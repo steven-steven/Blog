@@ -15,7 +15,7 @@
         "@mdx-js/react": "^1.5.1",
         "@next/mdx": "^9.0.8",
         "disqus-react": "^1.0.10",
-        "next": "9.0.7",
+        "next": "9.3.2",
         "next-ga": "^2.3.4",
         "prism-react-renderer": "^1.0.1",
         "react": "16.10.2",
