@@ -1,21 +1,18 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset='utf-8'>
-    <title><%= current_page.data.fetch("title", "Sitepress") %></title>
-    <%= stylesheet_link_tag "site" %>
-  </head>
-  <body>
+<%= render_layout "body" do %>
+  <div class="max-w-xl md:mx-auto flex flex-col gap-y-10 my-10 md:gap-y-20 md:my-20 p-4">
     <header>
-      <%= image_tag "logo-brown.svg", class: "logo logo-light" %>
-      <%= image_tag "logo-white.svg", class: "logo logo-dark" %>
-      <h1 id="title"><%= current_page.data.fetch("title", "Sitepress") %></h1>
+      <h1 class="text-4xl font-bold"><%= current_page.data.fetch("title") %></h1>
+      <% if subtitle = current_page.data["subtitle"] %>
+        <h2 class="text-xl opacity-50 mt-2"><%= subtitle %></h2>
+      <% end %>
     </header>
-    <main>
+    <main class="">
       <%= yield %>
     </main>
-    <footer>
-      Running version Sitepress <%= Sitepress::VERSION %>. Visit <a href="https://sitepress.cc/">sitepress.cc</a> for documentation, help, and updates.
+    <footer class="flex flex-row gap-x-6">
+      <% PrimaryPage.all.each do |page| %>
+        <%= link_to page.title, page.request_path %>
+      <% end %>
     </footer>
-  </body>
-</html>
+  </div>
+<% end %>
