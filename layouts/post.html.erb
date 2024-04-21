@@ -1,9 +1,14 @@
 <%= render_layout "layout" do %>
-  <div class="prose dark:prose-invert">
-    <%= yield %>
-    <% if publish_at = date(current_page.data["publish_at"]) %>
-      <hr>
-      <p>This post was published <%= publish_at.to_formatted_s(:long_ordinal) %><p>
+  <header>
+    <h1 class="text-3xl font-bold"><%= current_page.data.fetch("title") %></h1>
+    <% if subtitle = current_page.data["subtitle"] %>
+      <h2 class="text-xl opacity-50 mt-2"><%= subtitle %></h2>
     <% end %>
-  </div>
+    <% if publish_at = date(current_page.data["publish_at"]) %>
+      <p class="opacity-70"><%= publish_at.strftime("%A,  %B %d %Y") %><p>
+    <% end %>
+  </header>
+  <main class="prose dark:prose-invert max-w-none mt-6 text-inherit">
+    <%= yield %>
+  </main>
 <% end %>

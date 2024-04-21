@@ -30,6 +30,6 @@ module PageHelper
   end
 
   def render_github_readme(url)
-    render inline: github_readme(url), type: :markdown
+    render inline: github_readme(url), type: :md
   end
 end

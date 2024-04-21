@@ -4,7 +4,7 @@
 #
 
 app = 'stevenwhat'
-primary_region = 'ewr'
+primary_region = 'yyz'
 kill_signal = 'SIGINT'
 kill_timeout = '5s'
 

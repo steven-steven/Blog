@@ -1,0 +1,47 @@
+---
+title: Works
+subtitle: Things I'm working on
+primary_page:
+  name: Works
+  order: 3
+---
+
+<section class="flex flex-col space-y-8">
+  <div class="flex flex-col space-y-4">
+    <h2 class="pt-5 text-2xl font-bold">Recent Projects</h2>
+    <ul class="list-disc ml-5 md:ml-10">
+      <% WorkPage.all.each do |work| %>
+        <li class="p-2">
+          <div class="flex flex-col">
+            <%= link_to_page work, class: "font-normal hover:font-semibold" %>
+            <div class="opacity-60">
+              <%= work.subtitle %>
+            </div>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="flex flex-col space-y-4">
+    <h2 class="pt-5 text-2xl font-bold">Experiences</h2>
+    <ul class="list-disc ml-5 md:ml-10">
+      <% [["Shopify", "Software Developer", "May 2022 - Current"],
+          ["Shopify", "Software Engineer Intern", "Sept-Dec 2021"],
+          ["StackAdapt", "Software Engineer Intern", "Sept-Dec 2020"],
+          ["UW Blueprint", "Web Developer Volunteering", "Jan-Apr 2020"],
+          ["Loblaw Digital", "Software Developer Intern", "Sept-Dec 2019"],
+          ["IBM", "Software Developer Intern", "Jan-Apr 2019"],
+          ["Opentext", "Software Developer Intern", "May-Aug 2018"],
+          ["Opentext", "Quality Assurance Intern", "Sept-Dec 2017"],
+          ["Intellisoft Development Inc", "Software Developer Intern", "Jan-Dec 2017"]].each do |experience| %>
+        <li class="p-2 font-normal hover:font-semibold">
+          <div class="flex flex-col md:flex-row md:gap-10 flex-nowrap">
+            <%= experience[0] %>
+            <span class="opacity-60"><%= experience[1] %></span>
+            <span class="opacity-60">(<%= experience[2] %>)</span>
+          <div >
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</section>

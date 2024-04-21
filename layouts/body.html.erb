@@ -4,8 +4,10 @@
     <meta charset='utf-8'>
     <title><%= current_page.data.fetch("title") %></title>
     <%= stylesheet_link_tag "tailwind" %>
+    <%= javascript_include_tag "build/application" %>
   </head>
-  <body class="dark:bg-slate-900 dark:text-slate-100">
+  <body class="bg-gray-100 dark:bg-slate-900 text-slate-900 dark:text-slate-300 text-sm md:text-base">
+    <%= render "partials/navbar" %>
     <%= yield %>
   </body>
 </html>

@@ -1,7 +1,16 @@
 <%= render_layout "layout" do %>
-  <%= yield %>
-  <div class="prose prose-sm dark:prose-invert p-8 my-8 rounded backdrop-brightness-95 dark:backdrop-brightness-50">
-    <%= render_github_readme current_page.data.fetch("github_url") %>
-  </div>
-  <%=link_to "View the project on Github", current_page.data.fetch("github_url") %>
+  <header>
+    <h1 class="text-4xl font-bold"><%= current_page.data.fetch("title") %></h1>
+    <% if subtitle = current_page.data["subtitle"] %>
+      <h2 class="text-xl opacity-50 mt-2"><%= subtitle %></h2>
+    <% end %>
+  </header>
+  <main class="text-inherit mt-6">
+    <%= yield %>
+    <div class="prose prose-sm dark:prose-invert max-w-none p-8 my-8 rounded backdrop-brightness-95 dark:backdrop-brightness-50">
+      <p> Github README: </p>
+      <%= render_github_readme current_page.data.fetch("github_url") %>
+    </div>
+    <%=link_to "View the project on Github", current_page.data.fetch("github_url") %>
+  </main>
 <% end %>

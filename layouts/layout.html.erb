@@ -1,18 +1,10 @@
 <%= render_layout "body" do %>
-  <div class="max-w-xl md:mx-auto flex flex-col gap-y-10 my-10 md:gap-y-20 md:my-20 p-4">
-    <header>
-      <h1 class="text-4xl font-bold"><%= current_page.data.fetch("title") %></h1>
-      <% if subtitle = current_page.data["subtitle"] %>
-        <h2 class="text-xl opacity-50 mt-2"><%= subtitle %></h2>
-      <% end %>
-    </header>
-    <main class="">
+  <div class="max-w-[46rem] md:mx-auto flex flex-col gap-y-10 md:gap-y-20 mt-3 p-11 leading-relaxed font-serif">
+    <div>
       <%= yield %>
-    </main>
-    <footer class="flex flex-row gap-x-6">
-      <% PrimaryPage.all.each do |page| %>
-        <%= link_to page.title, page.request_path %>
-      <% end %>
+    </div>
+    <footer class="">
+      <div class="text-center text-xs">© Steven 2019</div>
     </footer>
   </div>
 <% end %>

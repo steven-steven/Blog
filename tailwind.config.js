@@ -1,13 +1,19 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class',
   content: [
     "./pages/**/*.*",
     "./models/**/*.*",
     "./helpers/**/*.*",
-    "./layouts/**/*.*"
+    "./layouts/**/*.*",
+    "./partials/**/*.*"
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        serif: "times, serif",
+      }
+    },
   },
   plugins: [
     require('@tailwindcss/forms'),
