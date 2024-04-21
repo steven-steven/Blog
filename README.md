@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExc2NjZGZyNW42NjBwOWNidWluYjh6MmFobmt6eW5pMXZiOTJ5YmN3byZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xUNd9F6HjZ5uUzfZ1m/giphy.gif" width="300">
+</p>
+
 # Hello World
 
 and this is my little corner of the internet. There's a few things you'll need to know to get around:
