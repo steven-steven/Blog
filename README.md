@@ -4,7 +4,9 @@
 
 # Hello World
 
-and this is my little corner of the internet. There's a few things you'll need to know to get around:
+This is my little corner of the internet. This is a repo hosting one of the best blogs in the world (not biased): www.stevenwhat.me
+
+There's a few things you'll need to know to get around:
 
 ## Running locally
 
