@@ -108,6 +108,7 @@ GEM
     redcarpet (3.6.0)
     reline (0.5.2)
       io-console (~> 0.5)
+    rouge (4.2.1)
     sitepress (3.2.2)
       sitepress-cli (= 3.2.2)
     sitepress-cli (3.2.2)
@@ -158,6 +159,7 @@ DEPENDENCIES
   chronic (~> 0.10.2)
   haml-rails
   markdown-rails (~> 2.0.0)
+  rouge
   sitepress (~> 3.1)
   slim-rails
   webrick

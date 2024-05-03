@@ -66,11 +66,11 @@ I don't have much experience with Markdown except for writing README files, but 
 
 _Sigh..._ I spent at least 5 hours, a McDonalds, and a bubble tea to get this working. This is basically highlighting markdown code blocks based on MDX.
 
-```javascript
+``` javascript
 const example = "Just like this - Javascript";
 ```
 
-```bash
+``` bash
 echo "or this - bash"
 ```
 

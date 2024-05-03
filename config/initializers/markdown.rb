@@ -1,10 +1,16 @@
 class ApplicationMarkdown < MarkdownRails::Renderer::Rails
+  include Redcarpet::Render::SmartyPants
+  include MarkdownRails::Helper::Rouge
+
   def enable
-    [:with_toc_data]
+    [:with_toc_data, :fenced_code_blocks, :highlight, :strikethrough, :superscript]
   end
 
   def renderer
-    ::Redcarpet::Markdown.new(self.class.new(with_toc_data: true), **features)
+    ::Redcarpet::Markdown.new(
+      self.class.new(with_toc_data: true, link_attributes: { target: '_blank' }),
+      **features
+    )
   end
 
   def image(link, title, alt_text)

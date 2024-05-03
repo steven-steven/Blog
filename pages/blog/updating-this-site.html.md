@@ -5,11 +5,11 @@ publish_at: April 21, 2024
 layout: post
 ---
 
-I've recently migrated all of the code, soo treat this post as a housewarming party! 🥳 It has long been in my todo list. I had to touch 2 files for every post I made, npm library updates was creeping in, and 5-year old technology felt so outdated! (or I haven't had the dedication to update it) I just thought it would make more sense (efficiency-wise, cost-wise, and fun-wise) to ditch it and spin up a new simpler home.
+It has long been in my todo list to migrate this site, soo treat this post as a housewarming party! 🥳 In the past codebase, making a post requires me to touch multiple files, npm library updates started creeping in, and 5-year old technology felt so outdated! I just thought it would make more sense (efficiency-wise, cost-wise, and fun-wise) to ditch it and spin up a new simpler home.
 
 For nostalgia, here was very first blog post about building the old site: [blog/creating-this-site](/blog/creating-this-site)
 
-Here is some exciting new tech:
+Here is some tech involved:
 
 - Sitepress
 - Markdown-rails
@@ -18,15 +18,93 @@ Here is some exciting new tech:
 - Stimulus
 - Tailwind
 
-## Sitepress
+I wanted to stick with simplicity, and with 5 blogging years behind me I'm pretty familiar with the essential features I actually need.
 
-## Markdown-Rails
+### Sitepress
+Sitepress first caught my eye while reading [Fly.io's blog on semi-static app](https://fly.io/ruby-dispatch/semi-static-websites/). Sitepress works as a Ruby site generator for static websites, and could also be embedded in a Rails app. This was great because although a static app is ideal enough for a stateless blog site, there's extra room to extend this into a full Rails app if I wish to in the future. Since working with Rails at work, it's become my specialty and this repo feels more like home compared to the javascript predecessor where my knowledge is a little bit out-of-date.
 
-## Sprocket
+Sitepress gives a intuitive structure similar to Next.js where files defined in the /pages folder has auto-configured routes. Similar to Rails you could define reusable view templates and partials, and it works with various templating engine like erb (and markdown! talk about that in a sec).
 
-## Fly.io + Docker
+There is model concept in Sitepress (inheriting `Sitepress::Model`), which can be used to define a collection of files as object and define their behaviors. The collection are defined with a glob pattern (ie. `blog/*.html.*`). With that, I can now do `BlogPage.all` and define its behaviors like `obj.published?`
 
-## Stimulus
+``` ruby
+def published?
+ data.fetch("publish_at") < Time.current
+end
+```
 
-## Tailwind
+Notice `data.fetch("publish_at")`. That is fetching the metadata that can be defined at the top of the page ([frontmatter](https://sitepress.cc/basics/frontmatter))
 
+```
+---
+title: Updating this site
+publish_at: April 21, 2024
+layout: post
+---
+```
+
+### Markdown-Rails
+With markdown-rails ([gem](https://github.com/sitepress/markdown-rails)), I can comfortably write pure markdown and have the engine convert it to HTML behind the scenes. There's a lot of configurations you can play with and it even lets you override the default HTML and style for the markdown elements.
+
+My markdown configuration as of now:
+
+```ruby
+class ApplicationMarkdown < MarkdownRails::Renderer::Rails
+  include Redcarpet::Render::SmartyPants
+  include MarkdownRails::Helper::Rouge
+
+  def enable
+    [:fenced_code_blocks, :highlight, :strikethrough, :superscript]
+  end
+
+  def renderer
+    ::Redcarpet::Markdown.new(self.class.new(with_toc_data: true), **features)
+  end
+
+  def image(link, title, alt_text)
+    # e.g. ![alt =100x100](url.png)
+    if title =~ /=(\d+)x(\d+)/
+      %(<img src="#{link}" width="#{$1}" height="#{$2}" alt="#{alt_text}" style="margin: 1.5rem auto;">)
+    else
+      %(<img src="#{link}" title="#{title}" alt="#{alt_text}" style="margin: 1.5rem auto;">)
+    end
+  end
+end
+
+MarkdownRails.handle :md, :markdown do
+  ApplicationMarkdown.new
+end
+```
+
+See how I had to override the image markdown element to include the flexibility of defining the image size. Oh, I wish markdown has an image size configuration by default, but this is good enough. 🫶
+
+I had to override the renderer to include low-level [Redcarpet](https://github.com/vmg/redcarpet) options such as `with_toc_data`, which renders the header elements with id so I could reference them in the table-of-contents. I wished markdown-rails lets you configure the render options without having to override the renderer yourself (I'll be watching [this issue](https://github.com/sitepress/markdown-rails/issues/4) for that).
+
+### Sprocket
+
+Sitepress uses sprocket to build the asset pipeline. That is, building all the images, javascripts, and stylesheets. The manifest.js file defines the assets I want to load.
+
+```js
+//= link_tree ../images
+//= link_directory ../stylesheets .css
+//= link_directory ../javascripts .js
+//= link_directory ../javascripts/build .js
+```
+
+I realized that my `/images` directory is pretty big (~1GB). So I might need to decide on another hosting solution (ie. S3) as this grows. It makes the build time take a while, and I'm pretty sure I'll hit a limit at one point.
+
+### Deployment
+
+If it was a Rails app, I would deploy it to [Fly.io](https://fly.io/) since it helps me lauch whole VMs with a free hobby plan. But since I decide to have this a static app, I think [Vercel.com](vercel.com) should work too.
+
+### Stimulus
+
+I'm used to having Stiumulus for defining complex JS interactions in erb templates. Currently I'm only using this for the dark-mode toggle. In the future, maybe I could stick with a more lightweight solution like [AlpineJS](https://alpinejs.dev/).
+
+### Tailwind
+
+This is a must-have for all my projects. I breathe and live by my tailwind classes. `flex`
+
+## Summary
+
+and Yes I haven't been writing in a while. There's so much to update, but too little time and motivation. But with this shiny new site I setup, it'll hopefully bring by habit back. Stay tuned.

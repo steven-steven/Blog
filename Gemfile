@@ -11,6 +11,7 @@ gem "webrick"
 gem "haml-rails"
 gem "markdown-rails", "~> 2.0.0"
 gem "slim-rails"
+gem 'rouge'
 
 # Parse `publish_at` dates from blog posts
 gem "chronic", "~> 0.10.2"

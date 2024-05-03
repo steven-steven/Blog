@@ -1,13 +1,13 @@
 <%= render_layout "layout" do %>
-  <header>
-    <h1 class="text-4xl font-bold"><%= current_page.data.fetch("title") %></h1>
+  <header class="pt-12 md:pt-16">
+    <h1 class="text-2xl md:text-3xl font-bold"><%= current_page.data.fetch("title") %></h1>
     <% if subtitle = current_page.data["subtitle"] %>
-      <h2 class="text-xl opacity-50 mt-2"><%= subtitle %></h2>
+      <h2 class="md:text-xl opacity-50"><%= subtitle %></h2>
     <% end %>
   </header>
-  <main class="text-inherit mt-6">
+  <main class="prose dark:prose-invert max-w-none mt-6 text-inherit text-sm md:text-lg prose-code:before:hidden prose-code:after:hidden prose-code:p-1 prose-code:rounded-md prose-code:font-medium prose-code:bg-gray-300 dark:prose-code:bg-slate-700">
     <%= yield %>
-    <div class="prose prose-sm dark:prose-invert max-w-none p-8 my-8 rounded backdrop-brightness-95 dark:backdrop-brightness-50">
+    <div class="p-8 my-8 rounded backdrop-brightness-95 dark:backdrop-brightness-50">
       <p> Github README: </p>
       <%= render_github_readme current_page.data.fetch("github_url") %>
     </div>

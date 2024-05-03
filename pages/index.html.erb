@@ -6,18 +6,18 @@ primary_page:
   order: 1
 ---
 
-<div class="flex flex-col items-center text-center border-b-2 p-5 gap-5">
+<div class="flex flex-col items-center text-center border-b-2 p-5 gap-2 md:gap-5">
   <span class="opacity-80">
     Welcome to my creative space!
     <br/>
     Growing everyday - one brain cell at a time!
   </span>
-  <%= image_tag("avatar_hello.png", :alt => "My Avatar", class:"w-20") %>
-  <p>
-    I ENJOY&nbsp;
-  </p>
+  <div class="relative">
+    <%= image_tag("avatar_hello.png", :alt => "My Avatar", class:"w-24 rounded-full") %>
+    <div class="rounded-full text-3xl absolute -right-1 -top-1">👋</div>
+  </div>
 </div>
-<div class="border-b-2 p-5">
+<div class="border-b-2 p-5 text-justify">
   <h2 class="py-5 text-2xl font-bold">About</h2>
   Hi, my name is Steven.
   <br />
@@ -41,13 +41,13 @@ primary_page:
     <li>
       LinkedIn:
       <a href="https://www.linkedin.com/in/steven-steven/" class="pl-1 font-normal">
-          https://www.linkedin.com/in/steven-steven/
+          linkedin.com/in/steven-steven/
       </a>
     </li>
     <li>
       Github:
       <a href="https://github.com/steven-steven" class="pl-1 font-normal">
-          https://github.com/steven-steven
+          github.com/steven-steven
       </a>
     </li>
   </ul>

@@ -11,7 +11,7 @@ It was 7pm Monday in Toronto, I sat in an unfamiliar hotel room right after work
 
 Let's take a step back. The last 2 months has been quite a ride. My friend invited me on a side project early September, to help build an NFT collectible. We are a team of 4 (2 dev, 1 artist, and 1 marketing person who brought and planned out the idea). Equipped with a simple curiosity and no experience in this space, I gotta say, this team was a blast! Honestly everyone plays a huge part in the project and we all carried it to the end with great planning.
 
-Results you ask? Let's not talk about that 😅. Here's a link to [the site](https://www.duckduckgoose.xyz/) and a link to [the contract on etherscan](https://etherscan.io/address/0xc15a882ee6ab53c00af7d73d21438a5f880e0107/#code). I'm used to getting side projects ditched, but this one's different. It's live and we pretty much brought it to completion! (and maybe the sunk cost of the time/money I've spent helps to justify my attachment to it).
+Results you ask? Let's not talk about that 😅. Here's a link to [the site](https://nft-website-1a829tf3x-steveninfinity29.vercel.app/) and a link to [the contract on etherscan](https://etherscan.io/address/0xc15a882ee6ab53c00af7d73d21438a5f880e0107/#code). I'm used to getting side projects ditched, but this one's different. It's live and we pretty much brought it to completion! (and maybe the sunk cost of the time/money I've spent helps to justify my attachment to it).
 
 Failures aside, I wanna spend some time in this blogpost to reflect on the iteration and end-to-end process of deploying this NFT, but more from the technical POV because I have nothing much to say about the business/art side anyway.
 
@@ -75,7 +75,7 @@ Another interesting thing about IPFS, is that you can refer to the resource usin
 Resource: more about IPFS best practices for NFT ([source](https://docs.ipfs.io/how-to/best-practices-for-nft-data/#metadata))
 
 ### Opensea Storefront
-Opensea is your marketplace. However we learned that it can only display NFTs that are minted. (we learned this the hardway. [See V1](#v1:-failed-iteration)). A storefront is a 1:1 mapping with a contract. If you had an existing deployed contract you can add it to opensea easily by [getting it listed here](https://opensea.io/get-listed). Only the contract owner can edit the storefront (login with the same wallet account you used to deploy the contract). As a contract owner, you could update the storefront such as the avatar, description, name, socials, fees you get for secondary sales, payout address, etc.
+Opensea is your marketplace. However we learned that it can only display NFTs that are minted. (we learned this the hardway. [See V1](#v1-failed-iteration)). A storefront is a 1:1 mapping with a contract. If you had an existing deployed contract you can add it to opensea easily by [getting it listed here](https://opensea.io/get-listed). Only the contract owner can edit the storefront (login with the same wallet account you used to deploy the contract). As a contract owner, you could update the storefront such as the avatar, description, name, socials, fees you get for secondary sales, payout address, etc.
 
 If you own a minted nft, you are a click away from selling/auctioning them, selling a bundle, etc.
 
