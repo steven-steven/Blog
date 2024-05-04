@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8' name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookclub - The Design of Everyday Things</title>
+    <link rel="stylesheet" href="/assets/tailwind-b4833c7b66e180ade5b74dbb93af374217679e5e57b785dd42b4dc7f36502533.css" media="screen" />
+    <script src="/assets/build/application-25ae7184b08e1be867fb7524ac6da4947649b73896dda1d6a3ff36fd664e1ca8.js"></script>
+  </head>
+  <body class="bg-gray-100 dark:bg-slate-900 text-slate-900 dark:text-slate-300 text-sm md:text-base">
+    <div class="flex flex-col md:flex-row items-center gap-5 justify-between mx-32 mt-10 md:mt-20">
+  <a class="text-3xl font-serif font-light" href="/">Steven</a>
+  <nav class="flex gap-x-6 items-center">
+    <button data-controller="dark-toggle" data-action="dark-toggle#toggle dblclick->dark-toggle#resetSystemMode" type="button" class="inline-block align-middle nav-link">
+  <svg data-dark-toggle-target="dark" class="hidden w-6 h-6 text-slate-700" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+  <svg data-dark-toggle-target="light" class="w-6 h-6 text-slate-200" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+</button>
+      <a href="/blog">Blog</a>
+      <a href="/works">Works</a>
+  </nav>
+</div>
+    
+  <div class="max-w-[46rem] md:mx-auto flex flex-col gap-y-10 md:gap-y-20 px-6 md:px-11 leading-relaxed font-serif">
+    <div>
+      
+  <header class="pt-12 md:pt-16">
+    <h1 class="text-2xl md:text-3xl font-bold">Bookclub - The Design of Everyday Things</h1>
+      <p class="opacity-70">Saturday,  August 28 2021<p>
+  </header>
+  <main class="prose dark:prose-invert max-w-none mt-6 text-inherit text-sm md:text-lg prose-code:before:hidden prose-code:after:hidden prose-code:p-1 prose-code:rounded-md prose-code:font-medium prose-code:bg-gray-300 dark:prose-code:bg-slate-700">
+    <blockquote>
+<p>&ldquo;I dream the renaissance of talent&hellip; Design is an equalizing tool. All that is needed is observation, creativity, and hard work&rdquo;</p>
+</blockquote>
+
+<p>It&rsquo;s easy to look away at all the little tools we use everyday, whether they help you or set you up for disaster/frustration. When it comes to products around me, I&rsquo;m the type who&rsquo;d take the responsibility to learn the tools, read the documentation, the manuals, etc. And if things go south, then I should blame myself for not doing that diligence, … right?</p>
+
+<p>⚠️ Nope! it&rsquo;s never the user&rsquo;s fault, but an indication that the design had failed you by allowing you to inevitably make that mistake. There&rsquo;s never really a &lsquo;human error&rsquo; - it&rsquo;s a &lsquo;system error&rsquo; (making error is part of our nature as humans. System design should take this into account).</p>
+
+<p>This book offers a whole new perspective to all designs in the world. By learning to observe little details, you realize that someone had at some point thoughtfully put them in and that&rsquo;s super fascinating to think about. It means that I should learn to take the status quo with a grain of salt and acknowledge that designs could be &lsquo;better&rsquo;.</p>
+
+<p>Like all else in my &lsquo;bookclub&rsquo; blog series, these are my notes of what I think is important/interesting to me with an additional sprinkle of my own words and thoughts. I clearly skipped a lot of part/details in the book - so I encourage you to read the book if you&rsquo;re interested! Honest review, I think this book is unnecessarily long which took me months, so be prepared :)</p>
+
+<h3 id="structure-of-the-blog">Structure of the blog</h3>
+
+<p>Now this is a long book, so please excuse my long notes. Note that the way I structure my notes does not align with structure of the book. (I designed them based on my mental model for personal <a href="#knowledge-in-the-world-not-the-head" target="_blank">ease of retrieval</a> 😉). Or you could jump to the &lsquo;Extra Thoughts&rsquo; for my review.
+1. <a href="#examples-of-bad-designs" target="_blank">Examples of Bad designs</a>
+2. <a href="#so-what-makes-designs-better" target="_blank">What makes designs &lsquo;Better&rsquo;</a>
+3. <a href="#knowledge-in-the-world-not-the-head" target="_blank">Knowledge in the world, not in the head</a>
+4. <a href="#human-error-system-error" target="_blank">Let&rsquo;s replace Human Error with System Error</a>
+5. <a href="#psychology-of-everyday-actions" target="_blank">Psychology of everyday actions (understand human behaviors)</a>
+6. <a href="#what-makes-design-hard" target="_blank">What makes design Hard</a>
+7. <a href="#design-thinking" target="_blank">Design Thinking</a>
+8. <a href="#good-exercises-takeaways" target="_blank">Good Exercises/takeaways</a>
+9. <a href="#extra-thoughts" target="_blank">Extra Thoughts</a></p>
+
+<h3 id="examples-of-bad-designs">Examples of bad designs:</h3>
+
+<ul>
+<li>Microwave/washing-machine that has too much functions/controls. Many of which I probably never used. Lack of understandability kills the purpose.</li>
+<li>Badly designed code (error handling, code structure, lack of tests/monitoring…)
+
+<ul>
+<li>Programmers are designers 🤯</li>
+</ul></li>
+<li>Badly designed systems let you make an error. Even worse are systems that induce you to make that error</li>
+</ul>
+
+<h3 id="so-what-makes-designs-better">So what makes designs &lsquo;better&rsquo;?</h3>
+
+<ul>
+<li>Discoverable (what&rsquo;s possible) &amp; understandable (communicate what it does)</li>
+<li>Make user feel in control, sense of mastery, satisfaction, pride. (affect emotional state)</li>
+<li>6 principle of design
+
+<ol>
+<li><strong>Affordance</strong> (what actions are possible): relationship between the object&rsquo;s property &amp; capability of the user
+
+<ul>
+<li>And <strong>anti-affordance</strong>: the prevention of interaction / deliberate friction (e.g wall tilted rather than horizontal to discourage people from placing objects like cups)</li>
+</ul></li>
+<li><strong>Signifiers</strong>: (things to help users perceive/where to find what&rsquo;s possible).
+
+<ul>
+<li>Words, graphics, signs, indicators, ..</li>
+</ul></li>
+<li><strong>Constraints</strong></li>
+<li><strong>Mappings</strong>: (make controls <a href="#knowledge-in-the-world-not-the-head" target="_blank">feel natural</a>)
+
+<ul>
+<li>Natural mapping (cultural/biological). E.g. up means more, down means less.</li>
+</ul></li>
+<li><strong>Feedback</strong>:
+
+<ul>
+<li>Delayed feedbacks make you feel unsettled</li>
+<li>Bad feedback (distracting, uninformative, irritating) is worse than no feedback</li>
+<li>Must be prioritized (important signals presented differently than non-important ones)</li>
+<li>Sound: what can&rsquo;t be seen. Can be informative &amp; annoying
+
+<ul>
+<li>Car horns used to alert others (not venting anger and rage)</li>
+<li>Important signifier of presence of cars. Electric car adds artificial sound. But what sound? Governments and companies are working to find the standard. 💸</li>
+</ul></li>
+</ul></li>
+<li><strong>Conceptual model</strong>:
+
+<ul>
+<li>Mental model of how user think the system work</li>
+<li>Created through inference, manuals, interaction experience, ..</li>
+<li>Good model allows one to predict it&rsquo;s behavior</li>
+<li>Complexity is good. It is confusion that&rsquo;s bad (it&rsquo;s no longer complicated once a meaning/structure/understanding is in place)</li>
+</ul></li>
+</ol></li>
+</ul>
+
+<h3 id="knowledge-in-the-world-not-the-head">Knowledge in the world (not the head)</h3>
+
+<ul>
+<li>Most effective way to help people remember is to make it unnecessary.</li>
+<li>i.e. 2 factor authentication: something you have + something you know.</li>
+<li>STM (short-term memory): has problems of interfering tasks
+
+<ul>
+<li>Solution: use different modalities/channels that don&rsquo;t interfere (sight, sound, touch, heraring, location, gestures) to present information</li>
+<li>I.e. driving systems presents haptic / audio feedback to not interfere with visual task.</li>
+</ul></li>
+<li>LTM (long-term memory): has problems in organization / retrieval process.
+
+<ul>
+<li>Knowledge in head is knoweldge in memory.</li>
+<li>Solution: provide structures to transform arbitrary things to a meaningful interpretation (conceptual model)</li>
+</ul></li>
+<li>Relying on models &amp; approximation to avoid detail
+
+<ul>
+<li>It&rsquo;s wrong to think that we should always practice mindfulness. Civilization advance by extending # operations without thinking about them</li>
+<li>People should focus on high-level purpose, machines should focus on details.</li>
+<li>To enhance memory/accuracy: &ldquo;One dull pencil is better than 2 sharp minds&rdquo;</li>
+<li>I.e. Socrates argues that books will diminish memory and the need to think (you can&rsquo;t argue/debate/question a book). Will tech make humans incapable?
+
+<ul>
+<li>No. Weak human + machine + good process are superior. It is things that make humans smart (not the unaided mind).</li>
+</ul></li>
+</ul></li>
+<li>Use reminders:
+
+<ul>
+<li>Ideally there&rsquo;s a <u>signal</u> (at the right time &amp; place) &amp; a <u>message</u> (just writing things down is a message without a signal)</li>
+<li>The sheer # of reminder methods indicate that it&rsquo;s a great need, with no 1 solution yet.</li>
+</ul></li>
+<li>Natural mapping
+
+<ul>
+<li>Controls are arranged so its relationship with the controlled is obvious and contained in the world.</li>
+<li>i.e. prevent you from selecting wrong button, dial, lever, switch to turn lights on, airplane operation, automobile.
+
+<ul>
+<li>Touch-screen GUI tend to have great mapping, but lack physical affordance (i.e. can&rsquo;t use your elbow if hands are full. Maybe voice command?)</li>
+</ul></li>
+<li>Natural mapping vary with culture: expect some confusion time to adjust
+
+<ul>
+<li>i.e. Should scrolling move the text or window? Scrolling &amp; arrow keys used to move the window. But then touch screen came and its only natural to move the text with fingers. Causes confusion. Apple switch scrolls to moving text model.</li>
+<li>I.e. which side of road cars drive on in different countries.</li>
+</ul></li>
+<li>But sometimes it&rsquo;s better to have activity-centered control (group things by activity rather than by device) to have less interruption (i.e. auditorium control).
+
+<ul>
+<li>There&rsquo;s trade-off between ease of activity vs customization (with edge cases/demand in requirements you still want to allow some manual control)</li>
+</ul></li>
+</ul></li>
+<li>4 Types of Constraints: clues to limit affordance
+
+<ol>
+<li>Physical: 🔲▵⃝
+
+<ul>
+<li>Why not design connector so that it&rsquo;s impossible to error. (USB-C)</li>
+<li>Design keys/plugs that work regardless of how they&rsquo;re inserted (it&rsquo;s hard to tell in dark environments) (i.e. car keys)</li>
+<li>&lsquo;Forcing function&rsquo;: Failure in one stage prevents next stage from happening. (e.g. Authentication, start car engine, atm card need to be pulled out before money is delivered)
+
+<ol>
+<li>Interlocks: force proper sequence of operation.
+
+<ul>
+<li>i.e. Car interlock, opening microwave while it&rsquo;s on, restroom pull-down shelf that blocks way out until you take all your things</li>
+<li>i.e. &lsquo;dead man&rsquo;s switch&rsquo;: release switch if operator die / loose control</li>
+</ul></li>
+<li>Lock-ins / lock-outs:
+
+<ul>
+<li>Lock-ins keep operation active (i.e. prompt when you exit file without saving, company try to keep you in their ecosystem), while lockout keep things out of danger (i.e. cover on electric outlet)</li>
+</ul></li>
+</ol></li>
+</ul></li>
+<li>Cultural 👺
+
+<ul>
+<li>Conventions and allowable action on how to behave in social situation</li>
+<li>Standardization
+
+<ul>
+<li>Simplify life, but they hinder future developments. (should be last resort)</li>
+<li>i.e. Most use base-10 arithmetic. But many other uses 12 or 60. Like 12 in a dozen, inches in a foot, hours in a day, months in a year, seconds in minutes, seconds in degree, minutes in hour 🤯..</li>
+</ul></li>
+</ul></li>
+<li>Semantic
+
+<ul>
+<li>Has a reasoning. It will change. (i.e. rider sit in front, would red light be meaningless in the future with automated cars)</li>
+</ul></li>
+<li>Logical
+
+<ul>
+<li>Logically make sense. Natural mapping is a logical constraint.</li>
+</ul></li>
+</ol></li>
+</ul>
+
+<h3 id="human-error-system-error">Human error =&gt; system error</h3>
+
+<ul>
+<li>When it&rsquo;s human error, we tend to blame then ignore. But when it&rsquo;s system error (machine stops working), we don&rsquo;t only find the broken part, we investigate why it break.</li>
+<li>We should treat all failure the same way - find fundamental cause &amp; redesign system.
+
+<ul>
+<li>Ask 5 whys &amp; seek the root problem (&ldquo;Never solve the problem I am asked to solve&rdquo;)</li>
+<li>Problems have to be discovered (dig the surface): Real world problems don&rsquo;t come nice/neatly packaged like those you see in school/exams.</li>
+</ul></li>
+<li>Errors caused by social/institution/time/economic pressures
+
+<ul>
+<li>Examples
+
+<ul>
+<li>Repetitive, precise tasks are opposite to what people are good at (creative, constructive, exploratory, seeking new opportunities).</li>
+<li>In many industries, operators must push boundary (or violate rules) to get things done. If they manage, they&rsquo;re praised. Otherwise, the same behavior is blamed.</li>
+<li>Cheating in school, not reporting faults, Individual/institutions that don&rsquo;t admit/hides faults, pressure from higher-ups</li>
+<li>Scuba divers weights are expensive. If they release it and make it back safe, they can&rsquo;t prove that it was necessary - causing embarrassment / social pressure</li>
+</ul></li>
+<li>Solutions:
+
+<ul>
+<li>Reward good behaviors 😌. Add visible metrics.</li>
+<li>Go through checklist ☑️ in pairs:</li>
+<li>Resisted by many cultures who feel it questions their competence.</li>
+<li>Putting sequence in unordered task is bad, since they might skip it thinking to come back later (benefit of digital checklist &gt; printed).</li>
+<li>Thank those who admit error and encourage ease of reporting.</li>
+<li>Goal is not to blame, but to fix/prevent the error</li>
+<li>Random thought: If we blame government/public-figures, will they reduce transparency. Rather than blaming, we should fix them collaboratively as a society (or healthy feedback).</li>
+<li>Jidoka philosophy: punish those who don&rsquo;t report errors. Make it an expectation so it&rsquo;s not discomforting for the reporter</li>
+<li>Semi-anonymous reporting process through Trusted Body</li>
+<li>Pilot report error to NASA with their identity so NASA could request more information. But when publicly released identity is stripped. (this is hard for medicine since there&rsquo;s no equivalent institution)</li>
+<li>Default to open internally, default to secrecy externally 🦐</li>
+</ul></li>
+</ul></li>
+<li>2 types of errors
+
+<ol>
+<li><strong>Slips</strong>: Execution don&rsquo;t go according to plan.
+
+<ul>
+<li>i.e. forgetting to turn off stove, mix similar tasks together</li>
+<li>Slips occur more frequently for skilled people (autonomous tasks). Happens subconsciously so simply &lsquo;paying closer attention&rsquo; won&rsquo;t work.</li>
+<li>To prevent for
+
+<ul>
+<li>Capture error: Ensure control are distinguishable for different purpose (many airplane controls are shape coded)</li>
+<li>Memory error: put reminders / minimize # steps / forcing functions</li>
+<li>Mode error: avoid use of modes. If it&rsquo;s necessary, equipment should make it obvious which mode it&rsquo;s on.</li>
+<li><del> Beeping/flashing to convey varying information (bad feedback) </del> Use different colored lights &amp; rich sounds</li>
+</ul></li>
+<li>To recover/mitigate
+
+<ul>
+<li>Make sure errors can be undone</li>
+<li>Good/fast perceptible feedback on state/nature of action performed</li>
+</ul></li>
+</ul></li>
+<li><strong>Mistakes</strong>: Plan is wrong.
+
+<ul>
+<li>(A) In Skill based behavior: automatic (prone to just slips)</li>
+<li>(B) In Rule based behavior: go by the book / experience
+
+<ul>
+<li>Potential cause of error
+
+<ul>
+<li>(A) Misdiagnosis of situation cause you to pick the wrong rule</li>
+<li>(B) Rule is faulty (wrong assumptions, incomplete knowledge, …)</li>
+<li>&copy; Outcome is incorrectly evaluated (wrong feedback)</li>
+</ul></li>
+</ul></li>
+<li>&copy; In Knowledge based behavior (problem solving novel situation)
+
+<ul>
+<li>Good conceptual model is essential</li>
+<li>Maybe machines (AI decisions/modeling, search, reasoning technique) can cooperate with humans on these complex tasks.</li>
+</ul></li>
+</ul></li>
+</ol></li>
+<li>Hindsight is superior to foresight
+
+<ul>
+<li>Difficult to avoid &amp; detect. Often there&rsquo;s too much information.</li>
+<li>Problems are obvious after the fact. But foresight is hard.</li>
+<li>How does one prioritize which of the many failures are urgent, to attend or ignore?</li>
+<li>Common problem in industries: (mine as well ☹️. i.e. fraud cases) Is the swamp of huge data. If all decision is questioned, nothing gets done. If not questioned, there&rsquo;s rare but substantial penalty.</li>
+<li>Challenge: design/present system in ways that&rsquo;s easy to monitor, interpret, questioned</li>
+<li>In hindsight, all events are logical. But not during the incident (i.e. high workload, emotions). Good incident analysis takes a long time because they consider all information/history - those that seem irrelevant could be critical. Unfortunately, public wants answers fast (public announcements are incomplete).</li>
+</ul></li>
+<li>Swiss Cheese analogy: 🧀 No single cause to blame
+
+<ul>
+<li>Accidents are often the result of many errors. (there are more than 1 way to solve it!)</li>
+<li>The conditions for accidents must align for it to occur</li>
+<li>Implies a solution:
+
+<ol>
+<li>Add more defensive layers</li>
+<li>Reduce #/size of holes</li>
+<li>Alert when holes line up</li>
+</ol></li>
+</ul></li>
+</ul>
+
+<h3 id="psychology-of-everyday-actions">Psychology of everyday actions:</h3>
+
+<ul>
+<li>Psychology affect how human interacts and feel emotionally about the product/experience</li>
+<li>Design sets off emotion like frustration, anger, helplessness, despair, hate. Or it could induce pride enjoyment, control, pleasure, love, attachment.</li>
+<li>Action cycle (use of the product)
+<img src="/assets/blogAssets/the-design-of-everyday-things/actioncycle.png" width="400" height="400" alt="Action Cycle" style="margin: 1.5rem auto;">
+
+<ul>
+<li>Action starts from &lsquo;Goal&rsquo; (goal-driven action) or &lsquo;World&rsquo; (event/data-driven actions)</li>
+<li>The circled transitions are opportunities for product enhancement. Radical ideas can come from redefining &lsquo;Goal&rsquo; ⭐️ (finding the core user need. ie. root cause analysis)</li>
+</ul></li>
+<li>Cognitive thoughts &amp; emotion affects each other in both directions through hormones
+
+<ul>
+<li>Cognition make sense of the world, emotion assigns <i>value</i></li>
+<li>Without good emotional system, it&rsquo;s hard to make choices/judgements. Without cognitive system, one is dysfunctional. (you need both)</li>
+<li>In tense situation, hormones bias the brain to <u>focus</u> on certain parts of environment, muscle tense up for action. In calm situation, hormones relax the muscles and bias toward <u>exploration &amp; creativity</u>.
+
+<ul>
+<li>When calm you&rsquo;re easily distracted but able to piece together knowledge.</li>
+<li>When tense, you get things done but too much gives you tunnel vision.</li>
+</ul></li>
+</ul></li>
+<li>3 levels of processing
+
+<ol>
+<li>Visceral: Unconscious and automatic.
+
+<ul>
+<li>Assess the situation without context/history. Nothing to do with usability of design. It&rsquo;s about immediate attraction/repulsion.</li>
+</ul></li>
+<li>Behavioral: Learned patterns. Details are mostly unconscious.
+
+<ul>
+<li>Drives expectations (which leads to tension/relief). i.e. Feels lack of control from bad feedback.</li>
+</ul></li>
+<li>Reflective: Slow reasoning &amp; conscious decision.
+
+<ul>
+<li>After the action/experience, they assess the cause, and leads to guilt/pride/blame/praise.</li>
+<li>Most important to designers because these emotions lasts in their memories.</li>
+</ul></li>
+<li>(2) &amp; (3) creates understanding, but enjoyment requires good design at all 3 levels.</li>
+</ol></li>
+<li>&lsquo;Flow State&rsquo;: occurs when activity slightly exceeds skill level to require full attention. State between low expectation (cause apathy) &amp; high expectation (cause anxiety/helplessness)</li>
+<li>People believe their conceptual model, so they <u>tend to blame the action than the approach</u>.
+
+<ul>
+<li>With no/delayed feedback, one tend to assume that the action wasn&rsquo;t done correctly. So they repeat the action (with more force).</li>
+<li>I.e. this is disastrous in emergency exits, failure to escape a pulling door has caused numerous death. Thus, many countries set law for pushing doors to exit &amp; panic-bars allowing them to push their bodies against it (affordance). 🤯</li>
+</ul></li>
+<li>&lsquo;Learned helplessness&rsquo; &amp; false blame
+
+<ul>
+<li>Situation when people experience repeated failure at a task, then decides that the task cannot be done (by them) and stop trying. Reinforces failure.</li>
+<li>i.e. when you have trouble using technology, think no one else is having the same problem, they blame themselves</li>
+<li>i.e. Math phobias: once you fall behind, it&rsquo;s hard to catch up. Not because the material is difficult, but it&rsquo;s taught/designed so that one stage hinders further progress. (once failure starts, you end up generalizing blame to all math)</li>
+<li>Solution:
+
+<ul>
+<li>Positive psychology: Replace &lsquo;failure&rsquo; with &lsquo;learning experience&rsquo;. We learn more from failures than successes</li>
+<li>Eliminate error messages, and provide more help/guidance</li>
+<li>Never let people start over if there&rsquo;s problems. Don&rsquo;t obstruct their progress. <u>Rather than incorrect, they&rsquo;re partially correct</u>.</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h3 id="what-makes-design-hard">What makes design hard:</h3>
+
+<ul>
+<li>Reminder: people are not machines. They are imaginative/creative creatures
+
+<ul>
+<li>People aren&rsquo;t born to be precise and accurate</li>
+<li>It&rsquo;s the duty of machines/design to understand people (not our duty to understand the arbitrary rules of the machine)</li>
+</ul></li>
+<li>Accept human behavior the way they are. Not the way we wish it to be. And human behavior can be pretty hard…</li>
+<li>As a programmer myself, I should learn not to expect users to be as logical as I am</li>
+<li>Always assume that people will make errors (Murphy&rsquo;s law: &ldquo;anything that can go wrong will go wrong.&rdquo;). Handle the non-happy parts.</li>
+<li>Adding more functions simplify our lives, but at the same time complicates life by making device harder to learn/use. (ie. Smart devices)</li>
+<li>Must take into account interfering activities while using the product</li>
+<li>Some designs are hard to iterate (i.e. large production projects with big risks/scale)
+
+<ul>
+<li>Prototyping needed: models, 3D printing, sketches, VR aids..</li>
+</ul></li>
+<li>Market-driven pressure 📈 (following trends rather than user needs)</li>
+<li>&lsquo;Featuritis&rsquo;: pressure to add new features/complexity in every release (due to demand, competition pressures, market saturation). No incentive to remove old ones.
+
+<ul>
+<li>Problem: Lose it&rsquo;s usability/understandability over time.</li>
+<li>Solution: <del>comparing features with competition to find weak points</del> concentrate on your strong points &amp; strengthen them. Ignore the voices &amp; focus on user needs.</li>
+</ul></li>
+<li>Stakeholders focus on price/budget rather than usability</li>
+<li>Resolving conflicting requirements between subteams:
+
+<ul>
+<li>Everyone (or leaders from disciplines involved) must be present in the entire design process, to hear all concerns as soon as they&rsquo;re discovered &amp; find agree on the design</li>
+<li>Otherwise sub-teams will change the requirements without other sub-teams knowing.</li>
+</ul></li>
+<li>Hard to accommodate everyone: Build different versions of the product
+
+<ul>
+<li>Design assistive devices as fashion statements. (i.e. the walker)</li>
+<li>Wide variety of people benefits from features that accomodate special needs.</li>
+</ul></li>
+<li>Tech change rapidly, but people &amp; culture change slowly. Fast to be invented, slow to be accepted, even slower to fade &amp; die.
+
+<ul>
+<li>Incremental innovation (slow improvement) vs radical innovation (often by collapsing industries to one)</li>
+</ul></li>
+<li>Unnecessary designs
+
+<ul>
+<li>In consumer economy, we&rsquo;re surrounded by objects of desire, not objects of use.</li>
+<li>Marketing scheme deliberately makes things seem out of style.</li>
+<li>Companies make things fail and replaceable over short lifetime.</li>
+</ul></li>
+<li>Environmental costs (of material, manufactoring process, distribution, servicing, repairs) are part of design. Design considers all things.</li>
+</ul>
+
+<h3 id="design-thinking">Design Thinking</h3>
+
+<ul>
+<li>Agile / iterative process because people are unaware of their true needs/difficulties.</li>
+<li>Double diamond model: discover/observe (expand), define/ideation (converge), develop/prototype (expand), deliver/testing (converge)
+
+<ul>
+<li>Design research != market research. Design focus on need/use, whereas marketing focus on purchasing decision.</li>
+<li>Big Data is not effective for design research (it doesn&rsquo;t reveal user&rsquo;s real needs, desires, reason for their actions)
+
+<ul>
+<li>It reaches a large number of people, but the insights are shallow (a tradeoff). What people say/do often won&rsquo;t match with what they need.</li>
+</ul></li>
+<li>Brainstorming: crazy wrong ideas can still contain creative insights. Avoid premature dismissal of ideas. Question the obvious.</li>
+<li>Prototype: answers whether we&rsquo;re solving the right problem.</li>
+<li>Observe their activity without distraction (i.e. behind them, video, group shadowing sessions!)</li>
+<li>Requirements: built from observations. Don&rsquo;t build them from the abstract or asking them what they need.</li>
+</ul></li>
+<li>Activity-centered design: Design for the activity - not individuals. (To satisfy many users)</li>
+</ul>
+
+<h3 id="good-exercises-takeaways">Good exercises / takeaways</h3>
+
+<ul>
+<li>Walk the world examining details of design
+
+<ul>
+<li>Next time you have trouble (figure out shower control, kitchen appliance), ask and challenge yourself how it could&rsquo;ve been better.</li>
+<li>If you come across well-designed that is effortless to use, stop and examine</li>
+</ul></li>
+<li>Try things before you buy! Can you figure things out easily? (problems are not your fault)</li>
+<li>Poka-yoke technique: DIY adding signifiers, forcing functions, affordance, constraints… (e.g. putting labels around confusing switch, covering critical switches..)</li>
+<li>Voice your fight for usability (give support to good designs, provide feedback, boycott, etc)</li>
+</ul>
+
+<h4 id="misc">MISC:</h4>
+
+<ul>
+<li>&lsquo;skeuomorphic&rsquo;: the technical term for incorporating old idea to new tech even though it no longer play a function, except to provide comfort/familiarity for transition.
+
+<ul>
+<li>i.e. Use artificial engine sound for electric vehicle, folder/save icon, cards remain horizontal from back-in-the-day swiping</li>
+</ul></li>
+</ul>
+
+<h3 id="extra-thoughts">Extra Thoughts:</h3>
+
+<p>My favorite part of the book was probably understanding the <a href="#human-error-system-error" target="_blank">types of errors humans will make</a> - and how designs can help to prevent/mitigate them using the 6 principles of design (like conceptual model, feedback, ..). In that section it brushes about &lsquo;hindsight is superior to foresight&rsquo; which really resonates with me - having too much information is something I struggle with everyday and I hope that is something I can improve. It also helps acknowledge that the world is more complex than we think they are. A problem will arise from many different factors (cheese holes) and it&rsquo;s hard to identify/forsee them coming your way. But this also means that fixing 1 hole might fix many potential problems, and there will always be work to do 👷‍♂️.</p>
+
+<p>My second favorite part is the discussion on <a href="#knowledge-in-the-world-not-the-head" target="_blank">putting knowledge in the world</a>. The world is so complex, it&rsquo;s such a relief to know that putting knowledge in the world implicitly through good design can really unleash our minds for more important tasks that humans are good at.</p>
+
+<p>I&rsquo;ve also built a growing respect for good designs and how critical they are in our lives. The intentional design for emergency doors, affordance/anti-affordance, forcing functions, putting phsyical constraints, was a few of the many examples I&rsquo;ve never payed attention before. I hope this list of examples will continue as I try to be more mindful of the designs of everyday things.</p>
+
+<p>As a programmer/builder, I am totally inline that design is an infinite game that should continue to be played, improved upon, and participated by everyone. Good designs will truly bring out true potential in humans.</p>
+
+  </main>
+
+    </div>
+    <footer class="">
+      <div class="text-center text-xs">© Steven 2019</div>
+    </footer>
+  </div>
+
+  </body>
+</html>

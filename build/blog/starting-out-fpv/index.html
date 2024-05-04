@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8' name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starting out FPV</title>
+    <link rel="stylesheet" href="/assets/tailwind-b4833c7b66e180ade5b74dbb93af374217679e5e57b785dd42b4dc7f36502533.css" media="screen" />
+    <script src="/assets/build/application-25ae7184b08e1be867fb7524ac6da4947649b73896dda1d6a3ff36fd664e1ca8.js"></script>
+  </head>
+  <body class="bg-gray-100 dark:bg-slate-900 text-slate-900 dark:text-slate-300 text-sm md:text-base">
+    <div class="flex flex-col md:flex-row items-center gap-5 justify-between mx-32 mt-10 md:mt-20">
+  <a class="text-3xl font-serif font-light" href="/">Steven</a>
+  <nav class="flex gap-x-6 items-center">
+    <button data-controller="dark-toggle" data-action="dark-toggle#toggle dblclick->dark-toggle#resetSystemMode" type="button" class="inline-block align-middle nav-link">
+  <svg data-dark-toggle-target="dark" class="hidden w-6 h-6 text-slate-700" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+  <svg data-dark-toggle-target="light" class="w-6 h-6 text-slate-200" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+</button>
+      <a href="/blog">Blog</a>
+      <a href="/works">Works</a>
+  </nav>
+</div>
+    
+  <div class="max-w-[46rem] md:mx-auto flex flex-col gap-y-10 md:gap-y-20 px-6 md:px-11 leading-relaxed font-serif">
+    <div>
+      
+  <header class="pt-12 md:pt-16">
+    <h1 class="text-2xl md:text-3xl font-bold">Starting out FPV</h1>
+      <p class="opacity-70">Tuesday,  November 10 2020<p>
+  </header>
+  <main class="prose dark:prose-invert max-w-none mt-6 text-inherit text-sm md:text-lg prose-code:before:hidden prose-code:after:hidden prose-code:p-1 prose-code:rounded-md prose-code:font-medium prose-code:bg-gray-300 dark:prose-code:bg-slate-700">
+    <p><img src="/assets/blogAssets/starting-out-fpv/fpv1.gif" width="400" height="400" alt="FPV Take Off" style="margin: 1.5rem auto;"></p>
+
+<blockquote>
+<p>&ldquo;When you fly, nothing else matter&rdquo;</p>
+</blockquote>
+
+<p>The past month I have been introduced to the world of FPV. Not having a mentor hasn&rsquo;t seem like too much of a burden as the FPV community on the internet (especially on youtube) had been extremely friendly for new players like me trying to get started in this hobby. In this post, I just wanted to uncover things I did to get started, my first impressions, and mistakes I&rsquo;ve made as an incompetent pilot. If you happen to fly FPV as well, feel free to hit me up or drop in some tips. If not, hopefully you&rsquo;d consider giving this hobby a try!</p>
+
+<h2 id="my-bitter-history-with-drones">My bitter history with drones</h2>
+
+<p>The first and last drone I owned was the DJI Phantom 4. I had it for about 2 years and had flew to few placed like Tangerang (where I lived), Vancouver and Bali. 24 August 2017, was the date when that drone crashed into a wall of rock, fell, and washed away by the rough merciless waves; after an attempt to sneak pass under a rock bridge in Bali. After that event the drone was never again seen and I&rsquo;m left with an unused remote controller and a few batteries and accessories lying around without purpose.</p>
+
+<p><img src="/assets/blogAssets/starting-out-fpv/crashSite.jpg" width="400" height="400" alt="Crash Site" style="margin: 1.5rem auto;"></p>
+
+<p>Another (potential) encounter I had with drones was when I saw the UW Aerial Robotics Group and considered joining. I remembered reading their wiki as well as some processes and roles they had with building drones. Unfortunately, I gave up on it knowing that I had no clue what I was reading. I really wished I had started researching on FPV early on those days…</p>
+
+<h2 id="purchasing-the-equipment">Purchasing the equipment</h2>
+
+<p><img src="/assets/blogAssets/starting-out-fpv/equipment.png" width="400" height="400" alt="FPV Equipments" style="margin: 1.5rem auto;">
+Seems like there was just one distributor that ships a lot of these FPV stuff worldwide. Which was Bangood.com.</p>
+
+<h3 id="1-drone-battery-charger-radio-controller-goggles">1. Drone + battery + charger + radio controller + goggles</h3>
+
+<p>Normally one would buy these parts separately, but I cheated a bit because I bought the <a href="https://www.banggood.com/EMAX-Tinyhawk-II-Freestyle-2_5-Inch-115mm-Wheelbase-FPV-Racing-Drone-RTF-Frsky-D8-Runcam-Nano-2-Camera-200mW-VTX-5A-ESC-p-1718751.html" target="_blank">&lsquo;ready to fly&rsquo; kit</a>. It was however a good choice and something I&rsquo;d recommend for starters, as it comes in a relatively much cheaper initial investment. It also saves lots of time researching and configuring the individual peripherals to get it working.
+The EMAX Freestyle 2 actually just came out this year and the reviews seems to be pretty positive. The only thing worth noting I&rsquo;d say was that the goggles in the kit cannot record any footages. You could buy a separate DVR module to manually attach on the goggles, or simply purchase a new goggles that comes with it out of the box.  I did the latter since I thought it&rsquo;s worth the investment in the long term.</p>
+
+<h3 id="2-new-goggles-batteries-chargers">2. New goggles + batteries + chargers</h3>
+
+<p>For the reasons mentioned earlier I decided to upgrade my goggles to the more fancy <a href="https://www.banggood.com/SKYZONE-SKY02C-5_8Ghz-48CH-Diversity-FPV-Goggles-Support-DVR-HDMI-With-Head-Tracker-Fan-For-RC-Racing-Drone-p-1466958.html" target="_blank">Skyzone02c</a>. The goggle comes with a lot of ports like the HDMI and SD card slot, 2  anthennas, AV cables, power cables that connects to an XT60 port (common connection for FPV batteries), but NO BATTERIES! I actually didn’t see that coming so as of the time I&rsquo;m writing this, I&rsquo;m still patiently waiting for my order to arrive.</p>
+
+<p>When it comes to batteries there are soo much options! I spent a night researching and seems like if I was to get LIPO batteries I&rsquo;d also need one of <a href="https://www.banggood.com/ISDT-Q8-BattGo-500W-20A-High-Power-Battery-Balance-Charger-Discharger-for-1-8S-Lipo-Battery-p-1596875.html" target="_blank">these chargers</a>, and had to pay much attention to the capacity and the series of the battery (determines how much Amp you need to charge it with). I think these are pretty advanced and requires lots of care. (ie. Charging at the wrong chemistry could cause the battery to swell or blow up.  Make sure you have an insurance for your house :smirk:)
+In the end I decided to go with a <a href="https://www.banggood.com/1pcs-NCR18650B-3400mAH-3_7-V-Unprotected-Rechargeable-li-ion-Battery-p-72906.html" target="_blank">7.4V LI-ION batteries</a> with a <a href="https://www.banggood.com/Fatshark-7_4V-18650-Li-ion-Cell-Battery-Case-Box-DC5_5+2_5-For-FPV-Goggles-Video-Headset-without-Battery-p-1133893.html" target="_blank">FatShark battery case</a>. I also need the <a href="https://www.banggood.com/Liitokala-lii-202-5V-2A-18650266501634014500-Micro-USB-Battery-Charger-p-1141175.html" target="_blank">LI-ION charger</a> which looks to me like the simplest option compared with having to deal with the different settings in most FPV battery chargers. Not sure if this was the right choice, but the only real way to know is to try it out myself I guess. Note that this was only to charge the goggles. Maybe buying an actual standard 4-button charger would be preferable for someone looking to charge different types of batteries (like the LIPO to charge the drone).</p>
+
+<h3 id="3-simulation">3. Simulation</h3>
+
+<p>The simulation doesn&rsquo;t come free and I think it&rsquo;s a good investment to purchase some of the common ones, since you ideally wanna get the physics similar to flying the actual drone. I purchased &lsquo;<a href="https://www.velocidrone.com" target="_blank">Velocidrone</a>&rsquo; for 20 pounds. There are multiplayer races, and different types of drone and maps to try out. I bind my FPV controllers with the game and hopefully could connect my new headgear in the future through HDMI or DVI (once the battery arrives).</p>
+
+<h3 id="4-betaflight-configurator">4. Betaflight Configurator</h3>
+
+<p><a href="https://github.com/betaflight/betaflight" target="_blank">Betaflight Configurator</a> is an open source software used to configure your drone, goggles or controller. Although the ready-to-fly package came preconfigured, there&rsquo;s definitely some stuff you wanna customize like the widgets you see on the goggles display, calibration, testing the motors, and assigning commands on the controller. There&rsquo;s definitely a huge amount of advanced setting like (tuning the PID controllers, the sensors, etc) and would be the go-to tool to debug if things go wrong.</p>
+
+<h2 id="few-basics">Few Basics</h2>
+
+<p>There&rsquo;s 4 propellers. That means that you can have at most 4 degrees of freedom (roll, pitch, yaw and throttling the propeller to move vertically). With a FPV you can control all 4 of those unlike the cinematic DJI drones I flew in the past which constraints some of these movements for stability. Afaik the standard DJI drones also have GPS features allowing for stable flight, but it&rsquo;ll be difficult to fly indoors. That&rsquo;s why controlling the FPV is extremely hard since the pilot is given full manual control - but you also get more freedom to perform tricks like the 360 flip or rolls.</p>
+
+<p>There are also 3 flying modes (acro, angle, and horizon). The angle is the easiest since it auto-levels and won&rsquo;t let you rotate above certain angle limits. The horizon auto-levels like angle mode but if you keep push the joystick all the way, it allows full rotations like the acro. The acro mode has no constraints and won&rsquo;t auto-level. Some people suggests going straight to acro so you don&rsquo;t have to relearn some of the habits you developed down the road.</p>
+
+<h2 id="learning-experience">Learning Experience</h2>
+
+<p>It’s like riding a bike. Knowing the theory won&rsquo;t help you as much as actually doing them and crashing. Then one day, the neurons in your brain just find the connections on their own. That pattern certainly occurred to me as I played the simulation for the first couple of weeks. I started out not being able to hover properly especially in the indoor maps, and had a hard time making sharp turns. Few weeks later, my fingers move on their own with minimal conscious effort. Amazing how the brain works!</p>
+
+<p>Once I felt comfortable enough, I went to the park to test it out. My first few flights was awful. Going from simulation I didn&rsquo;t really know what to expect. Some of my mistakes were:
+- Realizing that after you arm and your propeller joystick is all the way down, the propellers will spin, but won&rsquo;t fly until you actually increase its speed/throttle. So pushing the joystick down midair is like letting it go on freefall.
+- Not to fly above concrete.. Especialy when you haven&rsquo;t learned to properly hover.
+- Start with training your hovering and simple movements. When I started, I focus too much on wanting to move around which didn&rsquo;t go well at all. I found it helpful to plan my flights or to train with specific milestones in mind. (start with the small wins!)
+- Pay attention to the cables in the way of the propeller (secure it with tape or a zip tie).</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>FUN is an understatement. I still feel extreme anxiety when I fly but at the same time it feels exhilarating to move around and through objects with so much agility. I am still riding that learning curve and it is a pretty advanced and dangerous sport, but I&rsquo;d still recommend this hobby to anyone in a heartbeat.</p>
+
+<p>As a bonus, here&rsquo;s my first ever flip :)
+<img src="/assets/blogAssets/starting-out-fpv/fpvflip.gif" width="400" height="400" alt="FPV flip" style="margin: 1.5rem auto;"></p>
+
+  </main>
+
+    </div>
+    <footer class="">
+      <div class="text-center text-xs">© Steven 2019</div>
+    </footer>
+  </div>
+
+  </body>
+</html>

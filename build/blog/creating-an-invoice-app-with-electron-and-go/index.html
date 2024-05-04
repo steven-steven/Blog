@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8' name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating an Invoice App with Electron and Go</title>
+    <link rel="stylesheet" href="/assets/tailwind-b4833c7b66e180ade5b74dbb93af374217679e5e57b785dd42b4dc7f36502533.css" media="screen" />
+    <script src="/assets/build/application-25ae7184b08e1be867fb7524ac6da4947649b73896dda1d6a3ff36fd664e1ca8.js"></script>
+  </head>
+  <body class="bg-gray-100 dark:bg-slate-900 text-slate-900 dark:text-slate-300 text-sm md:text-base">
+    <div class="flex flex-col md:flex-row items-center gap-5 justify-between mx-32 mt-10 md:mt-20">
+  <a class="text-3xl font-serif font-light" href="/">Steven</a>
+  <nav class="flex gap-x-6 items-center">
+    <button data-controller="dark-toggle" data-action="dark-toggle#toggle dblclick->dark-toggle#resetSystemMode" type="button" class="inline-block align-middle nav-link">
+  <svg data-dark-toggle-target="dark" class="hidden w-6 h-6 text-slate-700" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+  <svg data-dark-toggle-target="light" class="w-6 h-6 text-slate-200" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+</button>
+      <a href="/blog">Blog</a>
+      <a href="/works">Works</a>
+  </nav>
+</div>
+    
+  <div class="max-w-[46rem] md:mx-auto flex flex-col gap-y-10 md:gap-y-20 px-6 md:px-11 leading-relaxed font-serif">
+    <div>
+      
+  <header class="pt-12 md:pt-16">
+    <h1 class="text-2xl md:text-3xl font-bold">Creating an Invoice App with Electron and Go</h1>
+      <p class="opacity-70">Wednesday,  August 26 2020<p>
+  </header>
+  <main class="prose dark:prose-invert max-w-none mt-6 text-inherit text-sm md:text-lg prose-code:before:hidden prose-code:after:hidden prose-code:p-1 prose-code:rounded-md prose-code:font-medium prose-code:bg-gray-300 dark:prose-code:bg-slate-700">
+    <p>A long long time ago (2 years ago -ish), my dad asked me if I could make an invoice app for his company because his old software was very outdated. The old legacy software was a custom-made software still currently running on a Windows XP in his office. He had even forgotten who made it for him in the first place.</p>
+
+<p>Old Invoice Software:
+<img src="/assets/blogAssets/creating-an-invoice-app-with-electron-and-go/oldApp.png" width="400" height="400" alt="Old invoice app" style="margin: 1.5rem auto;"></p>
+
+<p>I said I&rsquo;d give it a shot, and that summer vacation I remember trying to create a web-app to generate pdf documents which I wasn&rsquo;t very successful. Somehow at that time I couldn&rsquo;t wrap my head around how I could generate a PDF file, and downloading files from the internet. As soon as that vacation ends life got busy and I ditched the entire project and never really came back to it.</p>
+
+<p>Fast forward 2 years, covid came and I have so much time at hand this summer vacation being stuck alone at home. I deviced a 2 week timeline to complete the first prototype. If I gave myself too much time I know my procrastinating brain will slack off and will probably be distracted and never completing the project. So here is a working prototype after about 2 weeks. ⏳
+(Note that I&rsquo;ve played around with Go and GoKit API before starting this. So that was a good starting point)</p>
+
+<h2 id="table-of-contents">Table of Contents</h2>
+
+<ul>
+<li><a href="#design" target="_blank">Design</a></li>
+<li><a href="#architecture-and-stack" target="_blank">Architecture and Stack</a></li>
+<li><a href="#go-api" target="_blank">Go API</a></li>
+<li><a href="#firebase" target="_blank">Firebase</a></li>
+<li><a href="#electron" target="_blank">Electron</a>
+
+<ul>
+<li><a href="#generating-pdf" target="_blank">Generating PDF</a></li>
+<li><a href="#ui-and-tailwind" target="_blank">UI and Tailwind</a></li>
+<li><a href="#table-with-react-table" target="_blank">Table with react-table</a></li>
+<li><a href="#form" target="_blank">Form</a></li>
+</ul></li>
+<li><a href="#demo" target="_blank">Demo</a></li>
+<li><a href="#overall" target="_blank">Overall</a></li>
+</ul>
+
+<h2 id="design">Design</h2>
+
+<p>I begin with a Figma design. It was my first time learning to use this software, but it&rsquo;s actually really easy to use after going through the default tutorial. I can define a custom component and duplicate them (like shadow clone jutsu), or group components together into a single entity (like the fusion dance). An clear initial design definitely helps me speed up my dev process in later stages.</p>
+
+<p>The following are screenshots of the intial 3-page design (create/edit new invoice, history list of invoices, and add new inventory item).</p>
+
+<p><img src="/assets/blogAssets/creating-an-invoice-app-with-electron-and-go/design1.png" width="400" height="400" alt="Make new Invoice design" style="margin: 1.5rem auto;">
+<img src="/assets/blogAssets/creating-an-invoice-app-with-electron-and-go/design2.png" width="400" height="400" alt="Home page design" style="margin: 1.5rem auto;">
+<img src="/assets/blogAssets/creating-an-invoice-app-with-electron-and-go/design3.png" width="400" height="400" alt="Add new item design" style="margin: 1.5rem auto;"></p>
+
+<p>There are some things I modified after getting a few feedbacks from my family. For example in the &lsquo;buat invoice&rsquo; (make invoice) page, it&rsquo;s better to keep the &lsquo;SIMPAN&rsquo; (save) and &lsquo;DOWNLOAD PDF&rsquo; buttons below the totals to make it clear that the buttons are saving the state of the entire page. I also decided to make the table editable on that page, and remove the search bar on top of the home page since it was unnecessary.</p>
+
+<h2 id="architecture-and-stack">Architecture and Stack</h2>
+
+<p>I will be honest, my choice of stack are mostly based on what interests me the most. I used Golang&rsquo;s GoKit API, and Electron Framework for the UI, both of which I&rsquo;m inexperienced at and this will be my first project with both tools.</p>
+
+<p>I learned and played around with Golang and GoKit 4 months ago so it&rsquo;s not entirely new. However, I never touched electron or build a desktop app before so I decided to go with <a href="https://github.com/electron-react-boilerplate/electron-react-boilerplate" target="_blank">electron-react-boilerplate</a> since it has builtin eslint, typescript, deployment scripts, and other things that might potentially be a huge learning curve. Overall, it was an easy transition. Developing in electron is exactly like developing web-app (renderer process) but with an extra &lsquo;main process&rsquo; which deals with native I/O operations, creating windows and dialog boxes, and other interactions with the OS. Renderer process (the React component in my case) can easily call main process through the electron API&rsquo;s IPC.</p>
+
+<p>I also used Firebase Realtime as the database since it&rsquo;s the most flexible and cheapest (and fastest to get running) option I could think of. My dad wouldn&rsquo;t mind if the data was stored locally just like the old system, but I think storing it in the cloud could add additional scalability so people could now work off that old ancient office computer.</p>
+
+<p>Finally, here&rsquo;s a rough sketch of a simple design of the services:
+<img src="/assets/blogAssets/creating-an-invoice-app-with-electron-and-go/architecture.png" width="400" height="400" alt="design" style="margin: 1.5rem auto;"></p>
+
+<p>And the DB Models for &lsquo;Item&rsquo; and &lsquo;Invoice&rsquo; documents: (my name convention: those in suffix &lsquo;_db&rsquo; are the schema stored in the database)
+<img src="/assets/blogAssets/creating-an-invoice-app-with-electron-and-go/invoiceSchema.png" width="400" height="400" alt="invoiceSchema" style="margin: 1.5rem auto;">
+<img src="/assets/blogAssets/creating-an-invoice-app-with-electron-and-go/itemSchema.png" width="400" height="400" alt="itemSchema" style="margin: 1.5rem auto;"></p>
+
+<h2 id="go-api">Go API</h2>
+
+<p>I chose Go Kit mainly as it proposes good design priciples. I read up ways to structure a microservice <a href="https://medium.com/@shijuvar/go-microservices-with-go-kit-introduction-43a757398183" target="_blank">API with gokit</a> and it seems pretty neat. There are multiple layers of the API, and once I set it up the first time it&rsquo;s really easy to add/change features after.</p>
+
+<p><img src="/assets/blogAssets/creating-an-invoice-app-with-electron-and-go/gokit.png" width="400" height="400" alt="Go Kit" style="margin: 1.5rem auto;"></p>
+
+<p>Go also has a default testing package. The challenging part was mocking the Firebase DB for unit testing which I couldn&rsquo;t figure and ended up using a third-party github.com/jeremyschlatter/firebase. It was easy to use since it provides clean interface to change between a mock and real DB instance. Buutt.. it&rsquo;s not exactly well-maintained and only supports basic functions like get, set, delete, etc.</p>
+
+<p>There are also wierd marshalling bugs (or features) in Go that I didn&rsquo;t really like.
+- when marshalling an empty slice [] it outputs a nil in JSON. Seems like its a <a href="https://medium.com/swlh/arrays-and-json-in-go-98540f2fa74e" target="_blank">common issue</a> and there&rsquo;s a pending proposal to change this behavior. But for now my workaround is simply manually checking for the nil property and initializing an empty slice. For now it&rsquo;s ugly but that works.
+- There&rsquo;s another bug (<a href="https://github.com/golang/go/issues/3117" target="_blank">with a proposal on hold</a>), where it throws an error when assigning a field element when looping in a range (which shouldn&rsquo;t happen).</p>
+
+<h2 id="firebase">Firebase</h2>
+
+<p>One problem with firebase was the limited features of using Admin SDK in Go. The event listeners are only supported for Node.js and Java SDK. So in the end I still add a client SDK component, on top of the API, that listens to changes in the DB.</p>
+
+<p>Another issue like I mentioned earlier, the Firebase mocking library I used wasn&rsquo;t well-maintained and only allow simple operations like Set, Get, and Delete. This restricts me because I couldn&rsquo;t use &lsquo;push()&rsquo; to auto-generate keys. So I ended up autoincrementing the document ids which is probably not a good practice.</p>
+
+<p>Another interesting issue I faced with Firebase is that when I having an object {} with an autoincrementing integer as keys, Firebase sometimes <a href="https://stackoverflow.com/questions/17777112/single-integer-as-key-in-firebase-firebase-array-behavior" target="_blank">treat them as an array automatically</a> (which is kind of an unexpected behavior)</p>
+
+<h2 id="electron">Electron</h2>
+
+<h3 id="generating-pdf">Generating PDF</h3>
+
+<p>My first attempt was to use <a href="https://pdfkit.org" target="_blank">PDFKit</a> for Node. It enables me to draw lines, text and shapes on the PDF canvas, which will be triggered on IPC request to the main function. However, upon packaging the file to production with webpack <a href="https://github.com/foliojs/fontkit/issues/67" target="_blank">it couldn&rsquo;t recognize a dependency file on node_module</a>. 😔</p>
+
+<p>Couldn&rsquo;t get it working so I went for an alternative which was to first have an HTML template engine (I used <a href="https://www.npmjs.com/package/ejs-electron" target="_blank">ejs-electron</a>), render that and the inputs on an invisible browser window, and <a href="https://www.geeksforgeeks.org/generate-pdf-in-electronjs/" target="_blank">print the contents of that window to an output file</a> using electron&rsquo;s default functionalities. That works like a charm ✨. Especially since styling the pdf docs just becomes a problem of writing HTML and CSS.</p>
+
+<h3 id="ui-and-tailwind">UI and Tailwind</h3>
+
+<p>The only styling library I used is <a href="https://tailwindcss.com" target="_blank">Tailwind</a>. It&rsquo;s just like writing vanilla CSS but it makes it easy to theme and a lot of shortcuts are available. Unlike libraries with pre-styled components like Material-UI, I think its preferrable to go with low-level frameworks that you can easily tweak from scratch. Would highly recommend this framework even for those learning CSS for the first time.</p>
+
+<h3 id="table-with-react-table">Table with react-table</h3>
+
+<p>I was searching for an easy React library for tables and the first thing that came up was <a href="https://github.com/tannerlinsley/react-table" target="_blank">react-table</a>. It&rsquo;s a &lsquo;headless UI library&rsquo; meaning that it doesn&rsquo;t supply any UI markups (giving me great flexibility to go with my design). What the library gives is a set of react hooks like &lsquo;useTable&rsquo; to get the props for the table, &lsquo;useSortBy&rsquo; to easily give sorting functionalities, &lsquo;usePagination&rsquo;, etc.</p>
+
+<p>It was a bit challenging especially having it working with proper type checks in typescript. Another challange was having an editable table and connecting it with the rest of the form data. But the docs are pretty good and results was pretty sick in my opinion. I have 2 types of tables in the product - one for a simple view table with sorting, and the other is an editable table connected to a form.</p>
+
+<h3 id="form">Form</h3>
+
+<p>I used <a href="https://react-hook-form.com" target="_blank">react-hook-form</a>, a super handy library that provide hooks for filling out forms. It deals with error handling validation and state changes internally and I love how much it cleans up the code and take away that extra logic aside.</p>
+
+<h2 id="demo">Demo</h2>
+
+<p>Opening the App and edit existing invoices
+<img src="/assets/blogAssets/creating-an-invoice-app-with-electron-and-go/openAndEditDemo.gif" width="400" height="400" alt="Open and edit Demo" style="margin: 1.5rem auto;"></p>
+
+<p>Testing UI responsiveness
+<img src="/assets/blogAssets/creating-an-invoice-app-with-electron-and-go/responsiveDemo.gif" width="400" height="400" alt="Responsiveness Demo" style="margin: 1.5rem auto;"></p>
+
+<p>Download pdf
+<img src="/assets/blogAssets/creating-an-invoice-app-with-electron-and-go/downloadDemo.gif" width="400" height="400" alt="Download Demo" style="margin: 1.5rem auto;"></p>
+
+<p>Create New Invoice
+<img src="/assets/blogAssets/creating-an-invoice-app-with-electron-and-go/newInvoiceDemo.gif" width="400" height="400" alt="New Item Demo" style="margin: 1.5rem auto;"></p>
+
+<p>Create New Item as it appears when creating new invoice
+<img src="/assets/blogAssets/creating-an-invoice-app-with-electron-and-go/createNewItemDemo.gif" width="400" height="400" alt="New Item Demo" style="margin: 1.5rem auto;"></p>
+
+<p>Error Handling on Offline and automatically goes back up when internet is available
+<img src="/assets/blogAssets/creating-an-invoice-app-with-electron-and-go/offlineDemo.gif" width="400" height="400" alt="Offline Demo" style="margin: 1.5rem auto;"></p>
+
+<p>Sample invoice PDF with dummy data
+<img src="/assets/blogAssets/creating-an-invoice-app-with-electron-and-go/samplePdf.png" width="400" height="400" alt="Sample PDF" style="margin: 1.5rem auto;"></p>
+
+<h2 id="overall">Overall</h2>
+
+<p>Having my dad as a client is an interesting experience mainly because he&rsquo;s not adapted to modern technology. Thus, he doesn&rsquo;t seem to have much expectations other than getting it to work.</p>
+
+<p>So without great detail/features, I just try to make things intuitive to use and try to remove possible errors as much as possible, set up unit testing for my API (which helped me TONS during my development), offline error-handling, etc. But as we know, especially for a one-person product, wishing for a bug-less code would be impossible unless I&rsquo;m the almighty lord of code.</p>
+
+<p>So I&rsquo;m going to leave this product as it is for now and attend to any issues/requests that come up in the future. I do thought about a feature where it temporarily stores the invoices locally when there&rsquo;s a network error and upload it when internet goes back up. But this is not essential requirement so I&rsquo;m going to leave it for the future. I&rsquo;m all burnt out from past week so going to chill for a bit.</p>
+
+  </main>
+
+    </div>
+    <footer class="">
+      <div class="text-center text-xs">© Steven 2019</div>
+    </footer>
+  </div>
+
+  </body>
+</html>

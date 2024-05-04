@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8' name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookclub - Practical Object-Oriented Design</title>
+    <link rel="stylesheet" href="/assets/tailwind-b4833c7b66e180ade5b74dbb93af374217679e5e57b785dd42b4dc7f36502533.css" media="screen" />
+    <script src="/assets/build/application-25ae7184b08e1be867fb7524ac6da4947649b73896dda1d6a3ff36fd664e1ca8.js"></script>
+  </head>
+  <body class="bg-gray-100 dark:bg-slate-900 text-slate-900 dark:text-slate-300 text-sm md:text-base">
+    <div class="flex flex-col md:flex-row items-center gap-5 justify-between mx-32 mt-10 md:mt-20">
+  <a class="text-3xl font-serif font-light" href="/">Steven</a>
+  <nav class="flex gap-x-6 items-center">
+    <button data-controller="dark-toggle" data-action="dark-toggle#toggle dblclick->dark-toggle#resetSystemMode" type="button" class="inline-block align-middle nav-link">
+  <svg data-dark-toggle-target="dark" class="hidden w-6 h-6 text-slate-700" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+  <svg data-dark-toggle-target="light" class="w-6 h-6 text-slate-200" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+</button>
+      <a href="/blog">Blog</a>
+      <a href="/works">Works</a>
+  </nav>
+</div>
+    
+  <div class="max-w-[46rem] md:mx-auto flex flex-col gap-y-10 md:gap-y-20 px-6 md:px-11 leading-relaxed font-serif">
+    <div>
+      
+  <header class="pt-12 md:pt-16">
+    <h1 class="text-2xl md:text-3xl font-bold">Bookclub - Practical Object-Oriented Design</h1>
+      <p class="opacity-70">Saturday,  May 29 2021<p>
+  </header>
+  <main class="prose dark:prose-invert max-w-none mt-6 text-inherit text-sm md:text-lg prose-code:before:hidden prose-code:after:hidden prose-code:p-1 prose-code:rounded-md prose-code:font-medium prose-code:bg-gray-300 dark:prose-code:bg-slate-700">
+    <p><a href="https://www.poodr.com/" target="_blank">Practical Object-Oriented Design</a>, by Sandi Metz, is a book 📖 I recently read. In the book Ruby was merely just a tool to explain the concepts of designing a program in OOP. The book went through some iterative thought process of how one would approach writing &lsquo;changeable code&rsquo; - one that is adaptable for future changes and reduce cost of maintainance.</p>
+
+<p>I wanted this post to be a pictorial collection of my notes about some difficult concepts. Some of which might be applicable in the near future. But by no means is this a full summary.</p>
+
+<h3 id="single-responsibility">Single Responsibility</h3>
+
+<ul>
+<li>Class and methods should do ☝️ thing. You should be able to summarize the method/class&rsquo;s purpose in one sentence. Small methods are easier to maintain, is more obvious, and reusable.</li>
+<li>Depend on behavior not data. Don&rsquo;t access data directly, but wrap it in a method or struct. In Ruby one could add a getter/setter method by using &lsquo;attr<em>accessor&rsquo;/&lsquo;attr</em>reader&rsquo;/&lsquo;attr_writer&rsquo;.</li>
+</ul>
+
+<h3 id="managing-dependency">Managing Dependency</h3>
+
+<ul>
+<li>Dependency: is the need to know other class&rsquo;s name, method, arguments, order of arguments. A change in a class requires change in its dependents. This is costly.</li>
+<li>The direction of dependency could go in either direction. As a rule of thumb, always depend on more stable things (won&rsquo;t change often). I&rsquo;d imagine a dependency tree where the root is more stable then it&rsquo;s children/dependents. E.g. abstract class is more stable than concrete class. Concrete class therefore shouldn&rsquo;t have many dependents (other class calling it).</li>
+<li>Postpone decisions until you have enough context. You can temporarily isolate the dependencies so it can be refactored later. Dependency are foreign invaders. Make sure to explicitly expose them (ie. isolate them in a method)</li>
+<li>prefer keyword arguments <code>function(x:, y:, z:)</code>, so arg can be passed in any order.</li>
+<li>Use polymorphism to avoid delegation. Rather than &lsquo;check if object is A do this, if object is B do that&rsquo; -&gt; you could use polymorphism (i.e. duck typing or inheritance) so A and B implements the message you&rsquo;re trying to call. The caller now trusts that each object is the right type and simply call the message (without knowing/depending on each target class).
+
+<ul>
+<li>There&rsquo;s some notes on why dynamic type language like Ruby is an advantage. Personally not too convinced now; but I&rsquo;m hoping this will change.</li>
+</ul></li>
+</ul>
+
+<p><img src="/assets/blogAssets/book-POOD/polymorphism.png" width="400" height="400" alt="Polymorphism" style="margin: 1.5rem auto;">
+- Dependency Injection: the class should depend on behavior, not the type of instance. Loose coupling is achieved by initiating the object outside, and inserting the &lsquo;behavior&rsquo;.
+<img src="/assets/blogAssets/book-POOD/dependencyInjection.png" width="400" height="400" alt="Dependency Injection" style="margin: 1.5rem auto;"></p>
+
+<h3 id="flexible-interface">Flexible Interface</h3>
+
+<ul>
+<li>public interface (public methods) is contract, that should be stable.</li>
+<li>Sequence diagram: helps you focus on message-based design (&ldquo;I need to send this message. Who should respond to it?&rdquo;). Think of the message before the object.
+
+<ul>
+<li>Analogy: Tell the chef what you want. Without specifying the ingredients/recipe.</li>
+<li>similarly, a &lsquo;Trip&rsquo; class shouldn&rsquo;t define the procedure (ie. do this do that), nor should it contain the context of other classes (ie. prepare<em>bicycle). It should focus on what it wants (ie. a Trip wants to be &lsquo;prepared&rsquo;. The preparer is abstract and can be any object that implement the duck type &lsquo;prepare</em>trip(self)&rsquo;).</li>
+</ul></li>
+<li>Make interface explicit.
+
+<ul>
+<li>Private: must be called by implicit receiver (e.g. self)</li>
+<li>Protected: allow implicit receiver &amp; explicit receiver that is of same type or subtype.</li>
+<li>Public: stable and visible anywhere</li>
+</ul></li>
+<li>Law of Demeter: long chains (classA.classB.classC.d()) indicate that public interfaces are lacking.</li>
+<li>Duck types are public interface that&rsquo;s not tied to particular class. They share code via modules (more on this later&hellip;) Test is the best documentation. (more on shared test later&hellip;)</li>
+</ul>
+
+<h3 id="inheritance">Inheritance</h3>
+
+<ul>
+<li>Inheritance: is the delegation of unknown calls to its uperclass.</li>
+<li>&lsquo;super&rsquo; in Ruby, calls the superclass method (with the same method name). If no argument specified, by default the overrided pass all its arguments to superclass.</li>
+<li>Abstract class is a repo of common behavior. Can&rsquo;t be instantiated.</li>
+<li>Template method pattern: superclass sends the messages to its subclass to acquire the specializations of it&rsquo;s subclass. Superclass must define fallback method (a template - a HOOK) if the subclass doesn&rsquo;t implement it.
+
+<ul>
+<li>the oposite of calling &lsquo;super&rsquo; (calling super requires subclass to know superclass&rsquo;s implementation, which is bad / tight-coupling)</li>
+<li>thus, subclass don&rsquo;t have to know how to interact with superclass.</li>
+</ul></li>
+</ul>
+
+<p><img src="/assets/blogAssets/book-POOD/inheritance_hook.png" width="400" height="400" alt="Inheritance hook" style="margin: 1.5rem auto;"></p>
+
+<h3 id="modules">Modules</h3>
+
+<ul>
+<li>Modules: allow different object types to play common role (ie. schedulable and scheduler). Is also a way of automatic delegation just like Inheritance (but for unrelated types).</li>
+<li>in Ruby, &lsquo;include&rsquo; modules adds it to the instance of a class (instance.x). &lsquo;extend&rsquo; modules adds it to the class (Class.x).</li>
+</ul>
+
+<p><img src="/assets/blogAssets/book-POOD/modules.png" width="400" height="400" alt="Modules" style="margin: 1.5rem auto;"></p>
+
+<h3 id="composition">Composition</h3>
+
+<ul>
+<li>Larger object owns (has-a relationship) other objects.</li>
+<li>Factory: is object whose purpose is to create other objects.</li>
+<li>Aggregation: is like Composition, except that contained object has &lsquo;independent life&rsquo; to it&rsquo;s container. (e.g. Parts object contains an array of Part object).</li>
+</ul>
+
+<p><img src="/assets/blogAssets/book-POOD/composition_factory.png" width="400" height="400" alt="Composition factory" style="margin: 1.5rem auto;"></p>
+
+<h3 id="test">Test</h3>
+
+<ul>
+<li>Test gives you confidence to refactor constantly (change design decision without altering external behavior).</li>
+<li>Tips
+
+<ul>
+<li>It&rsquo;s annoying, but the solution is to get better at it (not stop testing).</li>
+<li>write test as if you expect your future self to have amnesia.</li>
+<li>a hard-to-write test is a sign of too much dependencies / hard to reuse</li>
+<li>Don&rsquo;t write private methods, but if you do, never ever test them.</li>
+<li>Only test public class</li>
+</ul></li>
+<li>Test incoming message: test of state (make assertion about return values)</li>
+<li>Testing the 2 types of outgoing message.
+
+<ol>
+<li>Commands - has side-effect (eg. file I/O, DB). It is the sender&rsquo;s responsibility to prove that it&rsquo;s properly sent. Is a test of behavior.
+
+<ul>
+<li>assert # times and with what arguments the message is sent.</li>
+<li>Use a Mock! (a dummy observer object that expects a message &amp; arguments)</li>
+</ul></li>
+<li>Queries - has no side-effect. Don&rsquo;t require any test</li>
+</ol></li>
+<li>Testing an expensive role
+
+<ul>
+<li>Use Stubs / Test Double!</li>
+<li>Stub is a dummy object that implements the same interface. However, what if the role changes? then the test double is forced to change. How is this enforced (to prevent obsolete stub - false positive)?</li>
+<li>Use shareable tests! (a test module class) Easy way to test every object that plays the role</li>
+</ul></li>
+</ul>
+
+<p><img src="/assets/blogAssets/book-POOD/testMock.png" width="400" height="400" alt="Test mock" style="margin: 1.5rem auto;"></p>
+
+<h3 id="testing-inheritance">Testing Inheritance</h3>
+
+<ul>
+<li>Similarly, one could test the superclass interface using sharable test modules.</li>
+<li>Generally, you shouldn&rsquo;t instantiate abstract class, but you could do it in the test. This might not work for all abstract class. In that case, stub the behavior of subclass.</li>
+<li>You could define shared module (ie. AnimalInterfaceTest) to test each subclass that they responds_to the shared public abstract methods.</li>
+<li>You could define shared module (ie. AnimalSubclassTest) to test each subclass that they responds_to the required abstract methods to override (note: if not overriden, the abstract class should throw error).</li>
+</ul>
+
+<p><img src="/assets/blogAssets/book-POOD/testInterface.png" width="400" height="400" alt="Test interface" style="margin: 1.5rem auto;"></p>
+
+<h3 id="and-that-is-all">And that is all!</h3>
+
+<p>Learned stuff that seems pretty important but is often ignored. Lot&rsquo;s of Aha! moments. I&rsquo;m hoping reading this would help me be more conscious of design decisions in every code I touch.</p>
+
+<p>I think it could get <del>pretty</del> awfully complicated, and probably needs a lot of iterations to get right. But it would certainly help to start thinking about it!</p>
+
+  </main>
+
+    </div>
+    <footer class="">
+      <div class="text-center text-xs">© Steven 2019</div>
+    </footer>
+  </div>
+
+  </body>
+</html>

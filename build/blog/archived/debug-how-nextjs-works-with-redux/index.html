@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8' name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug how Next.js works with redux</title>
+    <link rel="stylesheet" href="/assets/tailwind-b4833c7b66e180ade5b74dbb93af374217679e5e57b785dd42b4dc7f36502533.css" media="screen" />
+    <script src="/assets/build/application-25ae7184b08e1be867fb7524ac6da4947649b73896dda1d6a3ff36fd664e1ca8.js"></script>
+  </head>
+  <body class="bg-gray-100 dark:bg-slate-900 text-slate-900 dark:text-slate-300 text-sm md:text-base">
+    <div class="flex flex-col md:flex-row items-center gap-5 justify-between mx-32 mt-10 md:mt-20">
+  <a class="text-3xl font-serif font-light" href="/">Steven</a>
+  <nav class="flex gap-x-6 items-center">
+    <button data-controller="dark-toggle" data-action="dark-toggle#toggle dblclick->dark-toggle#resetSystemMode" type="button" class="inline-block align-middle nav-link">
+  <svg data-dark-toggle-target="dark" class="hidden w-6 h-6 text-slate-700" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+  <svg data-dark-toggle-target="light" class="w-6 h-6 text-slate-200" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+</button>
+      <a href="/blog">Blog</a>
+      <a href="/works">Works</a>
+  </nav>
+</div>
+    
+  <div class="max-w-[46rem] md:mx-auto flex flex-col gap-y-10 md:gap-y-20 px-6 md:px-11 leading-relaxed font-serif">
+    <div>
+      
+  <header class="pt-12 md:pt-16">
+    <h1 class="text-2xl md:text-3xl font-bold">Debug how Next.js works with redux</h1>
+      <p class="opacity-70">Monday,  November 11 2019<p>
+  </header>
+  <main class="prose dark:prose-invert max-w-none mt-6 text-inherit text-sm md:text-lg prose-code:before:hidden prose-code:after:hidden prose-code:p-1 prose-code:rounded-md prose-code:font-medium prose-code:bg-gray-300 dark:prose-code:bg-slate-700">
+    <p>It&rsquo;s 4.30 a.m. My palms are sweaty, knees weak, arms are heavy. I&rsquo;ve been on this since 12 a.m already. I&rsquo;m trying to dispatch a <em>redux-thunk</em> in <em>getInitialProps</em> in Next.js but something just didn&rsquo;t go right.</p>
+
+<h2 id="the-problem-was-i-just-sleepy">The problem - Was I just sleepy?</h2>
+
+<p>I was seeing two different version of the store!</p>
+
+<p>The <em>redux-thunk</em> did successfully complete the asynchronous call and filled the store with data. But the instant after the page finish loading, the store is empty! (Whaaa)</p>
+
+<p><img src="/assets/blogAssets/debug-how-nextjs-works-with-redux/inconsistentState.PNG" width="400" height="400" alt="inconsistentState" style="margin: 1.5rem auto;"></p>
+
+<p>Above, I&rsquo;m showing the client-side store on the left side, and the server-side store on the right side. Every time I refresh, new data gets added to the server store like it&rsquo;s supposed to, but the client-side didn&rsquo;t change. Clearly, these two stores are different.</p>
+
+<p>I&rsquo;m also getting a client error <code>&quot;did not expect server HTML to contain the text node &quot;&quot; in &lt;h1&gt;&quot;</code> which suggested that there is a mismatch in the render tree between the client and server.</p>
+
+<h3 id="my-thoughts">My thoughts</h3>
+
+<p>Lots of things to think about. I thought <em>redux</em> is the one single source of truth. Why is there two conflicting versions of it? And it did load data onto the store, but why is it gone in client-side? :sleuth<em>or</em>spy:</p>
+
+<h2 id="table-of-contents">Table of Contents</h2>
+
+<p>You can jump to <a href="#solution" target="_blank">Solution</a> if that&rsquo;s what you&rsquo;re looking for. The rest are just my sleepy brain&rsquo;s thought process.</p>
+
+<ul>
+<li>  <a href="#the-problem-was-i-just-sleepy" target="_blank">The problem - Was I just sleepy?</a>
+
+<ul>
+<li>  <a href="#my-thoughts" target="_blank">My thoughts</a></li>
+</ul></li>
+<li>  <a href="#debug-and-googling" target="_blank">Debug and Googling</a></li>
+<li>  <a href="#solution" target="_blank">Solution</a></li>
+<li>  <a href="#how-next-redux-wrapper-works-under-the-hood" target="_blank">How next-redux-wrapper works (under the hood)</a></li>
+<li>  <a href="#what-i-learned-knowing-whats-beneath" target="_blank">What I learned - knowing what&rsquo;s beneath</a></li>
+</ul>
+
+<h2 id="debug-and-googling">Debug and Googling</h2>
+
+<p>Instead of using <code>getInitialProps()</code>, I tried to simply call the <em>thunk</em> using<code>mapDispatchToProps</code>. That seems to work.</p>
+
+<p>&ldquo;So there&rsquo;s nothing wrong with <em>redux-thunks</em>. The problem is in <em>getInitialProps()</em>&rdquo;, I thought.</p>
+
+<p>So here is my <em>getInitialProps()</em> where I call the <em>thunk</em>:</p>
+<pre class="javascript"><span style="color: #fbf1c7;background-color: #282828">Home</span><span style="color: #fbf1c7">.</span><span style="color: #fbf1c7;background-color: #282828">getInitialProps</span> <span style="color: #fbf1c7">=</span> <span style="color: #fb4934">async </span><span style="color: #fbf1c7">({</span> <span style="color: #fbf1c7;background-color: #282828">store</span> <span style="color: #fbf1c7">})</span> <span style="color: #fbf1c7">=&gt;</span> <span style="color: #fbf1c7">{</span>
+    <span style="color: #fb4934">await</span> <span style="color: #fbf1c7;background-color: #282828">store</span><span style="color: #fbf1c7">.</span><span style="color: #fbf1c7;background-color: #282828">dispatch</span><span style="color: #fbf1c7">(</span><span style="color: #fbf1c7;background-color: #282828">loadAllMembers</span><span style="color: #fbf1c7">());</span>
+<span style="color: #fbf1c7">};</span>
+</pre>
+<p>Looks good to me&hellip;</p>
+
+<p>I read up some similar issues</p>
+
+<ul>
+<li><p><a href="https://github.com/zeit/next.js/issues/7503" target="_blank">&ldquo;Async redux thunk in SERVER breaks&rdquo; </a> - zeit/next.js issue</p></li>
+<li><p><a href="https://medium.com/@levente.balogh/how-to-use-redux-thunk-with-next-js-5daf3fcd14fd" target="_blank">&ldquo;How to use redux-thunk with Next.js&rdquo;</a> - Medium by Levente Balogh</p></li>
+</ul>
+
+<p>The answers from those articles, is to ensure <code>getInitialProps()</code> returns a promise or use <code>async-await</code>. But I tried that already, so why is it still broken? :broken_heart:</p>
+
+<p>Then I came across <a href="https://spectrum.chat/next-js/general/can-someone-explain-to-me-how-next-redux-wrapper-works-how-many-stores-does-it-build-on-the-server-on-the-client-how-is-the-data-handled%7E5777828e-0af5-483c-9e1d-f0f8b8e11bc0" target="_blank">a question by @cerulean</a> in the next-js spectrum chat :heart:.</p>
+
+<blockquote>
+<p>&ldquo;Can someone explain to me how &lsquo;next-redux-wrapper&rsquo; works? How many stores does it build, on the server, on the client? How is the data handled?&rdquo;</p>
+</blockquote>
+
+<p>I was sceptic in the beginning, but after reading how <em>next-redux-wrapper</em> works, I looked back at the documentation and woops seems like I forgot to put something :flushed:</p>
+
+<h2 id="solution">Solution</h2>
+
+<p>Here is what I did with creating my store and using <code>withRedux()</code> HOC from <em>next-redux-wrapper</em> <strong>before the change</strong>:</p>
+<pre class="javascript"><span style="color: #fe8019">const</span> <span style="color: #fbf1c7;background-color: #282828">store</span> <span style="color: #fbf1c7">=</span> <span style="color: #fbf1c7;background-color: #282828">configureStore</span><span style="color: #fbf1c7">({</span>
+    <span style="color: #b8bb26">reducer</span><span style="color: #fbf1c7">:</span> <span style="color: #fbf1c7;background-color: #282828">rootReducer</span>
+<span style="color: #fbf1c7">});</span>
+<span style="color: #fbf1c7">...</span>
+<span style="color: #fb4934">export</span> <span style="color: #fb4934">default</span> <span style="color: #fbf1c7;background-color: #282828">withRedux</span><span style="color: #fbf1c7">(()</span> <span style="color: #fbf1c7">=&gt;</span> <span style="color: #fbf1c7;background-color: #282828">store</span><span style="color: #fbf1c7">)(</span><span style="color: #fbf1c7;background-color: #282828">MyApp</span><span style="color: #fbf1c7">);</span>
+</pre>
+<p>And here it is <strong>after the change</strong></p>
+<pre class="javascript"><span style="color: #fe8019">const</span> <span style="color: #fbf1c7;background-color: #282828">makeStore</span> <span style="color: #fbf1c7">=</span> <span style="color: #fbf1c7">(</span><span style="color: #fbf1c7;background-color: #282828">initialState</span><span style="color: #fbf1c7">,</span> <span style="color: #fbf1c7;background-color: #282828">options</span><span style="color: #fbf1c7">)</span> <span style="color: #fbf1c7">=&gt;</span> <span style="color: #fbf1c7">{</span>
+  <span style="color: #fb4934">return</span> <span style="color: #fbf1c7;background-color: #282828">configureStore</span><span style="color: #fbf1c7">({</span>
+    <span style="color: #b8bb26">reducer</span><span style="color: #fbf1c7">:</span> <span style="color: #fbf1c7;background-color: #282828">rootReducer</span><span style="color: #fbf1c7">,</span>
+    <span style="color: #b8bb26">preloadedState</span><span style="color: #fbf1c7">:</span> <span style="color: #fbf1c7;background-color: #282828">initialState</span>
+  <span style="color: #fbf1c7">});</span>
+<span style="color: #fbf1c7">};</span>
+<span style="color: #fbf1c7">...</span>
+<span style="color: #fb4934">export</span> <span style="color: #fb4934">default</span> <span style="color: #fbf1c7;background-color: #282828">withRedux</span><span style="color: #fbf1c7">(</span><span style="color: #fbf1c7;background-color: #282828">makeStore</span><span style="color: #fbf1c7">)(</span><span style="color: #fbf1c7;background-color: #282828">MyApp</span><span style="color: #fbf1c7">);</span>
+</pre>
+<p>I initially assumed that all <code>makeStore</code> does is wrap the app with an instance of the store. So I ignorantly just implemented it with an arrow function that returns the created store.</p>
+
+<p>So the real answer to this problem is I had forgotten to <strong>pass <em>initialState</em> to the store</strong>. In this case I&rsquo;m using &lsquo;redux-starter-kit&rsquo; and I had to specify the <code>preloadedState</code> when creating the store.</p>
+
+<h2 id="how-next-redux-wrapper-works-under-the-hood">How next-redux-wrapper works (under the hood)</h2>
+
+<p>As mentioned earlier, someone explains it pretty well in <a href="https://spectrum.chat/next-js/general/can-someone-explain-to-me-how-next-redux-wrapper-works-how-many-stores-does-it-build-on-the-server-on-the-client-how-is-the-data-handled%7E5777828e-0af5-483c-9e1d-f0f8b8e11bc0" target="_blank">@cerulean&rsquo;s thread</a>. I&rsquo;ll try to paraphrase it based on my understanding:</p>
+
+<p>The <em>next-redux-wrapper</em>&lsquo;s <em>withRedux()</em> HOC creates a new store every time <code>getInitialProps()</code> is called by Next.js. This store is passed down to the redux Provider.</p>
+
+<p>So yes, the store is created more than once. In fact, a new store is created in the server for every SSR request. A store is created and <code>getInitialProps()</code> returns the redux state. The client then use this returned value to <strong>reconstruct</strong> the store on the browser side (what is called as &#39;hydration&rsquo;).</p>
+
+<p>But in essence the main confusion here is really about how <em>Next.js</em> behaves. <em>next-redux-wrapper</em> simply works around under those constraints. <code>getInitialProps()</code> can be called from both client-side and server-side, so because of this they both need to have their own version of the store.</p>
+
+<p>In the thread @exogen mention about how there are 3 store creations in total for a single server request. This haven&rsquo;t been fully absorbed in my brain yet, but here are the 3 cases that the redux store is created:</p>
+
+<ol>
+<li>in server when <code>getInitialProps()</code> is called during _app.js initialization</li>
+<li>in server, store data is extracted to be serialized into <code>__NEXT_DATA__</code> to then be passed to the app constructor</li>
+<li>in client side during hydration, where the client global store is created with data from <code>__NEXT_DATA__</code></li>
+</ol>
+
+<p><strong><u>So tying back to my problem</u></strong>, I think because I didn&rsquo;t pass in the initial state of the store, the client reconstructs an empty store instead of properly extracting the values returned from the server. Thus during refresh, the data is updated on the server&rsquo;s version of the store but is empty on the client-side. That&rsquo;s my guess.</p>
+
+<h2 id="what-i-learned-knowing-whats-beneath">What I learned - knowing what&rsquo;s beneath</h2>
+
+<p>It&rsquo;s a great example that made me realize how uninformed I am about the tools I used. The JS libraries and frameworks are provided and I was making lots of assumption on &lsquo;how I think it works&rsquo;. In all honesty I am quite ignorant about how things works until things break.</p>
+
+<p>On the other end of the spectrum, the best thing about being knowledgeable about your tools is that you&rsquo;d know where it&rsquo;d gone wrong when things break. In my case, I was pretty clueless and had to spend time blindly testing, and cornering the possible causes of the problem.</p>
+
+<p>I&rsquo;d imagine in the future when more libraries and tools become so complex and black-boxed, it&rsquo;ll be hell to debug.</p>
+
+  </main>
+
+    </div>
+    <footer class="">
+      <div class="text-center text-xs">© Steven 2019</div>
+    </footer>
+  </div>
+
+  </body>
+</html>

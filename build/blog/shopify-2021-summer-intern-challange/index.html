@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8' name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopify 2021 Summer Internship Challange</title>
+    <link rel="stylesheet" href="/assets/tailwind-b4833c7b66e180ade5b74dbb93af374217679e5e57b785dd42b4dc7f36502533.css" media="screen" />
+    <script src="/assets/build/application-25ae7184b08e1be867fb7524ac6da4947649b73896dda1d6a3ff36fd664e1ca8.js"></script>
+  </head>
+  <body class="bg-gray-100 dark:bg-slate-900 text-slate-900 dark:text-slate-300 text-sm md:text-base">
+    <div class="flex flex-col md:flex-row items-center gap-5 justify-between mx-32 mt-10 md:mt-20">
+  <a class="text-3xl font-serif font-light" href="/">Steven</a>
+  <nav class="flex gap-x-6 items-center">
+    <button data-controller="dark-toggle" data-action="dark-toggle#toggle dblclick->dark-toggle#resetSystemMode" type="button" class="inline-block align-middle nav-link">
+  <svg data-dark-toggle-target="dark" class="hidden w-6 h-6 text-slate-700" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+  <svg data-dark-toggle-target="light" class="w-6 h-6 text-slate-200" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+</button>
+      <a href="/blog">Blog</a>
+      <a href="/works">Works</a>
+  </nav>
+</div>
+    
+  <div class="max-w-[46rem] md:mx-auto flex flex-col gap-y-10 md:gap-y-20 px-6 md:px-11 leading-relaxed font-serif">
+    <div>
+      
+  <header class="pt-12 md:pt-16">
+    <h1 class="text-2xl md:text-3xl font-bold">Shopify 2021 Summer Internship Challange</h1>
+      <p class="opacity-70">Wednesday,  January 06 2021<p>
+  </header>
+  <main class="prose dark:prose-invert max-w-none mt-6 text-inherit text-sm md:text-lg prose-code:before:hidden prose-code:after:hidden prose-code:p-1 prose-code:rounded-md prose-code:font-medium prose-code:bg-gray-300 dark:prose-code:bg-slate-700">
+    <p>I wanna dedicate this post on my recent side project. As the title suggests, it is primarily for a coding challenge submission as a part of Shopify&rsquo;s Summer 2021 Intern application. I&rsquo;m shooting my shot by applying for both Front-end and Back-end positions, which has two different tasks.</p>
+
+<p>This post briefly describes both projects and reflects some of the challenges and decisions I made. The code is available here: https://github.com/steven-steven/shopifyApplication</p>
+
+<h2 id="fe-application">FE application</h2>
+
+<p>Deployed App: https://shopify-application.vercel.app</p>
+
+<p>The front-end challenge was to create a webpage to help users search OMDB movies and select/nominate 5 of their favorite movies. The data were pulled from the <a href="http://www.omdbapi.com" target="_blank">OMDb public API</a>. On top of the basic requirements (search, add/remove from nominatin list, display banner after 5 nominations, etc), some extras I added includes crafting my own design, adding notifications for when the user tries to select more than 5, and a details section to show the poster image of the selected movie.</p>
+
+<p>My main stack was Next.js (using the standard &lsquo;npx create-next-app&rsquo; starter code. Then I added in Tailwind css and Typescript manually after). Normally I&rsquo;d use Redux but I decided to try and use React&rsquo;s builtin useContext and useReducer hooks for the state management for my first time. I&rsquo;d say it works really well for small projects like these.</p>
+
+<p>I was really hoping that the OMDB API supports a query to get all the movies, so I can add some kind of pagination feature. However after playing around seems like the closest I can get is searching the movie by title name/prefix. Aside from that, there wasn&rsquo;t really any blocker and I didn&rsquo;t want to spend too much time on it considering I&rsquo;m also doing the backend challenge.</p>
+
+<p>I started with an initial design/sketch on Figma:</p>
+
+<p><img src="/assets/blogAssets/shopify-2021-summer-intern-challange/figma.png" width="400" height="400" alt="DB Structure" style="margin: 1.5rem auto;"></p>
+
+<p>But as you will see, my taste of colors quickly change as I played around with CSS.</p>
+
+<p><img src="/assets/blogAssets/shopify-2021-summer-intern-challange/nominatinPicker_demo.gif" width="400" height="400" alt="Nomination Picker Demo" style="margin: 1.5rem auto;"></p>
+
+<h2 id="be-application">BE application</h2>
+
+<p>Deployed App: https://shopify-image-repository.vercel.app</p>
+
+<p>This one feels more open ended. We had to build an image repository with any tech stack we desire to use, and focus on things we are interested the most. The first thing that came to my mind was using a cloud storage to store all the uploaded image (e.g. AWS S3 or Firebase Storage). I think cost-wise Firebase is always the better choice, and it would also easily extend to the Realtime Database and Authentication service. So Firebase it is! (Also I plan to use Firebase for FYDP fourth year design project, so it&rsquo;ll be good to learn it now anyways)</p>
+
+<p>I came across a template to start off my project (<a href="https://github.com/agcty/nextjs-advanced-starter" target="_blank">nextjs-advanced-starter</a>), which provides eslint, Tailwind, Typescript out of the box.</p>
+
+<p>Most of my time was then spent on implementing Firebase Auth and Storage, which wasn&rsquo;t too difficult considering the myriad resources on the internet. React useContext hooks also made it very easy to have a clean code separation for the auth and storage services.</p>
+
+<h4 id="firestore-db-structure">Firestore DB structure</h4>
+
+<p><img src="/assets/blogAssets/shopify-2021-summer-intern-challange/dbStructure.png" width="400" height="400" alt="DB Structure" style="margin: 1.5rem auto;"></p>
+
+<h4 id="storing-images-and-its-metadata">Storing images and its metadata</h4>
+
+<p>Once I had storage working, I knew I&rsquo;d need to use Firestore to maintain the image metadata. This is required since images can ideally be uploaded with the same name and that would replace the old image with the same name. So instead, I should store the image with a uniquely generated UUID, then use Firestore to keep the UUID with all metadata like the actual image name, thumbnail size, download url. To scale this further, I could also easily add more metadata like image tags or date uploaded and use them as query/search fields.</p>
+
+<p>All in all the logic was:
+- Upload each image:
+    - Generate UUID -&gt; Upload/put the image data on the Firebase Storage
+    - Get extra metadata like the image download url and thumbnail size -&gt; upload those metadata to Firestore
+- Get images
+    - Use firestore&rsquo;s realtime feature to listen to changes
+    - I thought about loading images in batches (or pagination) in the beginning. Basically it would work by keeping track of last fetched document. But of course it would be very tricky if the data can move around or when realtime data listeners updates the data. Firestore publish a <a href="https://www.youtube.com/watch?v=poqTHxtDXwU" target="_blank">good discussion on their youtube</a>. So keeping the tradeoff between doing &lsquo;realtime + no pagination&rsquo; vs &lsquo;one time fetch + pagination&rsquo;, I think I&rsquo;ll keep the realtime feature without pagination since I expect user images to be of considerable size as of now.</p>
+
+<h4 id="security">Security</h4>
+
+<p>One thing that surprises me was that Firebase Storage resources aren&rsquo;t encrypted at rest. It&rsquo;s also publicly available meaning once the image url is exposed, then anyone is free to access it. The URL has a token part which makes it unguessable, but still, it&rsquo;d be weird to have developers be able to see user images… I&rsquo;m guessing devs could implement their own encryption/decryption (on client side or proxy server) which probably adds complexity, latency, etc.</p>
+
+<p>For now, the best I could do is specify rules for R/W requests (these rules don&rsquo;t apply to the image url). I set the Firestore and Firebase Storage rules such that users are authenticated and can only access resources that they own (the request uid match with the appropriate user collection it tries to access). I could also potentially add other validations like file size or requested content type.</p>
+<pre class="javascript"><span style="color: #fbf1c7;background-color: #282828">rules_version</span> <span style="color: #fbf1c7">=</span> <span style="color: #b8bb26;font-style: italic">'</span><span style="color: #b8bb26;font-style: italic">2</span><span style="color: #b8bb26;font-style: italic">'</span><span style="color: #fbf1c7">;</span>
+<span style="color: #fbf1c7;background-color: #282828">service</span> <span style="color: #fbf1c7;background-color: #282828">cloud</span><span style="color: #fbf1c7">.</span><span style="color: #fbf1c7;background-color: #282828">firestore</span> <span style="color: #fbf1c7">{</span>
+  <span style="color: #fbf1c7;background-color: #282828">match</span> <span style="color: #fbf1c7">/</span><span style="color: #fbf1c7;background-color: #282828">databases</span><span style="color: #fbf1c7">/</span><span style="color: #fbf1c7">{</span><span style="color: #fbf1c7;background-color: #282828">database</span><span style="color: #fbf1c7">}</span><span style="color: #b8bb26;font-style: italic">/documents </span><span style="color: #fb4934;background-color: #282828;font-weight: bold">{
+</span>    <span style="color: #fbf1c7;background-color: #282828">match</span> <span style="color: #fbf1c7">/</span><span style="color: #fbf1c7;background-color: #282828">users</span><span style="color: #fbf1c7">/</span><span style="color: #fbf1c7">{</span><span style="color: #fbf1c7;background-color: #282828">uid</span><span style="color: #fbf1c7">}</span><span style="color: #b8bb26;font-style: italic">/{document=**}  </span><span style="color: #fb4934;background-color: #282828;font-weight: bold">{
+</span>      <span style="color: #fbf1c7;background-color: #282828">allow</span> <span style="color: #fbf1c7;background-color: #282828">read</span><span style="color: #fbf1c7">,</span> <span style="color: #fbf1c7;background-color: #282828">write</span><span style="color: #fbf1c7">:</span> <span style="color: #fb4934">if</span> <span style="color: #fbf1c7;background-color: #282828">request</span><span style="color: #fbf1c7">.</span><span style="color: #fbf1c7;background-color: #282828">auth</span> <span style="color: #fbf1c7">!=</span> <span style="color: #d3869b">null</span> <span style="color: #fbf1c7">&amp;&amp;</span> <span style="color: #fbf1c7;background-color: #282828">request</span><span style="color: #fbf1c7">.</span><span style="color: #fbf1c7;background-color: #282828">auth</span><span style="color: #fbf1c7">.</span><span style="color: #fbf1c7;background-color: #282828">uid</span> <span style="color: #fbf1c7">==</span> <span style="color: #fbf1c7;background-color: #282828">uid</span><span style="color: #fbf1c7">;</span>
+    <span style="color: #fbf1c7">}</span>
+  <span style="color: #fbf1c7">}</span>
+<span style="color: #fbf1c7">}</span>
+</pre>
+<h4 id="ui">UI</h4>
+
+<p>I&rsquo;d say its a pretty basic UI. I had some pages for the authentication flow, and it will route the users to /dashboard once logged in. I used <a href="https://www.npmjs.com/package/react-grid-gallery" target="_blank">react-grid-gallery</a> to display the images. It&rsquo;s my first time using it and seems like an awesome library. Although not perfect (e.g. It doesn&rsquo;t allow custom styles for the image checkbox. The default icon style is pretty bad on white images (<a href="https://github.com/benhowell/react-grid-gallery/issues/141" target="_blank">more about the issue</a>).</p>
+
+<p><img src="/assets/blogAssets/shopify-2021-summer-intern-challange/imagerepoDemo.gif" width="400" height="400" alt="Image Repository Demo" style="margin: 1.5rem auto;"></p>
+
+  </main>
+
+    </div>
+    <footer class="">
+      <div class="text-center text-xs">© Steven 2019</div>
+    </footer>
+  </div>
+
+  </body>
+</html>

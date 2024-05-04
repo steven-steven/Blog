@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8' name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookclub - DDIA (Designing Data Intensive Applications)</title>
+    <link rel="stylesheet" href="/assets/tailwind-b4833c7b66e180ade5b74dbb93af374217679e5e57b785dd42b4dc7f36502533.css" media="screen" />
+    <script src="/assets/build/application-25ae7184b08e1be867fb7524ac6da4947649b73896dda1d6a3ff36fd664e1ca8.js"></script>
+  </head>
+  <body class="bg-gray-100 dark:bg-slate-900 text-slate-900 dark:text-slate-300 text-sm md:text-base">
+    <div class="flex flex-col md:flex-row items-center gap-5 justify-between mx-32 mt-10 md:mt-20">
+  <a class="text-3xl font-serif font-light" href="/">Steven</a>
+  <nav class="flex gap-x-6 items-center">
+    <button data-controller="dark-toggle" data-action="dark-toggle#toggle dblclick->dark-toggle#resetSystemMode" type="button" class="inline-block align-middle nav-link">
+  <svg data-dark-toggle-target="dark" class="hidden w-6 h-6 text-slate-700" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+  <svg data-dark-toggle-target="light" class="w-6 h-6 text-slate-200" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+</button>
+      <a href="/blog">Blog</a>
+      <a href="/works">Works</a>
+  </nav>
+</div>
+    
+  <div class="max-w-[46rem] md:mx-auto flex flex-col gap-y-10 md:gap-y-20 px-6 md:px-11 leading-relaxed font-serif">
+    <div>
+      
+  <header class="pt-12 md:pt-16">
+    <h1 class="text-2xl md:text-3xl font-bold">Bookclub - DDIA (Designing Data Intensive Applications)</h1>
+      <p class="opacity-70">Thursday,  May 04 2023<p>
+  </header>
+  <main class="prose dark:prose-invert max-w-none mt-6 text-inherit text-sm md:text-lg prose-code:before:hidden prose-code:after:hidden prose-code:p-1 prose-code:rounded-md prose-code:font-medium prose-code:bg-gray-300 dark:prose-code:bg-slate-700">
+    <p>It&rsquo;s more than a year since I first picked this book. I&rsquo;ve let them go a few times. Man, this was a long one! But it was worth. I picked this book early 2022 because I wanted to learn about data. I&rsquo;ve always been curious about data engineering, and challenges that come by in that space of work. I remember interviewing for Data Eng position at Shopee right after graduating undergrad, and totally blanked out terribly when asked questions like what OLAP is 🫣. This book was my redemption.</p>
+
+<p>It helps navigate through the diverse landscape of data storage/processing tools and systems, and understand its limitations. Hopefully then, we could decide which are appropriate given the challenge of quantity, complexity, and velocity of data of this information age.</p>
+
+<p>Note: This post is my attempt of summarizing. None of these thoughts belong to me.</p>
+
+<p>There was too much nuances to think of. I can&rsquo;t help but bring these ideas to ongoing discussions in my work (e.g. bringing fraud data like shop close events across the company, but want to keep actions and policies synchronous. Dataflows is bi-directional). I&rsquo;m hopeful that I&rsquo;ll come to this for reference many times in the future.</p>
+
+<h2 id="table-of-contents">Table of Contents</h2>
+
+<ul>
+<li><a href="#part-i-data-stored-in-1-machine" target="_blank">Part I: data stored in 1 machine</a>
+
+<ul>
+<li><a href="#different-data-models-query-languages" target="_blank">Different data models / query languages</a></li>
+<li><a href="#indexes" target="_blank">Indexes</a></li>
+<li><a href="#data-models" target="_blank">Data Models</a></li>
+<li><a href="#data-formats-evolving-schemas-serialization" target="_blank">Data formats, evolving schemas, serialization</a></li>
+</ul></li>
+<li><a href="#part-ii-distributed-across-machines" target="_blank">Part II: distributed across machines</a>
+
+<ul>
+<li><a href="#replication" target="_blank">Replication</a></li>
+<li><a href="#partitioning-sharding" target="_blank">Partitioning/Sharding</a></li>
+</ul></li>
+<li><a href="#part-iii-guarantees" target="_blank">Part III: Guarantees</a>
+
+<ul>
+<li><a href="#transactions" target="_blank">Transactions</a></li>
+<li><a href="#isolation-levels" target="_blank">Isolation levels</a></li>
+<li><a href="#providing-guarantees-for-distributed-machines" target="_blank">Providing guarantees for distributed machines. 😓</a></li>
+</ul></li>
+<li><a href="#part-iv-derived-data-in-heterogenous-system" target="_blank">Part IV: derived data in heterogenous system</a>
+
+<ul>
+<li><a href="#batch-processing" target="_blank">Batch processing</a></li>
+<li><a href="#stream-processing" target="_blank">Stream Processing</a></li>
+<li><a href="#stream-processing-in-practice" target="_blank">Stream Processing In Practice</a></li>
+<li><a href="#evaluating-stream-processing" target="_blank">Evaluating stream processing</a></li>
+<li><a href="#enforcing-write-constraints" target="_blank">Enforcing write constraints</a></li>
+</ul></li>
+<li><a href="#part-iv-future-of-data-systems" target="_blank">Part IV: Future of data systems</a>
+
+<ul>
+<li><a href="#data-ethics" target="_blank">Data Ethics</a></li>
+</ul></li>
+<li><a href="#miscellaneous" target="_blank">Miscellaneous</a></li>
+</ul>
+
+<h2 id="part-i-data-stored-in-1-machine">Part I: data stored in 1 machine</h2>
+
+<p>In the &lsquo;ideal system&rsquo;, what we want is Reliability, Scalability, Maintainability. <strong>Reliable</strong> systems tolerate faults of the inevitably unreliable parts. The system should tolerating hardware faults (ie. redundancy or software techniques), systematic error (ie. evaluate assumptions and edge cases, testing, isolation on failure, monitoring), human error (ie. sandbox environments, easy recovery, telemetry). Sometimes we choose to sacrifice it to reduce dev/operational cost, but be conscious when we cut corners.
+<strong>Scalable</strong> system manages the side-effects of growth in data/traffic/complexity. Load is described by &lsquo;load parameters&rsquo; (ie. rate of request, distribution of followers, r/w ratio, simultaneous user, hit rate, common operations..), then design the architecture around that load param. (e.g. make expensive fan-out write and fast read if R&gt;W rate). What happen when load param increases? How much can you tolerate? (affects on throughput, distribution of response time, etc). Worry about peak, not just average. (ie. P90 edge cases can be expensive)
+<strong>Maintainable</strong> system cares about operability (e.g. monitoring, dependency updates, anticipate issues, documentation, security, etc), simplicity (e.g. well-defined abstractions), evolvability (agile across large data systems). Maintenance cost &gt; cost of initial development.</p>
+
+<h3 id="different-data-models-query-languages">Different data models / query languages</h3>
+
+<p>Models reflect how we think of problem. Systems are built off layers of data models (ie. domain object, storage structure, memory/network, hardware, etc).
+<strong>Relational DB vs NoSQL (many non-relational db models)</strong>
+In relational db, a general purpose &lsquo;query optimizers&rsquo; abstracts away access path of execution.
+In document db, there&rsquo;s schema flexibility (implicit schema-on-read. So app need to explicitly handle any structure changes and require no data migration, saving downtime), performance from data locality (however, since entire doc is replaced on updates, keep them small, and avoid increasing its size to avoid reallocation). It&rsquo;s good for contained data, supports 1-many (nested tree), but is expensive for many-1/many-many references, joins, or may need to denormalize.
+Relational &amp; document db is converging over time (e.g. json column in SQL db, relational-like join support in Rethinkdb, etc.)
+<strong>Graph-like models</strong>
+Are more natural for complex interconnected data (e.g. social, web, road network). Can run algorithms like shortest-path and page rank. Graph can be heterogenous, a datastore containing different types (vertex representing people, location, event, checkin, comments). You can think of it as being stored in Vertices table (id, properties) and Edges table (id, tail<em>vertex, head</em>vertex, properties). Allow flexible and evolving schema, and dynamic number of joins. Querying recursively walks through the variable-length edges on the graph to look for a match (recursive CTE in SQL is much more complex)</p>
+
+<p>Query languages: <strong>Declarative</strong> (specify pattern, hides/decouple implementation, less expressive) vs <strong>Imperative</strong> (define steps to achieve goal, hard to parallelize/optimize). <strong>Map-reduce</strong> is in between imperative/declarative and pretty low-level (SQL can be implemented as series of map-reduce), but its restricted to a pure function (no side-effects so it can run independently).</p>
+
+<h3 id="indexes">Indexes</h3>
+
+<p>Knowing <em>how storage engines</em> work helps you select &amp; tune a storage engine to perform well on your load. Let&rsquo;s talk about indexes&hellip;
+<strong>Index</strong> is an additional metadata to search data in &lt; O(n) time. Fast read but slow writes from overhead (⚠️ tradeoff based on your query patterns). <strong>Secondary index</strong> helps perform joins or a field-search (ie. find all {table} with {indexed column condition}), isn&rsquo;t unique. A B-tree or log structured index can be used.</p>
+
+<p>2 approaches of indexing / storage engines:
+- <strong>Log-structured indexes</strong>: Many db use immutable append-only data file (log). Pros: sequential write is much faster than random writes, simpler concurrency and crash recovery. A simple example is <em>hash indexes</em>: an in-memory hash map <code>{PK: byte_offset_in_disk}</code>. You could have a background job to perform &lsquo;compaction&rsquo; (normalizing keys), &lsquo;merge&rsquo; segmented files, store it in new segment. During that time, new write request goes to new segment, new read requests goes to old segment. Good for high write frequency, but must fit in memory (random access and growth makes hash map on disk hard) and isn&rsquo;t good for range queries. A better example is <strong>SSTable (sorted string table) / LSM trees</strong>: like hash index, but sort the segment files by key. It makes out-of-memory compaction easy with merge-sort, allow sparse index and range queries. Keeping it sorted in disk is possible (b-trees), but even easier in memory (i.e. red-black trees, avl trees). In-memory trees are called &lsquo;memtable&rsquo;, and you write it to disk as new SSTable segment. SSTable then gets compacted &amp; merged on scheduled background job. Problem 1: recent writes to memtable is lost on db crash. Solution is to keep separate log on disk to append writes and can be cleared once memtable is written to disk. Problem 2: look-up on non-existent key is slow, as it looks through all segments. Solution is &lsquo;bloom filters&rsquo;.
+- <strong>Page-oriented indexes (ie. B-trees)</strong> is more widely used. B-trees are also sorted by key, but structured as a tree of fix-size mutable pages instead of variable-sized segments. Each page has sparse keys and in-between keys is a reference to another page that defines keys within that range. Adding new key adds to the right page, or if full splits the page in 2 halves. Tree remains balanced. (fun-fact: 4-level tree of 4kb pages with branching factor of 500 = 250 TB). Problem 1: a crash in between page mutations can lead to corrupted index. Solution is a separate &lsquo;write-ahead log&rsquo; (WAL) to write operation before executing them. Could also use &lsquo;copy-on-write&rsquo; scheme, so it&rsquo;s not mutating directly. Problem 2: Tree mutations 🌳 must be protected with latches/locks for concurrent writes. Problem 3: Is hard to maintain locality of leaf pages to be positioned sequentially in disk to optimize range queries disk seeks. Unlike LSM trees which writes merged segments in one go.</p>
+
+<p>Typically LSM-trees has faster writes, whereas B-trees has faster reads, but benchmarks depends on your workloads. LSM-trees have high write throughput with sequential writes, compress better with no fragmentation; but its background compaction job can block IO, thus p90 response time of lsm-tree is less predictable. It also requires compaction write bandwidth to keep up with incoming write throughput (otherwise you run out of disk. Need to monitor ingress or throttle)</p>
+
+<p><strong>Clustered index</strong> stores entire row as index&rsquo;s value (e.g. InnoDB PK) vs <strong>Non-Clustered index</strong> where value is a ref to heap. This allows for multi index, but needs to reallocate pointer if row size increase.</p>
+
+<p><strong>Multi-column indexes</strong> can be used to query multiple cols together without an O(nlog(n)) search (e.g. long/lat, rgb, time/temp). <em>Concatenated index</em> is most commonly used: combine fields into one key, i.e. &lsquo;firstname lastname&rsquo;, order matters depending on field of search. <em>B-tree/LSM</em> wont work on multi-dimensional range (i.e. querying locations within a long/lat range), so either need to convert to 1D (e.g. using <a href="https://en.wikipedia.org/wiki/Space-filling_curve" target="_blank">space-filling curve</a>) or use specialized spatial indexes like R-trees.</p>
+
+<p><strong>Fuzzy indexes</strong> can search for similar text or mispelling. Lucene uses <em>SStable</em> to store a term dictionary <code>{term: [...doc_ids]}</code>. Its in-memory index is a FSA of characters, which can be transformed to &lsquo;Levenshtein automaton&rsquo; to allow search for words within some edit distance.</p>
+
+<h3 id="data-models">Data Models</h3>
+
+<p><strong>In-memory databases</strong>: instead of storing data in disks, we can get durability by distributed systems and logs (ie. VoltDB, MemSQL, RAMCloud, Redis, Couchbase). Using in-memory is faster, avoid overhead of encoding the structures on disk-write, and allow data structures like priority queue/sets (in Redis).</p>
+
+<p><strong>OLTP</strong> (online transaction processing) DB stores state with low-latency R/W. The bottleneck is often disk seek time so need indexing. <strong>OLAP</strong> (online analytic processing) is used to read large records to aggregate, write bulk or store event stream. The bottleneck is often disk bandwidth to scan huge records so needs encoding/compression (e.g. Apache Hive, Spark SQL, Apache Drill)</p>
+
+<p><strong>Data warehouse</strong> runs expensive ad hoc analytical queries without affecting OLTP operations. Read-only copy of all OLTP data. Uses ETL to be extracted, transformed to analysis-friendly schema, cleaned up, and loaded to warehouse.</p>
+
+<p><strong>Star schema</strong> (aka. dimensional modeling): A <em>Fact table</em> represents timestamped event, with columns either attributes or a FK to a <em>Dimension table</em> (the 5W1H of the event, such as date/product/customer).</p>
+
+<p><strong>Column-oriented storage</strong>: Stores each columns together instead of the rows. Support OLAP access pattern that typically queries for few columns but large records. Also applies to non-relational data (ie. Parquet). Allow data compression before storage since most column values are repetitive (ie. one-hot-encoded bitmap for each distinct value in the column also allow efficient searches using bitwise operation; vectorized processing; and saves bandwidth since more data can be loaded in memory/cache on operation).</p>
+
+<p><em>Sort order</em>: every col can be sorted in ways that benefit the queries (ie. sort on date). You can have multiple sort keys, or even redundant data sorted in different ways. They make writes more difficult, but not a problem since data warehouse is read-only.</p>
+
+<p><em>Materialized views</em>: a matrix of cached aggregations (ie. SUM, COUNT..) where each FK of the fact table is a dimension (ie. data cube / OLAP cube)</p>
+
+<h3 id="data-formats-evolving-schemas-serialization">Data formats, evolving schemas, serialization</h3>
+
+<p>When data format / schema evolve, different version of code and data can coexist. You either need <strong>backward compatibility</strong> (new code handles old data) or <strong>forward compatibility</strong> (old code handles new data, often by ignoring additions)</p>
+
+<p>For <em>Thrift/Protobuf</em>: Adding required/optional field is &lsquo;forward compatible&rsquo;. Adding optional field is &lsquo;backward compatible&rsquo;. Removing optional field is &lsquo;backward compatible&rsquo;. Removing required field invalid. For <em>Avro</em>: You can only add/remove field with default, since you break compatibility when reader can&rsquo;t find a default on a schema mismatch.</p>
+
+<p><strong>Encoding/serialization</strong>: in-memory objects (optimized for access) is translated to byte-sequences when you write/send data.</p>
+
+<p>Language specific encodings (java&rsquo;s serializable, python&rsquo;s pickle, ruby&rsquo;s marshall) is convenient but language specific, vulnerable to decoding arbitrary byte sequence, unable to version, and bad performance. So prefer standard encodings (i.e. json, xml, binary variants).</p>
+
+<p>Limitations: XML/CSV can&rsquo;t distinguish number/string. JSON can&rsquo;t distinguish integers/floating-point, so large numbers are better off a string, since languages with floating-point IEEE754 like JS can&rsquo;t parse it accurately. JSON/XML don&rsquo;t support binary strings, so need to interpret as base64 hackily. Difficult to enforce schemas.</p>
+
+<p>When internal data has no pressure for interoperability, consider <strong>Binary encoding</strong>. It&rsquo;s more compact, schema is always an up-to-date documentation, track backward/forward compatibility, allow type checking for typed languages. <strong>(1) Thrift &amp; Protobuf</strong> are 2 binary encoding libraries. Both has schema so no need to include field names, but a field tag/identifier (inc #) for schema evolution. Schema is in an IDL format and code can be generated to encode/decode that schema in language of choice. <strong>(2) Avro</strong> is another binary schema. Super compact because encodings only has values without its field-name/tag/datatype. Encoder/decoder schema must be compatible, but don&rsquo;t have to be the same. Comparing both the writer and reader schema, Avro decoder provides a schema resolution (ie. matches fields by name. If in writer but not in reader schema, it&rsquo;s ignored; forward compatible. If expected in reader but not in writer schema, it fallback to reader&rsquo;s default; backward compatible). The reader can fetch the writer&rsquo;s schema either via the beginning of a large file, via the writer version number associated with the record in db, or via the beginning of network connection (ie. Avro RPC). It&rsquo;s friendlier for dynamically generated schemas, since you don&rsquo;t need to manually assign field tags like in Thrift. It also makes code generation optional so you can look at data directly as long as you have the schema.</p>
+
+<p>The concept of compatibility applies the same for other ways of sending data: (1) <em>via DB</em>: is backward compatible for its ability to decode what&rsquo;s written in the past. Forward compatible matters for example on rolling upgrades when new code inserting data doesn&rsquo;t break old code reading it, and when old code tries to modify data from newer schema it should keep the new schema intact (must be taken care in the app code). (2) <em>via Service Call</em>: data encoded/versioned between clients and server API should be compatible. <em>RPC</em> frameworks use binary encoding for performance (ie. gRPC uses protobuf) with inter-organization requests as its focus. Whereas <em>REST</em> is dominant for public APIs for its vast ecosystem and simplicity without code generation. Server is typically updated before clients, so you only need backward compatibility on request &amp; forward compatibility on response data. When service can&rsquo;t force clients to upgrade during compatibility-breaking change, they need to support multiple versions. (3) <em>via Message Passing</em>: Message is a byte sequence so can use any encoding. A use case is in Actor programming model (i.e. Elixir supervisor. Each actor communicate via messages, and can scale over multiple nodes since addresses can be local/remote and assumes messages may be lost). On rolling upgrades, you&rsquo;d need to worry about compatibility between messages sent.</p>
+
+<h2 id="part-ii-distributed-across-machines">Part II: distributed across machines</h2>
+
+<p>You can distribute data for scalability, fault tolerance / availability, geographical latency. But comes with complexity, constraints, tradeoffs. There&rsquo;s 2 common way to distribute data: <em>Replication</em> vs <em>Partitioning/Sharding</em>.</p>
+
+<h3 id="replication">Replication</h3>
+
+<p><strong>Single-leader replication:</strong>
+<em>Leader-based replication</em>: client writes to leader, leader sends to its followers the change-stream / replication logs, each followers apply changes in order. Read from any node, but write must go through the leader.</p>
+
+<p>Sync vs Async replication: On <strong>Sync replication</strong>, leader waits till data is propagated to all followers before confirming the write. On <strong>Async Replication</strong>, leader doesn&rsquo;t wait. On <strong>Semi-sync</strong>, one of the follower is sync to ensure latest data in at least 2 replica. Sync gives better guarantee/durability but blocks write.</p>
+
+<p><em>On new follower setup</em>: take a snapshot of the leader, copy to the follower, follower requests the leader&rsquo;s replication log for changes since the last snapshot, catch up.
+<em>On follower failure</em>, follower compares and catch up with the leader&rsquo;s change-log.
+<em>On failover</em> (leader failure), new leader is elected, the client and other followers including old leader are reconfigured to ack the new leader. Failover challenges include discarding async writes when old leader hasn&rsquo;t replicated it (cause inconsistency), deciding timeout before leader declared dead (unnecessary timeouts on transient load spike vs long recovery time when it fails), split brain situation, etc. Thus failover is often performed manually.</p>
+
+<p>Different ways to implement replication logs: (a) <strong>Statement based replication</strong>: forwards the instructions. But operation must be deterministic and ordered. (b) <strong>Write Ahead Log</strong> (WAL): the low/byte-level write logs are forwarded. But needs downtime on db upgrade. &copy; <strong>Logical Log replication</strong>: a separate log from the storage engine log, with per-row granularity. Nodes can run different DB versions. Logical logs can be easily parsed for CDC. (d) <strong>Trigger-based replication</strong>: move it up to the app layer / triggers / stored procedures, to run custom code. E.g. if you want to replicate subset of data or perform conflict resolution.</p>
+
+<p>Replication guarantees:
+- <strong><a id="eventual-consistency">Eventual consistency</a></strong>: On async replication, a read-replica could be stale. But will be eventually consistent. &lsquo;eventually&rsquo; (replication lag) is vague.
+- <strong>&ldquo;Reading your own writes&rdquo; / &ldquo;read-after-write&rdquo; consistency</strong>: guarantee you read changes you write instantly. Implementations: (1) Read modified data from the leader, (2) Client/server can track time since last update and only use follower with replication lag within 1 min. For consistency across device, you may need to route a user&rsquo;s devices to same replica and somehow maintain a central timestamp.
+- <strong>&ldquo;Monotonic reads&rdquo;</strong> guarantee you don&rsquo;t go to older replica along a read sequence. So user don&rsquo;t see things move back in time, like making several reads and seeing the comment appear &amp; disappear. Implementation: restrict user to read from 1 replica.
+- <strong>&ldquo;Consistent Prefix Reads&rdquo;</strong> guarantee if sequence of writes happen in some order, anyone reading will see them in same order. So observer don&rsquo;t see answers appear before the question when reading from multiple replicas/partitions. Implementation: restrict that any causal related event writes to the same partition, or use algorithm to track causal dependencies (see <a href="#miscellaneous" target="_blank">footnotes</a>)
+- See more later (ie. <a href="#consistency" target="_blank">Consistency guarantees</a>)</p>
+
+<p>Dealing w these issues in app code is complex. &lsquo;Transactions&rsquo; try to hide these guarantees. Stronger guarantees are expensive, so use it sparingly.</p>
+
+<p><strong>Multi-leader replication</strong>:</p>
+
+<p>Use multi-leader replication to scale writes, add performance, and tolerate outages. But needs write-conflict resolution for concurrent writes. A common strategy is 1 leader per datacenter. Each leader acts as followers to other leaders. Is complex and should be avoided when possible.</p>
+
+<p>Other use cases: (1) Offline db has same architecture as multi-leader replication. Each device is its own write leader that asynchronously synchronize over unreliable network. Tools like CouchDB make multi-leader configuration easier. (2) Real-time collaborative editing apps.</p>
+
+<p><strong><a id="resolve_conflict">Detect/resolve write conflicts</a></strong>: (1) Avoid them when possible. I.e. route user through only 1 datacenter. (2) Resolve order/inconsistent state on write via timestamp/uuid (i.e. last write wins) (It&rsquo;s prone to data loss on concurrent writes but is acceptable for uses like caching) (3) Merge/concatenate values if possible (4) Resolved on read by storing the conflicted data and resolving it with a user-prompt. (5) Use algorithm to detect whether its a &lsquo;concurrent issue&rsquo; or &lsquo;happens-before&rsquo; (see <a href="#miscellaneous" target="_blank">footnotes</a>). Version vector could be passed along the replicas. Each client override/merge data for &lsquo;happens-before&rsquo; causality and keep all &lsquo;concurrent&rsquo; writes (for resolution).</p>
+
+<p>Replication topologies: describe how write is propagated through the leaders (ie. circular, start, all-to-all). Tradeoff: single point of failure vs causality issues (some links are faster than others leading to disordered messages on arrival. Similar problem to &lsquo;consistent prefix read&rsquo;. To order events, use &lsquo;version vectors&rsquo;, but many systems implement conflict detection poorly so read/test your guarantees carefully)</p>
+
+<p><strong>Leaderless replication</strong> (aka dynamo-style db):</p>
+
+<p>Client (or a coordinator node) sends writes to many replicas. Writing only need majority of acks. Reading are also sent to several nodes (version # is used to determine which value is newer). Pros: high availability (no failover), low latency, tolerate stale reads. Cons: not fault tolerant against network failure.</p>
+
+<p><em>General quorum rules</em>: With n replicas, write must be confirmed by w nodes and reads must query at least r nodes. We&rsquo;ll get up-to-date value as long as <code>w+r&gt;n</code>. Balance w/r values based on # of node failures you can tolerate, but don&rsquo;t take them as guarantees as there are edge cases (ie. concurrent writes, rollback hasn&rsquo;t occur after failed write, etc).</p>
+
+<p><em>Copying over missing data to stale replicas</em> can be done via (a) read-repair (reader fix any stale it found), or (b) anti-entropy run background process to copy over missing diffs</p>
+
+<p><strong>Monitoring staleness</strong> is important for db health. On leader-based replication, you could track replication lag metrics (leader&rsquo;s replication log position - follower&rsquo;s position). In leaderless replication, there&rsquo;s no fixed write order so this is difficult.</p>
+
+<p><em>Sloppy quorums</em> (optional. To tolerate network failure): When quorum isn&rsquo;t reached (ie. potential network failure), accept the writes anyway rather than returning errors. Write it to your neighbouring nodes temporarily, for durability and not part of the quorum. When nodes recover, return the write to the home nodes - &lsquo;hinted handoff&rsquo;.</p>
+
+<h3 id="partitioning-sharding">Partitioning/Sharding</h3>
+
+<p>For larger dataset / high query throughput, you want to scale across many disks and query partitions independently. Usually combined with replication for fault tolerance. Beyond simple R/W, parallelizing query execution (multiple join, filtering, grouping, aggregations for analytics) amongst partition/nodes is a hot specialized topic.</p>
+
+<p>Goal: <em>Make partitioning fair</em> (equal data and equal query throughput). Else, it&rsquo;s &lsquo;skewed&rsquo;. A partition with a high load is called &lsquo;hot spot&rsquo;.</p>
+
+<p><em>Ways to partition</em>:
+- By key range: like a dictionary, you directly know where to go. Depending on tne data distribution, partition boundaries would need to adapt (e.g. when A-B &gt; T-Z). Cons: r/w access patterns can lead to hotspots, so design keys carefully.
+- By hash of key: hash_function(key) =&gt; partition. Data is uniformly random distributed, but doing range queries becomes tricky since no sorted order. Skewed workload can still exist (ie. a celebrity tweet). A technique is to split the hotspot keys into many and concat it with a random number, but this needs additional bookkeeping.
+- Hybrid approach: compound key. The first part identifies the partition and second part for sorts it.</p>
+
+<p>Partitioning secondary key (SK index) is more complex: 2 main approaches:
+- Document-based partitioning / local index: The row&rsquo;s SK are stored in the same partition as the PK. Writing a document updates only one partition, but expensive read since SK of all documents must be gathered from all partitions.
+- Term-based partitioning / global index: Partitions are determined by the term/SK itself, similar but independent to how PK is partitioned. Once you find the SK record, which contains array of refs to PKs, you could follow those docs across multiple partitions. Easy read, but expensive write since multiple SK indices of the document is spread across partitions (often async, which breaks read-after-write consistency).</p>
+
+<p><em>Rebalancing partitions</em>: You need to move data around partitions when adding cpu, memory, failover, etc. How do you maintain fair distribution, stay available, move sparingly to minimize time and load? Strategies: (1) <em>Fixed number of partitions</em>: Create more partitions than nodes so node:partition is 1:many. Partitions are stolen/moved between nodes. Operationally simpler but it&rsquo;s hard to configure the right # of partitions ahead of time; high overhead when partition size is small, but hard to rebalance if it grows too big. Ideally, partition size proportional to data size. (2) <em>Dynamic partitioning</em>: Allow partition to split/merge. Number of partition proportional to data size (3) <em>Fix number of partitions per node</em>: When number of nodes change, partitions splits/merge its data across.</p>
+
+<p>Rebalancing is dangerous, keep human in the loop to prevent operational surprises. It&rsquo;s an expensive operation with large amount of transferring.</p>
+
+<p><em>Service discovery</em> (how does client find the partition, i.e. routing tier). Keeping routing tier up-to-date is challenging because of consensus - use coordination service like ZooKeeper to track this mapping, or have each node implement gossip protocol, etc.</p>
+
+<p>Writing often involve multiple partition. What if one fails? -&gt; transaction!</p>
+
+<h2 id="part-iii-guarantees">Part III: Guarantees</h2>
+
+<h3 id="transactions">Transactions</h3>
+
+<p>Transaction are created to ignore many error scenarios and concurrency issues which are hard to debug and test. Multi-object transaction is needed for things like maintaining FK, updating denormalized data, updating secondary indexes.</p>
+
+<p>Guarantees transaction provides: <em>ACID</em>
+- Atomic: abort/rollback if transaction cannot be completed/committed. Prevent intermittent state so it can be safely retried. E.g. For single-object operation we can use crash logs, atomic operations like compare-and-set.
+- Consistency (shouldn&rsquo;t belong in acid): when transaction preserve validity about the data (invariants) that must always be true. However, this consistency is a property of the app code and not the DB.
+- Isolation: concurrently executing transactions are isolated from each other. <strong>Serializability</strong> means transaction can pretend it&rsquo;s the only transaction running, and if there&rsquo;s another transaction they&rsquo;re committed serially. There are weaker form of isolation levels to tradeoff for performance. E.g. lock each object
+- Durability: promise that once committed, data will persist despite faults/crashes. In practice, there&rsquo;s no guarantee - lots of bugs happen at low-level.</p>
+
+<h3 id="isolation-levels">Isolation levels</h3>
+
+<p>Serializable isolation comes with performance cost and many DB use weaker isolation levels to protect against &lsquo;some&rsquo; concurrency issues. Most implementation don&rsquo;t satisfy formal definitions of these guarantees, so don&rsquo;t blindly rely on tools; understand the problems that exist &amp; how to prevent them.</p>
+
+<p>a) <em>Read Committed</em> guarantees 2 things: (1) <strong>No dirty reads</strong>: other client can&rsquo;t read between transaction before it&rsquo;s committed. Only read committed data. <em>Implementation</em>: Read-locks blocks reads during long-running transaction. Instead, DB can store old committed value and serve them for reads during the transaction (2) <strong>No dirty writes</strong>: other client can&rsquo;t write to the resource in between transaction. Only write to committed data. <em>Implementation</em>: row-level write locks</p>
+
+<p><strong>Skew reads</strong> problem (non-repeatable reads) when there&rsquo;s a write transaction between 2 reads you might see inconsistency between the 2 reads. Although you could do a refresh, this is less tolerable for backups/long-queries that observe the db at different points in time.</p>
+
+<p>b) <strong>Snapshot isolation / Repeatable read</strong>: transaction reads from consistent snapshot. <em>Implementation</em>: DB maintain different committed version of object for each transaction (aka MVCC &lsquo;multi-version concurrency control&rsquo;). In MVCC, each transaction gets incrementing id, and updating an obj will mark-delete + create-new-block with its id. All transaction only consider blocks from committed transactions that it sees at its start. For indexes, you could keep versions with copy-on-write B-tree, or use one index for many versions and later filter visibility rules via txId.</p>
+
+<p><strong>Lost-update problem</strong>: when 2 write transactions (in form of read-modify-write) are concurrent, you risk losing earlier write (ie. 2 concurrent increments, updating documents/page, ..).</p>
+
+<p>Solutions: (1) Atomic write operations: if possible avoid read-modify-write cycle with atomic operations (ie. use <code>UPDATE .. SET value = value + 1 WHERE ...</code>). Not possible for cases like text editing. (2) Explicit locking: lock resources updated by the transaction with app code. (ie. <a href="https://dev.mysql.com/doc/refman/8.0/en/innodb-locking-reads.html#:%7E:text=FOR%20UPDATE%20reads%20the%20latest,FOR%20UPDATE%20works." target="_blank">FOR UPDATE</a>) (3) Auto detect lost updates: let concurrent transactions run in parallel and redo if race did happen. Detect race using same algo as snapshot isolation. Nice if db use this since it&rsquo;s automatic, not mysql. (4) Compare-and-set: Only set when current val match previous read, else retry. Check for db support</p>
+
+<p>On replicated db, lost-update can happen on 2 concurrent writes happening on different nodes. Locks don&rsquo;t work because there&rsquo;s no guarantee of 1 up-to-date data. You need to detect concurrent write and let app code resolve the versions (<a href="#resolve_conflict" target="_blank">see notes on resolving conflict</a>).</p>
+
+<p><strong>Write-skew problem</strong>: when 2 transaction read same set of objects then update them. Generalization of lost-update problem, but harder since there&rsquo;s now multiple objects involved, you can&rsquo;t use db constraints on multiple objects. (Ex1. 2 doctors concurrently try to leave on-call at the same time, both can succeed with its own snapshot isolation even when they shouldn&rsquo;t. Ex2. booking conflict for a meeting room).</p>
+
+<p>Solution: You could use db triggers, serializable isolation, explicit locking (doesn&rsquo;t work for Ex2 since it checks for absence and no object to attach lock to. You could create rows to represent empty slots/resources that can be locked - approach is called &lsquo;materializing conflicts&rsquo;, turning phantom into lock conflict). <strong>Phantom</strong>: where a write changes search query of another transaction.</p>
+
+<p>c) <strong>Serializable isolation</strong>. Implementations:
+- Execute in serial order: <strong>A single threaded</strong> loop execute transactions. It&rsquo;s made possible with development of bigger RAM, transactions are normally short-running. Throughput is limited but avoid concurrency issues. Single-threaded usually disable multi-statement transaction since that&rsquo;ll kill throughput with lots of network delay; instead puts transaction code in stored procedure so everything gets executed from db. You can potentially scale throughput of single thread by using multiple cores and partition data.
+- <strong>Two-phase locking 2PL</strong>: Require <em>Shared-lock</em> for reads, and <em>Exclusive-lock</em> for writes. Exclusive-lock blocks everything and Shared-lock blocks exclusive lock. There&rsquo;s also <em>Predicate-locks</em>/<em>Index-range-locks</em> which locks group of rows matching some condition. Transactions only release all of its locks at the end, so it&rsquo;s possible for deadlock, in which the DB would abort one of them. Perform significantly worse than weak isolation, reduced concurrency and queuing, due to acquiring/releasing locks.
+- <strong>Optimistic concurrency control</strong> like <em>Serializable Snapshot Isolation SSI</em>: On top of snapshot isolation, SSI use algorithm to detect serialization conflict, and should abort in situations where transaction acts on outdated premise (someone has changed something it thought was true). A read premise is outdated if (a) the MVCC read snapshot is stale due to a write from uncommitted transaction before it. At the point of premise, uncommitted transaction was ignored because it doesn&rsquo;t know if they&rsquo;re going to write. (b) a write happens after the read: Like 2PL&rsquo;s locking, we could do the same but only as a trip-wire to notify that row may be outdated. Checks if it&rsquo;s indeed modified at the end of transaction.
+  - SSI provides full serializability with small performance penalty, since no locks. Best for short transactions and on low contention since it&rsquo;s less likely to run into aborts. It&rsquo;s optimistic as it assumes everything&rsquo;s good, and checks for violation before commit (abort and retry).</p>
+
+<h3 id="providing-guarantees-for-distributed-machines">Providing guarantees for distributed machines. 😓</h3>
+
+<p>For single-node computer, total failure is better than partial failure. Makes it deterministic. However multi-nodes introduces network latency, availability, high failure rate, geographical distance, etc. We&rsquo;re forced to build reliable system from unreliable components, by building high-level concepts on top of it.</p>
+
+<h4 id="networks">Networks</h4>
+
+<p>Often the only way to communicate is across machines. With asynchronous packet networks you can&rsquo;t guarantee it arriving. Was it processed before the response were lost? Was there delay? Was it delivered?</p>
+
+<p><img src="/assets/blogAssets/book-ddia/ghosted.png" width="400" height="400" alt="Ghosted" style="margin: 1.5rem auto;"></p>
+
+<p><em>Defining, testing, and detecting network faults</em> is important, otherwise arbitrary things like data-loss. See how your system reacts to the chaos monkey (ie. node failure). You can declare node is dead if timeout keeps elapsing on multiple retries.</p>
+
+<p><em>Timeout tradeoff</em>: Long timeout (long wait) vs short timeout (cascading failures, redundancy). You could monitor and set timeout based on expected delays adaptively with a <a href="https://medium.com/@arpitbhayani/phi-%CF%86-accrual-failure-detection-79c21ce53a7a" target="_blank">Phi Accrual failure detector</a>.</p>
+
+<p>Delays happen due to network congestion and <em>queuing</em>. As incoming data increases, the switch queue will fill and packet starts dropping. There&rsquo;s also OS queue if CPU is busy, queue on sender for rate limiting, queuing on VM if it gets paused, etc.</p>
+
+<p>Use <strong>UDP</strong> for latency-intensive apps like calls. Has low reliability (ie. don&rsquo;t retry) but avoid network delays.</p>
+
+<p>Why can&rsquo;t we make network synchronous? Circuit-switch (ie. fix-line telephone network) is extremely reliable but assume a fixed amount of call bandwidth. Packet-switch protocol is used for TCP connection because they&rsquo;re optimized for bursty traffic with no particular bandwidth requirement. Tradeoff: You get variable delay in dynamic allocation, but wire is maximally utilized and cost less. You get latency guarantees in static allocation, but reduced utilization make it expensive.</p>
+
+<h4 id="clocks-and-timing-issues">Clocks and timing issues</h4>
+
+<p>Each machine has its own inaccurate quartz clock. To sync time, NTP is commonly used - where clock is adjusted to a server group, which is adjusted by more accurate sources like GPS.</p>
+
+<p>We depend on clocks: timeouts, timestamps, expiry, scheduled jobs, time metrics, generating consistent txID for snapshot isolation</p>
+
+<p>The 2 kinds of clocks are (1) <strong>Wall clock time</strong> which usually sync-ed with NTP but could move back in time so is unreliable for measuring elapsed time. (2) <strong>Monotonic clock</strong> which is guaranteed to move forward in time. Used to measure duration/elapsed time. NTP can speed/slow it down but can&rsquo;t move it back in time.</p>
+
+<p>There&rsquo;s still plenty of ways for clock sync to go wrong (i.e. NTP is limited by network delay too, process could pause at any time). And often this fails silently (data loss). If you care, you need to monitor clock offsets between machines and build robustness around it. Issues are amplified in distributed system because there&rsquo;s no shared memory you can rely on. A leader could arbitrarily pause and continue without noticing it slept. 😴</p>
+
+<p>You could prevent processes from pausing if you try hard enough: In embedded/critical systems, <strong>real-time</strong> means it needs to meet timing guarantees (nothing to do with performance). It needs expensive support from the whole stack (e.g. real time operating system RTOS guarantees cpu time, library functions document worst-case time, limit GC)</p>
+
+<p>Don&rsquo;t rely on clocks to order events. (i.e. LWW last write wins strategy won&rsquo;t work. The definition of &lsquo;recent&rsquo; depends on incorrect clock). A safer alternative is <strong>logical clock</strong>.</p>
+
+<h4 id="nodes-just-cant-work-together">Nodes just can&rsquo;t work together</h4>
+
+<p>Truth is defined by majority: there&rsquo;s only one majority and it decides the fate of the system. Even if a node believes it&rsquo;s the &lsquo;chosen one&rsquo;, it doesn&rsquo;t mean the majority agrees, and acting as if it&rsquo;s the chosen one could corrupt the system. To avoid the misleaded node from disrupting the system, you could use technique called <strong>Fencing</strong>: an incrementing counter called fencing token is given every time a &lsquo;chosen one&rsquo; is granted. The resource would collect these tokens, and reject writes if it had processed one with a higher token. E.g. for zookeper lock service you could use zxid/cversion as the token since they&rsquo;re monotonically increasing.</p>
+
+<p><em>Byzantine fault</em>: when nodes deliberately lie (e.g. faking a fencing token) it&rsquo;s harder because now they&rsquo;re unreliable and untrustable. The consensus problem in these environments are called &lsquo;Byzantine Generals Problem&rsquo;. E.g. in aerospace env, data in memory/cpu register could be corrupted by radiation and node can act arbitrarily, fraud prevention in P2P networks. Solution protocols are complicated and often impractical. Byzantine problem isnt a problem in web apps where server/firewall authorizes request and prevents malicious clients.</p>
+
+<h4 id="a-bit-about-designing-guarantees">A bit about designing guarantees</h4>
+
+<p>Although it seems like distributed systems can&rsquo;t guarantee anything, you can design system models with certain assumptions of its behavior, design the world to satisfy those assumptions, then make guarantees.</p>
+
+<p>Common <em>system models for timing assumptions</em>: (A) Synchronous model: bounded clock/network/process-pause delays. Often not practical (B) Partially synchronous model: sometimes exceed bounds but behave well most times. &copy; Async model: don&rsquo;t rely on timing/clocks/timeouts.</p>
+
+<p>Common <em>system models for node failures</em>: (A) Crash-stop faults: node either works or crash (B) Crash-recovery faults: node can recover after crash. You can preserve state in disk. &copy; Byzantine faults: nodes can do anything including decieving others</p>
+
+<p>Distributed algorithms are then designed based on these models. 2 categories of properties for an algorithm&rsquo;s correctness: (A) &lsquo;liveness property&rsquo;: something eventually happens. Can&rsquo;t point to specific time (i.e. availability) (B) &lsquo;safety property&rsquo;: nothing happens, and if it did we can point to specific time (i.e. uniqueness, monotonicity)</p>
+
+<p>Unfortunately, real world don&rsquo;t always follow system model assumptions. Yikes.. Theoretical analysis is still important, but so is empirical testing,</p>
+
+<h4 id="consistency-at-the-cost-of-fault-tolerance-performance"><a id="consistency"> Consistency </a> (at the cost of fault-tolerance &amp; performance)</h4>
+
+<p><em>Consistency guarantees</em> (of replicas)
+- <em>Eventual consistency</em> (<a href="#eventual-consistency" target="_blank">see replication</a>) is the weakest. Bugs are hard to find by testing.
+- <strong>Linearizability</strong> is the strongest. Create illusion of a single replica and no replication lags between nodes, by add another constraint that if a client reads value r, all subsequent reads should also be r.
+  - <em>Examples where we need linearizability</em>: (a) In systems that elect leader by granting locks - everyone need to read and agree of the most recently elected leader. (b) To provide uniqueness guarantees like picking usernames. &copy; In other constraints like preventing bank balance from going negative, booking same seat on a flight, sell more than available stock. (d) In cross-channel systems, delay between data passing through multiple channels can disrupt system dependent on reading both channels consistently.
+  - Implementation of linearizability: (1) If you r/w from single-leader replication &amp;&amp; doesn&rsquo;t use snapshot isolation &amp;&amp; don&rsquo;t read from a stale leader during failover. (2) Use consensus algorithm (i.e. zookeeper / etcd).
+  - Multi-leader, leaderless replication, or even cached systems can&rsquo;t be linearizable! <strong>CAP theorem</strong>: When network fault occurs, choose between consistency and availability. e.g. multi-leader replication can work independently (available) when network fails, but aren&rsquo;t linearizable.
+  - Another tradeoff of linearizability besides fault tolerance is performance.
+- <strong>Causally consistent</strong>: as long as system always obeys the right ordering of events - partial ordering: it doesn&rsquo;t care about concurrent events, just ones with happens-before relation (partial ordering graph are like git version histories with independent branches/ merges).
+  - Implementing casual consistent:
+  - (1) like how we detect concurrent writes on same key, we could generalize <em>version vector</em> to track causal dependency across entire DB. The DB needs to know which data version was already read, so version number from prior operation is passed back on write. DB tracks which data has been read by each transaction, so when transaction commits, it checks if version is up-to-date. Tracking all casual dependencies can get impractical.
+  - (2) Use logical clock, a sequence number assigned for each operation. It&rsquo;s compact and provides total order. Only works for single-leader.
+  - (3) Lamport timestamp: simple method to generate sequences consistent with causality. The timestamp is a unique pair (node ID, counter). Provides total ordering since if counter is different, we impose that the higher node ID happens before. Every node &amp; client keeps track of max counter it&rsquo;ve seen so far, and include it in every request. If a node receives a request with max &gt; it&rsquo;s counter, it increases it&rsquo;s counter to that max. Cons: order can only be determined after the fact, after you compare against all node counters. In the moment of request, it doesn&rsquo;t know if another request happened concurrently, and whether to accept/reject.</p>
+
+<h4 id="consensus">Consensus</h4>
+
+<p>The abstraction you need to make data fault-tolerant &amp; consistent across multiple nodes.</p>
+
+<p>To solve <strong>atomic commit for distributed transaction</strong> (prevent partial failure), <strong>2PC</strong> (see <a href="#twopc" target="_blank">Misc</a>) is common but not very good. 2PC gives safety but often criticized for killing performance and operational problems.</p>
+
+<p><em>Heterogenous distributed transaction</em> (transaction spans across different vendors) are even more challenging, ex. keeping db and a message broker in sync. If one fails, abort all and safely retry without risking sending it twice to a system. This is possible only if all system has same atomic commit protocol: (1) XA transactions - standard for 2PC across heterogenous tech. Not a protocol but a C library to interface with coordinator. There are limitations like the single point of failure of the coordinator. There&rsquo;re an alternative though (later)</p>
+
+<p>A consensus must satisfy: Uniform agreement (same decision for all), Integrity (only vote once), validity (vote is registered), termination (decision is made even when some nodes fail - a liveness property. 2PC doesn&rsquo;t satisfy this)</p>
+
+<p><strong>Total Order Broadcast protocol</strong>: implemented by zookeeper/etcd for broadcasting consensus. Each node broadcasts order logs it received and replicate the operations. It guarantees messages are sent reliably in fixed order, but doesn&rsquo;t guarantee when (network/eventual-consistency). But you can build linearizable storage on top of it - append a distributed log to tentatively claim the username, wait for messages to be delivered back to you, if you get back what you wrote its successful but if it&rsquo;s from another user you abort. <em>Linearizable compare-and-set, total order broadcast, consensus, are all the same problem</em></p>
+
+<p><strong>Best known consensus alg: VSR, Paxos, Raft, Zab</strong>. Most of them decides on a sequence of values, instead of deciding on 1 value which takes longer time. Total-order-broadcast performs multiple round of consensus, but it only works if there&rsquo;s a leader, and leader selection is still a consensus problem in itself.. so?</p>
+
+<p>Choosing a leader: It&rsquo;s possible to make a weaker guarantee by enforcing a unique leader for each &lsquo;epochs&rsquo;. On election, a new monotonic inc epoch number is assigned. After voting a leader in the quorum, there&rsquo;s a 2nd round to vote on their proposals - If there&rsquo;s a conflict between 2 leaders, the one with higher epoch # wins.</p>
+
+<p>This guarantee comes at cost of performance for the syncing process</p>
+
+<p>Membership &amp; coordination services like <strong>Zookeeper/etcd</strong> are &lsquo;distributed kv stores&rsquo;. Zookeeper stores in-memory small data that is fault tolerant across db nodes. It provides (1) atomic &amp; linearizable distributed locks (2) monotonically increasing fencing token (3) detect failure if node fails by periodic heartbeats (4) subscribe to value (ie. membership) changes</p>
+
+<h2 id="part-iv-derived-data-in-heterogenous-system">Part IV: derived data in heterogenous system</h2>
+
+<p>No one size fits all solution. App is inevitably going to be heterogenous with different datastores, indexes, caches, analytic systems, etc.</p>
+
+<p>3 types of system: (1) Service / online systems: accepts request, performance measured by response time (2) Batch processing / offline systems: background job consumes data, performance measured by <strong>throughput - time to crunch input of certain size</strong> (3) Stream processing / near real-time: Between online and offline, it consumes data like batch, but do it as events comes up.</p>
+
+<p>2 types of data systems, determined not by the tools but how you use it: (1) Systems of record: normalized source of truth (2) Derived data system: transformed data. Can be recreated from source if lost. Redundant but provides different pov w better read performance.</p>
+
+<h3 id="batch-processing">Batch processing</h3>
+
+<p><strong>Unix tools</strong>: are fast and powerful tool for data analyses, ie. awk/sed/grep/sort/uniq/xarg. A program&rsquo;s output can be &lsquo;piped&rsquo; to another&rsquo;s input, so the program doesn&rsquo;t need to care about the context (loose coupling / inversion of control). But you need a common interface like file/channel. It is immutable and can buffer to a disk. Limitation: you can&rsquo;t pipe to a network connection. Just for single machine</p>
+
+<p><strong>Map reduce</strong>: kinda like Unix tools but distributed. Requires <em>Job</em> to get their input and output from HDFS, and to have no side-effects. A job breaks input file into records, map to k-v pairs, sort by key (maps a key to a reducer, sorted first per partition then merged by reducer), reducer iterate over sorted pair and combine adjacent keys with same values (shuffle), reducer can generate any # of output records. <em>Workflow</em> is a chain of MR jobs. Specify directory to R/W files, and the &lsquo;workflow scheduler&rsquo; handles dependencies between MR jobs. MR handles all network communications, so don&rsquo;t need to worry about node crashes / retries, it does it transparently.</p>
+
+<p>Higher programming models like <em>Pig/Hive</em> creates abstraction on top of MR.</p>
+
+<p>When &lsquo;joining&rsquo; in batch, we try to resolve all occurrences of the association at once to save throughput. The computation should ideally be local (i.e. by copying via ETL prior), otherwise a call to a remote db will introduce nondeterminism. Example processing patterns to &lsquo;bring related data to one place&rsquo;:</p>
+
+<p><strong>Reduce-side joins</strong> (sort-merge joins) using multiple sets of mappers and one reducer. Mappers go through the referenced and referencing table separately and we sort by FK. When we reduce, we merge the 2 sources on the FK.</p>
+
+<p><strong>GROUP BY</strong> (group by key and aggregate): set mappers to group by the key. Ex use case: sessionization to bring together user session from multiple servers.</p>
+
+<p>Hot keys can cause skew in amount of data going to each reducer. Strategy: sampling job to determine if keys are hot and distribute the work over several reducers.</p>
+
+<p><strong>Map-side joins</strong>: faster than reduce-side join if you can make assumption of the input data. In distributed filesystem, knowing the layout of dataset (size, sorting, partitioning) is important for optimizing join strategies. E.g. Broadcast hash join - without a reducer, each mapper reads entirety of the small input. Even better if inputs is partitioned the same way (ie. already grouped from the output of another MR job), then hash-join can load only the necessary data for that partition (aka. partition hash join or bucketed map join).</p>
+
+<p><em>Uses of batch</em>: OLAP output reports for BI (ie. metric over time, ranking, breakdown into subcategories). In contrast, a batch process don&rsquo;t output reports, but outputs a data structure. Ex. build indexes for search engine or full-text search, build ML classifier/recommendation systems which outputs the results to DB, offline processing on graph db.</p>
+
+<p><em>Writing to DB in a batch job</em> could kill throughput, overwhelm the db, cause side-effects if the job need to restart. Solution: write output as immutable file, then bulk load it to a read-only db.</p>
+
+<p><strong>HDFS</strong> uses shared-nothing approach, just computers connected by datacenter network. A central server called &lsquo;NameNode&rsquo; keeps track of which file block are in which machine. Blocks are replicated for fail tolerance.</p>
+
+<p>Like data lake, HDFS lets you can quickly dump any raw data to it. It&rsquo;ll then be processed further by MR for ETL into a DB where they&rsquo;re carefully modelled, interpreted by the consumer (schema-on-read) using any processing models that aren&rsquo;t just limited by SQL.</p>
+
+<p><em>Materialization</em>: intermediate data written to HDFS temporarily for a 2nd job to consume. So MR only start when preceding job fully completes, unlike unix pipes which are lazy.</p>
+
+<p><strong>Other dataflow engines: (ie. Spark, Flink)</strong> handles entire workflow as 1 job, rather than independent subjobs. Can pipe operators in more flexible ways, it is generalization of MR and is usually faster. Does Lazy loading for most operation except sorting which must temporarily hold entire state. <em>Recompute from available data</em> for fault tolerance, instead of materializing to tolerate faults - Spark uses RDD and Flink checkpoints operator state. But if it&rsquo;s expensive to recompute, than materializing maybe cheaper, but otherwise materializing adds overhead.</p>
+
+<h3 id="stream-processing">Stream Processing</h3>
+
+<p>A lot of <em>data is unbounded and arrives over time</em>. Stream processing is like running batch process continuously, since dealing with those require batch processor to divide data into windows of fixed duration.  <em>Inputs</em> are timestamped events encoded in a file. Published once and subscribed by many just like batch. Related events are grouped as <strong>topic/stream</strong>.</p>
+
+<p>Alternatively, You could use a DB to store incoming events and let subscribers periodically poll, but the overhead becomes large and it&rsquo;s better for consumer to be notified. You <strong>could directly message</strong> consumer from producer without an intermediary: Ex. UDP multicast is used in finance where latency is important, brokerless pub/sub like ZeroMQ, UDP is used by StatsD to collect approx metrics, HTTP/RPC is used in webhooks. In contrast you could rely on <strong>Message brokers</strong>: runs a server with producers and consumers connected to it. It helps to tolerate unreliable clients with data held by in-mem or on disk. Typically unbounded queueing or expects &lsquo;acks&rsquo; from the client before it removes the message or redeliver.</p>
+
+<p>Message systems can take different approaches to publish/subscribe model:
+- <em>What happens on consumer lag?</em> system could drop messages, buffer, write overflows to disk, or apply backpressure like blocking producer from sending more (unix pipes/TCP).
+- <em>Are messages lost if node crash?</em> durability vs throughput/latency.
+- <em>Which consumers do you deliver the messages to?</em> ie. <strong>load balancing</strong> distribute processing by delivering each message to 1 consumer vs <strong>fan-out</strong> where each message is delivered to all consumers independently. This matters if you care about <strong>Message ordering</strong>: if the messages are causally dependent and you want to make sure all the messages in the queue is always performed in order, each consumer must listen to 1 queue, instead of loadbalancing a queue across the consumers.
+- <em>Log based message brokers</em> vs <em>AMQP based message queues</em></p>
+
+<p>Unlike batch, consuming events can be destructive as it could cause data to be deleted from broker. The idea behind <strong>log-based message brokers</strong> is to combine durable DB with the low-latency notification. Producers <em>append to log and consumers read from the log</em> sequentially. <code>tail -f</code> watched a file for data appended, and notify the consumers if they&rsquo;re waiting at the end. Additionally, <em>partition the log for high throughput</em>. A topic can be defined as group of partitions carrying same type of messages. Since <strong>partition</strong> is append-only, messages within it are totally ordered, whereas there&rsquo;s no ordering guarantee across partitions.</p>
+
+<p><img src="/assets/blogAssets/book-ddia/consumer_group.png" width="400" height="400" alt="Consumer Groups" style="margin: 1.5rem auto;"></p>
+
+<p><strong>Consumer groups</strong>: with log-based approach, fan-out is trivial since consumer can read them independently without data being deleted. To load-balance across groups, broker assign partitions to nodes in consumer group. Downsides: in a consumer group, # nodes is at most # of partitions. Long-running processes can block the rest of messages in the partition. Thus if messages are long-running, want to load-balance, and message ordering is not important, use traditional <strong>AMQP style broker</strong> instead of log-based (not persisted FIFO).</p>
+
+<p><strong>Consumer offsets</strong>: There&rsquo;s incrementing sequence # assigned to each message called &lsquo;offsets&rsquo;. All messages with offset &lt; consumer&rsquo;s current offset, has been read. Broker don&rsquo;t need acknowledgements; only periodically recording the consumer offsets. If consumer node fails, another node in the consumer group takes over at last recorded offset. You can always replay old messages by copying the consumer and set it to yesterday&rsquo;s offset. This makes it like batch, where transformations are repeatable.</p>
+
+<p>Ring buffer: Logs are segmented with old ones deleted/archived, but is pretty large since buffer is on disk. Monitor <strong>consumer lag</strong> to raise alert before slow consumer starts missing messges.</p>
+
+<h3 id="streaming-for-derived-data-systems">Streaming for derived data systems</h3>
+
+<p>Replication log is itself a stream of db write events, from leader to followers.</p>
+
+<p><em>Using streaming to keep systems in sync</em>: When updated in DB, data must be updated in the cache, search indexes, data warehouse, etc. (1) Use batch process like ETL to load new data to warehouse, re-index. Can be slow. (2) Use dual writes. Atomic commit with 2PC is expensive. (3) <strong>CDC</strong>: expose replication logs as an API for other systems to consume, rather than an internal detail in DB. <em>Implementing</em>: Using DB triggers can be fragile with large performance overhead. Parsing the replication log is more robust. ie. Kafka connect offer many CDC connectors.</p>
+
+<p><em>Building new derived data system</em>: CDC logs will be truncated after some time, but if you need a full copy of the db&hellip; (1) <strong>Record snapshots</strong> (2) <strong>Log compaction</strong>: mark a thombstone on duplicate keys for log compaction so space isn&rsquo;t proportional to write history. Every CDC change updates previous values of the same key. When you need a full copy of db, you could start from offset 0 of the log-compacted topic. This is supported by Kafka.</p>
+
+<p>CDC is beginning to be first-class interface. RethinkDB, Firebase, CouchDB allows you to subscribe changes, so external data system can derive from this log.</p>
+
+<p><strong>Event Sourcing</strong>: is a pattern similar to CDC, but events are created at app logic and reflects events rather than low-level state changes. Deriving state needs the whole history / snapshot, since compaction isn&rsquo;t possible. <strong>Commands</strong> are synchronous requests, while <strong>events</strong> are immutable facts when the commands are validated and accepted. You could split events in 2 - a tentative reservation, and a confirmation/rejection event.</p>
+
+<p><strong>Mutable state and immutable events</strong> are 2 sides of the same coin. State is integration of events over time. Immutable events recovers easily and captures more information than just latest state.</p>
+
+<p>The write-optimized event log could derive different read-optimized views, such that debates around normalization/denormalization become irrelevant as long as you keep data consistent. However keeping derived system in sync without delay (reading your own writes) pose the same challenges as distributed systems.</p>
+
+<p>Immutability also has limitations: (1) compaction is expensive when there&rsquo;s high update/delete rate (2) if data need to be deleted (ie. GDPR or accidental leak), you wish to <strong>rewrite history, not just append</strong>. Deletion is hard, and often more of &lsquo;let&rsquo;s make it harder to retrieve&rsquo;</p>
+
+<h3 id="stream-processing-in-practice">Stream Processing In Practice</h3>
+
+<p>Once you have the stream, you can:
+- create derived data and keeping it in sync
+- push the events to users in the form of push notifications or visualization
+- Processing streams! process &gt;=1 input streams to produce &gt;=1 output streams.</p>
+
+<p>🪅 Uses:</p>
+
+<p>Could be used for monitoring/alert purposes like fraud detection systems to check credit card usage patterns, trading systems to check price change and execute trades, manufacturing system to monitor status of machines, etc.</p>
+
+<p>The <strong>Complex event processing (CEP)</strong> approach is to analyze event streams by finding pattern matches to a query. When match found, processing engine emit a &lsquo;complex event&rsquo;. Reverse the role of data &amp; queries in normal db: query being long-term instead of transient.</p>
+
+<p><strong>Search on streams</strong>: like CEP but perform searches within individual events. I.e. full-text queries, media monitoring services subscribe to feeds and search for mentions of topics, get notified when new real estate matching their search criteria appears on the market. <em>Percolator feature of ES</em> is an option to implement this. It can be slow to run every document against every query. An optimization is to index the queries as well as the documents to narrow down the set of queries to match.</p>
+
+<p><strong>Stream analytics</strong>: less about finding events, but toward aggregations/metrics over large events. I.e. rate, rolling average, detect trends over windows. Use probabiilstic algorithms like bloom filters, hyperLogLog, percentile estimation to approximate results.</p>
+
+<p><strong>Materialized views</strong>: Generalizing derived states. Need beginning of time events.</p>
+
+<p>🪅 Implementations:</p>
+
+<p>Stream operator/job is similar to unix process, map reduce jobs, and dataflow engines. The only difference is stream never ends - so sort-merge joins can&rsquo;t be used, and has its own strategies of fault-tolerance since you can&rsquo;t restart from beginning.</p>
+
+<p>3 types of stream joins:
+- <strong>Stream-stream</strong> (window) joins: the processor maintain state for the streams, and emit events after the join time window. E.g. to calculate Ad click-through rate, you could store &lsquo;visit&rsquo; and &lsquo;click&rsquo; events indexed by session ID. Then, emit <em>clicked</em> event if there are both events and <em>not clicked</em> event when there&rsquo;s a visit event but it expires without seeing a matching click event. The click may be delayed, out of order, or never come.
+- <strong>Stream-table</strong> (stream enrichment) joins: For each event, the processor remotely query DB, or if it&rsquo;s small, load a DB copy to be queried locally (like map-side join). That DB needs to be updated via CDC, so processor will have 2 inputs: table changelog stream + the input stream. I.e. joining user profile with a stream of user activities.
+- <strong>Table-table</strong> joins (materialized view maintenance): the output represents a join between 2 tables, aggregated in some way, but maintained as a continuous stream. E.g. to keep twitter&rsquo;s timeline cache you join &lsquo;tweets&rsquo; and &lsquo;follows&rsquo; table to distribute the tweets to the every follower (output is a follower with aggregation of tweets).</p>
+
+<p>🪅 Challenges:</p>
+
+<p><em>Slowly changing dimension (SCD)</em> problem: the timing of the join matters to determine order. Solution: append a unique version identifier. But this prevents log compaction since that&rsquo;ll remove the versions.</p>
+
+<p>Fault tolerance: in batch it&rsquo;s easy to restart due to immutable input and the output is only written once everything completes. Can&rsquo;t do this in streams because processing never ends. Solutions:
+- <em>Microbatching &amp; checkpointing</em>: break stream into batches (in spark-streaming), or generate rolling checkpoints of state to recover when operator crashes (in Flink). But you can&rsquo;t discard output once it leaves the processor, so restarting causes side-effects.
+- <em>Atomic commit</em>: output and side-effect takes effect iff successful, used in more restricted non-heterogenous envs like Google Cloud Dataflow, Kafka.
+- <em>Idempotence</em>: operations you can perform many times, like setting a key or storing metadata so you don&rsquo;t perform the update again.</p>
+
+<p><em>Time window challenges</em>: many processing frameworks use <strong>system clock</strong> instead of event time to determine window for simplicity, but breaks down if there&rsquo;s processing lag, along with mis-ordering of messages. Leads to bad data (like unintended spikes when processor comes back up from failure). But if <strong>event time</strong> was used, (1) the source device&rsquo;s local clock can&rsquo;t be trusted. An approach is to approximate the offset as (server received time - device send time) (2) Processor won&rsquo;t know if there&rsquo;re more events to come to include in the window. <em>Staggler</em> events could come delayed if it&rsquo;s buffered elsewhere like an offline mobile app or network delay. You could either drop them since it&rsquo;s a small % and alert if too much is dropped, or publish a correction.</p>
+
+<h3 id="evaluating-stream-processing">Evaluating stream processing</h3>
+
+<p><strong>Distributed transactions (2pc) vs derived data</strong> (sync vs async): Both provides ordering and atomic guarantees, but transactions provides stronger linearizability guarantees since it&rsquo;s sync. Async log is more robust/loosely-coupled than distributed transactions.</p>
+
+<p>Deriving data helps evolve apps: You can restructure dataset for new requirements (schema migrations). Allow you to maintain old/new schema side-by-side and maintain different views of your app. Gradual migration is easily reversible at every stage.</p>
+
+<p>2 philosophies: UNIX/hadoop provides &lsquo;simple&rsquo; low level wrapper around hardware, SQL provides &lsquo;simple&rsquo; high-level abstractions that hides all complexities. <em>Unbundling databases</em>: Derived data systems works like indexes of a huge DB running various software, machines, and teams. You could see 2 ways different tools integrate: (1) <strong>Federated DB / unifying reads</strong> provide unified query interface to a variety of systems. (2) <strong>Unbundled DB / unifying writes</strong> sync writes across diff systems.</p>
+
+<p>DB events aren&rsquo;t just async jobs: You could treat DB events as messages that actors/app subscribes and responds to, but that won&rsquo;t work if order and fault-tolerance matters.</p>
+
+<p><strong>Treating read as events</strong>: read events could also be stored or streamed through a processor. Allows you to do stream joins on the DB, track causal deps (analyze user behavior) but incurs extra I/O and storage. This idea opens up possibility of <strong>query/joining multiple partitions of data</strong> (ie. apache storm distributed rpc feature).</p>
+
+<p>Subscribe vs Querying argument:
+- <strong>Stream processor vs REST</strong> in microservices: Streaming is fault tolerant and performant. You could subscribe to events and store the most recent to db locally (stream to a cache) so when it&rsquo;s needed no network call is needed. But it goes in one direction instead of req/res.
+- <strong>Write path</strong> (pre-computation stages for data to flow to derived systems - eager load) and <strong>Read path</strong> (flow of data when consumers ask for it - lazy load): Derived data is where write path meets read path, and defines tradeoff between write-time work vs read-time work. The role of caches shift the boundary between write/read path, determined depending on the load.
+- Idea of stream processing applies to stateful client (websockets/eventsource-api). When user lags behind it could keep up via log brokers. Why not extend the write-path all the way to users? The challenge is supportability in our libraries/protocols/db/frameworks.</p>
+
+<h3 id="enforcing-write-constraints">Enforcing write constraints</h3>
+
+<p><strong>Uniqueness</strong>: funnel all through single node, otherwise requires distributed consensus. You could also use stream processor to partition the unique key (each partition is total ordered), join the states, and emitting success/reject. But it&rsquo;s <em>async</em>.</p>
+
+<p>For write constraints <em>involving multi-partition</em> (ie. payee, payer, request_id), using transactions to couple partitions would kill throughput. Turns out you could equivalently use <em>stream processing to avoid atomic protocol</em>! Distribute the multi-partition write request to multiple streams (need this step for atomic commit to ensure all or neither commits happens) to be processed on each partition independently. On crash, it&rsquo;ll retry and downstream should dedup.</p>
+
+<p>Dealing with async: Unlike transactions, streams aren&rsquo;t linearizable. Consistency could mean <strong>timeliness</strong> (up to date state) or <strong>integrity</strong> correctness (no permanent corruption). <em>Streaming system keeps integrity with low performance but no guarantee on timeliness.</em> Solutions:
+- You can subscribe to the output stream for result.
+- <strong>Weaker constraints</strong>: it&rsquo;s often acceptable to violate constraint, write optimistically and apologize after. Eg. ask them to rebook/rename/reorder/refund. If the <strong>cost of apology &lt; cost of performance/availability.</strong></p>
+
+<h2 id="part-iv-future-of-data-systems">Part IV: Future of data systems</h2>
+
+<p>When zooming out, there&rsquo;s so much things you do with all the dataflows. (ie. caches, data analysis from warehouse, ML systems, notifications, etc)</p>
+
+<p>Be very clear of input/output of data systems. Funnel all input through 1 system so ordering writes become easy and consistent.</p>
+
+<p>Developments:
+- As you scale, order isn&rsquo;t guaranteed across partitions/systems (ie. microservices deploy states independently). Causal problems often arise in subtle ways (e.g. unfriend event &amp; message send could be causally dependent). Ordered consensus is an open research.
+- Batch &amp; stream is beginning to blur - Spark perform stream processing on top of batch engine. Flink performs batch on top of stream engine.
+- Lambda architecture: running stream processing for quick latency, then re-running same processing w batch to perform more reliable and exact algorithms.
+- Differential dataflow: defining materialized views via complex queries
+- Spreadsheets have dataflow capabilities ahead of most languages. Views/aggregations/index of records can recompute automatically. However, we need that to be fault-tolerant, scalable, durable, and evolve with different tech / teams.</p>
+
+<p><strong>End-to-end argument</strong>: Data corruption/correctness should be considered holistically. Low-level reliability features aren&rsquo;t sufficient, and it&rsquo;s hard to abstract away fault-tolerant mechanisms from the user. Immutability isn&rsquo;t a cure-all. You need exactly once semantics / idempotent, to make it retry-able. Transaction don&rsquo;t always ensure idempotence. E.g1. A transaction crashes as soon as it commits, the node retries as a new tcp connection when it comes back. E.g2. client crash after sending post request, they manually retry after seeing the error msg, which makes separate transactions.</p>
+
+<p>Ensuring idempotence require <strong>dedup methods</strong> that considers end-to-end dataflow. E.g. You could use a unique request_id generated client-side (event log) and the DB transaction is performed with that id as unique column.</p>
+
+<h3 id="data-ethics">Data Ethics</h3>
+
+<p>Datasets are about people, treat them with humanity. Ethics is difficult but is too important to ignore.</p>
+
+<p><strong>Discrimination</strong>: Predictive analysis is used to determine risk of bad loan, fraud, insurance coverage, hiring trustworthy people, property rental, air travel. Organizations naturally want to be cautious and better off saying no. These affects individuals and systematically exclude people from aspects of society without proof of guilt / chance to appeal (algorithmic prison). Algorithms will learn and amplify systematic biases we input. They extrapolate from the past, and a discriminatory past will be codified. We need humans and <em>moral imagination</em> to model a better evolved future.</p>
+
+<p><strong>Accountability</strong>: It&rsquo;s hard to trace how ML algorithms make decisions. Ie. Going by &ldquo;How did you, or people like you behave in the past?&rdquo; implies stereotyping. Statistical data will be wrong on individual cases. (interceptor movie meme)</p>
+
+<p>We need to make algorithms transparant, avoid reinforcing biases, fix mistakes, prevent its use to harm people; e.g. data focused to aid support for those in need instead harming the most vulnerable people.</p>
+
+<p>Feedback loops and echo chamber breeds stereotypes/misinformation/polarization. Involve systems thinking when considering consequences.</p>
+
+<p><strong>Data collection</strong>: user is no longer the customer when the service acts on the data with its own interests which may conflict with the user&rsquo;s. Advertisers are often the actual customers with user engagement being the product. Startups are valued by their surveillance capabilities. Corporates targets marginalized minorities the most. Data analysis can also reveal a lot (ie. smartwatch sensor can work out what you&rsquo;re typing). Users have little knowledge of the derived data, there is no option/dialog to negotiate how much data they&rsquo;re willing to provide (terms are set by service not user), there could be costs to people not using a service and the less privileged has less freedom of choice. Surveillance has never been this scalable and automated.</p>
+
+<p><strong>Privacy</strong>: the freedom to decide what you want to disclose to whom. These rights are often transferred to the data collector, and companies exercise those rights for them with the goal of maximizing profit. Algorithms are oblivious to personal judgements of what data is undesirable/wrong/inappropriate.</p>
+
+<p><strong>Data as toxic assets</strong>: it could land into the wrong hands, ie. data leak, bad management, the political env of tomorrow. Knowledge gives power to scrutinize others while avoiding scrutiny to oneself. Data is the pollution problem of the information age just as industrial age left us with problems that took long to safeguard, regulate, and putting a cost for businesses that benefit the commons. Between the tradeoff of over-regulating risks and preventing breakthrough, companies should self-regulate through a culture shift.</p>
+
+<h2 id="miscellaneous">Miscellaneous</h2>
+
+<p><strong>Happens-before relationship vs Concurrency</strong>: Operation A <em>happens before</em> B if B knows/depends-on/builds-upon A. While 2 operation is <em>concurrent</em> if neither happens before the other (don&rsquo;t know each other)</p>
+
+<p><strong>Algorithm to capture causal dependencies. Detect Concurrency vs Happens-before</strong>:</p>
+
+<p>DB maintain version # for every key, and increments it on every write. Client merges the values it reads, before writing them back (e.g. union, attach tombstone on deletion, RIAK supports CDRT data structure to do auto merge, include conflict resoltuion).</p>
+
+<p>The DB overwrite values with version number &lt;= the request version number (happens-before), and keep higher version number (concurrent) as siblings.</p>
+
+<p>For leaderless and multi-replicas, it&rsquo;s the same but need version number per each replica &amp; per key. You&rsquo;d have a <em>version vector</em>: collection of version number from all replica.</p>
+
+<p><strong><a id="twopc">2PC (2 Phase commit)</a></strong></p>
+
+<p>A &lsquo;coordinator&rsquo; assigns txID unique to the transaction. <em>Phase 1</em>: when ready to commit coordinator send a prepare request to each nodes if they can commit. If response is all yes, it send a <em>Phase 2</em> commit request, else, abort request to all nodes. By replying &lsquo;yes&rsquo; the node promises to commit tx without any error. And when coordinator make the final decision, it logs a commit point to disk in case it fails, and decision must be enforced no matter how many retries.</p>
+
+<p>However, 2PC is vulnerable to coordinator failure when the nodes is left blocked / in doubt from not receiving the 2nd phase&rsquo;s confirmation (thus 2pc is a blocking atomic commit protocol). This is a problem since locks are often held in transactions and so can&rsquo;t be released if blocked, making the app unavailable until resolved. The only way is for an admin to manually make the decision.</p>
+
+  </main>
+
+    </div>
+    <footer class="">
+      <div class="text-center text-xs">© Steven 2019</div>
+    </footer>
+  </div>
+
+  </body>
+</html>

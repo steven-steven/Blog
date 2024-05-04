@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  a {
+    @apply font-semibold;
+  }
+  a:hover {
+    @apply underline;
+  }
+  nav > .active {
+    @apply text-slate-400 dark:text-slate-600;
+  }
+}

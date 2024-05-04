@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8' name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookclub - The Well-Grounded Rubyist</title>
+    <link rel="stylesheet" href="/assets/tailwind-b4833c7b66e180ade5b74dbb93af374217679e5e57b785dd42b4dc7f36502533.css" media="screen" />
+    <script src="/assets/build/application-25ae7184b08e1be867fb7524ac6da4947649b73896dda1d6a3ff36fd664e1ca8.js"></script>
+  </head>
+  <body class="bg-gray-100 dark:bg-slate-900 text-slate-900 dark:text-slate-300 text-sm md:text-base">
+    <div class="flex flex-col md:flex-row items-center gap-5 justify-between mx-32 mt-10 md:mt-20">
+  <a class="text-3xl font-serif font-light" href="/">Steven</a>
+  <nav class="flex gap-x-6 items-center">
+    <button data-controller="dark-toggle" data-action="dark-toggle#toggle dblclick->dark-toggle#resetSystemMode" type="button" class="inline-block align-middle nav-link">
+  <svg data-dark-toggle-target="dark" class="hidden w-6 h-6 text-slate-700" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+  <svg data-dark-toggle-target="light" class="w-6 h-6 text-slate-200" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+</button>
+      <a href="/blog">Blog</a>
+      <a href="/works">Works</a>
+  </nav>
+</div>
+    
+  <div class="max-w-[46rem] md:mx-auto flex flex-col gap-y-10 md:gap-y-20 px-6 md:px-11 leading-relaxed font-serif">
+    <div>
+      
+  <header class="pt-12 md:pt-16">
+    <h1 class="text-2xl md:text-3xl font-bold">Bookclub - The Well-Grounded Rubyist</h1>
+      <p class="opacity-70">Friday,  June 25 2021<p>
+  </header>
+  <main class="prose dark:prose-invert max-w-none mt-6 text-inherit text-sm md:text-lg prose-code:before:hidden prose-code:after:hidden prose-code:p-1 prose-code:rounded-md prose-code:font-medium prose-code:bg-gray-300 dark:prose-code:bg-slate-700">
+    <p>Took me a few months to read this, jumping on and off. Reading <a href="/blog/book-POOD" target="_blank">POOD book</a> and working with Ruby on Rails at Shopify, sparks ✨ a deep interest in me to understand more about the Ruby language. This book by David A. Black called <a href="https://www.manning.com/books/the-well-grounded-rubyist-third-edition?gclid=Cj0KCQjwl_SHBhCQARIsAFIFRVVTvONzrTOZXYA7iDidLZwnwKe_ZIE-6AbOmf-zhHLtdVIWEGSHhukaAvliEALw_wcB" target="_blank">&lsquo;The Well-Grounded Rubyist&rsquo;</a> was actually recommended by one of my colleagues at work. As a beginner picking up the language, I learned new exciting things every chapter of this book which got me going.</p>
+
+<p>&lsquo;Understanding&rsquo; to me is key when reading programming books. I feel like it&rsquo;s tempting, but completely unnecessary to try and memorize syntaxes or anything really. If you end up forgetting, that could just be a signal that the information isn&rsquo;t important to you. But nonetheless it&rsquo;s important to know what features are available in your toolbox, and it&rsquo;ll definitely improve my literacy when reading/understanding what&rsquo;s going on in other people&rsquo;s code as well.</p>
+
+<h3 id="ruby">Ruby</h3>
+
+<p>In general, the language is very expressive. At its core almost everything in Ruby is an object (including classes, numbers, symbols..). You send messages (method call) to the receiver object, and it&rsquo;ll either make sense of them or complain. Going over some basic objects like strings, arrays, hash, date/time, I realize the methods those objects can respond to are SOOOO rich 💰. I guess whenever I ever wanna do something, there&rsquo;s probably a message that exists in that class which could help me do it idiomatically.</p>
+
+<h4 id="class-variables-scopes-variables">Class variables, scopes, variables</h4>
+
+<p>A cool new concept that is unique to Ruby is class methods (or singleton method of the class). Since a class is itself an object, it has its own method and state which isn&rsquo;t shared with the instance of itself.</p>
+
+<p>The 3 types of variables are global (name starts with $var. Never go out of scope), local, and class variables (start with @@var. A way to share data between class and its instance).</p>
+
+<p>It was also helpful to understand the Ruby scope first time learning it. Everything is top-level and the scope would change (thus, &lsquo;self&rsquo; changes) after you call a class/method/module. Luckily classes/modules are defined by a constant. You could easily look a constant up through the namespace using the scope operator ::</p>
+
+<h4 id="modules">Modules</h4>
+
+<p>Modules are just like classes, except they can&rsquo;t be instantiated. Generally use class to model an enitity, and use module to model a behavior. To mixin a module you can .include, .prepend, or .extend (includes the module to the singleton class. e.g. to add functionality to class methods).</p>
+
+<h4 id="code-blocks-enumerable-procs">Code blocks, Enumerable, Procs</h4>
+
+<p>Another really cool concept was how code block works. Methods that accepts a code block is an iterator which &lsquo;yields&rsquo; value to the block, then the block runs, and when the block returns a value that value is returned to the yield call, and the iterator method continues running from the last yielded point.</p>
+
+<p>Enumerable works the same way as iterator, except it&rsquo;s an object that yields. Enumerable is a good way to protect a collection from being modified. Classes that inherit from enumerable also has a rich set of methods available (i.e. You can use map/each/inject operations for a File object - this saves memory since you don&rsquo;t read it first).</p>
+
+<p>A related concept is Proc (lambda is closely similar). They are simply callable objects like code blocks. Instead of passing a code block you could equivalently pass in a proc with the &amp; prefix (synthetic sugar for .to_proc). Proc is also a way to implement closure since it carries its context with it.</p>
+
+<h4 id="symbols">Symbols</h4>
+
+<p>One thing that confuses me starting out Ruby was &lsquo;symbols&rsquo; (which is often interchangeable with strings). Internally, all identifiers (variable names, method names, constants..) are stored in a symbol table. Ruby exposes this to the programmers, to save the compiler some trouble of having to translate the string to symbol internally (e.g. so you can use symbols to lookup a method directly).</p>
+
+<h4 id="misc">Misc</h4>
+
+<p>One other interesting method is &lsquo;caller&rsquo; which provides array of stacktrace, at any point during the program. I just thought that this would be a really helpful method to debug in combination to the debugger.</p>
+
+<h3 id="thoughts">Thoughts</h3>
+
+<p>When people say Ruby is easy to use, I can somewhat agree - but it does need some getting used to. When you start getting familiar with what&rsquo;s available to you, I feel like that&rsquo;s when the fun starts. As quoted from the book &ldquo;The more you learn about the language, the more you can learn&rdquo;. I&rsquo;m no where near that point, but I can see myself being more fluent with it. I didn&rsquo;t like it as much when I first started, I think because it feels very different from the languages I know.</p>
+
+<p>But when I say expressive, Ruby is insanely expressive. You can build on objects during its lifetime, rewrite standard libraries, or create methods/classes dynamically at runtime. That&rsquo;s illegal! Nope. Not in ruby. The freedom in Ruby provides flexibility for whatever the programmer wants to express. In fact the last chapter of the book describes how Ruby can be coded in a functional style (e.g. use higher-order functions, immutable vs mutable objects, using &lsquo;yield_self&rsquo; method to chain operations (like .tap but returns the result), using &lsquo;curry&rsquo; method to turn your multi-argument functions into partial functions that accepts the arguments in sequence before being executed, or even support for tail-call optimization when doing recursion - reminds me of this <a href="https://www.youtube.com/watch?v=-PX0BV9hGZY" target="_blank">musical about TCO</a> 😂)</p>
+
+<h3 id="future">Future</h3>
+
+<p>Things that I can explore in the future:
+- Ruby made it easy to use Regex since it&rsquo;s also an object that you send messages to. Regex is powerful, yet can be hard to maintain. I feel like a small rake script project involving regex parsing would be quite fun to explore. It can pattern match, replace captured patterns, or just play a bit more with quantifiers, anchors and lookahead assertions (constraints), modifiers..
+- Ruby (fileutils, pathname) gives a handful of File tools, like creating directories, manipulating files in the disk.. A project involving file management could be interesting.
+- Building a DSL that utililze method_missing. There was a cool code example in the book about building XML (writing ruby DSL syntax -&gt; that can be converted into -&gt; XML).
+- Using Thread class to easily spawn threads. You can pause/resume a thread, or even use Thread keys to store thread-safe values. Furthermore, it&rsquo;s also easy to create server socket communication with TCPServer (e.g. a chat server). In the book we created a simple multiplayer rock-paper-scissor game which combines these 2 concepts.</p>
+
+  </main>
+
+    </div>
+    <footer class="">
+      <div class="text-center text-xs">© Steven 2019</div>
+    </footer>
+  </div>
+
+  </body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8' name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Source Weekend</title>
+    <link rel="stylesheet" href="/assets/tailwind-b4833c7b66e180ade5b74dbb93af374217679e5e57b785dd42b4dc7f36502533.css" media="screen" />
+    <script src="/assets/build/application-25ae7184b08e1be867fb7524ac6da4947649b73896dda1d6a3ff36fd664e1ca8.js"></script>
+  </head>
+  <body class="bg-gray-100 dark:bg-slate-900 text-slate-900 dark:text-slate-300 text-sm md:text-base">
+    <div class="flex flex-col md:flex-row items-center gap-5 justify-between mx-32 mt-10 md:mt-20">
+  <a class="text-3xl font-serif font-light" href="/">Steven</a>
+  <nav class="flex gap-x-6 items-center">
+    <button data-controller="dark-toggle" data-action="dark-toggle#toggle dblclick->dark-toggle#resetSystemMode" type="button" class="inline-block align-middle nav-link">
+  <svg data-dark-toggle-target="dark" class="hidden w-6 h-6 text-slate-700" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+  <svg data-dark-toggle-target="light" class="w-6 h-6 text-slate-200" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+</button>
+      <a href="/blog">Blog</a>
+      <a href="/works">Works</a>
+  </nav>
+</div>
+    
+  <div class="max-w-[46rem] md:mx-auto flex flex-col gap-y-10 md:gap-y-20 px-6 md:px-11 leading-relaxed font-serif">
+    <div>
+      
+  <header class="pt-12 md:pt-16">
+    <h1 class="text-2xl md:text-3xl font-bold">Open Source Weekend</h1>
+      <p class="opacity-70">Monday,  September 05 2022<p>
+  </header>
+  <main class="prose dark:prose-invert max-w-none mt-6 text-inherit text-sm md:text-lg prose-code:before:hidden prose-code:after:hidden prose-code:p-1 prose-code:rounded-md prose-code:font-medium prose-code:bg-gray-300 dark:prose-code:bg-slate-700">
+    <p><img src="/assets/blogAssets/opensource-weekend/meme.png" width="400" height="400" alt="Power" style="margin: 1.5rem auto;"></p>
+
+<p><strong>Shameless plug</strong>: Click the image below to checkout my opensource! You can easily generate the same card for your typeracer data, and use them in any readme!</p>
+
+<p><a href="https://github.com/steven-steven/typeracer-readme-stats" target="_blank"><img src="https://typeracer-readme-stats.vercel.app/api?username=juninight29" title="" alt="Steven's Typeracer stats" style="margin: 1.5rem auto;"></a></p>
+
+<p><a href="https://github.com/steven-steven/steven-steven" title="=400x400" target="_blank"><img src="/assets/blogAssets/opensource-weekend/readme.png" title="" alt="My github readme profile" style="margin: 1.5rem auto;"></a></p>
+
+<p>It&rsquo;s a long labor day weekend, and what&rsquo;s better to do than to do more labor. I think the term &lsquo;labor&rsquo; often connotes dreadful work done while being employed by someone. But by definition labor just means work in general, and the curse of having a hobby for programming is that now the line between &lsquo;labor&rsquo; vs &lsquo;leisure&rsquo; is also blurred.</p>
+
+<p>With respect to labor day, I&rsquo;d like to take this moment on kudos-ing fellow workers, and in all generations before us, who has continued to fight for the small/big improvements to our lives and the working conditions that I am lucky to enjoy today.</p>
+
+<p>Ever since graduation, I&rsquo;ve been trying to make this &lsquo;coding&rsquo; thing a hobby instead of a work and I think &lsquo;open source&rsquo; has always been the shining light at the end of the tunnel. Ya know, just have fun learning and making contributions with no commitment whatsoever (I&rsquo;ll take that back; you still need to commit and push - <strong>pun intended</strong>).</p>
+
+<p>My journey started with a friend who wanted to improve his Github profile readme for an upcoming job hunt. Baffled, I realized I&rsquo;ve never had one too! So I did what I have to do.</p>
+
+<blockquote>
+<p>I start off with a simple one, and came across an example readme profile with a cool automated card showing github stats, found that they came from a popular open-source called <a href="https://github.com/anuraghazra/github-readme-stats" target="_blank">github-readme-stats</a>, had an idea of displaying my typeracing data, looked up if there&rsquo;s an existing implementation - seems like none except that I found this other open-source called <a href="https://github.com/tobimori/typeracer-box" target="_blank">typeracer-box</a> that uses Github Workflow cron job to query the typeracer api and update the contents of a github gist to visualize the data - pretty cool stuff, I forked and implemented my own gist showing my typeracer data which I can pin on my profile, but how about go further and implement my own version of github-readme-stats that shows the typeracer data in any readme? So I forked the repo, modify the card to display typeracer data, fix some tests, remove all upstream files/features that I don&rsquo;t need, update the readme, and by the time I&rsquo;m happy with my new shiny open source project I call <a href="https://github.com/steven-steven/typeracer-readme-stats" target="_blank">typeracer-readme-stats</a>, I felt super confident with the ins-and-outs of the entire code - so why not tackle some issues? Look for an issue needing help, found an interesting one regarding failing github CI workflow, fix them in my repo, opens a PR contribution, WIN.</p>
+</blockquote>
+
+<p>That&rsquo;s it as a TLDR pals! Aside from all the grammatical folks that got trigerred from reading that paragraph, if you&rsquo;re interested, below are some major learnings from this weekend. The rest of this post are few awesome things I learned this labor day weekend:</p>
+
+<p><strong>Typeracer API</strong> (<a href="https://typeracerdata.com/about" target="_blank">docs</a>): A banger. The absence of an auth makes it perfect for simple projects.</p>
+
+<p><strong>Github profile README</strong> (<a href="https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/managing-your-profile-readme" target="_blank">guide</a>)</p>
+
+<p><strong>Anuraghazra/github-readme-stats</strong> (<a href="https://github.com/anuraghazra/github-readme-stats" target="_blank">github</a>)(A <a href="https://codecrumbs.io/library/github-readme-stats" target="_blank">how-the-repo-works guide</a>)
+  - Serves an endpoint that renders an SVG animation containing your real-time github stats. Then having the markdown/html pull in that svg as a source, I think it&rsquo;s brilliant. Who would&rsquo;ve thought to serve SVG data dynamically through an endpoint.
+  - SVG and CSS animation is a powerful combination.
+  - The code is also super well-maintained. There is a <code>utils.js</code> page for all custom errors and logging, calculations of width/height, there&rsquo;s a I18n implementation from scratch that looks up the locale translation from an object, etc.
+  - The served endpoint receives query parameters for high customizability.
+  - Jest tests + codecov test coverage. I had to fix some tests while making all the changes, but it was pretty straight forward since there&rsquo;s not a lot of UI components in the card. You&rsquo;d mock the api request and assert things about the response, headers, etc; or check that every theme is properly rendered onto the card elements</p>
+
+<p><strong>Typeracer-box</strong> (<a href="https://github.com/tobimori/typeracer-box" target="_blank">github</a>). This repo auto populate the gist every hour with updated typeracer data. All you need is to give it a public gist and a github token with permission to write to the gist. Not as cool as animated svg in my opinion, but still super powerful. We&rsquo;re essentially using github gist to visualize some query (somewhat like a BI tool), and make that sharable. I suppose you can even embed gist to a markdown so I&rsquo;ll give &lsquo;em extra cool points.. The meat of the project lies mainly in the <code>index.js</code> script, and the github workflow that execute the script every hour with a scheduled cron job. My main struggles implementing this was figuring out how to make the github tokens work..</p>
+
+<p>** Github API and tokens**. You can Request tokens of various permissions <a href="https://github.com/settings/tokens" target="_blank">here</a>. Apparently, if you hardcode the token in the code, github will automatically revoke the token. I spent a while before figuring out why my token isn&rsquo;t working&hellip; The tokens will allow you to make requests to GraphQL endpoint (<a href="https://docs.github.com/en/graphql" target="_blank">docs</a>) and REST endpoints (<a href="https://docs.github.com/en/rest" target="_blank">docs</a>). The API does cool shit like: querying for PR changes, making a bot PR comment, generating a README doc from a json file. When we power this with Github actions, ugh&hellip; Now I kind of get where services like dependabot get their magic.</p>
+
+<p>*<em>Github workflows and actions *</em>
+  - Make it run tests, run scripts, run shell commands. Can set it to trigger on PR, on cron schedule, on issue creation, on issue comment, on PR, on label, and many other events (<a href="https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows" target="_blank">docs</a>). Here are some good ones I saw:
+    - <a href="https://github.com/actions/labeler" target="_blank">actions/labeler@v2</a>
+      - An action for automatically labelling pull requests. On PR submission, it checks on a yml file (with k-v pair of {label: path}), so any pr touching a particular file or directory will be auto labeled.
+    - Every time someone adds a PR touching the <code>theme.js</code> file (<code>on: pull_request_target</code>), It&rsquo;ll trigger a script to create a github PR comment with some preview. The script uses the API to pull the diffs from the PR, convert them to object, and use that to generate the preview.
+    - On push of the branch, run a shell script that updates a readme doc</p>
+
+<p><strong>More Github repo maintenance tools:</strong>
+  - There are many github-specific files you can put in the <code>.github/*</code> folder. (<a href="https://stackoverflow.com/questions/60507097/is-there-an-overview-of-what-can-go-into-a-github-dot-github-directory" target="_blank">stackoverflow overview</a>). Few that peaks my interest is <code>stale.yml</code>, <code>issues-templates</code>, <code>codeowners</code>, <code>dependabot.yml</code>&hellip; Just more stuff to explore
+  - Badges are cool. You can use it to indicate status of a workflow (<a href="https://docs.github.com/en/actions/monitoring-and-troubleshooting-workflows/adding-a-workflow-status-badge" target="_blank">github workflow status badge docs</a>). There&rsquo;s also https://shields.io/ which lets you create badges of all types and purposes. You can use it for links (which I did in my profile readme), or pull data from an endpoint.</p>
+
+<p><strong>SVG</strong>: I&rsquo;ve always knew how powerful svg was, but realizing it can run a css animation I was rendered speechless.. What? I thought svg is only for icons 😳
+  - I broke the svg progress aniamation after changing the radius. This was the <a href="https://codepen.io/nkunic/pen/jXBZWV" target="_blank">codepen</a> that helped me. After micro-adjusting the circle&rsquo;s <code>stroke-dasharray</code> attribute while making sure progress is full when <code>stroke-dashoffset</code> is 0 and progress is empty when it&rsquo;s 100, I was able to make it sort of work without entirely sure how it works 😅 (yet)</p>
+
+<p><strong>Vercel dev</strong> (<a href="https://vercel.com/blog/vercel-dev" target="_blank">docs</a>): Vercel&rsquo;s serverless functions (without the next.js stuff). It just serves all endpoints defined under <code>api/*</code>. In this case, it fits our purpose perfectly since we just need an endpoint to serve our dynamically rendered svg asset. Can&rsquo;t get any simpler than that.</p>
+
+<p><strong>Miscellaneous TIL</strong>
+  - <code>cache control</code> in HTTP request header
+    - <code>max-age</code>: means the # sec it&rsquo;ll be cached in the browser.
+    - <code>no-cache</code>: means it has to validate the data from the server every time (it doesn&rsquo;t mean don&rsquo;t cache)
+  - Automating chrome using CLI headless chrome (<a href="https://developer.chrome.com/blog/headless-chrome/" target="_blank">chrome documentation</a>).
+    - ie. print the dom, take screenshot, convert the page to PDF, run JS in the browser&hellip;
+    - There&rsquo;s a high level node library for it <a href="https://github.com/puppeteer/puppeteer" target="_blank">Puppeteer</a>.</p>
+
+<p><strong>Last but not least</strong>.., <a href="https://github.com/anuraghazra/github-readme-stats/pull/1999" target="_blank">here&rsquo;s a link to my first open source PR contribution</a> I made for <code>github-readme-stats</code> 🥳 As described in that PR description link, adding prettier checks to the CI will enforce the trailing commas in the <code>themes.js</code> file so we get correct diffs in the right lines. (Update: It got approved and merged!!!)</p>
+
+<p><a href="https://github.com/anuraghazra/github-readme-stats/pull/1999" title="=400x400" target="_blank"><img src="/assets/blogAssets/opensource-weekend/contribution.png" title="" alt="PR contribution" style="margin: 1.5rem auto;"></a></p>
+
+<h3 id="conclusion">Conclusion</h3>
+
+<p>Thought of some good follow-up projects when time permits:
+  - Improve the visualization of the card. Fancy svg / animation tricks. Typeracer api returns other useful stuff like avatar images.
+  - automate readme docs from code
+  - automate a preview of the targeted code on PR request. Maybe using headless chrome</p>
+
+<p>Definitely more comfortable with contributing compared to last year where just the thought of looking at a stranger&rsquo;s code and getting context overwhelms me. As my first open-source contribution this surprisingly felt effortless and rewarding - started off as something cool I want, doesn&rsquo;t exist yet, interesting technology to learn, within my ability, and at the end of day is open for anyone to use and extend off too. It just snowballs as I begin to discover new things along the way. So if I were to give advise to a year-ago me, I would say,</p>
+
+<blockquote>
+<p>&ldquo;Start with something cool you want to make, and go from there&rdquo;</p>
+</blockquote>
+
+  </main>
+
+    </div>
+    <footer class="">
+      <div class="text-center text-xs">© Steven 2019</div>
+    </footer>
+  </div>
+
+  </body>
+</html>
