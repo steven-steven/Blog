@@ -6,7 +6,7 @@ primary_page:
   order: 2
 ---
 
-<section class="pt-12 md:pt-16 flex flex-col space-y-5 text-sm">
+<section class="pt-12 md:pt-16 flex flex-col space-y-5 text-base">
   <% BlogPage.published.reverse.group_by { |post| post.publish_at.year }
     .each do |year, posts| %>
     <h2 class="md:text-lg font-light"><%= year %></h2>

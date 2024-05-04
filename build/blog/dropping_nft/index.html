@@ -3,7 +3,7 @@
   <head>
     <meta charset='utf-8' name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dropping NFT</title>
-    <link rel="stylesheet" href="/assets/tailwind-b4833c7b66e180ade5b74dbb93af374217679e5e57b785dd42b4dc7f36502533.css" media="screen" />
+    <link rel="stylesheet" href="/assets/tailwind-9a8ddea3645246c4b59742ea4106f1427d18d7517692ee59a0ab4a25f527d3d7.css" media="screen" />
     <script src="/assets/build/application-25ae7184b08e1be867fb7524ac6da4947649b73896dda1d6a3ff36fd664e1ca8.js"></script>
   </head>
   <body class="bg-gray-100 dark:bg-slate-900 text-slate-900 dark:text-slate-300 text-sm md:text-base">
@@ -26,10 +26,10 @@
     <h1 class="text-2xl md:text-3xl font-bold">Dropping NFT</h1>
       <p class="opacity-70">Monday,  November 22 2021<p>
   </header>
-  <main class="prose dark:prose-invert max-w-none mt-6 text-inherit text-sm md:text-lg prose-code:before:hidden prose-code:after:hidden prose-code:p-1 prose-code:rounded-md prose-code:font-medium prose-code:bg-gray-300 dark:prose-code:bg-slate-700">
+  <main class="prose dark:prose-invert max-w-none mt-6 text-inherit text-base md:text-lg prose-code:before:hidden prose-code:after:hidden prose-code:p-1 prose-code:rounded-md prose-code:font-medium prose-code:bg-gray-300 dark:prose-code:bg-slate-700">
     <p>It was 7pm Monday in Toronto, I sat in an unfamiliar hotel room right after work. I&rsquo;ve scheduled 8pm to grab lunch with a friend whom I haven&rsquo;t met in 2 years since school goes lockdown. And the next day will be my first ever visit to the office and meeting my co-workers in 3D for the first time, 6 months after joining the company. That&rsquo;s for another time; but point is - all was unfamiliar. I jumped onto Etherscan that evening to start the sale and push some code to enable minting from our website. And tadah! We dropped our first NFT!</p>
 
-<p><img src="/assets/blogAssets/dropping-nft/duckmeme.png" width="400" height="400" alt="DDG meme" style="margin: 1.5rem auto;"></p>
+<p><img src="https://steven-steven.github.io/Blog/assets/images/blogAssets/dropping-nft/duckmeme.png" width="400" height="400" alt="DDG meme" style="margin: 1.5rem auto;"></p>
 
 <blockquote>
 <p>(Credits: Our member Sherley. See more of DDG art on our <a href="https://twitter.com/DDGNFT" target="_blank">Twitter</a>)</p>
@@ -87,7 +87,7 @@
 
 <p>There is some standards on the structure of the metadata. I think this specification is Opensea specific (I could be wrong, but you can find it <a href="https://docs.opensea.io/docs/metadata-standards" target="_blank">on their docs</a>). Once the token is minted, Opensea could parse the metadata of that token and do all things like display image, filter custom attributes, name, description, etc.</p>
 
-<p><img src="/assets/blogAssets/dropping-nft/metadataOnOpensea.png" width="400" height="400" alt="Opensea metadata" style="margin: 1.5rem auto;"></p>
+<p><img src="https://steven-steven.github.io/Blog/assets/images/blogAssets/dropping-nft/metadataOnOpensea.png" width="400" height="400" alt="Opensea metadata" style="margin: 1.5rem auto;"></p>
 
 <p><a href="https://testnets.opensea.io/collection/duck-duck-goose-ipt2wg9heh" target="_blank">Here&rsquo;s an opensea testnet collection</a> that I created as an example.</p>
 
@@ -134,7 +134,7 @@
 <p>Basically a factory contract is a type of contract that Opensea provides, which is like a mystery box (or pokemon cards). Once people buy them, it&rsquo;s minted on purchase, and will show up as a minted NFT. Behind the scenes, the factory contract is a normal contract with the &#39;mint()&rsquo; function configured to call the &lsquo;mint()&rsquo; function of another contract. So under the hood you&rsquo;ll end up with 2 different contracts (one is the factory, and one is the actual token contract). Turns out, that ruins everything because we realized that tokens minted from the factory would go to a separate collection, and we aren&rsquo;t the owner of that collection so we wouldn&rsquo;t be able to change the storefront (a <a href="https://github.com/ProjectOpenSea/opensea-creatures/issues/123" target="_blank">related github issue</a> from people with the same issue).
   - An initial workaround I tried was to configure the storefront from a metadata through the contract. But it&rsquo;s either that the things we can configure with the metadata is limited, or the <a href="https://docs.opensea.io/docs/contract-level-metadata" target="_blank">opensea contract-metadata documentation</a> for it is 💩, it doesn&rsquo;t seem like we could change all settings (e.g. banner image) using the metadata. Here was a <a href="https://github.com/ProjectOpenSea/opensea-creatures/issues/92" target="_blank">github issue</a> where I, along with many others in the internet, ask our concern but there was no solution to it 🤷‍♂️. After testing around, I decided it&rsquo;s not worth it and time to look for another approach..</p>
 
-<p><img src="/assets/blogAssets/dropping-nft/startover.png" width="400" height="400" alt="Start over" style="margin: 1.5rem auto;"></p>
+<p><img src="https://steven-steven.github.io/Blog/assets/images/blogAssets/dropping-nft/startover.png" width="400" height="400" alt="Start over" style="margin: 1.5rem auto;"></p>
 
 <h3 id="v2-final-iteration">V2: final iteration</h3>
 
@@ -195,7 +195,7 @@ Web3-react also provides multiple ways you can connect your wallet to the browse
 
 <p>The R/W functions is critical in interacting with the contract. These functions are ones defined in the contract (e.g.  ERC-721 standards or ones you define yourself).</p>
 
-<p><img src="/assets/blogAssets/dropping-nft/etherscanRW.png" width="400" height="400" alt="Etherscan interface" style="margin: 1.5rem auto;"></p>
+<p><img src="https://steven-steven.github.io/Blog/assets/images/blogAssets/dropping-nft/etherscanRW.png" width="400" height="400" alt="Etherscan interface" style="margin: 1.5rem auto;"></p>
 
 <p>You can also provide a token/profile information in Etherscan by submitting a formal request through a form (<a href="https://info.etherscan.com/token-update-guide/" target="_blank">guide</a>). They&rsquo;ll get back to you by email after a few weeks.</p>
 

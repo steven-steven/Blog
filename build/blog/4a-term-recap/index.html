@@ -3,7 +3,7 @@
   <head>
     <meta charset='utf-8' name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Five courses in Four months (a 4A term Recap)</title>
-    <link rel="stylesheet" href="/assets/tailwind-b4833c7b66e180ade5b74dbb93af374217679e5e57b785dd42b4dc7f36502533.css" media="screen" />
+    <link rel="stylesheet" href="/assets/tailwind-9a8ddea3645246c4b59742ea4106f1427d18d7517692ee59a0ab4a25f527d3d7.css" media="screen" />
     <script src="/assets/build/application-25ae7184b08e1be867fb7524ac6da4947649b73896dda1d6a3ff36fd664e1ca8.js"></script>
   </head>
   <body class="bg-gray-100 dark:bg-slate-900 text-slate-900 dark:text-slate-300 text-sm md:text-base">
@@ -26,7 +26,7 @@
     <h1 class="text-2xl md:text-3xl font-bold">Five courses in Four months (a 4A term Recap)</h1>
       <p class="opacity-70">Saturday,  August 15 2020<p>
   </header>
-  <main class="prose dark:prose-invert max-w-none mt-6 text-inherit text-sm md:text-lg prose-code:before:hidden prose-code:after:hidden prose-code:p-1 prose-code:rounded-md prose-code:font-medium prose-code:bg-gray-300 dark:prose-code:bg-slate-700">
+  <main class="prose dark:prose-invert max-w-none mt-6 text-inherit text-base md:text-lg prose-code:before:hidden prose-code:after:hidden prose-code:p-1 prose-code:rounded-md prose-code:font-medium prose-code:bg-gray-300 dark:prose-code:bg-slate-700">
     <p>Wow, can&rsquo;t believe it&rsquo;s 4 months after I wrote my <a href="/blog/when-the-storm-ends" target="_blank">3B term recap</a>. This term was another fast and furious ride with deadlines after deadlines. I took 5 courses (4 TE 1 CSE) after overloading one. My reason to overload is that it&rsquo;s free (given that I pay 20k+ for my term tuition, an extra course is like 5k value normally). Second reason is that its fully online, meaning I have a lot of time given I&rsquo;m on my desk all day. Third, I was just curious but maybe the decision was a <a href="#planningfallacy" target="_blank">planning fallacy</a> altogether.</p>
 
 <p>So here you go. My term recap:</p>
@@ -53,7 +53,7 @@
 
 <p><strong>A) Local Search Strategies</strong></p>
 
-<p><img src="/assets/blogAssets/4a-term-recap/localsearch.png" width="400" height="400" alt="localsearchalgorithms" style="margin: 1.5rem auto;">
+<p><img src="https://steven-steven.github.io/Blog/assets/images/blogAssets/4a-term-recap/localsearch.png" width="400" height="400" alt="localsearchalgorithms" style="margin: 1.5rem auto;">
 The first part of the course teaches us how to formulate a problem (define state space, initial state, goal state, set of actions, and costs for actions). If we can define a finite state space and transitions between different states, this becomes a path-finding problem.</p>
 
 <p>We could use local search methods to look for actions that will lead us to the optimal state.</p>
@@ -64,7 +64,7 @@ The first part of the course teaches us how to formulate a problem (define state
 
 <p>Assignment 1 requires us to write some of these algorithms from scratch to solve a given problem. For example, exploring a maze. The image below is an example of an output of my maze search using A*. It finds an optimal path after exploring 33 states.</p>
 
-<p><img src="/assets/blogAssets/4a-term-recap/aStar.png" width="400" height="400" alt="aStar" style="margin: 1.5rem auto;"></p>
+<p><img src="https://steven-steven.github.io/Blog/assets/images/blogAssets/4a-term-recap/aStar.png" width="400" height="400" alt="aStar" style="margin: 1.5rem auto;"></p>
 
 <p><strong>B) Game Playing</strong></p>
 
@@ -78,7 +78,7 @@ The first part of the course teaches us how to formulate a problem (define state
 
 <p>With informed search algorithms we introduced heuristics. These are good for simple state space, but in more complex ones, it gets you to a local minima. With meta-heuristics now you&rsquo;re introduced with the idea of exploring vs exploiting, where sometimes you take risks (non-improving actions) and look at the big picture. There are a couple of techniques we covered which is classified as trajectory method (train one solution at a time) and population based (train multiple solutions at once)</p>
 
-<p><img src="/assets/blogAssets/4a-term-recap/metaHeuristic.png" width="400" height="400" alt="meta-heuristic" style="margin: 1.5rem auto;"></p>
+<p><img src="https://steven-steven.github.io/Blog/assets/images/blogAssets/4a-term-recap/metaHeuristic.png" width="400" height="400" alt="meta-heuristic" style="margin: 1.5rem auto;"></p>
 
 <p>Overall this part of the lecture seems to me like many different approaches to essentially the same problem. In the assignments we get hands on to building these algorithms from scratch which was valuable, but they are all similar problems.</p>
 
@@ -97,8 +97,8 @@ The first part of the course teaches us how to formulate a problem (define state
 
 <p>For example, in the assignment we create a python program that construct other programs (AST) 📜 that would mimic the behavior of a 6-mux, using binary operators AND, OR, NOT, IF. We evaluate the fitness of a solution (AST) by feeding it inputs and getting % of correct outputs. Like GA, a high-fitness solution will tend to survive. The following shows the final 6-mux my program generated, as well as the progress of the population fitness over 300 iterations:</p>
 
-<p><img src="/assets/blogAssets/4a-term-recap/gp_tree.png" width="400" height="400" alt="6-mux tree" style="margin: 1.5rem auto;">
-<img src="/assets/blogAssets/4a-term-recap/gp_fitness.png" width="400" height="400" alt="GP fitness" style="margin: 1.5rem auto;"></p>
+<p><img src="https://steven-steven.github.io/Blog/assets/images/blogAssets/4a-term-recap/gp_tree.png" width="400" height="400" alt="6-mux tree" style="margin: 1.5rem auto;">
+<img src="https://steven-steven.github.io/Blog/assets/images/blogAssets/4a-term-recap/gp_fitness.png" width="400" height="400" alt="GP fitness" style="margin: 1.5rem auto;"></p>
 
 <p>We then covered a bit on evolutionary programming (although there wasn&rsquo;t assignments on it) where instead of evolving programs, we evolve machines (FSM). Generally it could be used to build machines that recognize and classifies patterns.</p>
 
@@ -138,11 +138,11 @@ The first part of the course teaches us how to formulate a problem (define state
 
 <p>We did 2 assignments where we get to code those algorithms hands-on for a given MazeWorld environment. I got to implement policy iteration, value iteration, Q-Learning, SARSA, Expected SARSA, Double Q-Learning, and SARSA with eligibility trace. For each, we plot the performance over iterations and compare its behavior. The gif below demonstrates the red agent 🟥 as it learned the goal 🟨 (reward +1) and avoid the blue pits 🟦(penalty of -10) and black walls ⬛️. We give each step a penalty of -0.1 so the agent naturally try to find shortest path.</p>
 
-<p><img src="/assets/blogAssets/4a-term-recap/rl.gif" width="400" height="400" alt="Policy Iteration" style="margin: 1.5rem auto;"></p>
+<p><img src="https://steven-steven.github.io/Blog/assets/images/blogAssets/4a-term-recap/rl.gif" width="400" height="400" alt="Policy Iteration" style="margin: 1.5rem auto;"></p>
 
 <p>As shown in the sample performance graph below, DP algorithms like value-iteration and policy-iteration converges really quickly (but assumes that we know the environment perfectly). While the SARSA and Q-learning will continuously sample and take hundreds of iteration before finally converging to a stable value.</p>
 
-<p><img src="/assets/blogAssets/4a-term-recap/rlSampleGraph.png" width="400" height="400" alt="Sample Performance" style="margin: 1.5rem auto;"></p>
+<p><img src="https://steven-steven.github.io/Blog/assets/images/blogAssets/4a-term-recap/rlSampleGraph.png" width="400" height="400" alt="Sample Performance" style="margin: 1.5rem auto;"></p>
 
 <p><strong>D) Policy Gradient</strong></p>
 
@@ -150,7 +150,7 @@ The first part of the course teaches us how to formulate a problem (define state
 
 <p>In assignment 3 where we had to implement a policy gradient with the same MazeWorld environment as before. I represented the states-action pair with 1-hot encoding as a 1x400 vector (the first 100 entries indicates moving left from each of the 100 states in the grid, the second 100 entries indicate moving right, etc). With a simple linear function approximation and softmax function for the policy, I didn&rsquo;t see my agent converging at all 😢 even after 5000 episodes (which took like 30 minutes to run).</p>
 
-<p><img src="/assets/blogAssets/4a-term-recap/policygrad.png" width="400" height="400" alt="Failed policy gradient" style="margin: 1.5rem auto;"></p>
+<p><img src="https://steven-steven.github.io/Blog/assets/images/blogAssets/4a-term-recap/policygrad.png" width="400" height="400" alt="Failed policy gradient" style="margin: 1.5rem auto;"></p>
 
 <p>Maybe a potential improvement would be to try other ways to represent the features or incorporate more information like how far the agent has gone from a wall, etc. Instead of doing linear function approximation and softmax function, a better alternative in terms of performance would just be to use non-linear approximations such as using a neural network to learn the policy. But I didn&rsquo;t really know how neural network works (this wasn&rsquo;t taught to us) and how to use tensorflow/pytorch libraries - maybe will look at it myself in the near future.</p>
 
@@ -276,24 +276,24 @@ In assignment 3, the goal was to implement a distributed key-value service; usin
 <p>Below are some of my scuffed designs and how it changes over time:</p>
 
 <p>The First Robot I designed..
-<img src="/assets/blogAssets/4a-term-recap/486_robot1.png" width="400" height="400" alt="Design 1" style="margin: 1.5rem auto;"></p>
+<img src="https://steven-steven.github.io/Blog/assets/images/blogAssets/4a-term-recap/486_robot1.png" width="400" height="400" alt="Design 1" style="margin: 1.5rem auto;"></p>
 
 <p>Then trying to get the Inverse Kinematics working, I end up re-deesigning the whole thing..
-<img src="/assets/blogAssets/4a-term-recap/486_robot2.png" width="400" height="400" alt="Design 2" style="margin: 1.5rem auto;"></p>
+<img src="https://steven-steven.github.io/Blog/assets/images/blogAssets/4a-term-recap/486_robot2.png" width="400" height="400" alt="Design 2" style="margin: 1.5rem auto;"></p>
 
 <p>Then trying to get the Dynamics working so here&rsquo;s the final redesigned robot. The last joint is prismatic joint that goes up and down with the paddle at the bottom edge of it.
-<img src="/assets/blogAssets/4a-term-recap/486_robot3.png" width="400" height="400" alt="Design 3" style="margin: 1.5rem auto;"></p>
+<img src="https://steven-steven.github.io/Blog/assets/images/blogAssets/4a-term-recap/486_robot3.png" width="400" height="400" alt="Design 3" style="margin: 1.5rem auto;"></p>
 
 <p>and the design for links and joints of the robot..
-<img src="/assets/blogAssets/4a-term-recap/486_links.png" width="400" height="400" alt="Link Design" style="margin: 1.5rem auto;"></p>
+<img src="https://steven-steven.github.io/Blog/assets/images/blogAssets/4a-term-recap/486_links.png" width="400" height="400" alt="Link Design" style="margin: 1.5rem auto;"></p>
 
 <p><strong>Labs</strong></p>
 
 <p>The Labs (group of 2) are done in Choreographe and we get to control a real NAO robot. Since it&rsquo;s all online this term, we only see the robot in simulation, while the TA runs our code in the physical robot to give us feedback to reflect upon. Like the project, labs are also seperated into modules throughout the course. For example we perform Forward Kinematics and inverse kinematics on the robot&rsquo;s right arm, generate a trajectory, and code a controller loop to follow the trajectory. This was equally as difficult as the project but it was cool to see the movements reflect directly on the NAO robot. The TA also gave us a video sometimes (and as shown below, shit happens.. all the time 💩).</p>
 
-<p><img src="/assets/blogAssets/4a-term-recap/controlsNAO.gif" width="400" height="400" alt="GIF of NAO control loop" style="margin: 1.5rem auto;"></p>
+<p><img src="https://steven-steven.github.io/Blog/assets/images/blogAssets/4a-term-recap/controlsNAO.gif" width="400" height="400" alt="GIF of NAO control loop" style="margin: 1.5rem auto;"></p>
 
-<p><img src="/assets/blogAssets/4a-term-recap/486_armSize.png" width="400" height="400" alt="Policy Iteration" style="margin: 1.5rem auto;"></p>
+<p><img src="https://steven-steven.github.io/Blog/assets/images/blogAssets/4a-term-recap/486_armSize.png" width="400" height="400" alt="Policy Iteration" style="margin: 1.5rem auto;"></p>
 
 <p><strong>Course Modules</strong></p>
 
@@ -561,8 +561,8 @@ In assignment 3, the goal was to implement a distributed key-value service; usin
 </ul></li>
 </ol>
 
-<p><img src="/assets/blogAssets/4a-term-recap/psychoanalysisJoke2.jpg" width="400" height="400" alt="psychoanalysisJoke2" style="margin: 1.5rem auto;">
-<img src="/assets/blogAssets/4a-term-recap/psychoanalysisJoke1.jpg" width="400" height="400" alt="psychoanalysisJoke1" style="margin: 1.5rem auto;"></p>
+<p><img src="https://steven-steven.github.io/Blog/assets/images/blogAssets/4a-term-recap/psychoanalysisJoke2.jpg" width="400" height="400" alt="psychoanalysisJoke2" style="margin: 1.5rem auto;">
+<img src="https://steven-steven.github.io/Blog/assets/images/blogAssets/4a-term-recap/psychoanalysisJoke1.jpg" width="400" height="400" alt="psychoanalysisJoke1" style="margin: 1.5rem auto;"></p>
 
 <h2 id="6-capstone-design-project-ece-498a">6. Capstone Design Project - ECE 498A</h2>
 

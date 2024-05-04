@@ -3,7 +3,7 @@
   <head>
     <meta charset='utf-8' name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Creating an Invoice App with Electron and Go</title>
-    <link rel="stylesheet" href="/assets/tailwind-b4833c7b66e180ade5b74dbb93af374217679e5e57b785dd42b4dc7f36502533.css" media="screen" />
+    <link rel="stylesheet" href="/assets/tailwind-9a8ddea3645246c4b59742ea4106f1427d18d7517692ee59a0ab4a25f527d3d7.css" media="screen" />
     <script src="/assets/build/application-25ae7184b08e1be867fb7524ac6da4947649b73896dda1d6a3ff36fd664e1ca8.js"></script>
   </head>
   <body class="bg-gray-100 dark:bg-slate-900 text-slate-900 dark:text-slate-300 text-sm md:text-base">
@@ -26,11 +26,11 @@
     <h1 class="text-2xl md:text-3xl font-bold">Creating an Invoice App with Electron and Go</h1>
       <p class="opacity-70">Wednesday,  August 26 2020<p>
   </header>
-  <main class="prose dark:prose-invert max-w-none mt-6 text-inherit text-sm md:text-lg prose-code:before:hidden prose-code:after:hidden prose-code:p-1 prose-code:rounded-md prose-code:font-medium prose-code:bg-gray-300 dark:prose-code:bg-slate-700">
+  <main class="prose dark:prose-invert max-w-none mt-6 text-inherit text-base md:text-lg prose-code:before:hidden prose-code:after:hidden prose-code:p-1 prose-code:rounded-md prose-code:font-medium prose-code:bg-gray-300 dark:prose-code:bg-slate-700">
     <p>A long long time ago (2 years ago -ish), my dad asked me if I could make an invoice app for his company because his old software was very outdated. The old legacy software was a custom-made software still currently running on a Windows XP in his office. He had even forgotten who made it for him in the first place.</p>
 
 <p>Old Invoice Software:
-<img src="/assets/blogAssets/creating-an-invoice-app-with-electron-and-go/oldApp.png" width="400" height="400" alt="Old invoice app" style="margin: 1.5rem auto;"></p>
+<img src="https://steven-steven.github.io/Blog/assets/images/blogAssets/creating-an-invoice-app-with-electron-and-go/oldApp.png" width="400" height="400" alt="Old invoice app" style="margin: 1.5rem auto;"></p>
 
 <p>I said I&rsquo;d give it a shot, and that summer vacation I remember trying to create a web-app to generate pdf documents which I wasn&rsquo;t very successful. Somehow at that time I couldn&rsquo;t wrap my head around how I could generate a PDF file, and downloading files from the internet. As soon as that vacation ends life got busy and I ditched the entire project and never really came back to it.</p>
 
@@ -62,9 +62,9 @@
 
 <p>The following are screenshots of the intial 3-page design (create/edit new invoice, history list of invoices, and add new inventory item).</p>
 
-<p><img src="/assets/blogAssets/creating-an-invoice-app-with-electron-and-go/design1.png" width="400" height="400" alt="Make new Invoice design" style="margin: 1.5rem auto;">
-<img src="/assets/blogAssets/creating-an-invoice-app-with-electron-and-go/design2.png" width="400" height="400" alt="Home page design" style="margin: 1.5rem auto;">
-<img src="/assets/blogAssets/creating-an-invoice-app-with-electron-and-go/design3.png" width="400" height="400" alt="Add new item design" style="margin: 1.5rem auto;"></p>
+<p><img src="https://steven-steven.github.io/Blog/assets/images/blogAssets/creating-an-invoice-app-with-electron-and-go/design1.png" width="400" height="400" alt="Make new Invoice design" style="margin: 1.5rem auto;">
+<img src="https://steven-steven.github.io/Blog/assets/images/blogAssets/creating-an-invoice-app-with-electron-and-go/design2.png" width="400" height="400" alt="Home page design" style="margin: 1.5rem auto;">
+<img src="https://steven-steven.github.io/Blog/assets/images/blogAssets/creating-an-invoice-app-with-electron-and-go/design3.png" width="400" height="400" alt="Add new item design" style="margin: 1.5rem auto;"></p>
 
 <p>There are some things I modified after getting a few feedbacks from my family. For example in the &lsquo;buat invoice&rsquo; (make invoice) page, it&rsquo;s better to keep the &lsquo;SIMPAN&rsquo; (save) and &lsquo;DOWNLOAD PDF&rsquo; buttons below the totals to make it clear that the buttons are saving the state of the entire page. I also decided to make the table editable on that page, and remove the search bar on top of the home page since it was unnecessary.</p>
 
@@ -77,17 +77,17 @@
 <p>I also used Firebase Realtime as the database since it&rsquo;s the most flexible and cheapest (and fastest to get running) option I could think of. My dad wouldn&rsquo;t mind if the data was stored locally just like the old system, but I think storing it in the cloud could add additional scalability so people could now work off that old ancient office computer.</p>
 
 <p>Finally, here&rsquo;s a rough sketch of a simple design of the services:
-<img src="/assets/blogAssets/creating-an-invoice-app-with-electron-and-go/architecture.png" width="400" height="400" alt="design" style="margin: 1.5rem auto;"></p>
+<img src="https://steven-steven.github.io/Blog/assets/images/blogAssets/creating-an-invoice-app-with-electron-and-go/architecture.png" width="400" height="400" alt="design" style="margin: 1.5rem auto;"></p>
 
 <p>And the DB Models for &lsquo;Item&rsquo; and &lsquo;Invoice&rsquo; documents: (my name convention: those in suffix &lsquo;_db&rsquo; are the schema stored in the database)
-<img src="/assets/blogAssets/creating-an-invoice-app-with-electron-and-go/invoiceSchema.png" width="400" height="400" alt="invoiceSchema" style="margin: 1.5rem auto;">
-<img src="/assets/blogAssets/creating-an-invoice-app-with-electron-and-go/itemSchema.png" width="400" height="400" alt="itemSchema" style="margin: 1.5rem auto;"></p>
+<img src="https://steven-steven.github.io/Blog/assets/images/blogAssets/creating-an-invoice-app-with-electron-and-go/invoiceSchema.png" width="400" height="400" alt="invoiceSchema" style="margin: 1.5rem auto;">
+<img src="https://steven-steven.github.io/Blog/assets/images/blogAssets/creating-an-invoice-app-with-electron-and-go/itemSchema.png" width="400" height="400" alt="itemSchema" style="margin: 1.5rem auto;"></p>
 
 <h2 id="go-api">Go API</h2>
 
 <p>I chose Go Kit mainly as it proposes good design priciples. I read up ways to structure a microservice <a href="https://medium.com/@shijuvar/go-microservices-with-go-kit-introduction-43a757398183" target="_blank">API with gokit</a> and it seems pretty neat. There are multiple layers of the API, and once I set it up the first time it&rsquo;s really easy to add/change features after.</p>
 
-<p><img src="/assets/blogAssets/creating-an-invoice-app-with-electron-and-go/gokit.png" width="400" height="400" alt="Go Kit" style="margin: 1.5rem auto;"></p>
+<p><img src="https://steven-steven.github.io/Blog/assets/images/blogAssets/creating-an-invoice-app-with-electron-and-go/gokit.png" width="400" height="400" alt="Go Kit" style="margin: 1.5rem auto;"></p>
 
 <p>Go also has a default testing package. The challenging part was mocking the Firebase DB for unit testing which I couldn&rsquo;t figure and ended up using a third-party github.com/jeremyschlatter/firebase. It was easy to use since it provides clean interface to change between a mock and real DB instance. Buutt.. it&rsquo;s not exactly well-maintained and only supports basic functions like get, set, delete, etc.</p>
 
@@ -128,25 +128,25 @@
 <h2 id="demo">Demo</h2>
 
 <p>Opening the App and edit existing invoices
-<img src="/assets/blogAssets/creating-an-invoice-app-with-electron-and-go/openAndEditDemo.gif" width="400" height="400" alt="Open and edit Demo" style="margin: 1.5rem auto;"></p>
+<img src="https://steven-steven.github.io/Blog/assets/images/blogAssets/creating-an-invoice-app-with-electron-and-go/openAndEditDemo.gif" width="400" height="400" alt="Open and edit Demo" style="margin: 1.5rem auto;"></p>
 
 <p>Testing UI responsiveness
-<img src="/assets/blogAssets/creating-an-invoice-app-with-electron-and-go/responsiveDemo.gif" width="400" height="400" alt="Responsiveness Demo" style="margin: 1.5rem auto;"></p>
+<img src="https://steven-steven.github.io/Blog/assets/images/blogAssets/creating-an-invoice-app-with-electron-and-go/responsiveDemo.gif" width="400" height="400" alt="Responsiveness Demo" style="margin: 1.5rem auto;"></p>
 
 <p>Download pdf
-<img src="/assets/blogAssets/creating-an-invoice-app-with-electron-and-go/downloadDemo.gif" width="400" height="400" alt="Download Demo" style="margin: 1.5rem auto;"></p>
+<img src="https://steven-steven.github.io/Blog/assets/images/blogAssets/creating-an-invoice-app-with-electron-and-go/downloadDemo.gif" width="400" height="400" alt="Download Demo" style="margin: 1.5rem auto;"></p>
 
 <p>Create New Invoice
-<img src="/assets/blogAssets/creating-an-invoice-app-with-electron-and-go/newInvoiceDemo.gif" width="400" height="400" alt="New Item Demo" style="margin: 1.5rem auto;"></p>
+<img src="https://steven-steven.github.io/Blog/assets/images/blogAssets/creating-an-invoice-app-with-electron-and-go/newInvoiceDemo.gif" width="400" height="400" alt="New Item Demo" style="margin: 1.5rem auto;"></p>
 
 <p>Create New Item as it appears when creating new invoice
-<img src="/assets/blogAssets/creating-an-invoice-app-with-electron-and-go/createNewItemDemo.gif" width="400" height="400" alt="New Item Demo" style="margin: 1.5rem auto;"></p>
+<img src="https://steven-steven.github.io/Blog/assets/images/blogAssets/creating-an-invoice-app-with-electron-and-go/createNewItemDemo.gif" width="400" height="400" alt="New Item Demo" style="margin: 1.5rem auto;"></p>
 
 <p>Error Handling on Offline and automatically goes back up when internet is available
-<img src="/assets/blogAssets/creating-an-invoice-app-with-electron-and-go/offlineDemo.gif" width="400" height="400" alt="Offline Demo" style="margin: 1.5rem auto;"></p>
+<img src="https://steven-steven.github.io/Blog/assets/images/blogAssets/creating-an-invoice-app-with-electron-and-go/offlineDemo.gif" width="400" height="400" alt="Offline Demo" style="margin: 1.5rem auto;"></p>
 
 <p>Sample invoice PDF with dummy data
-<img src="/assets/blogAssets/creating-an-invoice-app-with-electron-and-go/samplePdf.png" width="400" height="400" alt="Sample PDF" style="margin: 1.5rem auto;"></p>
+<img src="https://steven-steven.github.io/Blog/assets/images/blogAssets/creating-an-invoice-app-with-electron-and-go/samplePdf.png" width="400" height="400" alt="Sample PDF" style="margin: 1.5rem auto;"></p>
 
 <h2 id="overall">Overall</h2>
 

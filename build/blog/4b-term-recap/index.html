@@ -3,7 +3,7 @@
   <head>
     <meta charset='utf-8' name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Closure (a 4B term Recap)</title>
-    <link rel="stylesheet" href="/assets/tailwind-b4833c7b66e180ade5b74dbb93af374217679e5e57b785dd42b4dc7f36502533.css" media="screen" />
+    <link rel="stylesheet" href="/assets/tailwind-9a8ddea3645246c4b59742ea4106f1427d18d7517692ee59a0ab4a25f527d3d7.css" media="screen" />
     <script src="/assets/build/application-25ae7184b08e1be867fb7524ac6da4947649b73896dda1d6a3ff36fd664e1ca8.js"></script>
   </head>
   <body class="bg-gray-100 dark:bg-slate-900 text-slate-900 dark:text-slate-300 text-sm md:text-base">
@@ -26,7 +26,7 @@
     <h1 class="text-2xl md:text-3xl font-bold">Closure (a 4B term Recap)</h1>
       <p class="opacity-70">Saturday,  May 01 2021<p>
   </header>
-  <main class="prose dark:prose-invert max-w-none mt-6 text-inherit text-sm md:text-lg prose-code:before:hidden prose-code:after:hidden prose-code:p-1 prose-code:rounded-md prose-code:font-medium prose-code:bg-gray-300 dark:prose-code:bg-slate-700">
+  <main class="prose dark:prose-invert max-w-none mt-6 text-inherit text-base md:text-lg prose-code:before:hidden prose-code:after:hidden prose-code:p-1 prose-code:rounded-md prose-code:font-medium prose-code:bg-gray-300 dark:prose-code:bg-slate-700">
     <p>Like my <a href="/blog/when-the-storm-ends" target="_blank">3B term</a> and <a href="/blog/4a-term-recap" target="_blank">4A term</a> recap, I&rsquo;m gonna do the same for my 4B term experiences - especially since it&rsquo;s my last term of undergrad! WAHOOO! 👨‍🎓🎊</p>
 
 <p>So here you go. My term-end reflection:</p>
@@ -82,7 +82,7 @@
 
 <p>Aside: In fact, React also had their own flamegraph profiler on the browser. Gonna try this out sometime..</p>
 
-<p><img src="/assets/blogAssets/4b-term-recap/flamegraph.png" width="400" height="400" alt="Flamegraph" style="margin: 1.5rem auto;"></p>
+<p><img src="https://steven-steven.github.io/Blog/assets/images/blogAssets/4b-term-recap/flamegraph.png" width="400" height="400" alt="Flamegraph" style="margin: 1.5rem auto;"></p>
 
 <p>Not to mention a lot of other profiling tools like Valgrind (analyze memory allocations), Helgrind (concurrency problems), which I&rsquo;m guessing is more relevant for C/C++ programs. There&rsquo;s also linux&rsquo;s &lsquo;perf&rsquo; tool that gives general stats as well as costs per line of code.</p>
 
@@ -94,7 +94,7 @@
 
 <p>CUDA code is a new paradigm to me. The global cuda function called by the host will be executed by multiple independent cuda threads. From what I understood (<a href="https://stackoverflow.com/questions/14093692/whats-the-difference-between-cuda-shared-and-global-memory" target="_blank">stackoverflow</a>), the pointer arguments copied from the host will be located in device as a &lsquo;global memory&rsquo; and shared amongst all cuda threads. So coding in cuda, I make sure not to write to the same memory output (e.g. each thread writes to its dedicated indices on an output matrix). To tell which thread does which work, normally involves using the set of indexes uniquely available to the current thread (threadIdx.x, blockIdx.x, blockDim.x, etc). The indices come from the landscape of the cuda threads, which are partitioned into 2D constructs called blocks and each blocks are partitioned in a 2D construct called a grid. We are free to define the block &amp; grid sizes in the host code (within limits). In particular this diagram below helps me a lot when visualizing the gpu thread landscape: (image source: Nvidia docs). In that example, our grid size is (2x3), block size is (3x4), and thus 12 * 6 = 72 gpu threads in total.</p>
 
-<p><img src="/assets/blogAssets/4b-term-recap/gputhreads.png" width="400" height="400" alt="GPU thread landscape" style="margin: 1.5rem auto;"></p>
+<p><img src="https://steven-steven.github.io/Blog/assets/images/blogAssets/4b-term-recap/gputhreads.png" width="400" height="400" alt="GPU thread landscape" style="margin: 1.5rem auto;"></p>
 
 <p>I was able to get away with just using global and private memory throughout the course, but apparently there&rsquo;s also other types of memory like shared memory which one could leverage.</p>
 
@@ -135,7 +135,7 @@
     3. Non-max supression: Reduce edges to a fine thin line. For each pixel, set its value to 0 if there&rsquo;s a neighboring pixel along a discrete orientation with higher magnitude.
     4. Double-thresholding: remove unconnected weak edges and keep strong</p>
 
-<p><img src="/assets/blogAssets/4b-term-recap/lanefinding.png" width="400" height="400" alt="Lane Finding Pipeline" style="margin: 1.5rem auto;"></p>
+<p><img src="https://steven-steven.github.io/Blog/assets/images/blogAssets/4b-term-recap/lanefinding.png" width="400" height="400" alt="Lane Finding Pipeline" style="margin: 1.5rem auto;"></p>
 
 <ul>
 <li><p>In the assignment, we create a pipeline to detect road lines from a video (as shown on image above). The <a href="https://github.com/udacity/CarND-LaneLines-P1" target="_blank">starter code is actually from Udacity</a>. After masking a trapezoid region of interest (ROI), implementing Canny Edge to obtain the edges, I used &lsquo;Hough Transform&rsquo; to parameterize the lines (map the x,y pixels to a Hough space and vote for the max overlaps of d, θ). Once we get the line equation (d = xcos(theta) - ysin(theta)), we draw the solid lanes for that frame.</p></li>
@@ -167,7 +167,7 @@
 <li><p>Since backpropagation is expensive, a typical batch gradient descent training typically takes the average loss over all input data and backpropagate that average for the entire data batch. Analyzing the error, you realize that as size of the batch N increase, we get diminishing returns. That&rsquo;s why we normally do &lsquo;Stochastic(minibatch) gradient descent SGD&rsquo; which is like a normal GD, but we shuffle and sample a small subest of the training batch at each iteration. There are also <a href="https://ruder.io/optimizing-gradient-descent/" target="_blank">optimization algorithms</a> for SGD (ie. adam, momentum..) to hopefully improve convergence (trial/error approach).</p></li>
 </ul>
 
-<p><img src="/assets/blogAssets/4b-term-recap/nnNotes.png" width="400" height="400" alt="2 Layer NN notes" style="margin: 1.5rem auto;"></p>
+<p><img src="https://steven-steven.github.io/Blog/assets/images/blogAssets/4b-term-recap/nnNotes.png" width="400" height="400" alt="2 Layer NN notes" style="margin: 1.5rem auto;"></p>
 
 <ul>
 <li>Things begin to click for me as I was doing the assignment, which was to hand-code a simple feed-forward and backward-pass on 2 layer fully connected NN (input layer -&gt; FC layer -&gt; ReLU -&gt; FC layer -&gt; softmax). Image above show my messy 2-layer backpropagation formulation notes.</li>
@@ -237,7 +237,7 @@
 
 <p>Our 8th assignment was cool though. We did behavioral planning (code a FSM to decide how the vehicle should change lanes, given data like the ego&rsquo;s position and distances from other vehicles around it). The goal is to complete 2 miles of driving while avoiding collisions and completing it within 3 minutes. The whole thing was based on Udacity&rsquo;s Nanodegree course since they provide a really good driving simulation. The <a href="https://www.youtube.com/watch?v=7sI3VHFPP0w&t=369s" target="_blank">video tutorial</a> also gives a great explaination on the simulation code. My code running below:</p>
 
-<p><img src="/assets/blogAssets/4b-term-recap/motionplanning.gif" width="400" height="400" alt="Behavioral planning" style="margin: 1.5rem auto;"></p>
+<p><img src="https://steven-steven.github.io/Blog/assets/images/blogAssets/4b-term-recap/motionplanning.gif" width="400" height="400" alt="Behavioral planning" style="margin: 1.5rem auto;"></p>
 
 <h2 id="3-astronomy-sci-238">3. Astronomy - SCI 238</h2>
 
@@ -303,7 +303,7 @@
 
 <p>In introspection, we recognized that a flaw in the FYDP was that it focuses on engineering design more than product management. Since we chose a supervisor outside of ECE, his suggestions and concerns had always been talking with our clients (the university councelors) and collecting user stories to make sure we&rsquo;re solving the right problem. - of which we didn&rsquo;t do and he was pretty disappointed with that.</p>
 
-<p><img src="/assets/blogAssets/4b-term-recap/redlife.png" width="400" height="400" alt="Redlife" style="margin: 1.5rem auto;"></p>
+<p><img src="https://steven-steven.github.io/Blog/assets/images/blogAssets/4b-term-recap/redlife.png" width="400" height="400" alt="Redlife" style="margin: 1.5rem auto;"></p>
 
 <p>See the online brochure: https://www.eng.uwaterloo.ca/2021-capstone-design/electrical-computer/participants-7/</p>
 
