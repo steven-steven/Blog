@@ -11,4 +11,7 @@
   <main class="prose dark:prose-invert max-w-none mt-6 text-inherit text-base md:text-lg break-words prose-code:before:hidden prose-code:after:hidden prose-code:p-1 prose-code:rounded-md prose-code:font-medium prose-code:bg-gray-300 dark:prose-code:bg-slate-700">
     <%= yield %>
   </main>
+  <div class="mt-10">
+    <%= render "partials/disqus", path: current_page.request_path, title: current_page.data.fetch("title") %>
+  </div>
 <% end %>
