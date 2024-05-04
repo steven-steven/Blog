@@ -27,7 +27,7 @@ But I do hope that just as the author envisioned, more problems will arise from 
 ## Complexity: when things are no longer predictable
 The book made a clear distinction between 'complicated' vs 'complex' systems. 'Complicated' problems can be broken apart because they're independent / loosely coupled. But being 'complex' is about the dense interconnection of parts that fluctuate and highly unpredictable. A good analogy of complexity: a break shot at billiards or the 'butterfly effect' concept. Unlike the ideal world where you can model a closed system, small deviations and interactions percolate in nonlinear ways and change the entire game. It's a shape-shifting network of many direct and indirect links that changes the prediction, and its impossible to know the right lever to pull ahead of time.
 
-![Too much possibilities](/assets/blogAssets/book-team-of-teams/drstrange.jpg "=400x400")
+![Too much possibilities](book-team-of-teams/drstrange.jpg "=400x400")
 
 Some properties of complex systems:
   - No perfect or permanent solution exist.
@@ -106,7 +106,7 @@ However, while breaking it down and optimizing parts to cut inefficiencies, you 
 
 In an environment where workers need to constantly take new roles, use unfamiliar tools, this can mean death when the system can't adapt to new realities (i.e. failure of the Maginot Line defense against enemies that don't play by their rules). The 'never again' mentality often won't work because it's impossible to foresee what's going to happen.
 
-![There is no war in ba sing se](/assets/blogAssets/book-team-of-teams/basingse.png "=400x400")
+![There is no war in ba sing se](book-team-of-teams/basingse.png "=400x400")
 
 While our strive for efficiency and foresight kinda work, not only did it kill the muscle to self-organize (antifragility), they also invite more unpredictable complexity against the rising tide of more complex threats that came because of it (or around it). For example, tech can be seen as a tool we build to pursue efficiency; but that same improved connectivity also shapes new complexity, shorten the reinforcing feedback delays, rumors spread faster, harder to respond and prioritize events, and the entire game is less deterministic than ever. Perhaps this trade-off was more of human intervention vs nature. The more we try to control, the less we actually do.
 

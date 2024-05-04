@@ -12,7 +12,7 @@ Perhaps same thing with international FOBs like me who felt different from every
 
 After years of jumping between work and internships, It was finally time to break myself from the hustle and return home (for 4 months! Hardly recall the last time I had vacation that long). Itineraries and expectations of any kind are unnecessary. All I had to carry with me was an empty canvas ready to be painted with undiscovered memories.
 
-![home](/assets/blogAssets/trip-down-the-memory-lane/home.png "=400x400")
+![home](trip-down-the-memory-lane/home.png "=400x400")
 
 This blog post was meant to be a gallery of paintings (a collection of short essays) that had shaped me during my trip. They're in the more personal side of the spectrum that I hope would leave some comfort for those who's able to identify themselves amongst the paintings.
 
@@ -23,9 +23,9 @@ It's name was Kopi. A coffee colored poodle that can melt any stress away. My fi
 
 It's not easy taking care of another creature (especially with a language barrier) - meal times, keeping them away from anything that could kill them, disposing their waste, and observing them if they're not feeling well. Domestication of pets has gone a long way. But I found that there's also beauty to being ignorant, seeking companionship, reminding me that maybe life isn't as complicated as it needs to be. She's always there for us wagging her tail away.
 
-![kopi](/assets/blogAssets/trip-down-the-memory-lane/kopi.png "=400x400")
-![kopi](/assets/blogAssets/trip-down-the-memory-lane/kopi2.png "=400x400")
-![kopi](/assets/blogAssets/trip-down-the-memory-lane/kopi3.png "=400x400")
+![kopi](trip-down-the-memory-lane/kopi.png "=400x400")
+![kopi](trip-down-the-memory-lane/kopi2.png "=400x400")
+![kopi](trip-down-the-memory-lane/kopi3.png "=400x400")
 
 ## Catching up with old acquaintances
 The only friend I have back home are friends from high school.. Or shall I say acquaintances? Some were close and others have drifted apart.
@@ -56,11 +56,11 @@ You might call it placebo or pseudoscience, but if these rituals and belief has 
 
 Anyways… here are some pictures from Chinese New year (after not celebrating it for 6 years)!
 
-![cny](/assets/blogAssets/trip-down-the-memory-lane/cny.png "=400x400")
-![cny](/assets/blogAssets/trip-down-the-memory-lane/cny1.png "=400x400")
-![cny](/assets/blogAssets/trip-down-the-memory-lane/cny2.png "=400x400")
-![cny](/assets/blogAssets/trip-down-the-memory-lane/cny3.png "=400x400")
-![cengbeng](/assets/blogAssets/trip-down-the-memory-lane/cengbeng.png "=400x400")
+![cny](trip-down-the-memory-lane/cny.png "=400x400")
+![cny](trip-down-the-memory-lane/cny1.png "=400x400")
+![cny](trip-down-the-memory-lane/cny2.png "=400x400")
+![cny](trip-down-the-memory-lane/cny3.png "=400x400")
+![cengbeng](trip-down-the-memory-lane/cengbeng.png "=400x400")
 
 
 On the flight back to Canada, I watched a movie 'The Farewell', which I found to be heck relatable. About chinese cultures, immigrating away from family, death (which we'll talk in a bit), and cultural differences from the western world.
@@ -87,7 +87,7 @@ Firstly, environment. Indonesia is well-known to be very resourceful - we probab
 
 Humanity has been challenged again with the Russian-Ukraine conflict. In Indonesia particularly, there's an oil crisis. Expensive oil means expensive logistics, and everything gets more expensive. There's news of people lining up and waiting for their share of subsidized cooking oil, lining up for gas, illegal stocking and exports of oil, etc. I have quite some empathy for the government because much of this is in their hands, but still.. a lot have to be done.
 
-![chaos](/assets/blogAssets/trip-down-the-memory-lane/chaos.png "=400x400")
+![chaos](trip-down-the-memory-lane/chaos.png "=400x400")
 
 We're used to unclear policies, politicians not doing their job, the powerful playing behind the scenes, riots that always end up in unnecessary violence. A place where humanity is always tested. At least that's the picture you get when you are exposed to the news every day. But I do believe that for every bad news, there are countless other good news that's aren't celebrated. In the midst of complexity, emergence can be seen to occur. Amongst the crowd, there's a generation of people who cares and I'd love to stay positive in shaping the future, and be surrounded by these people.
 
@@ -134,5 +134,5 @@ One way of doing that is maybe to recapture the moments. Look into pictures, mem
 Overall this trip was a very refreshing cooldown period. A way to literally step away from work and take a moment to see things from all other things happening in the world (e.g. home). I will miss a lot of things, like the late night conversations with my sister, parents and friends, drives around the city, the comfort of home, the softness of Kopi's fur, and food especially.
 
 
-<largeImg src="/assets/blogAssets/trip-down-the-memory-lane/food.png" alt="food"/>
+<largeImg src="trip-down-the-memory-lane/food.png" alt="food"/>
 

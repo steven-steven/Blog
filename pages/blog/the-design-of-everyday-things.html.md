@@ -171,7 +171,7 @@ Now this is a long book, so please excuse my long notes. Note that the way I str
   - Psychology affect how human interacts and feel emotionally about the product/experience
   - Design sets off emotion like frustration, anger, helplessness, despair, hate. Or it could induce pride enjoyment, control, pleasure, love, attachment.
   - Action cycle (use of the product)
-    ![Action Cycle](/assets/blogAssets/the-design-of-everyday-things/actioncycle.png "=400x400")
+    ![Action Cycle](the-design-of-everyday-things/actioncycle.png "=400x400")
     - Action starts from 'Goal' (goal-driven action) or 'World' (event/data-driven actions)
     - The circled transitions are opportunities for product enhancement. Radical ideas can come from redefining 'Goal' ⭐️ (finding the core user need. ie. root cause analysis)
   - Cognitive thoughts & emotion affects each other in both directions through hormones

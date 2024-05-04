@@ -16,7 +16,7 @@ Honestly, I wasn't too scared until the day arrived where a van picked us at 8am
 
 When we got into the waters and practiced to breathe, fear began to overwhelm. I had the tendency of holding my breath underwater which fucked up my breathing rhythm altogether. When this happens, I could only calm myself down and attempt to fix my breathing on my own instead of resurfacing. That was challenging, especially with me healing from a rough cough early that week. I find the whole experience of breathing from an oxygen tank very intriguing.
 
-![Diving](/assets/blogAssets/first-time-diving-in-phuket/diving1.png "=400x400")
+![Diving](first-time-diving-in-phuket/diving1.png "=400x400")
 
 Suddenly I had the ability to breathe just like all sea creatures. I could see colorful corals and school of fishes, dark sea urchins, and starfishes lying on the sea bed. It was a rich habitat and home of creatures that has evolved along-side our humanity, with many of its mysteries left unknown. It felt magical and for a long half-hour we were all tourists witnessing the daily lifestyle of an ecosystem and its long inhabitants.
 

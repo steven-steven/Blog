@@ -20,11 +20,11 @@ So this is what no lag feels like! My computer's so much faster..
 #### Doing the Daily Leetcode Challange 👨‍💻
 I begin doing Leetcode Daily Challenge (it gives a random problem everyday) for the last 4 months or so. On average I spend about an 30 min - 1 hour per day, and occasionally up to 5h for a hard problem. When I give up I normally look at ['Programming with Larry'](https://www.youtube.com/channel/UCl3tJFKsFrw2p_Wxf1YDSow) on Youtube (came across by chance but I really recommend his videos). Larry streams and record himself solving it live, so it's normally super helpful to listen to his thought process on the spot before reaching to a solution, rather than your normal 'here's your solution' type of videos.
 
-![Daily Challange](/assets/blogAssets/sayonara-2020/dailyChallenge.png "=400x400")
+![Daily Challange](sayonara-2020/dailyChallenge.png "=400x400")
 
 I feel like I am much more comfortable problem-solving and identifying which appropriate techniques to use for a given problem. I try my best keeping a note of heuristics, although I think most of it is learned subconsciously. Tbh I probably forgot most of the questions I've solved LOL. IDK do shoot me a msg if you have suggestions of a better method of keeping note/heuristics so it sticks.
 
-![Leetcode Notes](/assets/blogAssets/sayonara-2020/leetcodeNotes.png "=400x400")
+![Leetcode Notes](sayonara-2020/leetcodeNotes.png "=400x400")
 
 Anyways, I'm still FAR from good. But It's fun and I look forward to continue improving this year (Yes Dynamic Programming, I'm staring at you). Hopefully will try out Leetcode weekly contest this year once I feel more comfortable.
 
@@ -35,7 +35,7 @@ This year I get to touch on Ruby on Rails, Go, ElectronJS for the first time, an
 
 I have 3 tiny whoops before I realize it. I've broken 2 motors, and a flight controller (from the snow). Big Oof. Not so much of the price, but more to the hate of waiting for replacement parts to ship.
 
-![FPV collections](/assets/blogAssets/sayonara-2020/fpv.png "=400x400")
+![FPV collections](sayonara-2020/fpv.png "=400x400")
 
 #### Buying my first ever stock
 
@@ -45,8 +45,8 @@ Tried out Wealthsimple's auto-investment and manual trading account few months a
 
 I started using The Moonlander (a split keyboard). It's my first mechanical and ortholinear keyboard and it definitely increases my typing speed so much, *after a lot of practice and typing tests. I can program my own key bindings, and it's really easy to update the firmware. For now I have the following key bindings (probably will change over time as I find new ways to automate my common shortcuts):
 
-![Keyboard Layout](/assets/blogAssets/sayonara-2020/keyboardLayout.png "=400x400")
-![Keyboard](/assets/blogAssets/sayonara-2020/keyboard.png "=400x400")
+![Keyboard Layout](sayonara-2020/keyboardLayout.png "=400x400")
+![Keyboard](sayonara-2020/keyboard.png "=400x400")
 
 #### Movies/films/Manga:
 

@@ -4,7 +4,7 @@ publish_at: October 31, 2020
 layout: post
 ---
 
-![Download Demo](/assets/blogAssets/i-am-an-aws-certified-cloud-practitioner/ccp_cert.png "=400x400")
+![Download Demo](i-am-an-aws-certified-cloud-practitioner/ccp_cert.png "=400x400")
 
 My first actual use of AWS was 8 months ago when i tried to provision a RDS MySQL DB instance for a course project ([ECE 356](/blog/when-the-storm-ends#4.-database-sql---ece-356)). I had to import ~2 GB of sanitized Yelp data which was painfully slow locally (hours). But to my surprise, it took less than 5 min in RDS! 
 

@@ -13,7 +13,7 @@ Now that the storm ends, I want to recapture the things I went through and learn
 
 <center>Crash!</center>
 
-![Crash!](storm.png)
+![Crash!](when-the-storm-ends/storm.PNG "=300x300")
 
 ## Table of Contents
 
@@ -134,37 +134,37 @@ We have both our app and SQL code available [here or Github](https://github.com/
 
 
 ER Model
-![ERModel](/assets/blogAssets/when-the-storm-ends/ermodel.png "=400x400")
+![ERModel](when-the-storm-ends/ermodel.png "=400x400")
 <hr/>Login
 
-![Login](/assets/blogAssets/when-the-storm-ends/1login.png "=400x400")
+![Login](when-the-storm-ends/1login.png "=400x400")
 <hr/>Create Post with Hashtag
 
-![Create Post](/assets/blogAssets/when-the-storm-ends/2home.png "=400x400")
+![Create Post](when-the-storm-ends/2home.png "=400x400")
 <hr/>Inside a post, view/add comments, add thumbs reaction, set status to 'read'
 
-![Comment](/assets/blogAssets/when-the-storm-ends/3comment.png "=400x400")
+![Comment](when-the-storm-ends/3comment.png "=400x400")
 <hr/>Search filter
 
-![Search](/assets/blogAssets/when-the-storm-ends/4search.png "=400x400")
+![Search](when-the-storm-ends/4search.png "=400x400")
 <hr/>Search and Follow Hashtags
 
-![Search Hashtags](/assets/blogAssets/when-the-storm-ends/5search_and_follow_hashtag.png "=400x400")
+![Search Hashtags](when-the-storm-ends/5search_and_follow_hashtag.png "=400x400")
 <hr/>Search and Follow Users
 
-![Search Users](/assets/blogAssets/when-the-storm-ends/6search_and_follow_users.png "=400x400")
+![Search Users](when-the-storm-ends/6search_and_follow_users.png "=400x400")
 <hr/>Followed shown in home page. You can see your posts and posts from users and hashtags followed
 
-![Followed](/assets/blogAssets/when-the-storm-ends/7followed.png "=400x400")
+![Followed](when-the-storm-ends/7followed.png "=400x400")
 <hr/>Inside a group (as a member)
 
-![Group Page](/assets/blogAssets/when-the-storm-ends/8group.png "=400x400")
+![Group Page](when-the-storm-ends/8group.png "=400x400")
 <hr/>Create a Group, and set group size limit
 
-![Create Group](/assets/blogAssets/when-the-storm-ends/9createGroup.png "=400x400")
+![Create Group](when-the-storm-ends/9createGroup.png "=400x400")
 <hr/>Inside a group (as an admin). Can add/remove members
 
-![Group Page Admin](/assets/blogAssets/when-the-storm-ends/10group_admin.png "=400x400")
+![Group Page Admin](when-the-storm-ends/10group_admin.png "=400x400")
 <hr/>
 
 

@@ -8,21 +8,21 @@ I've been wanting write entry for my fpv learning progress, since I haven't real
 
 ## Shots from EMAX Freestyle 2
 
-![shot 1](/assets/blogAssets/fpv-diary-1/1.gif "=400x400")
-![shot 2](/assets/blogAssets/fpv-diary-1/2.gif "=400x400")
-![shot 3](/assets/blogAssets/fpv-diary-1/3.gif "=400x400")
-![shot 4](/assets/blogAssets/fpv-diary-1/4.gif "=400x400")
-![shot 5](/assets/blogAssets/fpv-diary-1/5.gif "=400x400")
-![shot 6](/assets/blogAssets/fpv-diary-1/6.gif "=400x400")
-![shot 7](/assets/blogAssets/fpv-diary-1/7.gif "=400x400")
+![shot 1](fpv-diary-1/1.gif "=400x400")
+![shot 2](fpv-diary-1/2.gif "=400x400")
+![shot 3](fpv-diary-1/3.gif "=400x400")
+![shot 4](fpv-diary-1/4.gif "=400x400")
+![shot 5](fpv-diary-1/5.gif "=400x400")
+![shot 6](fpv-diary-1/6.gif "=400x400")
+![shot 7](fpv-diary-1/7.gif "=400x400")
 
 ## Shots from Mobula 6
 
-![shot 1](/assets/blogAssets/fpv-diary-1/a.gif "=400x400")
-![shot 2](/assets/blogAssets/fpv-diary-1/b.gif "=400x400")
-![shot 3](/assets/blogAssets/fpv-diary-1/c.gif "=400x400")
-![shot 4](/assets/blogAssets/fpv-diary-1/d.gif "=400x400")
-![shot 5](/assets/blogAssets/fpv-diary-1/e.gif "=400x400")
+![shot 1](fpv-diary-1/a.gif "=400x400")
+![shot 2](fpv-diary-1/b.gif "=400x400")
+![shot 3](fpv-diary-1/c.gif "=400x400")
+![shot 4](fpv-diary-1/d.gif "=400x400")
+![shot 5](fpv-diary-1/e.gif "=400x400")
 
 ## Legality
 Since I started, I've became more paranoidly concerned about drone laws in Canada. I think this isn't something one could enforce easily, but still I wish to always stay out of trouble. Some of the major ones in my case are:
@@ -41,7 +41,7 @@ This hobby has roughly been 50% flying and 50% fixing hardware problems. They sa
 - One afternoon, I landed on a puddle and I could clearly see smoke coming out from the flight controller board. I had them replaced (the board cost ~$70), had to re-solder everything. I painted [silicone conformal coating](https://www.amazon.ca/gp/product/B085G42TGS/ref=ppx_od_dt_b_asin_title_s00?ie=UTF8&psc=1) on the new board to hopefully water-proof it and not make that same mistake.
 - I've also lost the drone couple of times (crash and battery fell out), which on average would took me about an hour to find around the field.
 
-![fix 1](/assets/blogAssets/fpv-diary-1/fix1.png "=400x400")
-![fix 2](/assets/blogAssets/fpv-diary-1/fix2.png "=400x400")
-![fix 3](/assets/blogAssets/fpv-diary-1/fix3.png "=400x400")
-![fix 3](/assets/blogAssets/fpv-diary-1/fix4.png "=400x400")
+![fix 1](fpv-diary-1/fix1.png "=400x400")
+![fix 2](fpv-diary-1/fix2.png "=400x400")
+![fix 3](fpv-diary-1/fix3.png "=400x400")
+![fix 3](fpv-diary-1/fix4.png "=400x400")

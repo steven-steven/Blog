@@ -30,7 +30,7 @@ Not really
 
 ### Steven Steven
 
-![WatCard](/assets/blogAssets/no-last-name/watcard.jpg "=400x400")
+![WatCard](no-last-name/watcard.jpg "=400x400")
 
 I should clarify that my full name in passport is 'Steven'. For administrative reasons, the school and the companies I worked at had me registered as 'Steven Steven'. When I purchase a plane ticket, sign a contract for rent, or open up a bank account, and it requires a first and last name, I put in 'Steven Steven'.
 

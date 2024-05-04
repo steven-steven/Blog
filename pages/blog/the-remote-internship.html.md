@@ -4,7 +4,7 @@ publish_at: December 24, 2020
 layout: post
 ---
 
-![Welcome Loots](/assets/blogAssets/the-remote-internship/loot.png "=400x400")
+![Welcome Loots](the-remote-internship/loot.png "=400x400")
 
 There are definitely perks of being in the technology industry that made it possible to survive and thrive even in the midst of pandemic. 4 months flew quickly, and last week was the end of my internship at StackAdapt where I get to fully experience the new WFH culture.
 
@@ -39,7 +39,7 @@ Our tech team have morning standup twice every week, and I also joined the 'Coff
 2020 made public speaking a joke. There was a moment where I had to demo a feature I made (for inline editing) on a monthly company wide product meeting of about 130 people. The PM I worked with, Daniel, gave me the chance to help out on the demo. It was a great experience and didn't feel as nerve wracking over Zoom, especially when most people didn't turn on their cams.
 
 ## Playing Pong with Chris + end of year digital escape room
-![Pong](/assets/blogAssets/the-remote-internship/pong.png "=400x400")
+![Pong](the-remote-internship/pong.png "=400x400")
 
 Chris is a fellow Waterloo intern, and he's a competitive table tennis player (probably one of the few best I've ever played with). I reached out to him and we hanged out and played every Friday after work, only until the 2nd wave comes and the lockdown is up again 😢 But enjoyed while it lasted and my game improved so much especially after he taught me to use my hip power more.
 
@@ -58,4 +58,4 @@ A random word of wisdom for myself:
 > Know your enemy, know his sword.
 
 P.S > I gotta preserve my 4 month of fame on the company site ✨
-![I'm in the company website](/assets/blogAssets/the-remote-internship/companyPic.gif "=400x400")
+![I'm in the company website](the-remote-internship/companyPic.gif "=400x400")

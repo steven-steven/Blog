@@ -41,7 +41,7 @@ Am I feeling up/down? Pleasant/unpleasant? Approach/avoid? Energized/depleted? n
 
 The Mood meter is a <u> Pleasantness vs Energy</u> plot
 
-![Mood Meter](/assets/blogAssets/book-permission-to-feel/moodmeter.jpg "=400x400")
+![Mood Meter](book-permission-to-feel/moodmeter.jpg "=400x400")
 
 - <u>Yellow zone</u>: posture erect, eyes sparkling, energized (e.g: finding myself in the zone, go climbing)
 - <u>Red zone</u>: tense body, heart beats fast, furrowed/raised eyebrows. Fight or flee response (e.g: presentation, meeting stranger, debugging)

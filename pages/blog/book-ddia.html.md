@@ -221,7 +221,7 @@ For single-node computer, total failure is better than partial failure. Makes it
 
 Often the only way to communicate is across machines. With asynchronous packet networks you can't guarantee it arriving. Was it processed before the response were lost? Was there delay? Was it delivered?
 
-![Ghosted](/assets/blogAssets/book-ddia/ghosted.png "=400x400")
+![Ghosted](book-ddia/ghosted.png "=400x400")
 
 *Defining, testing, and detecting network faults* is important, otherwise arbitrary things like data-loss. See how your system reacts to the chaos monkey (ie. node failure). You can declare node is dead if timeout keeps elapsing on multiple retries.
 
@@ -352,7 +352,7 @@ Message systems can take different approaches to publish/subscribe model:
 
 Unlike batch, consuming events can be destructive as it could cause data to be deleted from broker. The idea behind **log-based message brokers** is to combine durable DB with the low-latency notification. Producers *append to log and consumers read from the log* sequentially. `tail -f` watched a file for data appended, and notify the consumers if they're waiting at the end. Additionally, *partition the log for high throughput*. A topic can be defined as group of partitions carrying same type of messages. Since **partition** is append-only, messages within it are totally ordered, whereas there's no ordering guarantee across partitions.
 
-![Consumer Groups](/assets/blogAssets/book-ddia/consumer_group.png "=400x400")
+![Consumer Groups](book-ddia/consumer_group.png "=400x400")
 
 **Consumer groups**: with log-based approach, fan-out is trivial since consumer can read them independently without data being deleted. To load-balance across groups, broker assign partitions to nodes in consumer group. Downsides: in a consumer group, # nodes is at most # of partitions. Long-running processes can block the rest of messages in the partition. Thus if messages are long-running, want to load-balance, and message ordering is not important, use traditional **AMQP style broker** instead of log-based (not persisted FIFO).
 

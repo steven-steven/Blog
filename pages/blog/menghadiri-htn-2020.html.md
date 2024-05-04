@@ -4,7 +4,7 @@ publish_at: January 23, 2021
 layout: post
 ---
 
-![Dashboard home](/assets/blogAssets/menghadiri-htn-2020/dashboardHome.png "=400x400")
+![Dashboard home](menghadiri-htn-2020/dashboardHome.png "=400x400")
 
 Minggu lalu, saya berpartisipasi di Hack The North 2020++ yang merupakan hackathon terbesar di Kanada. Event ini diselenggarakan setiap tahun dimana ribuan murid dari berbagai sudut dunia, figur-figur teknologi, dan sponsor dari berbagai perusahaan diundang untuk datang ke University of Waterloo. Saya sendiri telah hadir sekali sebagai seorang hacker tahun 2018 dan lagi di tahun 2019 sebagai seorang mentor (tugasku membantu hacker jika ada pertanyaan mengenai Web, backend, formulasi ide, ataupun sedikit hardware). Karena pandemi sekarang, event 2020 telah diundurkan ke Januari minggu lalu. Dan pada akhirnya event tersebut diselenggarakan secara online melalui 'Hopin', dan kapasitas yang biasa sekitar 1000 orang ditingkatkan hingga 3000+ orang. Awalnya saya agak penasaran bagaimana sebuah hackathon bisa dieksekusikan secara online, terutama karena proses sosialisasi/networking akan sangat berbeda dibanding bertemu berhadapan secara langsung.
 
@@ -12,7 +12,7 @@ Namun ternyata event ini terorganisir dengan sangat baik, menyadarkanku bahwa ke
 
 ## Tentang hackathon (apa itu?)
 
-![Schedule](/assets/blogAssets/menghadiri-htn-2020/schedule.png "=400x400")
+![Schedule](menghadiri-htn-2020/schedule.png "=400x400")
 
 Dalam sebuah hackathon, para hacker berkelompok (1-4 orang) dan berkerja untuk membuat apapun dalam jangka waktu 36 jam. APAPUN. Setelah 36 jam, kelompok dapat menunjukan hasil karyanya didepan juri (pitch), dan pemenangnya mendapatkan berbagai hadiah (dalam bentuk benda ataupun kesempatan karir).
 
@@ -33,10 +33,10 @@ Kemudian semua interaksi asynchronous diadakan di Discord. Ada channel untuk ber
 ## Produk dari tim Pikapika - Steganographia
 
 Encoding:
-![EncodingDemo](/assets/blogAssets/menghadiri-htn-2020/encodingDemo.gif "=400x400")
+![EncodingDemo](menghadiri-htn-2020/encodingDemo.gif "=400x400")
 
 Decoding:
-![DecodingDemo](/assets/blogAssets/menghadiri-htn-2020/verificationDemo.gif "=400x400")
+![DecodingDemo](menghadiri-htn-2020/verificationDemo.gif "=400x400")
 
 Saya berkelompok dengan teman-teman sekelas (grup berempat). Sebelum event ini, kami sempat brainstorming dahulu ingin buat apa. Berbagai ide seperti pomodoro timer yang mendeteksi wajah, permainan multiplayer tetris yang menggunakan pergerakan tubuh atau pose untuk menggerakan, dll. Pada akhirnya kami sepakat membuat service untuk watermark gambar digital menggunakan sebuah ML model dari research di Berekely [bernama StegaStamp](https://github.com/tancik/StegaStamp). Kami membuat web service supaya pemilik foto bisa generate sebuah invisible watermark sebelum mereka bagikan di sosial media.
 

@@ -20,9 +20,9 @@ I wanted this post to be a pictorial collection of my notes about some difficult
 - Use polymorphism to avoid delegation. Rather than 'check if object is A do this, if object is B do that' -> you could use polymorphism (i.e. duck typing or inheritance) so A and B implements the message you're trying to call. The caller now trusts that each object is the right type and simply call the message (without knowing/depending on each target class).
     - There's some notes on why dynamic type language like Ruby is an advantage. Personally not too convinced now; but I'm hoping this will change.
 
-![Polymorphism](/assets/blogAssets/book-POOD/polymorphism.png "=400x400")
+![Polymorphism](book-POOD/polymorphism.png "=400x400")
 - Dependency Injection: the class should depend on behavior, not the type of instance. Loose coupling is achieved by initiating the object outside, and inserting the 'behavior'.
-![Dependency Injection](/assets/blogAssets/book-POOD/dependencyInjection.png "=400x400")
+![Dependency Injection](book-POOD/dependencyInjection.png "=400x400")
 
 ### Flexible Interface
 - public interface (public methods) is contract, that should be stable.
@@ -44,20 +44,20 @@ I wanted this post to be a pictorial collection of my notes about some difficult
   - the oposite of calling 'super' (calling super requires subclass to know superclass's implementation, which is bad / tight-coupling)
   - thus, subclass don't have to know how to interact with superclass.
 
-![Inheritance hook](/assets/blogAssets/book-POOD/inheritance_hook.png "=400x400")
+![Inheritance hook](book-POOD/inheritance_hook.png "=400x400")
 
 ### Modules
 - Modules: allow different object types to play common role (ie. schedulable and scheduler). Is also a way of automatic delegation just like Inheritance (but for unrelated types).
 - in Ruby, 'include' modules adds it to the instance of a class (instance.x). 'extend' modules adds it to the class (Class.x).
 
-![Modules](/assets/blogAssets/book-POOD/modules.png "=400x400")
+![Modules](book-POOD/modules.png "=400x400")
 
 ### Composition
 - Larger object owns (has-a relationship) other objects.
 - Factory: is object whose purpose is to create other objects.
 - Aggregation: is like Composition, except that contained object has 'independent life' to it's container. (e.g. Parts object contains an array of Part object).
 
-![Composition factory](/assets/blogAssets/book-POOD/composition_factory.png "=400x400")
+![Composition factory](book-POOD/composition_factory.png "=400x400")
 
 ### Test
 - Test gives you confidence to refactor constantly (change design decision without altering external behavior).
@@ -78,7 +78,7 @@ I wanted this post to be a pictorial collection of my notes about some difficult
   - Stub is a dummy object that implements the same interface. However, what if the role changes? then the test double is forced to change. How is this enforced (to prevent obsolete stub - false positive)?
   - Use shareable tests! (a test module class) Easy way to test every object that plays the role
 
-![Test mock](/assets/blogAssets/book-POOD/testMock.png "=400x400")
+![Test mock](book-POOD/testMock.png "=400x400")
 
 ### Testing Inheritance
 - Similarly, one could test the superclass interface using sharable test modules.
@@ -86,7 +86,7 @@ I wanted this post to be a pictorial collection of my notes about some difficult
 - You could define shared module (ie. AnimalInterfaceTest) to test each subclass that they responds_to the shared public abstract methods.
 - You could define shared module (ie. AnimalSubclassTest) to test each subclass that they responds_to the required abstract methods to override (note: if not overriden, the abstract class should throw error).
 
-![Test interface](/assets/blogAssets/book-POOD/testInterface.png "=400x400")
+![Test interface](book-POOD/testInterface.png "=400x400")
 
 ### And that is all!
 

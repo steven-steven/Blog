@@ -35,31 +35,31 @@ P.S. Forgot to mention this shit is free
 
 ## My Workspace @ a glance
 
-![Workspace 1](/assets/blogAssets/discovering-notion/newpage.png "=400x400")
+![Workspace 1](discovering-notion/newpage.png "=400x400")
 
 Above is what a blank page looks like. It's a canvas that you can fill with anything you like. Imagination is your limit :unicorn_face:.
 
 ### Main Page
 
-![Workspace 1](/assets/blogAssets/discovering-notion/workspace1.png "=400x400")
+![Workspace 1](discovering-notion/workspace1.png "=400x400")
 
 Now that's the main page. Ideally I don't want to clutter it with too much stuff. So at the top I have a huge cover picture of a *becak(Indonesian Tricycle) from Unsplash, there's a bunch of shortcuts to different pages, and a handsome photograph on the side.
 
 ### Database (Table View)
 
-![Workspace 2](/assets/blogAssets/discovering-notion/workspace2.png "=400x400")
+![Workspace 2](discovering-notion/workspace2.png "=400x400")
 
-![Table Dropdown](/assets/blogAssets/discovering-notion/workspace2_dropdown.png "=400x400")
+![Table Dropdown](discovering-notion/workspace2_dropdown.png "=400x400")
 
-![Table Filter](/assets/blogAssets/discovering-notion/workspace2_filter.png "=400x400")
+![Table Filter](discovering-notion/workspace2_filter.png "=400x400")
 
 Below that, I have a TODO table. I can easily add new task, assign attributes (class, due, progress, etc.) through a customized list of options I created. This can then be used to sort and filter. Basically this thing IS a database!
 
-![Open Page](/assets/blogAssets/discovering-notion/workspace2_open.png "=400x400")
+![Open Page](discovering-notion/workspace2_open.png "=400x400")
 
 If you hover over a task, you can open it as a page. You can have a page *inside a page inside a page inside a page*... Let me click that and :drum_with_drumsticks: walah..
 
-![Task Page](/assets/blogAssets/discovering-notion/workspace2_task.png "=400x400")
+![Task Page](discovering-notion/workspace2_task.png "=400x400")
 
 I zoomed out on that popup page to capture as much as possible but it's pretty much an entirely new page with my notes on that particular task. You can also set the attributes below the title, and it'll be reflected in the database.
 
@@ -67,19 +67,19 @@ But wait. You haven't seen everything.
 
 ### Database (Kanban View)
 
-![Workspace 3](/assets/blogAssets/discovering-notion/workspace3_kanban.png "=400x400")
+![Workspace 3](discovering-notion/workspace3_kanban.png "=400x400")
 
 You can turn this thing (the table) into a Kanban board automatically by changing the view! Here I partition the board based on 'Today', 'This Week', and 'This Month' tasks that we tagged earlier. I can freely drag the task boxes between the partitions and it will immediately update that task's attribute. You can filter this stuff too (ie. filter out only the non-completed task).
 
 ### Bookmarks and Page Links
 
-![Workspace 4](/assets/blogAssets/discovering-notion/workspace4.png "=400x400")
+![Workspace 4](discovering-notion/workspace4.png "=400x400")
 
 Below the database, I have a 'Things To Read' section that bookmarks webpages. And a <u>List View</u> of my courses this term. Let's click on one!
 
 ### Dropdown, linked database, checklist...
 
-![Subject Specific Page](/assets/blogAssets/discovering-notion/workspace5.png "=400x400")
+![Subject Specific Page](discovering-notion/workspace5.png "=400x400")
 
 So within a course specific page, I have a <u>dropdown</u> "Overview", that summarize the course outline, and due dates for labs.
 
@@ -95,11 +95,11 @@ We've also seen that I can have multiple views point to the same database (like 
 
 I have also an entire page dedicated to show the entire database. I can do a search, add view, filter, etc.
 
-![Entire Database](/assets/blogAssets/discovering-notion/workspace6.png "=400x400")
+![Entire Database](discovering-notion/workspace6.png "=400x400")
 
 ### Interface
 
-![Workspace 7](/assets/blogAssets/discovering-notion/workspace7.png "=400x400")
+![Workspace 7](discovering-notion/workspace7.png "=400x400")
 
 The interface is component based. So you create a component (Some I have yet to try out), and you can drag them around, and place it anywhere on your canvas.
 
@@ -113,7 +113,7 @@ As I said before we used this at [Blueprint](https://uwblueprint.org/) for our a
 
 Below is an example ticket that I have:
 
-![Collaboration with Notion](/assets/blogAssets/discovering-notion/blueprint1.png "=400x400")
+![Collaboration with Notion](discovering-notion/blueprint1.png "=400x400")
 
 ## Drawbacks
 

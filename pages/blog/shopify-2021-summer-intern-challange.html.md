@@ -19,11 +19,11 @@ I was really hoping that the OMDB API supports a query to get all the movies, so
 
 I started with an initial design/sketch on Figma:
 
-![DB Structure](/assets/blogAssets/shopify-2021-summer-intern-challange/figma.png "=400x400")
+![DB Structure](shopify-2021-summer-intern-challange/figma.png "=400x400")
 
 But as you will see, my taste of colors quickly change as I played around with CSS.
 
-![Nomination Picker Demo](/assets/blogAssets/shopify-2021-summer-intern-challange/nominatinPicker_demo.gif "=400x400")
+![Nomination Picker Demo](shopify-2021-summer-intern-challange/nominatinPicker_demo.gif "=400x400")
 
 ## BE application
 Deployed App: https://shopify-image-repository.vercel.app
@@ -35,7 +35,7 @@ I came across a template to start off my project ([nextjs-advanced-starter](http
 Most of my time was then spent on implementing Firebase Auth and Storage, which wasn't too difficult considering the myriad resources on the internet. React useContext hooks also made it very easy to have a clean code separation for the auth and storage services.
 
 #### Firestore DB structure
-![DB Structure](/assets/blogAssets/shopify-2021-summer-intern-challange/dbStructure.png "=400x400")
+![DB Structure](shopify-2021-summer-intern-challange/dbStructure.png "=400x400")
 
 #### Storing images and its metadata
 Once I had storage working, I knew I'd need to use Firestore to maintain the image metadata. This is required since images can ideally be uploaded with the same name and that would replace the old image with the same name. So instead, I should store the image with a uniquely generated UUID, then use Firestore to keep the UUID with all metadata like the actual image name, thumbnail size, download url. To scale this further, I could also easily add more metadata like image tags or date uploaded and use them as query/search fields.
@@ -68,4 +68,4 @@ service cloud.firestore {
 #### UI
 I'd say its a pretty basic UI. I had some pages for the authentication flow, and it will route the users to /dashboard once logged in. I used [react-grid-gallery](https://www.npmjs.com/package/react-grid-gallery) to display the images. It's my first time using it and seems like an awesome library. Although not perfect (e.g. It doesn't allow custom styles for the image checkbox. The default icon style is pretty bad on white images ([more about the issue](https://github.com/benhowell/react-grid-gallery/issues/141)).
 
-![Image Repository Demo](/assets/blogAssets/shopify-2021-summer-intern-challange/imagerepoDemo.gif "=400x400")
+![Image Repository Demo](shopify-2021-summer-intern-challange/imagerepoDemo.gif "=400x400")

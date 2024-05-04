@@ -9,7 +9,7 @@ Indexing is such a fascinating field that we all take for granted. When we looku
 
 I learned indexing in my Database course recently. I came across how data records typically span over multiple blocks in your disk and that is time expensive to search. Disk latency is around 13ms, and RAM latency is around 83 ns. At our scale of comparison I think that'd be like the speed of taking a book next to you, versus walking (on your feet) to the national library in Ottawa and back. But that is the inevitable limitation of reading disks. There's no way around it but to minimize the number of disk reads as much as possible. So that's where indexing comes in. It comes down not only to how the data is stored and organized, but also the techniques we use to refer to the data during a lookup.
 
-<largeImg src="/assets/blogAssets/indexing-with-spatial-search-algorithm/comic1.jpg" alt="Comic by commitstrip"/>
+<largeImg src="indexing-with-spatial-search-algorithm/comic1.jpg" alt="Comic by commitstrip"/>
 
 There is no magic nor a silver bullet. Like all things in life, the solution depends on what you want to search for. For example, to search for your favorite book by name, maybe you should arrange the books alphabetically in your shelf. But if you're looking to search by genre, maybe put them in categorical buckets instead. Whether your index is dense, or sparse, or whether you store them in B+ Trees or implement dynamic hashing, there a whole lot of ways and each comes at an expense and its own benefits.
 
@@ -42,7 +42,7 @@ With this new interesting concept, I thought of something fun to code over night
 
 A simple concept, and it didn't take me long because there's already a javascript library called [kdbush](https://github.com/mourner/kdbush) doing the indexing for me using a k-d-tree. Simply give it the array of coordinates, and it'll return an indexed structure that you can query to.
 
-![My Spatial Search Visualization](/assets/blogAssets/indexing-with-spatial-search-algorithm/spatialsearchvis.png "=400x400")
+![My Spatial Search Visualization](indexing-with-spatial-search-algorithm/spatialsearchvis.png "=400x400")
 
 Check it out yourself! -> https://steven-steven.github.io/spatialsearch/
 

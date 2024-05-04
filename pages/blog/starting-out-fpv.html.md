@@ -4,7 +4,7 @@ publish_at: November 10, 2020
 layout: post
 ---
 
-![FPV Take Off](/assets/blogAssets/starting-out-fpv/fpv1.gif "=400x400")
+![FPV Take Off](starting-out-fpv/fpv1.gif "=400x400")
 
 > "When you fly, nothing else matter"
 
@@ -13,13 +13,13 @@ The past month I have been introduced to the world of FPV. Not having a mentor h
 ## My bitter history with drones
 The first and last drone I owned was the DJI Phantom 4. I had it for about 2 years and had flew to few placed like Tangerang (where I lived), Vancouver and Bali. 24 August 2017, was the date when that drone crashed into a wall of rock, fell, and washed away by the rough merciless waves; after an attempt to sneak pass under a rock bridge in Bali. After that event the drone was never again seen and I'm left with an unused remote controller and a few batteries and accessories lying around without purpose.
 
-![Crash Site](/assets/blogAssets/starting-out-fpv/crashSite.jpg "=400x400")
+![Crash Site](starting-out-fpv/crashSite.jpg "=400x400")
 
 Another (potential) encounter I had with drones was when I saw the UW Aerial Robotics Group and considered joining. I remembered reading their wiki as well as some processes and roles they had with building drones. Unfortunately, I gave up on it knowing that I had no clue what I was reading. I really wished I had started researching on FPV early on those days…
 
 ## Purchasing the equipment
 
-![FPV Equipments](/assets/blogAssets/starting-out-fpv/equipment.png "=400x400")
+![FPV Equipments](starting-out-fpv/equipment.png "=400x400")
 Seems like there was just one distributor that ships a lot of these FPV stuff worldwide. Which was Bangood.com.
 
 ### 1. Drone + battery + charger + radio controller + goggles
@@ -56,4 +56,4 @@ Once I felt comfortable enough, I went to the park to test it out. My first few 
 FUN is an understatement. I still feel extreme anxiety when I fly but at the same time it feels exhilarating to move around and through objects with so much agility. I am still riding that learning curve and it is a pretty advanced and dangerous sport, but I'd still recommend this hobby to anyone in a heartbeat.
 
 As a bonus, here's my first ever flip :)
-![FPV flip](/assets/blogAssets/starting-out-fpv/fpvflip.gif "=400x400")
+![FPV flip](starting-out-fpv/fpvflip.gif "=400x400")

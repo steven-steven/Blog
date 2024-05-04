@@ -8,7 +8,7 @@ layout: post
 
 <script
     type="text/javascript"
-    src="/assets/blogAssets/code-brakedown-maze-generator/mazeGenerators.js"
+    src="code-brakedown-maze-generator/mazeGenerators.js"
 ></script>
 
 Last week I came across '[Visualizing Algorithms](https://bost.ocks.org/mike/algorithms/)', an article by Mike Bostock (creator of D3.js). He wrote about visualizing different algorithms for sampling, shuffling, sorting, and maze generation. Aside from all technical complexities and use cases of these algorithms, I was equally curious about how Mike was able to create those stunning visualizations.
@@ -71,7 +71,7 @@ Overall, the time complexity remains O(n) since every cell is visited exactly on
 ### cellSize and cellSpacing
 
 One thing that confuses me in the beginning was the structure. I keep forgetting that the cells are separated by spaces. These spaces can be colored either black or white, depending whether there is a path between the two cells.
-![Maze Cell Layout](/assets/blogAssets/code-brakedown-maze-generator/cell_layout.png "=400x400")
+![Maze Cell Layout](code-brakedown-maze-generator/cell_layout.png "=400x400")
 Above is a 7x7 maze cell. The `cellSize=12` and `cellSpacing=8`. The cells are always a square, while the spacings are a rectangular block with size cellSize x cellSpacing.
 
 ### direction

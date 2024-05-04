@@ -16,9 +16,9 @@ class ApplicationMarkdown < MarkdownRails::Renderer::Rails
   def image(link, title, alt_text)
     # e.g. ![alt =100x100](url.png)
     if title =~ /=(\d+)x(\d+)/
-      %(<img src="#{link}" width="#{$1}" height="#{$2}" alt="#{alt_text}" style="margin: 1.5rem auto;">)
+      %(<img src="https://steven-steven.github.io/Blog/assets/images/blogAssets/#{link}" width="#{$1}" height="#{$2}" alt="#{alt_text}" style="margin: 1.5rem auto;">)
     else
-      %(<img src="#{link}" title="#{title}" alt="#{alt_text}" style="margin: 1.5rem auto;">)
+      %(<img src="https://steven-steven.github.io/Blog/assets/images/blogAssets/#{link}" title="#{title}" alt="#{alt_text}" style="margin: 1.5rem auto;">)
     end
   end
 end

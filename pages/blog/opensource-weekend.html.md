@@ -4,13 +4,13 @@ publish_at: September 5, 2022
 layout: post
 ---
 
-![Power](/assets/blogAssets/opensource-weekend/meme.png "=400x400")
+![Power](opensource-weekend/meme.png "=400x400")
 
 **Shameless plug**: Click the image below to checkout my opensource! You can easily generate the same card for your typeracer data, and use them in any readme!
 
 [![Steven's Typeracer stats](https://typeracer-readme-stats.vercel.app/api?username=juninight29)](https://github.com/steven-steven/typeracer-readme-stats)
 
-[![My github readme profile](/assets/blogAssets/opensource-weekend/readme.png)](https://github.com/steven-steven/steven-steven "=400x400")
+[![My github readme profile](opensource-weekend/readme.png)](https://github.com/steven-steven/steven-steven "=400x400")
 
 It's a long labor day weekend, and what's better to do than to do more labor. I think the term 'labor' often connotes dreadful work done while being employed by someone. But by definition labor just means work in general, and the curse of having a hobby for programming is that now the line between 'labor' vs 'leisure' is also blurred.
 
@@ -65,7 +65,7 @@ That's it as a TLDR pals! Aside from all the grammatical folks that got trigerre
 
 **Last but not least**.., [here's a link to my first open source PR contribution](https://github.com/anuraghazra/github-readme-stats/pull/1999) I made for `github-readme-stats` 🥳 As described in that PR description link, adding prettier checks to the CI will enforce the trailing commas in the `themes.js` file so we get correct diffs in the right lines. (Update: It got approved and merged!!!)
 
-[![PR contribution](/assets/blogAssets/opensource-weekend/contribution.png)](https://github.com/anuraghazra/github-readme-stats/pull/1999 "=400x400")
+[![PR contribution](opensource-weekend/contribution.png)](https://github.com/anuraghazra/github-readme-stats/pull/1999 "=400x400")
 
 ### Conclusion
 

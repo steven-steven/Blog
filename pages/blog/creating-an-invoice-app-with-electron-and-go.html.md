@@ -7,7 +7,7 @@ layout: post
 A long long time ago (2 years ago -ish), my dad asked me if I could make an invoice app for his company because his old software was very outdated. The old legacy software was a custom-made software still currently running on a Windows XP in his office. He had even forgotten who made it for him in the first place.
 
 Old Invoice Software:
-![Old invoice app](/assets/blogAssets/creating-an-invoice-app-with-electron-and-go/oldApp.png "=400x400")
+![Old invoice app](creating-an-invoice-app-with-electron-and-go/oldApp.png "=400x400")
 
 I said I'd give it a shot, and that summer vacation I remember trying to create a web-app to generate pdf documents which I wasn't very successful. Somehow at that time I couldn't wrap my head around how I could generate a PDF file, and downloading files from the internet. As soon as that vacation ends life got busy and I ditched the entire project and never really came back to it.
 
@@ -35,9 +35,9 @@ I begin with a Figma design. It was my first time learning to use this software,
 
 The following are screenshots of the intial 3-page design (create/edit new invoice, history list of invoices, and add new inventory item).
 
-![Make new Invoice design](/assets/blogAssets/creating-an-invoice-app-with-electron-and-go/design1.png "=400x400")
-![Home page design](/assets/blogAssets/creating-an-invoice-app-with-electron-and-go/design2.png "=400x400")
-![Add new item design](/assets/blogAssets/creating-an-invoice-app-with-electron-and-go/design3.png "=400x400")
+![Make new Invoice design](creating-an-invoice-app-with-electron-and-go/design1.png "=400x400")
+![Home page design](creating-an-invoice-app-with-electron-and-go/design2.png "=400x400")
+![Add new item design](creating-an-invoice-app-with-electron-and-go/design3.png "=400x400")
 
 There are some things I modified after getting a few feedbacks from my family. For example in the 'buat invoice' (make invoice) page, it's better to keep the 'SIMPAN' (save) and 'DOWNLOAD PDF' buttons below the totals to make it clear that the buttons are saving the state of the entire page. I also decided to make the table editable on that page, and remove the search bar on top of the home page since it was unnecessary.
 
@@ -50,17 +50,17 @@ I learned and played around with Golang and GoKit 4 months ago so it's not entir
 I also used Firebase Realtime as the database since it's the most flexible and cheapest (and fastest to get running) option I could think of. My dad wouldn't mind if the data was stored locally just like the old system, but I think storing it in the cloud could add additional scalability so people could now work off that old ancient office computer.
 
 Finally, here's a rough sketch of a simple design of the services:
-![design](/assets/blogAssets/creating-an-invoice-app-with-electron-and-go/architecture.png "=400x400")
+![design](creating-an-invoice-app-with-electron-and-go/architecture.png "=400x400")
 
 And the DB Models for 'Item' and 'Invoice' documents: (my name convention: those in suffix '_db' are the schema stored in the database)
-![invoiceSchema](/assets/blogAssets/creating-an-invoice-app-with-electron-and-go/invoiceSchema.png "=400x400")
-![itemSchema](/assets/blogAssets/creating-an-invoice-app-with-electron-and-go/itemSchema.png "=400x400")
+![invoiceSchema](creating-an-invoice-app-with-electron-and-go/invoiceSchema.png "=400x400")
+![itemSchema](creating-an-invoice-app-with-electron-and-go/itemSchema.png "=400x400")
 
 ## Go API
 
 I chose Go Kit mainly as it proposes good design priciples. I read up ways to structure a microservice [API with gokit](https://medium.com/@shijuvar/go-microservices-with-go-kit-introduction-43a757398183) and it seems pretty neat. There are multiple layers of the API, and once I set it up the first time it's really easy to add/change features after.
 
-![Go Kit](/assets/blogAssets/creating-an-invoice-app-with-electron-and-go/gokit.png "=400x400")
+![Go Kit](creating-an-invoice-app-with-electron-and-go/gokit.png "=400x400")
 
 Go also has a default testing package. The challenging part was mocking the Firebase DB for unit testing which I couldn't figure and ended up using a third-party github.com/jeremyschlatter/firebase. It was easy to use since it provides clean interface to change between a mock and real DB instance. Buutt.. it's not exactly well-maintained and only supports basic functions like get, set, delete, etc.
 
@@ -101,25 +101,25 @@ I used [react-hook-form](https://react-hook-form.com), a super handy library tha
 ## Demo
 
 Opening the App and edit existing invoices
-![Open and edit Demo](/assets/blogAssets/creating-an-invoice-app-with-electron-and-go/openAndEditDemo.gif "=400x400")
+![Open and edit Demo](creating-an-invoice-app-with-electron-and-go/openAndEditDemo.gif "=400x400")
 
 Testing UI responsiveness
-![Responsiveness Demo](/assets/blogAssets/creating-an-invoice-app-with-electron-and-go/responsiveDemo.gif "=400x400")
+![Responsiveness Demo](creating-an-invoice-app-with-electron-and-go/responsiveDemo.gif "=400x400")
 
 Download pdf
-![Download Demo](/assets/blogAssets/creating-an-invoice-app-with-electron-and-go/downloadDemo.gif "=400x400")
+![Download Demo](creating-an-invoice-app-with-electron-and-go/downloadDemo.gif "=400x400")
 
 Create New Invoice
-![New Item Demo](/assets/blogAssets/creating-an-invoice-app-with-electron-and-go/newInvoiceDemo.gif "=400x400")
+![New Item Demo](creating-an-invoice-app-with-electron-and-go/newInvoiceDemo.gif "=400x400")
 
 Create New Item as it appears when creating new invoice
-![New Item Demo](/assets/blogAssets/creating-an-invoice-app-with-electron-and-go/createNewItemDemo.gif "=400x400")
+![New Item Demo](creating-an-invoice-app-with-electron-and-go/createNewItemDemo.gif "=400x400")
 
 Error Handling on Offline and automatically goes back up when internet is available
-![Offline Demo](/assets/blogAssets/creating-an-invoice-app-with-electron-and-go/offlineDemo.gif "=400x400")
+![Offline Demo](creating-an-invoice-app-with-electron-and-go/offlineDemo.gif "=400x400")
 
 Sample invoice PDF with dummy data
-![Sample PDF](/assets/blogAssets/creating-an-invoice-app-with-electron-and-go/samplePdf.png "=400x400")
+![Sample PDF](creating-an-invoice-app-with-electron-and-go/samplePdf.png "=400x400")
 
 ## Overall
 Having my dad as a client is an interesting experience mainly because he's not adapted to modern technology. Thus, he doesn't seem to have much expectations other than getting it to work.

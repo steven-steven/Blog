@@ -24,7 +24,7 @@ Here's my rendition of a summary:
 - flaw: Kant tells us to ignore emotion and use pure reasoning. Leads to decision paralysis, because sometimes you just have to trust your gut. Kant also tells us not to lie - but you're allowed to go around the lie (ie. rather than saying the shirt is ugly, point out a better shirt or invite them for shopping).
 - Scanlon's version: find a common ground that you think no one would disagree. Treat everyone's interest equal to yours. Unlike Kant, you're imagining a negotiation instead of coming up with universal law.
 
-![Avatar great divide episode](/assets/blogAssets/book-how-to-be-perfec/greatdivide.png "=400x400")
+![Avatar great divide episode](book-how-to-be-perfec/greatdivide.png "=400x400")
 
 ** Ubuntu**: african philosophy, that a person is a person through other people. We exist through others. We're a tiny part of a larger whole. We owe our existence to others, including those in the past generations.
 
@@ -37,7 +37,7 @@ Here's my rendition of a summary:
 ### Interesting dillemas
 **Trolley problem**: if it's better to sacrifice 1 to save 5, what's different between pulling a lever vs pushing someone vs killing someone for their organs? outcome is the same if you use utilitarian. But from deontologic perspective, regardless of the outcome, the intent of using someone else as a means to an end is a big no.
 
-![Trolley problem meme](/assets/blogAssets/book-how-to-be-perfec/trolleymeme.png "=400x400")
+![Trolley problem meme](book-how-to-be-perfec/trolleymeme.png "=400x400")
 <center>
 
 ([source](https://m.facebook.com/TrolleyProblemMemes/photos/a.250373635311569/1458912157791038/))

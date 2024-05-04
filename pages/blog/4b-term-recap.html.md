@@ -57,7 +57,7 @@ Flamegraph is just a top-tier profiling tool ✨. It identifies where to improve
 
 Aside: In fact, React also had their own flamegraph profiler on the browser. Gonna try this out sometime..
 
-![Flamegraph](/assets/blogAssets/4b-term-recap/flamegraph.png "=400x400")
+![Flamegraph](4b-term-recap/flamegraph.png "=400x400")
 
 Not to mention a lot of other profiling tools like Valgrind (analyze memory allocations), Helgrind (concurrency problems), which I'm guessing is more relevant for C/C++ programs. There's also linux's 'perf' tool that gives general stats as well as costs per line of code.
 
@@ -69,7 +69,7 @@ In the assignments (and final), we leverage them to perform data parallism (dist
 
 CUDA code is a new paradigm to me. The global cuda function called by the host will be executed by multiple independent cuda threads. From what I understood ([stackoverflow](https://stackoverflow.com/questions/14093692/whats-the-difference-between-cuda-shared-and-global-memory)), the pointer arguments copied from the host will be located in device as a 'global memory' and shared amongst all cuda threads. So coding in cuda, I make sure not to write to the same memory output (e.g. each thread writes to its dedicated indices on an output matrix). To tell which thread does which work, normally involves using the set of indexes uniquely available to the current thread (threadIdx.x, blockIdx.x, blockDim.x, etc). The indices come from the landscape of the cuda threads, which are partitioned into 2D constructs called blocks and each blocks are partitioned in a 2D construct called a grid. We are free to define the block & grid sizes in the host code (within limits). In particular this diagram below helps me a lot when visualizing the gpu thread landscape: (image source: Nvidia docs). In that example, our grid size is (2x3), block size is (3x4), and thus 12 * 6 = 72 gpu threads in total.
 
-![GPU thread landscape](/assets/blogAssets/4b-term-recap/gputhreads.png "=400x400")
+![GPU thread landscape](4b-term-recap/gputhreads.png "=400x400")
 
 I was able to get away with just using global and private memory throughout the course, but apparently there's also other types of memory like shared memory which one could leverage.
 
@@ -107,7 +107,7 @@ We begun by understanding different levels of automation, typical sensors, what 
     3. Non-max supression: Reduce edges to a fine thin line. For each pixel, set its value to 0 if there's a neighboring pixel along a discrete orientation with higher magnitude.
     4. Double-thresholding: remove unconnected weak edges and keep strong
 
-![Lane Finding Pipeline](/assets/blogAssets/4b-term-recap/lanefinding.png "=400x400")
+![Lane Finding Pipeline](4b-term-recap/lanefinding.png "=400x400")
 
 - In the assignment, we create a pipeline to detect road lines from a video (as shown on image above). The [starter code is actually from Udacity](https://github.com/udacity/CarND-LaneLines-P1). After masking a trapezoid region of interest (ROI), implementing Canny Edge to obtain the edges, I used 'Hough Transform' to parameterize the lines (map the x,y pixels to a Hough space and vote for the max overlaps of d, θ). Once we get the line equation (d = xcos(theta) - ysin(theta)), we draw the solid lanes for that frame.
 
@@ -134,7 +134,7 @@ We begun by understanding different levels of automation, typical sensors, what 
 - The idea is still the same though - feed data, score the output on a loss function, optimize the parameters with gradient descent. However, recall that gradient descent update requires calculating first derivative (slope) of the loss function wrt the weights. This is more challanging since weights are distributed over many layers, so the approach is to backpropagate the loss from the output to every weights in previous layers. Doing numerically might be slow, so there's actually 'automatic differentiation' that remembers intermediate values as you pass.
 - Since backpropagation is expensive, a typical batch gradient descent training typically takes the average loss over all input data and backpropagate that average for the entire data batch. Analyzing the error, you realize that as size of the batch N increase, we get diminishing returns. That's why we normally do 'Stochastic(minibatch) gradient descent SGD' which is like a normal GD, but we shuffle and sample a small subest of the training batch at each iteration. There are also [optimization algorithms](https://ruder.io/optimizing-gradient-descent/) for SGD (ie. adam, momentum..) to hopefully improve convergence (trial/error approach).
 
-![2 Layer NN notes](/assets/blogAssets/4b-term-recap/nnNotes.png "=400x400")
+![2 Layer NN notes](4b-term-recap/nnNotes.png "=400x400")
 
 - Things begin to click for me as I was doing the assignment, which was to hand-code a simple feed-forward and backward-pass on 2 layer fully connected NN (input layer -> FC layer -> ReLU -> FC layer -> softmax). Image above show my messy 2-layer backpropagation formulation notes.
 
@@ -187,7 +187,7 @@ The last few part of the course was blurry to me. It was partially a review for 
 
 Our 8th assignment was cool though. We did behavioral planning (code a FSM to decide how the vehicle should change lanes, given data like the ego's position and distances from other vehicles around it). The goal is to complete 2 miles of driving while avoiding collisions and completing it within 3 minutes. The whole thing was based on Udacity's Nanodegree course since they provide a really good driving simulation. The [video tutorial](https://www.youtube.com/watch?v=7sI3VHFPP0w&t=369s) also gives a great explaination on the simulation code. My code running below:
 
-![Behavioral planning](/assets/blogAssets/4b-term-recap/motionplanning.gif "=400x400")
+![Behavioral planning](4b-term-recap/motionplanning.gif "=400x400")
 
 ## 3. Astronomy - SCI 238
 
@@ -250,7 +250,7 @@ On the demo day, the Tableu server crashes! (luckily our member Zabrina took pre
 
 In introspection, we recognized that a flaw in the FYDP was that it focuses on engineering design more than product management. Since we chose a supervisor outside of ECE, his suggestions and concerns had always been talking with our clients (the university councelors) and collecting user stories to make sure we're solving the right problem. - of which we didn't do and he was pretty disappointed with that.
 
-![Redlife](/assets/blogAssets/4b-term-recap/redlife.png "=400x400")
+![Redlife](4b-term-recap/redlife.png "=400x400")
 
 See the online brochure: https://www.eng.uwaterloo.ca/2021-capstone-design/electrical-computer/participants-7/
 

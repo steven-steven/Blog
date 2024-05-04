@@ -34,7 +34,7 @@ Well below are some challenges/decisions I faced implementing some of the above 
 
 ## Offline capability
 
-![Download Demo](/assets/blogAssets/building-invoice-app-v2/fsm.png "=400x400")
+![Download Demo](building-invoice-app-v2/fsm.png "=400x400")
 
 I decided to make the app an offline/online hybrid. The most difficult part was being extra careful about fault tolerance making sure I cover all cases. There is essentially a replicated CRUD logic for offline mode and online mode, and the data is replicated in 3 places:
 1. In the DB
@@ -223,6 +223,6 @@ https://github.com/steven-steven/electroninvoice
 Some gifs below as a quick demo. Yes.. gif with a hard G. Like 'Graphic' type of G. Not Jif. Jif bad ☹. Gif good🙂.
 
 editing offline, and syncing back when online:
-![Download Demo](/assets/blogAssets/building-invoice-app-v2/offline.gif "=400x400")
+![Download Demo](building-invoice-app-v2/offline.gif "=400x400")
 adding/editing customers:
-![Download Demo](/assets/blogAssets/building-invoice-app-v2/customerList.gif "=400x400")
+![Download Demo](building-invoice-app-v2/customerList.gif "=400x400")

@@ -6,7 +6,7 @@ layout: post
 
 It was 7pm Monday in Toronto, I sat in an unfamiliar hotel room right after work. I've scheduled 8pm to grab lunch with a friend whom I haven't met in 2 years since school goes lockdown. And the next day will be my first ever visit to the office and meeting my co-workers in 3D for the first time, 6 months after joining the company. That's for another time; but point is - all was unfamiliar. I jumped onto Etherscan that evening to start the sale and push some code to enable minting from our website. And tadah! We dropped our first NFT!
 
-![DDG meme](/assets/blogAssets/dropping-nft/duckmeme.png "=400x400")
+![DDG meme](dropping-nft/duckmeme.png "=400x400")
 > (Credits: Our member Sherley. See more of DDG art on our [Twitter](https://twitter.com/DDGNFT))
 
 Let's take a step back. The last 2 months has been quite a ride. My friend invited me on a side project early September, to help build an NFT collectible. We are a team of 4 (2 dev, 1 artist, and 1 marketing person who brought and planned out the idea). Equipped with a simple curiosity and no experience in this space, I gotta say, this team was a blast! Honestly everyone plays a huge part in the project and we all carried it to the end with great planning.
@@ -55,7 +55,7 @@ I believe the best practice is to host the metadata and image on an IPFS like Pi
 
 There is some standards on the structure of the metadata. I think this specification is Opensea specific (I could be wrong, but you can find it [on their docs](https://docs.opensea.io/docs/metadata-standards)). Once the token is minted, Opensea could parse the metadata of that token and do all things like display image, filter custom attributes, name, description, etc.
 
-![Opensea metadata](/assets/blogAssets/dropping-nft/metadataOnOpensea.png "=400x400")
+![Opensea metadata](dropping-nft/metadataOnOpensea.png "=400x400")
 
 [Here's an opensea testnet collection](https://testnets.opensea.io/collection/duck-duck-goose-ipt2wg9heh) that I created as an example.
 
@@ -92,7 +92,7 @@ However, the caveat here is that minting costs a LOT of gas fee (talk about that
 Basically a factory contract is a type of contract that Opensea provides, which is like a mystery box (or pokemon cards). Once people buy them, it's minted on purchase, and will show up as a minted NFT. Behind the scenes, the factory contract is a normal contract with the 'mint()' function configured to call the 'mint()' function of another contract. So under the hood you'll end up with 2 different contracts (one is the factory, and one is the actual token contract). Turns out, that ruins everything because we realized that tokens minted from the factory would go to a separate collection, and we aren't the owner of that collection so we wouldn't be able to change the storefront (a [related github issue](https://github.com/ProjectOpenSea/opensea-creatures/issues/123) from people with the same issue).
   - An initial workaround I tried was to configure the storefront from a metadata through the contract. But it's either that the things we can configure with the metadata is limited, or the [opensea contract-metadata documentation](https://docs.opensea.io/docs/contract-level-metadata) for it is 💩, it doesn't seem like we could change all settings (e.g. banner image) using the metadata. Here was a [github issue](https://github.com/ProjectOpenSea/opensea-creatures/issues/92) where I, along with many others in the internet, ask our concern but there was no solution to it 🤷‍♂️. After testing around, I decided it's not worth it and time to look for another approach..
 
-![Start over](/assets/blogAssets/dropping-nft/startover.png "=400x400")
+![Start over](dropping-nft/startover.png "=400x400")
 
 ### V2: final iteration
 With a lot of dead ends, our final approach is to ditch this factory nonsense and just write our own contract externally from Opensea. Instead of relying on the opensea code, I wrote and deploy my own, and then register the contract to opensea after. With that approach, since only NFT tokens that has been minted will show up in Opensea collection, the idea is for buyers to mint it externally out of opensea (i.e. from our website or etherscan). Only after it's minted will it appear in Opensea. This is also where I transition to Remix IDE and I'm glad I did.
@@ -148,7 +148,7 @@ Once the contract is deployed onto the chain, we get a contractID and we can sea
 
 The R/W functions is critical in interacting with the contract. These functions are ones defined in the contract (e.g.  ERC-721 standards or ones you define yourself).
 
-![Etherscan interface](/assets/blogAssets/dropping-nft/etherscanRW.png "=400x400")
+![Etherscan interface](dropping-nft/etherscanRW.png "=400x400")
 
 You can also provide a token/profile information in Etherscan by submitting a formal request through a form ([guide](https://info.etherscan.com/token-update-guide/)). They'll get back to you by email after a few weeks.
 

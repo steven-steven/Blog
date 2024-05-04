@@ -28,7 +28,7 @@ This course is a soft introduction to AI. In particular, it's the use of algorit
 
 **A) Local Search Strategies**
 
-![localsearchalgorithms](/assets/blogAssets/4a-term-recap/localsearch.png "=400x400")
+![localsearchalgorithms](4a-term-recap/localsearch.png "=400x400")
 The first part of the course teaches us how to formulate a problem (define state space, initial state, goal state, set of actions, and costs for actions). If we can define a finite state space and transitions between different states, this becomes a path-finding problem.
 
 We could use local search methods to look for actions that will lead us to the optimal state.
@@ -39,7 +39,7 @@ We then learned 'informed search techniques' where the exploration is now guided
 
 Assignment 1 requires us to write some of these algorithms from scratch to solve a given problem. For example, exploring a maze. The image below is an example of an output of my maze search using A*. It finds an optimal path after exploring 33 states.
 
-![aStar](/assets/blogAssets/4a-term-recap/aStar.png "=400x400")
+![aStar](4a-term-recap/aStar.png "=400x400")
 
 **B) Game Playing**
 
@@ -53,7 +53,7 @@ In the assignment, we created an intelligent computer agent that plays the game 
 
 With informed search algorithms we introduced heuristics. These are good for simple state space, but in more complex ones, it gets you to a local minima. With meta-heuristics now you're introduced with the idea of exploring vs exploiting, where sometimes you take risks (non-improving actions) and look at the big picture. There are a couple of techniques we covered which is classified as trajectory method (train one solution at a time) and population based (train multiple solutions at once)
 
-![meta-heuristic](/assets/blogAssets/4a-term-recap/metaHeuristic.png "=400x400")
+![meta-heuristic](4a-term-recap/metaHeuristic.png "=400x400")
 
 Overall this part of the lecture seems to me like many different approaches to essentially the same problem. In the assignments we get hands on to building these algorithms from scratch which was valuable, but they are all similar problems.
 
@@ -72,8 +72,8 @@ This is pretty dope. It's like GA 🧬, but we use those concepts to construct p
 
 For example, in the assignment we create a python program that construct other programs (AST) 📜 that would mimic the behavior of a 6-mux, using binary operators AND, OR, NOT, IF. We evaluate the fitness of a solution (AST) by feeding it inputs and getting % of correct outputs. Like GA, a high-fitness solution will tend to survive. The following shows the final 6-mux my program generated, as well as the progress of the population fitness over 300 iterations:
 
-![6-mux tree](/assets/blogAssets/4a-term-recap/gp_tree.png "=400x400")
-![GP fitness](/assets/blogAssets/4a-term-recap/gp_fitness.png "=400x400")
+![6-mux tree](4a-term-recap/gp_tree.png "=400x400")
+![GP fitness](4a-term-recap/gp_fitness.png "=400x400")
 
 
 We then covered a bit on evolutionary programming (although there wasn't assignments on it) where instead of evolving programs, we evolve machines (FSM). Generally it could be used to build machines that recognize and classifies patterns.
@@ -114,11 +114,11 @@ From TD(0) we could generalize the equation for multi-step bootstrapping algorit
 
 We did 2 assignments where we get to code those algorithms hands-on for a given MazeWorld environment. I got to implement policy iteration, value iteration, Q-Learning, SARSA, Expected SARSA, Double Q-Learning, and SARSA with eligibility trace. For each, we plot the performance over iterations and compare its behavior. The gif below demonstrates the red agent 🟥 as it learned the goal 🟨 (reward +1) and avoid the blue pits 🟦(penalty of -10) and black walls ⬛️. We give each step a penalty of -0.1 so the agent naturally try to find shortest path.
 
-![Policy Iteration](/assets/blogAssets/4a-term-recap/rl.gif "=400x400")
+![Policy Iteration](4a-term-recap/rl.gif "=400x400")
 
 As shown in the sample performance graph below, DP algorithms like value-iteration and policy-iteration converges really quickly (but assumes that we know the environment perfectly). While the SARSA and Q-learning will continuously sample and take hundreds of iteration before finally converging to a stable value.
 
-![Sample Performance](/assets/blogAssets/4a-term-recap/rlSampleGraph.png "=400x400")
+![Sample Performance](4a-term-recap/rlSampleGraph.png "=400x400")
 
 **D) Policy Gradient**
 
@@ -126,7 +126,7 @@ We then learned policy gradient. This is where we optimize the policy directly w
 
 In assignment 3 where we had to implement a policy gradient with the same MazeWorld environment as before. I represented the states-action pair with 1-hot encoding as a 1x400 vector (the first 100 entries indicates moving left from each of the 100 states in the grid, the second 100 entries indicate moving right, etc). With a simple linear function approximation and softmax function for the policy, I didn't see my agent converging at all 😢 even after 5000 episodes (which took like 30 minutes to run).
 
-![Failed policy gradient](/assets/blogAssets/4a-term-recap/policygrad.png "=400x400")
+![Failed policy gradient](4a-term-recap/policygrad.png "=400x400")
 
 Maybe a potential improvement would be to try other ways to represent the features or incorporate more information like how far the agent has gone from a wall, etc. Instead of doing linear function approximation and softmax function, a better alternative in terms of performance would just be to use non-linear approximations such as using a neural network to learn the policy. But I didn't really know how neural network works (this wasn't taught to us) and how to use tensorflow/pytorch libraries - maybe will look at it myself in the near future.
 
@@ -254,24 +254,24 @@ The Project (individual) are done in Matlab Grader, where the core goal is to bu
 Below are some of my scuffed designs and how it changes over time:
 
 The First Robot I designed..
-![Design 1](/assets/blogAssets/4a-term-recap/486_robot1.png "=400x400")
+![Design 1](4a-term-recap/486_robot1.png "=400x400")
 
 Then trying to get the Inverse Kinematics working, I end up re-deesigning the whole thing..
-![Design 2](/assets/blogAssets/4a-term-recap/486_robot2.png "=400x400")
+![Design 2](4a-term-recap/486_robot2.png "=400x400")
 
 Then trying to get the Dynamics working so here's the final redesigned robot. The last joint is prismatic joint that goes up and down with the paddle at the bottom edge of it.
-![Design 3](/assets/blogAssets/4a-term-recap/486_robot3.png "=400x400")
+![Design 3](4a-term-recap/486_robot3.png "=400x400")
 
 and the design for links and joints of the robot..
-![Link Design](/assets/blogAssets/4a-term-recap/486_links.png "=400x400")
+![Link Design](4a-term-recap/486_links.png "=400x400")
 
 **Labs**
 
 The Labs (group of 2) are done in Choreographe and we get to control a real NAO robot. Since it's all online this term, we only see the robot in simulation, while the TA runs our code in the physical robot to give us feedback to reflect upon. Like the project, labs are also seperated into modules throughout the course. For example we perform Forward Kinematics and inverse kinematics on the robot's right arm, generate a trajectory, and code a controller loop to follow the trajectory. This was equally as difficult as the project but it was cool to see the movements reflect directly on the NAO robot. The TA also gave us a video sometimes (and as shown below, shit happens.. all the time 💩).
 
-![GIF of NAO control loop](/assets/blogAssets/4a-term-recap/controlsNAO.gif "=400x400")
+![GIF of NAO control loop](4a-term-recap/controlsNAO.gif "=400x400")
 
-![Policy Iteration](/assets/blogAssets/4a-term-recap/486_armSize.png "=400x400")
+![Policy Iteration](4a-term-recap/486_armSize.png "=400x400")
 
 **Course Modules**
 
@@ -421,8 +421,8 @@ But what I'll do is go over maybe 1 or 2 fun facts from each chapter/module. (I 
     - When stressed, and the event is controllable (e.g. exams), 'problem-focused coping' like working harder and planning better is effective. But under uncontrollable events (e.g. death of someone) 'emotion-focused coping' like watch movies and relax would be the better strategy.
     - Maintaining different social roles (e.g. you could simultaneously fulfill your role as a father, student, coworker, basketball team member, etc) is good for your health. More encouragement around you.
 
-![psychoanalysisJoke2](/assets/blogAssets/4a-term-recap/psychoanalysisJoke2.jpg "=400x400")
-![psychoanalysisJoke1](/assets/blogAssets/4a-term-recap/psychoanalysisJoke1.jpg "=400x400")
+![psychoanalysisJoke2](4a-term-recap/psychoanalysisJoke2.jpg "=400x400")
+![psychoanalysisJoke1](4a-term-recap/psychoanalysisJoke1.jpg "=400x400")
 
 ## 6. Capstone Design Project - ECE 498A
 

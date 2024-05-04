@@ -10,7 +10,7 @@ Wrapping up an awesome co-op term (4 months internship) at Loblaw Digital! :conf
 
 Working hard and gaining experience is important. But I think reflection is equally (or if not more) critical when it comes to effetively developing skills and aligning myself to the bigger scope. Similar to what we do at the end of a sprint in Scrum, I would like to take a retrospect on my overall experiences, what I achieved and learned in the process, feedbacks I had recieved (what went well and what did not), as well as how I will decide to improve them for the upcoming year (next sprint).
 
-![marketplaceLaunch](/assets/blogAssets/a-retrospective-of-my-4-months-sprint-at-Loblaw-Digital/marketplaceLaunch.jpg "=400x400")
+![marketplaceLaunch](a-retrospective-of-my-4-months-sprint-at-Loblaw-Digital/marketplaceLaunch.jpg "=400x400")
 
 ## Table of Contents
 

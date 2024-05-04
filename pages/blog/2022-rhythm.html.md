@@ -8,13 +8,13 @@ layout: post
 
 **Home**
 
-![Home](/assets/blogAssets/2022-rhythm/bandung.png "=400x400")
+![Home](2022-rhythm/bandung.png "=400x400")
 
 I began the year home. A good start surrounded by comfort and the family I love and missed. The traditions, old friends, family, food, places, and most importantly the people that I'll see for the very last time (my uncle, grandpa, grandma). At a deeper level, being home is a lot of things including feeling restless, confined, guilty, grateful, inspired, carefree, bored, at ease. It was sad leaving huge layers of me behind, but I was fully recharged as soon as I got back for a fulltime at Shopify.
 
 **Full time job**
 
-![office](/assets/blogAssets/2022-rhythm/office.png "=400x400")
+![office](2022-rhythm/office.png "=400x400")
 
 Excited that there's more people including interns in the team. Despite the Shopify layoffs at the start of the year, our team was fortunate to have no one leaving. Through the 8 months, I finished multiple projects like action sequencing, UI migrations, revamping the schema to make actions a first-class-citizen in our trust platform, and moving into a smaller specialized team owning a rules engine. Some days are more busy than others and I feel empowered to have good amount of freedom to choose the kinds of work that I want to partake. Now gaining more product context and familiarity with the codebase and ruby-on-rails, has given me ownership, ability to participate in more discussions, and I've been enjoying my work so much more.
 
@@ -28,8 +28,8 @@ I'll be leading a project next cycle. Thrilled and a bit tensed, but I'm hopeful
 
 **After work, exercise, socials**
 
-![running](/assets/blogAssets/2022-rhythm/running.png "=400x400")
-![Routesetting](/assets/blogAssets/2022-rhythm/routesetting.png "=400x400")
+![running](2022-rhythm/running.png "=400x400")
+![Routesetting](2022-rhythm/routesetting.png "=400x400")
 
 This year was perhaps the most social I've been throughout my life. I tried many diffferent clubs using my alumni card, including archery, table tennis, running, tea club, visual arts club, movie club, climbing. After a long day at work (at home), there was a phase where I had something going on and conversations with different people every day of the week.
 
@@ -44,11 +44,11 @@ There was also a guy who approached me while I was reading kindle in the ion tra
 
 **Reading**
 
-![books](/assets/blogAssets/2022-rhythm/books.png "=400x400")
+![books](2022-rhythm/books.png "=400x400")
 
 I have read some really good books this year 😊 'Project Hail Mary' was my favorite of all time. I think I got teary eyes in 'I'm glad my mom died' and 'when breath becomes air'. 'Unnatural causes' was a good memoir that gets you fascinated about death. 'Permission to feel' was heart-warming and helped me understand myself more. 'Antifragile' was really lengthy but rich of new perspectives. 'How to be perfect' was absolutely hilarious. 'The end of everything' got me fascinated about nature, and hey! I had a chat and got a photo with Katie Mack the author! 📸 (and her signature too)
 
-![Katie Mack's signature](/assets/blogAssets/2022-rhythm/signature.png "=400x400")
+![Katie Mack's signature](2022-rhythm/signature.png "=400x400")
 
 I'm currently midway through 'An emotional education'. I've also continued reading 'Designing Data Intensive Application' recently, which I picked up on 8 months ago but stopped. Currently 60% through and learning so much! There's also 'The dawn of everything: a new history of humanity' which I gave up at 15% It was interesting, but not encyclopaedia-thick interesting.
 
@@ -59,19 +59,19 @@ On another tangent, I finished up a 'Concurrent Data Processing for Elixir' cour
 **Miscellaneous**
 - I reached a milestone of 100wpm on typing test!
 
-![typeracer](/assets/blogAssets/2022-rhythm/typeracer_score.jpg "=400x400")
-![typeracer graph](/assets/blogAssets/2022-rhythm/graph.png "=400x400")
+![typeracer](2022-rhythm/typeracer_score.jpg "=400x400")
+![typeracer graph](2022-rhythm/graph.png "=400x400")
 
 - Attended late in-person graduation and meeting old friends
 - Went to Swedish House Mafia concert, my first concert ever. I was third-wheeling then, but I still love the chaotic vibe of people around me. You can't help but dance and sing with the crowd. Might seem a bit out of character, but I was still me and I loved it.
 
-![concert](/assets/blogAssets/2022-rhythm/concert.png "=400x400")
+![concert](2022-rhythm/concert.png "=400x400")
 
 - Visiting google office and old friend.
 - Visiting Shopify office in Toronto and meeting some co-worker in-person for the first time.
 - Started going on dates and I found love for the first time in my life this November ❤️. It's been a weird series of events and I'm loving every single part of it. Sad that we'll be doing LDR soon. I feel so loved right now and that feeling is absolutely amazing. We both still have lots to learn about each other and about finding balance in relationship, but she definitely was the highlight that had made this year super special.
 
-![Her](/assets/blogAssets/2022-rhythm/her.png "=400x400")
-![Smoothie](/assets/blogAssets/2022-rhythm/smoothie.png "=400x400")
+![Her](2022-rhythm/her.png "=400x400")
+![Smoothie](2022-rhythm/smoothie.png "=400x400")
 
 **Overall**, this year has brought so much fulfillment and joy. I have found myself multiple times over, and this couldn't have been possible without support of many people around me. I hope that I had improved their life as much as they had on me. My wish for next year is to have more courage, tackle new uncertainties, and carry over all this rhythm built up over this year to create something even more amazing. At the same time, taking time to breathe and embrace any emotions with people around me.

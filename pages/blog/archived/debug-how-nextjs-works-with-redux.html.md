@@ -12,7 +12,7 @@ I was seeing two different version of the store!
 
 The *redux-thunk* did successfully complete the asynchronous call and filled the store with data. But the instant after the page finish loading, the store is empty! (Whaaa)
 
-![inconsistentState](/assets/blogAssets/debug-how-nextjs-works-with-redux/inconsistentState.PNG "=400x400")
+![inconsistentState](debug-how-nextjs-works-with-redux/inconsistentState.PNG "=400x400")
 
 Above, I'm showing the client-side store on the left side, and the server-side store on the right side. Every time I refresh, new data gets added to the server store like it's supposed to, but the client-side didn't change. Clearly, these two stores are different.
 

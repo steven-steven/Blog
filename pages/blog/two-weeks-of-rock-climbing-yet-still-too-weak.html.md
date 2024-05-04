@@ -4,7 +4,7 @@ publish_at: October 27, 2019
 layout: post
 ---
 
-![Rock Climbing Gym](/assets/blogAssets/two-weeks-of-rock-climbing/gym.png "=400x400")
+![Rock Climbing Gym](two-weeks-of-rock-climbing/gym.png "=400x400")
 
 **Disclaimer: This is a reflection from a newb climber. May contain misleading and incorrect information. Seek a real rock climbing expert for better suggestions.**
 
@@ -17,7 +17,7 @@ I mean, I am strong enough to hold a handstand and I can do at least 5 pullups; 
 
 ## I was wrong
 
-![Flap Injury](/assets/blogAssets/two-weeks-of-rock-climbing/flap.png "=400x400")
+![Flap Injury](two-weeks-of-rock-climbing/flap.png "=400x400")
 
 Sorry about the gory image above. I got a flap. Apparently it's a common injury in climbing. I was lucky it wasn't deep and could've prevented it if I moisture my hands enough or be more careful when climbing.
 

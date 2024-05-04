@@ -6,7 +6,7 @@ layout: post
 
 Last December, I picked up a book called "Measure What Matters", by John Doerr :blue_book:. The book is centered around OKR, a goal-setting methodology used in many big companies including Google, Facebook, Amazon, and my recent company I interned at, Loblaw Digital.
 
-![Measure What Matters](/assets/blogAssets/learning-okr/measureWhatMatters.jpg "=400x400")
+![Measure What Matters](learning-okr/measureWhatMatters.jpg "=400x400")
 
 In fact, before I chose to read this book, OKR (Objectives and Key Results) has entered my ears a few times this term. During my 4-months term at Loblaw Digital, I've been in one of my team's discussions about deciding what key-result goals we'd like to have in order to meet our set of objectives. Just to throw an example out there, one of our key resut was to reduce the error rate by x% for our API. We also discussed in detail about how these metrics will be measured. Apart from that I've been actively listening to :headphones: GoFigure podcast by GoJek (Indonesia's Decacorn Super App), where they also coined the term OKR a few times.
 
@@ -149,9 +149,9 @@ So at a personal level, I believe OKR will help me clarify what my priorities ar
 
 So beginning from 2020, I'll give it a shot. My 2020 OKR:
 
-![OKR 1](/assets/blogAssets/learning-okr/okr1.png "=400x400")
-![OKR 2](/assets/blogAssets/learning-okr/okr2.png "=400x400")
-![OKR 3](/assets/blogAssets/learning-okr/okr3.png "=400x400")
+![OKR 1](learning-okr/okr1.png "=400x400")
+![OKR 2](learning-okr/okr2.png "=400x400")
+![OKR 3](learning-okr/okr3.png "=400x400")
 
 ### By the time of writing...
 
