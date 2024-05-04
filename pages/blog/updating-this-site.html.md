@@ -80,22 +80,21 @@ See how I had to override the image markdown element to include the flexibility 
 
 I had to override the renderer to include low-level [Redcarpet](https://github.com/vmg/redcarpet) options such as `with_toc_data`, which renders the header elements with id so I could reference them in the table-of-contents. I wished markdown-rails lets you configure the render options without having to override the renderer yourself (I'll be watching [this issue](https://github.com/sitepress/markdown-rails/issues/4) for that).
 
-### Sprocket
+### Sprocket & Serving assets via Github
 
 Sitepress uses sprocket to build the asset pipeline. That is, building all the images, javascripts, and stylesheets. The manifest.js file defines the assets I want to load.
 
 ```js
-//= link_tree ../images
 //= link_directory ../stylesheets .css
 //= link_directory ../javascripts .js
 //= link_directory ../javascripts/build .js
 ```
 
-I realized that my `/images` directory is pretty big (~1GB). So I might need to decide on another hosting solution (ie. S3) as this grows. It makes the build time take a while, and I'm pretty sure I'll hit a limit at one point.
+Initially, I also build my images `//= link_tree ../images` but I realized that my blog assets are pretty big (the gifs and images took up >1GB).  It makes the build time take a while, and I'm pretty sure I'll hit a limit at one point. After thinking long and hard, I came up with using Github to host my images. I setup github pages which will serve the files for me. One downside is I now have to prepend all my image links with `https://steven-steven.github.io/Blog/assets/images/blogAssets/` but that's easy to do since I'm already overriding the markdown-rails images. I thought that was ingenius, who needs S3 amiright 😉
 
 ### Deployment
 
-If it was a Rails app, I would deploy it to [Fly.io](https://fly.io/) since it helps me lauch whole VMs with a free hobby plan. But since I decide to have this a static app, I think [Vercel.com](vercel.com) should work too.
+If it was a Rails app, I would use [Fly.io](https://fly.io/) to launch whole VMs with a free hobby plan. But since this is just a static app, I think [Vercel.com](vercel.com) should work too. I moved my Nameserver from Domain.com to Cloudflare in hope that it would do its DNS magic to speed up page load.
 
 ### Stimulus
 

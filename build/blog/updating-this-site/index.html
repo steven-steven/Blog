@@ -98,19 +98,18 @@ layout: post
 
 <p>I had to override the renderer to include low-level <a href="https://github.com/vmg/redcarpet" target="_blank">Redcarpet</a> options such as <code>with_toc_data</code>, which renders the header elements with id so I could reference them in the table-of-contents. I wished markdown-rails lets you configure the render options without having to override the renderer yourself (I&rsquo;ll be watching <a href="https://github.com/sitepress/markdown-rails/issues/4" target="_blank">this issue</a> for that).</p>
 
-<h3 id="sprocket">Sprocket</h3>
+<h3 id="sprocket-serving-assets-via-github">Sprocket &amp; Serving assets via Github</h3>
 
 <p>Sitepress uses sprocket to build the asset pipeline. That is, building all the images, javascripts, and stylesheets. The manifest.js file defines the assets I want to load.</p>
-<pre class="js"><span style="color: #928374;font-style: italic">//= link_tree ../images</span>
-<span style="color: #928374;font-style: italic">//= link_directory ../stylesheets .css</span>
+<pre class="js"><span style="color: #928374;font-style: italic">//= link_directory ../stylesheets .css</span>
 <span style="color: #928374;font-style: italic">//= link_directory ../javascripts .js</span>
 <span style="color: #928374;font-style: italic">//= link_directory ../javascripts/build .js</span>
 </pre>
-<p>I realized that my <code>/images</code> directory is pretty big (~1GB). So I might need to decide on another hosting solution (ie. S3) as this grows. It makes the build time take a while, and I&rsquo;m pretty sure I&rsquo;ll hit a limit at one point.</p>
+<p>Initially, I also build my images <code>//= link_tree ../images</code> but I realized that my blog assets are pretty big (the gifs and images took up &gt;1GB).  It makes the build time take a while, and I&rsquo;m pretty sure I&rsquo;ll hit a limit at one point. After thinking long and hard, I came up with using Github to host my images. I setup github pages which will serve the files for me. One downside is I now have to prepend all my image links with <code>https://steven-steven.github.io/Blog/assets/images/blogAssets/</code> but that&rsquo;s easy to do since I&rsquo;m already overriding the markdown-rails images. I thought that was ingenius, who needs S3 amiright 😉</p>
 
 <h3 id="deployment">Deployment</h3>
 
-<p>If it was a Rails app, I would deploy it to <a href="https://fly.io/" target="_blank">Fly.io</a> since it helps me lauch whole VMs with a free hobby plan. But since I decide to have this a static app, I think <a href="vercel.com" target="_blank">Vercel.com</a> should work too.</p>
+<p>If it was a Rails app, I would use <a href="https://fly.io/" target="_blank">Fly.io</a> to launch whole VMs with a free hobby plan. But since this is just a static app, I think <a href="vercel.com" target="_blank">Vercel.com</a> should work too. I moved my Nameserver from Domain.com to Cloudflare in hope that it would do its DNS magic to speed up page load.</p>
 
 <h3 id="stimulus">Stimulus</h3>
 
