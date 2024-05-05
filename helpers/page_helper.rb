@@ -13,8 +13,8 @@ module PageHelper
     end
   end
 
-  def github_readme_url(url)
-    "https://raw.githubusercontent.com/#{URI(url).path}/main/README.md"
+  def github_readme_url(url, branch="main")
+    "https://raw.githubusercontent.com/#{URI(url).path}/#{branch}/README.md"
   end
 
   def date(value)
@@ -27,6 +27,8 @@ module PageHelper
 
   def github_readme(url)
     remote_content github_readme_url url
+  rescue
+    remote_content github_readme_url(url, "master")
   end
 
   def render_github_readme(url)

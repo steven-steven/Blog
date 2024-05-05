@@ -7,10 +7,13 @@
   </header>
   <main class="prose dark:prose-invert max-w-none mt-6 text-inherit text-base md:text-lg break-words prose-code:before:hidden prose-code:after:hidden prose-code:p-1 prose-code:rounded-md prose-code:font-medium prose-code:bg-gray-300 dark:prose-code:bg-slate-700">
     <%= yield %>
-    <div class="p-8 my-8 rounded backdrop-brightness-95 dark:backdrop-brightness-50">
-      <p> Github README: </p>
-      <%= render_github_readme current_page.data.fetch("github_url") %>
-    </div>
-    <%=link_to "View the project on Github", current_page.data.fetch("github_url") %>
+    <% repos = current_page.data.fetch("github_url").split(",") %>
+    <% repos.each do |repo| %>
+      <div class="p-8 my-8 rounded backdrop-brightness-95 dark:backdrop-brightness-50">
+        <p> Github README: </p>
+        <%= render_github_readme repo %>
+      </div>
+    <% end %>
+    <%=link_to "View the project on Github", repos.join(" and ") %>
   </main>
 <% end %>

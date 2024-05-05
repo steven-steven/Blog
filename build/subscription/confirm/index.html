@@ -3,8 +3,8 @@
   <head>
     <meta charset='utf-8' name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Confirm Subscription</title>
-    <link rel="stylesheet" href="/assets/tailwind-680b27ef920231a437ecb0b928ebf94f12ab1ffcee0c1447f21bc1b300f5fdac.css" media="screen" />
-    <script src="/assets/build/application-0d06a2e01a854c8f052de6edee47af8ea71d7967c85ea302c9e3059816e5dc38.js"></script>
+    <link rel="stylesheet" href="/assets/tailwind-411f91dd5b89fb0c5835c0d0f1189f0def25c96cd270c454ec884aba7c991825.css" media="screen" />
+    <script src="/assets/build/application-4230f8bd593d59f5f3586a39eb8353a548c37479bd50792836be84edda12f04c.js"></script>
   </head>
   <body class="bg-gray-100 dark:bg-slate-900 text-slate-900 dark:text-slate-300 text-sm md:text-base">
     <div class="flex flex-col md:flex-row items-center gap-5 justify-between mx-32 mt-10 md:mt-20">
@@ -21,11 +21,11 @@
     
   <div class="max-w-[46rem] md:mx-auto flex flex-col gap-y-10 md:gap-y-20 px-6 md:px-11 leading-relaxed font-serif">
     <div>
-      <div data-controller="subscription" data-subscription-function-value="subscribe" data-subscription-token-value="" class="mt-20">
-  <img data-subscription-target="loading" src="/Users/steven/src/github.com/sitepress/assets/images/loading.gif" alt="Loading..."  width="250" />
+      <div data-controller="subscription" data-subscription-function-value="subscribe" class="mt-20">
+  <img data-subscription-target="loading" src="https://steven-steven.github.io/Blog/assets/images/loading.gif" alt="Loading..." class="w-80 my-0 mx-auto"/>
 
   <template data-subscription-target="successTemplate">
-    <div class="text-xl bg-green-100 p-10">
+    <div class="text-xl bg-green-100 dark:bg-green-900 p-10">
       <p>Thanks for subscribing, and welcome to my email list!</p>
       <p>Keep an eye out for exciting emails.</p>
 
@@ -35,7 +35,7 @@
   </template>
 
   <template data-subscription-target="failTemplate">
-    <div class="text-xl bg-red-100 p-10">
+    <div class="text-xl bg-red-100 dark:bg-amber-900 p-10">
       <p>Oopsie Something went wrong.</p>
       <p>Please try again or email me directly at steven.infinity29@gmail.com and I can add you in to the email list manually</p>
 

@@ -2504,30 +2504,42 @@
     static app_script_url = "https://script.google.com/macros/s/AKfycbxdKymGNp2EfskR5m63GU07UptkeSuA3_EmswwdEQNytm-unsszNJWh53z4xjcleZKH/exec";
     static targets = ["successTemplate", "failTemplate", "loading", "email"];
     static values = {
-      token: String,
-      function: String,
-      email: String
+      function: String
     };
     connect() {
       if (this.functionValue == "subscribe") {
-        if (this.tokenValue == "")
+        const token = this.getQueryParam("token");
+        if (!token || token == "") {
           return this.redirect404();
-        const url = `${this.constructor.app_script_url}?token=${this.tokenValue}&p=confirm-subscribe`;
+        }
+        ;
+        const url = `${this.constructor.app_script_url}?token=${token}&p=confirm-subscribe`;
         this.showResponse(url);
       } else if (this.functionValue == "unsubscribe") {
-        if (this.tokenValue == "")
+        const token = this.getQueryParam("token");
+        if (!token || token == "") {
           return this.redirect404();
-        const url = `${this.constructor.app_script_url}?token=${this.tokenValue}&p=confirm-unsubscribe`;
+        }
+        ;
+        const url = `${this.constructor.app_script_url}?token=${token}&p=confirm-unsubscribe`;
         this.showResponse(url);
       } else if (this.functionValue == "new") {
-        if (this.emailValue == "")
+        const email = this.getQueryParam("email");
+        if (!email || email == "") {
           return this.redirect404();
-        const url = `${this.constructor.app_script_url}?p=subscribe&email=${this.emailValue}`;
+        }
+        ;
+        const url = `${this.constructor.app_script_url}?p=subscribe&email=${email}`;
         this.showResponse(url);
       }
     }
     redirect404() {
       window.location.href = `/404`;
+    }
+    getQueryParam(param) {
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      return urlParams.get(param);
     }
     submitForm() {
       const email = this.emailTarget.value;

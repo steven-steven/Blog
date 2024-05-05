@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8' name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice App</title>
+    <link rel="stylesheet" href="/assets/tailwind-411f91dd5b89fb0c5835c0d0f1189f0def25c96cd270c454ec884aba7c991825.css" media="screen" />
+    <script src="/assets/build/application-4230f8bd593d59f5f3586a39eb8353a548c37479bd50792836be84edda12f04c.js"></script>
+  </head>
+  <body class="bg-gray-100 dark:bg-slate-900 text-slate-900 dark:text-slate-300 text-sm md:text-base">
+    <div class="flex flex-col md:flex-row items-center gap-5 justify-between mx-32 mt-10 md:mt-20">
+  <a class="text-3xl font-serif font-light" href="/">Steven</a>
+  <nav class="flex gap-x-6 items-center">
+    <button data-controller="dark-toggle" data-action="dark-toggle#toggle dblclick->dark-toggle#resetSystemMode" type="button" class="inline-block align-middle nav-link">
+  <svg data-dark-toggle-target="dark" class="hidden w-6 h-6 text-slate-700" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+  <svg data-dark-toggle-target="light" class="w-6 h-6 text-slate-200" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+</button>
+      <a href="/blog">Blog</a>
+      <a href="/works">Works</a>
+  </nav>
+</div>
+    
+  <div class="max-w-[46rem] md:mx-auto flex flex-col gap-y-10 md:gap-y-20 px-6 md:px-11 leading-relaxed font-serif">
+    <div>
+      
+  <header class="pt-12 md:pt-16">
+    <h1 class="text-2xl md:text-3xl font-bold">Invoice App</h1>
+      <h2 class="md:text-xl opacity-50">Electron app to track and generate invoices</h2>
+  </header>
+  <main class="prose dark:prose-invert max-w-none mt-6 text-inherit text-base md:text-lg break-words prose-code:before:hidden prose-code:after:hidden prose-code:p-1 prose-code:rounded-md prose-code:font-medium prose-code:bg-gray-300 dark:prose-code:bg-slate-700">
+    <p>In the hype of NFTs, 4 duck friends set out to build an NFT collectible of their own. They are far off from the moon, but nothing can stop them from dreaming.</p>
+
+<p>For a full overview, you could checkout <a href="/blog/creating-an-invoice-app-with-electron-and-go" target="_blank">this reflection post of the first version</a> from August 2020, and <a href="/blog/blog/building-invoice-app-v2" target="_blank">another post of the second version update</a>.</p>
+
+      <div class="p-8 my-8 rounded backdrop-brightness-95 dark:backdrop-brightness-50">
+        <p> Github README: </p>
+        <p align="center">
+  <img src="https://github.com/steven-steven/electroninvoice/blob/master/readme_assets/dpLogo.jpg" width="50" />
+ </p>
+
+<p>Electron app that powers the DP Invoice APP. See the <a href="https://github.com/steven-steven/GoInvoice" target="_blank">Backend</a> built in Golang.</p>
+
+<p>This app is created with:</p>
+
+<ul>
+<li><a href="https://electron-react-boilerplate.js.org/docs/installation" target="_blank">Electron React Boilerplate</a></li>
+<li><strong>Firebase Realtime DB</strong> to subscribe to realtime events</li>
+<li><strong>Tailwind</strong> as style library</li>
+<li><strong>ejs-electron</strong> as a template engine for the invoice</li>
+<li><a href="https://github.com/tannerlinsley/react-table" target="_blank">react-table</a> to provide hooks fro creating custom tables</li>
+<li><a href="https://react-hook-form.com/" target="_blank">react-hook-form</a> to provide hooks for simple form creation and validations</li>
+</ul>
+
+<h2 id="starting-development">Starting Development</h2>
+
+<ol>
+<li>import <code>./app/config.json</code> file for secrets (firebase configurations and production server)</li>
+<li>Start the app in the <code>dev</code> environment.</li>
+</ol>
+<pre class="bash">   yarn dev
+</pre>
+<h2 id="packaging-for-production">Packaging for Production</h2>
+
+<p>To package apps for the local platform:</p>
+<pre class="bash">yarn package
+</pre>
+<h2 id="demo">Demo</h2>
+
+<p>Add + Edit Invoice</p>
+
+<p><img src="https://github.com/steven-steven/electroninvoice/blob/master/readme_assets/create.gif" width="300" /></p>
+
+<p>Add new inventory Item</p>
+
+<p><img src="https://github.com/steven-steven/electroninvoice/blob/master/readme_assets/newItem.gif" width="300" /></p>
+
+<p>Download and edit existing invoice PDF</p>
+
+<p><img src="https://github.com/steven-steven/electroninvoice/blob/master/readme_assets/editPdf.gif" width="300" /></p>
+
+<p>Error Handling when Offline and works again once the internet is available</p>
+
+<p><img src="https://github.com/steven-steven/Blog/blob/main/assets/images/blogAssets/creating-an-invoice-app-with-electron-and-go/offlineDemo.gif" width="300" /></p>
+
+      </div>
+      <div class="p-8 my-8 rounded backdrop-brightness-95 dark:backdrop-brightness-50">
+        <p> Github README: </p>
+        <p align="center">
+  <img src="https://github.com/steven-steven/electroninvoice/blob/master/readme_assets/dpLogo.jpg" width="50" />
+ </p>
+
+<p>Backend API that powers the DP Invoice APP. See the <a href="https://github.com/steven-steven/electroninvoice" target="_blank">native app</a> built in Electron.</p>
+
+<p>This app is created with:</p>
+
+<ul>
+<li><a href="http://gokit.io/" target="_blank">Go Kit</a></li>
+<li><a href="https://godoc.org/github.com/jeremyschlatter/firebase" target="_blank">jeremyschlatter&rsquo;s Firebase wrapper</a> to connect to Firebase Realtime DB and provide mock interface for testing.</li>
+<li><a href="https://github.com/gorilla/mux" target="_blank">Gorilla Mux</a> for HTTP router</li>
+</ul>
+
+<h2 id="starting-development">Starting Development</h2>
+
+<ol>
+<li>import <code>./config/config.json</code> file for secrets (firebase configurations)</li>
+<li>Install dependencies</li>
+</ol>
+<pre class="bash">   go get
+</pre>
+<ol>
+<li>Run the app</li>
+</ol>
+<pre class="bash">   go run <span style="color: #fbf1c7;background-color: #282828">.</span>
+</pre>
+<h2 id="run-unit-tests">Run Unit Tests</h2>
+
+<ol>
+<li>Run test for invoice API</li>
+</ol>
+<pre class="bash">   go <span style="color: #fbf1c7;background-color: #282828">test</span> ./invoice
+</pre>
+<ol>
+<li>Run test for inventory item API</li>
+</ol>
+<pre class="bash">   go <span style="color: #fbf1c7;background-color: #282828">test</span> ./item
+</pre>
+      </div>
+    <a href="https://github.com/steven-steven/electroninvoice and https://github.com/steven-steven/GoInvoice">View the project on Github</a>
+  </main>
+
+    </div>
+    <div data-controller="subscription" class="flex flex-col items-center p-8 bg-slate-50 dark:bg-slate-800 dark:shadow-slate-700 shadow-lg">
+  <p class="text-xl">Get my latest articles and updates</p>
+  <p>At most one email a month and no spam.</p>
+
+  <div class="mt-5 flex">
+    <label class="items-center">
+      <input type="email" data-subscription-target="email" class="w-full rounded-xl dark:bg-zinc-700" placeholder="Your email" required>
+    </label>
+    <button type="submit" data-action="click->subscription#submitForm" class="px-3 ml-2 ext-white bg-blue-500 rounded-lg">
+      Subscribe
+    </button>
+  </div>
+</div>
+
+    <footer class="">
+      <div class="text-center text-xs">© Steven 2019</div>
+    </footer>
+  </div>
+
+  </body>
+</html>
