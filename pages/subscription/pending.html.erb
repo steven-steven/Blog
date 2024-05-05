@@ -1,0 +1,26 @@
+---
+title: Pending Subscription
+---
+
+<div data-controller="subscription" data-subscription-function-value="new" data-subscription-email-value="<%= params["email"] %>" class="mt-20">
+  <img data-subscription-target="loading" src="/loading.gif" alt="Loading..."  width="250" />
+
+  <template data-subscription-target="successTemplate">
+    <div class="text-xl bg-green-100 p-10">
+      <p>Thanks! Just one last step..</p>
+      <p>We've sent you an email. Please check them and confirm your subscription.</p>
+
+      <br/>
+      <p> - Steven </p>
+    </div>
+  </template>
+
+  <template data-subscription-target="failTemplate">
+    <div class="text-xl bg-red-100 p-10">
+      <p>👀 It looks like you've already been subscribed.</p>
+
+      <br/>
+      <p> - Steven </p>
+    </div>
+  </template>
+</div>

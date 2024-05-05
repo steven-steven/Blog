@@ -3,8 +3,8 @@
   <head>
     <meta charset='utf-8' name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Discovering OKR and my summary of &#39;Measure What Matters&#39;</title>
-    <link rel="stylesheet" href="/assets/tailwind-9a8ddea3645246c4b59742ea4106f1427d18d7517692ee59a0ab4a25f527d3d7.css" media="screen" />
-    <script src="/assets/build/application-25ae7184b08e1be867fb7524ac6da4947649b73896dda1d6a3ff36fd664e1ca8.js"></script>
+    <link rel="stylesheet" href="/assets/tailwind-680b27ef920231a437ecb0b928ebf94f12ab1ffcee0c1447f21bc1b300f5fdac.css" media="screen" />
+    <script src="/assets/build/application-0d06a2e01a854c8f052de6edee47af8ea71d7967c85ea302c9e3059816e5dc38.js"></script>
   </head>
   <body class="bg-gray-100 dark:bg-slate-900 text-slate-900 dark:text-slate-300 text-sm md:text-base">
     <div class="flex flex-col md:flex-row items-center gap-5 justify-between mx-32 mt-10 md:mt-20">
@@ -26,7 +26,7 @@
     <h1 class="text-2xl md:text-3xl font-bold">Discovering OKR and my summary of &#39;Measure What Matters&#39;</h1>
       <p class="opacity-70">Friday,  December 27 2019<p>
   </header>
-  <main class="prose dark:prose-invert max-w-none mt-6 text-inherit text-base md:text-lg prose-code:before:hidden prose-code:after:hidden prose-code:p-1 prose-code:rounded-md prose-code:font-medium prose-code:bg-gray-300 dark:prose-code:bg-slate-700">
+  <main class="prose dark:prose-invert max-w-none mt-6 text-inherit text-base md:text-lg break-words prose-code:before:hidden prose-code:after:hidden prose-code:p-1 prose-code:rounded-md prose-code:font-medium prose-code:bg-gray-300 dark:prose-code:bg-slate-700">
     <p>Last December, I picked up a book called &ldquo;Measure What Matters&rdquo;, by John Doerr :blue_book:. The book is centered around OKR, a goal-setting methodology used in many big companies including Google, Facebook, Amazon, and my recent company I interned at, Loblaw Digital.</p>
 
 <p><img src="https://steven-steven.github.io/Blog/assets/images/blogAssets/learning-okr/measureWhatMatters.jpg" width="400" height="400" alt="Measure What Matters" style="margin: 1.5rem auto;"></p>
@@ -224,8 +224,44 @@
 <p>Any how, can&rsquo;t believe half-quarter of the year had passed. I won&rsquo;t continue tracking my OKR but I&rsquo;ll try to keep it at the back of my brain.</p>
 
   </main>
+  <div class="my-10">
+    <button id="js-discuss-button" class="rounded-2xl border-2 border-slate-400 md:w-auto w-full px-5 py-4 hover:font-semibold">Show comments</button>
+<div id="disqus_thread"></div>
+<script>
+  var commentButton = document.getElementById("js-discuss-button")
+  var disqus_config = function () {
+    this.page.url = `https://stevenwhat.me/blog/archived/learning-okr`;
+    this.page.identifier = "/blog/archived/learning_okr";
+    this.page.title = "Discovering OKR and my summary of &#39;Measure What Matters&#39;";
+  };
+  commentButton.addEventListener('click', function() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://blog-zlm7tpahgt.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+
+    event.target.parentElement.removeChild(event.target);
+  })
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  </div>
 
     </div>
+    <div data-controller="subscription" class="flex flex-col items-center p-8 bg-slate-50 dark:bg-slate-800 dark:shadow-slate-700 shadow-lg">
+  <p class="text-xl">Get my latest articles and updates</p>
+  <p>At most one email a month and no spam.</p>
+
+  <div class="mt-5 flex">
+    <label class="items-center">
+      <input type="email" data-subscription-target="email" class="w-full rounded-xl dark:bg-zinc-700" placeholder="Your email" required>
+    </label>
+    <button type="submit" data-action="click->subscription#submitForm" class="px-3 ml-2 ext-white bg-blue-500 rounded-lg">
+      Subscribe
+    </button>
+  </div>
+</div>
+
     <footer class="">
       <div class="text-center text-xs">© Steven 2019</div>
     </footer>

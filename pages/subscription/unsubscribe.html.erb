@@ -1,0 +1,26 @@
+---
+title: Confirm Subscription
+---
+
+<div data-controller="subscription" data-subscription-function-value="unsubscribe" data-subscription-token-value="<%= params["token"] %>" class="mt-20">
+  <img data-subscription-target="loading" src="/Users/steven/src/github.com/sitepress/assets/images/loading.gif" alt="Loading..."  width="250" />
+
+  <template data-subscription-target="successTemplate">
+    <div class="text-xl bg-green-100 p-10">
+      <p>Successfully unsubscribed. Thanks for being a part of us</p>
+      <p>What's one thing we could do better? Please reach out, we'd love to hear any of your feedbacks</p>
+
+      <br/>
+      <p> - Steven </p>
+    </div>
+  </template>
+
+  <template data-subscription-target="failTemplate">
+    <div class="text-xl bg-red-100 p-10">
+      <p>We can't find you in the list. Seems like you're already unsubscribed</p>
+
+      <br/>
+      <p> - Steven </p>
+    </div>
+  </template>
+</div>

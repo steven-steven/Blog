@@ -6,3 +6,6 @@ window.Stimulus = Application.start()
 
 import DarkToggleController from "./dark_toggle_controller"
 Stimulus.register("dark-toggle", DarkToggleController)
+
+import SubscriptionController from "./subscription_controller"
+Stimulus.register("subscription", SubscriptionController)

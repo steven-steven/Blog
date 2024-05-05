@@ -82,8 +82,8 @@
       if (clearEventListeners)
         this.clearEventListenersForBinding(binding);
     }
-    handleError(error2, message, detail = {}) {
-      this.application.handleError(error2, `Error ${message}`, detail);
+    handleError(error3, message, detail = {}) {
+      this.application.handleError(error3, `Error ${message}`, detail);
     }
     clearEventListenersForBinding(binding) {
       const eventListener = this.fetchEventListenerForBinding(binding);
@@ -219,10 +219,10 @@
       this.element = element;
       this.index = index;
       this.eventTarget = descriptor.eventTarget || element;
-      this.eventName = descriptor.eventName || getDefaultEventNameForElement(element) || error("missing event name");
+      this.eventName = descriptor.eventName || getDefaultEventNameForElement(element) || error2("missing event name");
       this.eventOptions = descriptor.eventOptions || {};
-      this.identifier = descriptor.identifier || error("missing identifier");
-      this.methodName = descriptor.methodName || error("missing method name");
+      this.identifier = descriptor.identifier || error2("missing identifier");
+      this.methodName = descriptor.methodName || error2("missing method name");
       this.keyFilter = descriptor.keyFilter || "";
       this.schema = schema;
     }
@@ -247,7 +247,7 @@
         return false;
       }
       if (!hasProperty(this.keyMappings, standardFilter)) {
-        error(`contains unknown key filter: ${this.keyFilter}`);
+        error2(`contains unknown key filter: ${this.keyFilter}`);
       }
       return this.keyMappings[standardFilter].toLowerCase() !== event.key.toLowerCase();
     }
@@ -299,7 +299,7 @@
       return defaultEventNames[tagName](element);
     }
   }
-  function error(message) {
+  function error2(message) {
     throw new Error(message);
   }
   function typecast(value) {
@@ -365,10 +365,10 @@
       try {
         this.method.call(this.controller, event);
         this.context.logDebugActivity(this.methodName, { event, target, currentTarget, action: this.methodName });
-      } catch (error2) {
+      } catch (error3) {
         const { identifier, controller, element, index } = this;
         const detail = { identifier, controller, element, index, event };
-        this.context.handleError(error2, `invoking action "${this.action}"`, detail);
+        this.context.handleError(error3, `invoking action "${this.action}"`, detail);
       }
     }
     willBeInvokedByEvent(event) {
@@ -583,13 +583,13 @@
     }
   };
   function add(map, key, value) {
-    fetch(map, key).add(value);
+    fetch2(map, key).add(value);
   }
   function del(map, key, value) {
-    fetch(map, key).delete(value);
+    fetch2(map, key).delete(value);
     prune(map, key);
   }
-  function fetch(map, key) {
+  function fetch2(map, key) {
     let values = map.get(key);
     if (!values) {
       values = /* @__PURE__ */ new Set();
@@ -957,8 +957,8 @@
       try {
         const value = this.delegate.parseValueForToken(token);
         return { value };
-      } catch (error2) {
-        return { error: error2 };
+      } catch (error3) {
+        return { error: error3 };
       }
     }
   };
@@ -1092,11 +1092,11 @@
             oldValue = descriptor.reader(rawOldValue);
           }
           changedMethod.call(this.receiver, value, oldValue);
-        } catch (error2) {
-          if (error2 instanceof TypeError) {
-            error2.message = `Stimulus Value "${this.context.identifier}.${descriptor.name}" - ${error2.message}`;
+        } catch (error3) {
+          if (error3 instanceof TypeError) {
+            error3.message = `Stimulus Value "${this.context.identifier}.${descriptor.name}" - ${error3.message}`;
           }
-          throw error2;
+          throw error3;
         }
       }
     }
@@ -1403,8 +1403,8 @@
       try {
         this.controller.initialize();
         this.logDebugActivity("initialize");
-      } catch (error2) {
-        this.handleError(error2, "initializing controller");
+      } catch (error3) {
+        this.handleError(error3, "initializing controller");
       }
     }
     connect() {
@@ -1415,8 +1415,8 @@
       try {
         this.controller.connect();
         this.logDebugActivity("connect");
-      } catch (error2) {
-        this.handleError(error2, "connecting controller");
+      } catch (error3) {
+        this.handleError(error3, "connecting controller");
       }
     }
     refresh() {
@@ -1426,8 +1426,8 @@
       try {
         this.controller.disconnect();
         this.logDebugActivity("disconnect");
-      } catch (error2) {
-        this.handleError(error2, "disconnecting controller");
+      } catch (error3) {
+        this.handleError(error3, "disconnecting controller");
       }
       this.outletObserver.stop();
       this.targetObserver.stop();
@@ -1452,10 +1452,10 @@
     get parentElement() {
       return this.element.parentElement;
     }
-    handleError(error2, message, detail = {}) {
+    handleError(error3, message, detail = {}) {
       const { identifier, controller, element } = this;
       detail = Object.assign({ identifier, controller, element }, detail);
-      this.application.handleError(error2, `Error ${message}`, detail);
+      this.application.handleError(error3, `Error ${message}`, detail);
     }
     targetConnected(element, name) {
       this.invokeControllerMethod(`${name}TargetConnected`, element);
@@ -1547,7 +1547,7 @@
     try {
       testReflectExtension();
       return extendWithReflect;
-    } catch (error2) {
+    } catch (error3) {
       return (constructor) => class extended extends constructor {
       };
     }
@@ -1939,8 +1939,8 @@
         console.error(`Couldn't find or create scope for identifier: "${identifier}" and element:`, element);
       }
     }
-    handleError(error2, message, detail) {
-      this.application.handleError(error2, message, detail);
+    handleError(error3, message, detail) {
+      this.application.handleError(error3, message, detail);
     }
     createScopeForElementAndIdentifier(element, identifier) {
       return new Scope(this.schema, element, identifier, this.logger);
@@ -2039,14 +2039,14 @@
       const context = this.router.getContextForElementAndIdentifier(element, identifier);
       return context ? context.controller : null;
     }
-    handleError(error2, message, detail) {
+    handleError(error3, message, detail) {
       var _a;
       this.logger.error(`%s
 
 %o
 
-%o`, message, error2, detail);
-      (_a = window.onerror) === null || _a === void 0 ? void 0 : _a.call(window, message, "", 0, 0, error2);
+%o`, message, error3, detail);
+      (_a = window.onerror) === null || _a === void 0 ? void 0 : _a.call(window, message, "", 0, 0, error3);
     }
     logFormattedMessage(identifier, functionName, detail = {}) {
       detail = Object.assign({ application: this }, detail);
@@ -2499,9 +2499,62 @@
     }
   };
 
+  // assets/javascripts/controllers/subscription_controller.js
+  var subscription_controller_default = class extends Controller {
+    static app_script_url = "https://script.google.com/macros/s/AKfycbxdKymGNp2EfskR5m63GU07UptkeSuA3_EmswwdEQNytm-unsszNJWh53z4xjcleZKH/exec";
+    static targets = ["successTemplate", "failTemplate", "loading", "email"];
+    static values = {
+      token: String,
+      function: String,
+      email: String
+    };
+    connect() {
+      if (this.functionValue == "subscribe") {
+        if (this.tokenValue == "")
+          return false;
+        const url = `${this.constructor.app_script_url}?token=${this.tokenValue}&p=confirm-subscribe`;
+        this.showResponse(url);
+      } else if (this.functionValue == "unsubscribe") {
+        if (this.tokenValue == "")
+          return false;
+        const url = `${this.constructor.app_script_url}?token=${this.tokenValue}&p=confirm-unsubscribe`;
+        this.showResponse(url);
+      } else if (this.functionValue == "new") {
+        if (this.emailValue == "")
+          return false;
+        const url = `${this.constructor.app_script_url}?p=subscribe&email=${this.emailValue}`;
+        this.showResponse(url);
+      }
+    }
+    submitForm() {
+      const email = this.emailTarget.value;
+      window.location.href = `http://127.0.0.1:8080/subscription/pending?email=${encodeURIComponent(email)}`;
+    }
+    async showResponse(url) {
+      if (!url)
+        return false;
+      const response = await this.postRequest(url);
+      let template = response ? this.successTemplateTarget : this.failTemplateTarget;
+      let clon = template.content.cloneNode(true);
+      this.element.appendChild(clon);
+      this.loadingTarget.classList.add("hidden");
+    }
+    async postRequest(url) {
+      try {
+        let result = await fetch(url);
+        result = await result.json();
+        return result["success"];
+      } catch {
+        console.error("There was a problem with your fetch operation:", error);
+        return false;
+      }
+    }
+  };
+
   // assets/javascripts/controllers/index.js
   window.Stimulus = Application.start();
   Stimulus.register("dark-toggle", dark_toggle_controller_default);
+  Stimulus.register("subscription", subscription_controller_default);
 
   // assets/javascripts/application.js
   if (localStorage.getItem("color-theme") === "dark" || !("color-theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches) {

@@ -1,0 +1,27 @@
+---
+title: Confirm Subscription
+---
+
+<div data-controller="subscription" data-subscription-function-value="subscribe" data-subscription-token-value="<%= params["token"] %>" class="mt-20">
+  <img data-subscription-target="loading" src="/Users/steven/src/github.com/sitepress/assets/images/loading.gif" alt="Loading..."  width="250" />
+
+  <template data-subscription-target="successTemplate">
+    <div class="text-xl bg-green-100 p-10">
+      <p>Thanks for subscribing, and welcome to my email list!</p>
+      <p>Keep an eye out for exciting emails.</p>
+
+      <br/>
+      <p> - Steven </p>
+    </div>
+  </template>
+
+  <template data-subscription-target="failTemplate">
+    <div class="text-xl bg-red-100 p-10">
+      <p>Oopsie Something went wrong.</p>
+      <p>Please try again or email me directly at steven.infinity29@gmail.com and I can add you in to the email list manually</p>
+
+      <br/>
+      <p> - Steven </p>
+    </div>
+  </template>
+</div>

@@ -3,8 +3,8 @@
   <head>
     <meta charset='utf-8' name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Indexing with Spatial Search Algorithm</title>
-    <link rel="stylesheet" href="/assets/tailwind-9a8ddea3645246c4b59742ea4106f1427d18d7517692ee59a0ab4a25f527d3d7.css" media="screen" />
-    <script src="/assets/build/application-25ae7184b08e1be867fb7524ac6da4947649b73896dda1d6a3ff36fd664e1ca8.js"></script>
+    <link rel="stylesheet" href="/assets/tailwind-680b27ef920231a437ecb0b928ebf94f12ab1ffcee0c1447f21bc1b300f5fdac.css" media="screen" />
+    <script src="/assets/build/application-0d06a2e01a854c8f052de6edee47af8ea71d7967c85ea302c9e3059816e5dc38.js"></script>
   </head>
   <body class="bg-gray-100 dark:bg-slate-900 text-slate-900 dark:text-slate-300 text-sm md:text-base">
     <div class="flex flex-col md:flex-row items-center gap-5 justify-between mx-32 mt-10 md:mt-20">
@@ -27,7 +27,7 @@
       <h2 class="md:text-xl opacity-50">Have you ever spent your whole afternoon searching for an eraser... I have.</h2>
       <p class="opacity-70">Thursday,  March 12 2020<p>
   </header>
-  <main class="prose dark:prose-invert max-w-none mt-6 text-inherit text-base md:text-lg prose-code:before:hidden prose-code:after:hidden prose-code:p-1 prose-code:rounded-md prose-code:font-medium prose-code:bg-gray-300 dark:prose-code:bg-slate-700">
+  <main class="prose dark:prose-invert max-w-none mt-6 text-inherit text-base md:text-lg break-words prose-code:before:hidden prose-code:after:hidden prose-code:p-1 prose-code:rounded-md prose-code:font-medium prose-code:bg-gray-300 dark:prose-code:bg-slate-700">
     <p>Indexing is such a fascinating field that we all take for granted. When we lookup the nearest restaurants, the funniest cat videos, your favorite tv shows, or your idol&rsquo;s social media profile - we want it to be instant. Delays are unacceptable, and we shall continuously punch in billions off searches - there shall be no rest. Computers are treated inhumanely, but at the end of the day computers are computers. They have their limitation.</p>
 
 <p>I learned indexing in my Database course recently. I came across how data records typically span over multiple blocks in your disk and that is time expensive to search. Disk latency is around 13ms, and RAM latency is around 83 ns. At our scale of comparison I think that&rsquo;d be like the speed of taking a book next to you, versus walking (on your feet) to the national library in Ottawa and back. But that is the inevitable limitation of reading disks. There&rsquo;s no way around it but to minimize the number of disk reads as much as possible. So that&rsquo;s where indexing comes in. It comes down not only to how the data is stored and organized, but also the techniques we use to refer to the data during a lookup.</p>
@@ -99,8 +99,44 @@
 </ul>
 
   </main>
+  <div class="my-10">
+    <button id="js-discuss-button" class="rounded-2xl border-2 border-slate-400 md:w-auto w-full px-5 py-4 hover:font-semibold">Show comments</button>
+<div id="disqus_thread"></div>
+<script>
+  var commentButton = document.getElementById("js-discuss-button")
+  var disqus_config = function () {
+    this.page.url = `https://stevenwhat.me/blog/indexing-with-spatial-search-algorithm`;
+    this.page.identifier = "/blog/indexing_with_spatial_search_algorithm";
+    this.page.title = "Indexing with Spatial Search Algorithm";
+  };
+  commentButton.addEventListener('click', function() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://blog-zlm7tpahgt.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+
+    event.target.parentElement.removeChild(event.target);
+  })
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  </div>
 
     </div>
+    <div data-controller="subscription" class="flex flex-col items-center p-8 bg-slate-50 dark:bg-slate-800 dark:shadow-slate-700 shadow-lg">
+  <p class="text-xl">Get my latest articles and updates</p>
+  <p>At most one email a month and no spam.</p>
+
+  <div class="mt-5 flex">
+    <label class="items-center">
+      <input type="email" data-subscription-target="email" class="w-full rounded-xl dark:bg-zinc-700" placeholder="Your email" required>
+    </label>
+    <button type="submit" data-action="click->subscription#submitForm" class="px-3 ml-2 ext-white bg-blue-500 rounded-lg">
+      Subscribe
+    </button>
+  </div>
+</div>
+
     <footer class="">
       <div class="text-center text-xs">© Steven 2019</div>
     </footer>
