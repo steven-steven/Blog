@@ -3,10 +3,10 @@ title: Confirm Subscription
 ---
 
 <div data-controller="subscription" data-subscription-function-value="subscribe" data-subscription-token-value="<%= params["token"] %>" class="mt-20">
-  <img data-subscription-target="loading" src="/Users/steven/src/github.com/sitepress/assets/images/loading.gif" alt="Loading..."  width="250" />
+  <img data-subscription-target="loading" src="https://steven-steven.github.io/Blog/assets/images/loading.gif" alt="Loading..." class="w-80 my-0 mx-auto"/>
 
   <template data-subscription-target="successTemplate">
-    <div class="text-xl bg-green-100 p-10">
+    <div class="text-xl bg-green-100 dark:bg-green-900 p-10">
       <p>Thanks for subscribing, and welcome to my email list!</p>
       <p>Keep an eye out for exciting emails.</p>
 
@@ -16,7 +16,7 @@ title: Confirm Subscription
   </template>
 
   <template data-subscription-target="failTemplate">
-    <div class="text-xl bg-red-100 p-10">
+    <div class="text-xl bg-red-100 dark:bg-amber-900 p-10">
       <p>Oopsie Something went wrong.</p>
       <p>Please try again or email me directly at steven.infinity29@gmail.com and I can add you in to the email list manually</p>
 

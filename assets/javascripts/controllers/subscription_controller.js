@@ -11,24 +11,28 @@ export default class extends Controller {
 
   connect() {
     if(this.functionValue == "subscribe"){
-      if(this.tokenValue == "") return false
+      if(this.tokenValue == "") return this.redirect404();
       const url = `${this.constructor.app_script_url}?token=${this.tokenValue}&p=confirm-subscribe`;
       this.showResponse(url)
     } else if (this.functionValue == "unsubscribe"){
-      if(this.tokenValue == "") return false
+      if(this.tokenValue == "") return this.redirect404()
       const url = `${this.constructor.app_script_url}?token=${this.tokenValue}&p=confirm-unsubscribe`;
       this.showResponse(url)
     } else if (this.functionValue == "new"){
-      if(this.emailValue == "") return false
+      if(this.emailValue == "") return this.redirect404()
       const url = `${this.constructor.app_script_url}?p=subscribe&email=${this.emailValue}`;
       this.showResponse(url)
     }
   }
 
+  redirect404() {
+    window.location.href = `/404`;
+  }
+
   submitForm() {
     const email = this.emailTarget.value;
 
-    window.location.href = `http://127.0.0.1:8080/subscription/pending?email=${encodeURIComponent(email)}`;
+    window.location.href = `/subscription/pending?email=${encodeURIComponent(email)}`;
   }
 
   async showResponse(url) {
