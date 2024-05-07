@@ -1,7 +1,7 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static app_script_url = "https://script.google.com/macros/s/AKfycbxdKymGNp2EfskR5m63GU07UptkeSuA3_EmswwdEQNytm-unsszNJWh53z4xjcleZKH/exec";
+  static app_script_url = "https://script.google.com/macros/s/AKfycbzE07u9lEiNg3Pj_r0LXH1xiD39JYEHC7xo2kEwRG5CKOccaULNY0eG6XYgHaoCim91/exec";
   static targets = ["successTemplate", "failTemplate", "loading", "email"]
   static values = {
     function: String

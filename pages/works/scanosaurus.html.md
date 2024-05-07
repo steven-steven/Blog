@@ -1,18 +1,15 @@
 ---
-title: DuckDuckGoose NFT Collectable
-subtitle: Web3 Site, Smart contracts, character generation, Opensea, and all the goodies
+title: Scanosaurus
+subtitle: Scanning Service
 layout: github_project
-github_url: https://github.com/steven-steven/nft_website
-order: 1
+github_url: https://github.com/steven-steven/scanosaurus
+order: 2
 ---
 
-In the hype of NFTs, 4 duck friends set out to build an NFT collectible of their own. They are far off from the moon, but nothing can stop them from dreaming.
+Scanosaurus was a service I started from a personal need - I wanted to clear out the pile of University notes I have by archiving it digitally, but there weren't any bulk scanners in my area. I decided to get one of the [CZUR Aura Pro](https://shop.czur.com/products/aura?variant=28598339436592) for 299 USD.
 
-For a full overview, you could checkout [this reflection post](/blog/dropping_nft) from Nov 2021.
+The landing page: [https://scanosaurus.vercel.app/](https://scanosaurus.vercel.app/)
 
-### More Links:
-- [Web3 Landing Page](https://nft-website-1a829tf3x-steveninfinity29.vercel.app/)
-- [The Etherscan Smart Contract](https://etherscan.io/address/0xc15a882ee6ab53c00af7d73d21438a5f880e0107/#code)
-- [Scripts to deploy the tokens to IPFS & the deploying the contract](https://github.com/steven-steven/nft_opensea)
-- [Twitter Page](https://twitter.com/DDGNFT)
-- [Twitter bot](https://github.com/steven-steven/ddg-twitter-bot)
+On the technical aspect, I used Contentful for a headless CMS. It makes it easier to organize your content separately from presentation code. I used a NextJS starter app as the front-end code, which will uses Contentful's [GraphQL Content API](https://www.contentful.com/developers/docs/references/graphql/) to fetch the content. It's pretty cool to see that in action - you can update how the content is structured in the web UI and once published the graphql schema is generated automatically to be called in your code.
+
+The other challenging part of selling is setting up the copywrite, but I got some help with AI. I had a fun time exploring Midjourney for the first time, to generate my logo. It takes a few iteration, and I finally found the perfect dinosaur 🦖. The copywrite is mostly from chatgpt. What great time we live in.

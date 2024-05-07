@@ -3,7 +3,7 @@ title: DuckDuckGoose NFT Collectable
 subtitle: Web3 Site, Smart contracts, character generation, Opensea, and all the goodies
 layout: github_project
 github_url: https://github.com/steven-steven/nft_website
-order: 1
+order: 3
 ---
 
 In the hype of NFTs, 4 duck friends set out to build an NFT collectible of their own. They are far off from the moon, but nothing can stop them from dreaming.

@@ -2,7 +2,7 @@
 title: Social St
 subtitle: Coming soon..
 layout: post
-order: 3
+order: 5
 ---
 
 Coming soon...
