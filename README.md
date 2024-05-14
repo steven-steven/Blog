@@ -38,5 +38,4 @@ The files in sitepress is organized as follows:
 
 ## Deployment
 
-- `sitepress compile` to build the static files into `./build`.
-- `fly deploy` to deploy to fly.io
+- Push to main will be precompiled and deployed by Vercel
