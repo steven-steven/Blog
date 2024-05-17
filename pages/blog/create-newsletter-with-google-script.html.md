@@ -12,7 +12,9 @@ I was building an email newsletter while building Social St and this Blog. A cle
 
 ![Mailchimp](create-a-newsletter-with-google-script/mailchimp.png "=400x400")
 
-So I set out to bootstrap my own newsletter integrations with Google sheets + scripts! Got to admit that it was kinda scrappy and its still missing some features (like allowing users to select which categories they'd wish to subscribe to). But I don't think that's too important right now, especially with less than 500 people in my contacts.
+Edit: I recently learned about [Mailerlite](https://www.mailerlite.com/) and it looks promising with a free version. Might give it a try next time.
+
+Anyways, I set out to bootstrap my own newsletter integrations with Google sheets + scripts! Got to admit that it was kinda scrappy and its still missing some features (like allowing users to select which categories they'd wish to subscribe to). But I don't think that's too important right now, especially with less than 500 people in my contacts.
 
 Plus, I didn't start from scratch. I found [this blogpost](https://omarkama.li/blog/a-newsletter-using-gmail-google-sheets) by Omar Kamali going over his implementation of it, although I've hit some hurdles along the way (later).
 
