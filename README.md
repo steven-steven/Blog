@@ -22,7 +22,7 @@ $ yarn
 Then kickoff the processes with overmind.
 
 ```sh
-$ overmind start -f Procfile.dev
+$ overmind start -f Procfile.dev --port 3030
 ```
 
 ## File locations

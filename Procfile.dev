@@ -1,3 +1,3 @@
-web: bundle exec sitepress server
+web: bundle exec sitepress server -p 5001
 tailwind: npx tailwindcss -i ./assets/stylesheets/site.css -o ./assets/stylesheets/tailwind.css --watch
 js: yarn build:js --watch
