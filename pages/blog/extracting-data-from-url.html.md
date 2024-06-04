@@ -37,8 +37,10 @@ That codebase also had implemented bing image search in case they couldn't get a
 
 As an alternative, [this blogpost](https://andrejgajdos.com/how-to-create-a-link-preview/) also had their own solution to generating link previews and I think it might be a better starting point if I was to start over and hadn't spent my weekend doing this 😅.
 
-### Previews of my feed and Airtable
+### Preview of the feed I generated
 
 ![Generated feed](extracting-data-from-url/feed.png "=400x400")
+
+### Preview of the Airtable record ✨ enriched ✨
 
 ![Airtable data](extracting-data-from-url/airtable.png "=400x400")
