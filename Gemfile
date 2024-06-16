@@ -15,3 +15,7 @@ gem 'rouge'
 
 # Parse `publish_at` dates from blog posts
 gem "chronic", "~> 0.10.2"
+
+group :development, :test do
+  gem "debug", ">= 1.0.0"
+end

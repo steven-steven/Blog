@@ -25,6 +25,8 @@ Then kickoff the processes with overmind.
 $ overmind start -f Procfile.dev --port 3030
 ```
 
+Run `bundle exec rdbg -a` in a separate terminal for debugging
+
 ## File locations
 
 The files in sitepress is organized as follows:

@@ -4,17 +4,18 @@ publish_at: June 4, 2024 01:40
 layout: post
 ---
 
-Imagine this.. you bookmark a website, categorize/tag them, and you have a feed of all your bookmarks you can embed in your site filtered by tag.
+Imagine this.. you wish to curate websites. So the workflow goes: bookmark a site after you read them, tag it, then you have a feed of all your bookmarks filtered by tag that you can then embed in your site.
 
 To do this, I would need to:
+
 - save the url from my phone browser
-- tag the url using tags from a predetermined list
+- tag the url
 - extract and save images, title, short descriptions, favicon for the url
-- generate a feed for your site
+- generate a feed for the site
 
-Straight forward isn't it? It's a bookmark + data enrichment step + feed generator. I've looked far and wide but couldn't find a free solution (sorry for being cheap, but also https://embed.ly/extract's API cost $99), so I decided to bootstrap it myself.
+Straight forward isn't it? It's a bookmark + data enrichment step + feed generator. I've looked far and wide but couldn't find a free solution (sorry for being cheap, but also [embed.ly](https://embed.ly/extract)'s API cost $99. Excuse me?), so I decided to bootstrap it myself.
 
-Edit: I discovered Diffbot! They have a free version for 10k calls a month of 5 API calls per min. Would definitely give it a try to integrate it with Airtable (e.g. [with Zapier](https://zapier.com/apps/airtable/integrations/airtable/339901/enrich-new-airtable-records-with-diffbot-enhance)). If that works for you, then see you in another post 👋
+<u>Edit</u>: I discovered [Diffbot](https://www.diffbot.com/)! They have a free version for 10k calls a month of 5 API calls per min. Would definitely give it a try to integrate it with Airtable (e.g. [with Zapier](https://zapier.com/apps/airtable/integrations/airtable/339901/enrich-new-airtable-records-with-diffbot-enhance)). If that works for you, then see you in another post 👋
 
 My workaround is:
 - using Shortcuts to share websites to airtable from your phone ([I have an article for that!](/blog/how-to-share-urls-from-your-phone-to-airtable-with-ios-shortcuts))

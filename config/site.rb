@@ -1,3 +1,5 @@
+require 'debug'
+
 # Default layout for Sitepress pages
 Sitepress.configure do |config|
   ## Change the root_path of the Sitepress site, or set to a different

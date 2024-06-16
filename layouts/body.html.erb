@@ -5,6 +5,12 @@
     <title><%= current_page.data.fetch("title") %></title>
     <%= stylesheet_link_tag "tailwind" %>
     <%= javascript_include_tag "build/application" %>
+    <meta property="og:title" content="<%= current_page.data.fetch("title") %>" />
+    <meta property="og:url" content="https://www.stevenwhat.me<%= current_page.request_path %>" />
+    <meta property="og:type" content="<%= current_page.data.key?("primary_page") ? "website" : "article" %>" />
+    <meta property="og:description" content="Steven's blog where we talk about all things tech, books, lifestyle." />
+    <meta property="og:image" content="https://steven-steven.github.io/Blog/assets/images/avatar_hello.png" />
+    <link rel="icon" type="image/x-icon" href="https://steven-steven.github.io/Blog/assets/images/avatar_hello.png">
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0YNMWBS572"></script>
