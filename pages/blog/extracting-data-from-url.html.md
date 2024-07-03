@@ -15,15 +15,32 @@ To do this, I would need to:
 
 Straight forward isn't it? It's a bookmark + data enrichment step + feed generator. I've looked far and wide but couldn't find a free solution (sorry for being cheap, but also [embed.ly](https://embed.ly/extract)'s API cost $99. Excuse me?), so I decided to bootstrap it myself.
 
-<u>Edit</u>: I discovered [Diffbot](https://www.diffbot.com/)! They have a free version for 10k calls a month of 5 API calls per min. Would definitely give it a try to integrate it with Airtable (e.g. [with Zapier](https://zapier.com/apps/airtable/integrations/airtable/339901/enrich-new-airtable-records-with-diffbot-enhance)). If that works for you, then see you in another post 👋
-
 My workaround is:
-- using Shortcuts to share websites to airtable from your phone ([I have an article for that!](/blog/how-to-share-urls-from-your-phone-to-airtable-with-ios-shortcuts))
+
+- using Shortcuts to share websites to airtable from your phone ([see my other article](/blog/how-to-share-urls-from-your-phone-to-airtable-with-ios-shortcuts))
 - manually tag the url in Airtable (use linked records)
 - Scraping Solution! + update Airtable
 - pull from Airtable and generate a view in the site
 
-### The scraping solution part
+### One solution for the scraping part: Diffbot
+
+While writing this post I actually discovered [Diffbot](https://www.diffbot.com/)! They have a free version for 10k calls a month of 5 API calls per min. I quickly spun up a rake file that calls that API. Sample code:
+
+```ruby
+response = Net::HTTP.get(URI("https://api.diffbot.com/v3/analyze?token=#{Rails.application.credentials.diffbot_token}&url=#{URI.encode_www_form_component(url)}"))
+details = JSON.parse(response)
+next if details.blank? || details["errorCode"] == 500
+
+item[:Image] = details.dig("objects", 0, "images", 0, "url")
+item[:Favicon] = details.dig("objects", 0, "icon")
+item["Short Description"] = (details.dig("objects", 0, "text") || details.dig("objects", 0, "description"))&.split(/(?<=[.!?])\s+|\n+/)&.slice(2,2)&.join(" ")
+```
+
+For the most part that seem works as I expected - with a few caveats. First, it wasn't able to resolve images with relative paths. Second, there doesn't seem to be a description field out of the box. However, Diffbot lets you configure your own parsing rules, and I introduced 'description' field to look at all paragraph tags.
+
+It was an easy solution, but still pretty clunky. I think I'll keep using my original solution: a parser I bootstraped myself. But if I had discovered Diffbot earlier, I don't think it's worth bootstrapping my own scraper as it was good enough.
+
+### Original solution: Scrape it myself
 
 Scraping for images/title/description is common yet isn't straightforward because people just can't agree on a protocol. Would make my life easier if all sites have their open-graph metadata set, with an absolute path to the image.
 
