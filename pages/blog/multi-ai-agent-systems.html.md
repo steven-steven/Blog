@@ -6,6 +6,8 @@ layout: post
 
 Beep! Bop! 🤖 During a recent hack days, I experimented on creating a Multi-AI agent system that would accept my notes and generate a blog post, using the crewAI framework.
 
+Look at the project: [Crew AI Exploration](/works/crew_ai_exploration)
+
 ## Context
 
 It was hackdays and I decided to explore multi-AI agent systems. The premise is that unlike your normal LLM interaction where the machine requires continuous human feedback each step of the way, you have multiple LLM agents (with separate roles, goals, and backstories) that collaborate and prompts one another.
