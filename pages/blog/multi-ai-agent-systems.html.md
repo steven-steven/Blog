@@ -16,7 +16,7 @@ I completed the Deeplearning.ai quick course on [Multi AI Agent Systems with Cre
 
 ![Completion certificate](multi-ai-agent-systems/certificate.png "=400x400")
 
-In the next couple of days, I hacked together the following crew with 3 agents. A content_strategist that writes an outline, blog_writer, and an editor that proofreads the work.
+In the next couple of days, I hacked together the following crew with 3 agents. A Content Strategist that writes an outline, Blog Writer, and an Editor that proofreads the work.
 
 ```python
 content_strategist = Agent(
@@ -59,23 +59,33 @@ editor = Agent(
 
 Prompting felt like another craft of its own. I wouldn't call it programming at all. As stated in the course, a great mental framework is to think like a manager. What is the goal? What is the process? What kind of people would I need to hire to get it done?
 
-Here is an excerpt about Crew AI using the notes I wrote from the course. Written by yours truly, Crew AI Multi-AI Agent Systems.
+Here is a sample excerpt about Crew AI using the notes I wrote from the course. Written by yours truly, Crew AI Multi-AI Agent Systems.
 
-## An excerpt of the generated text
+> At the core of Crew AI lies the concept of multi-agent systems, where AI agents work collaboratively to achieve a common goal. These agents are trained to specialize in specific tasks, such as research, writing, or analysis, and can seamlessly interact with each other to accomplish complex objectives. By utilizing Crew AI, developers can create dynamic systems where agents can delegate tasks, share information, and work together to achieve optimal results.
 
-At the core of Crew AI lies the concept of multi-agent systems, where AI agents work collaboratively to achieve a common goal. These agents are trained to specialize in specific tasks, such as research, writing, or analysis, and can seamlessly interact with each other to accomplish complex objectives. By utilizing Crew AI, developers can create dynamic systems where agents can delegate tasks, share information, and work together to achieve optimal results.
-
-By structuring tasks into well-defined roles, goals, and backstories, Crew AI enables developers to create sophisticated workflows that mimic real-world scenarios. From content planning to customer support automation, Crew AI can streamline processes, improve efficiency, and enhance the overall user experience.
+> By structuring tasks into well-defined roles, goals, and backstories, Crew AI enables developers to create sophisticated workflows that mimic real-world scenarios. From content planning to customer support automation, Crew AI can streamline processes, improve efficiency, and enhance the overall user experience.
 
 ## Thoughts
 
-Not bad.. It's not apparent that it's significantly better than directly prompting an LLM. But breaking down the tasks into chunks that each of your agents (with their expertise) will tackle allows the result to be more focus and tailored to its limited context. You could also let agents bounce ideas and delegating tasks to each other automatically.
+Not bad.. It's not apparent that it's significantly better than directly prompting an LLM. But breaking down the tasks into chunks that each of your agents, with their expertise, will tackle allows the result to be more focused and tailored to its limited context. You could also let agents bounce ideas and delegate tasks to each other automatically.
 
-I was excited about the tools that you can plug into the specific tasks, like SerperDevTool which allow the agent to search the topic on google, ScrapeWebsiteTool which scrapes content from a particular URL, WebsiteSearchTool which does a RAG semantic search over the website, FileReadTool which reads a file, and MDXSearchTool which does semantic search over markdown file. Quite disappointed though, when I learned that `SerperDevTool` was paid API.
+I was excited about the tools that you can plug into the specific tasks, like:
+
+- SerperDevTool which allow the agent to search the topic on google,
+- ScrapeWebsiteTool which scrapes content from a particular URL,
+- WebsiteSearchTool which does a RAG semantic search over the website,
+- FileReadTool which reads a file,
+- MDXSearchTool which does semantic search over markdown file.
+
+Quite disappointed though, when I learned that `SerperDevTool` was paid API.
+
+![API Error](multi-ai-agent-systems/error.png "=400x400")
 
 ## Spinning up a UI
 
-I wasn't quite satisfied seeing the execution logs in the terminal, and decided to spin up a Streamlit UI to go along with it. I was new to streamlit so [this tutorial](https://www.youtube.com/watch?v=vhbfs38XmKk) was quite helpful to get me started.
+I wasn't quite satisfied seeing the execution logs in the terminal, and decided to spin up a Streamlit UI to go along with it. I am new to streamlit so [this tutorial](https://www.youtube.com/watch?v=vhbfs38XmKk) was quite helpful to get me started.
+
+![Streamlit UI app](multi-ai-agent-systems/streamlit.png "=400x400")
 
 ## Future Ideas
 
