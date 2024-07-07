@@ -10,6 +10,6 @@ Read my Article on it: [Curating a map for places to visit in Indonesia](/blog/c
 
 **Guide Me Places** is a side-project I built recently. I curate places to visit, and display coordinates 📍 in an interactive map to help people like me discover and explore all corners of Indonesia. On top of that, I've curated a feed of articles and stories from fellow travelers users can browse through when they select a location in the map.
 
-![Map with curated articles](curating-a-map-for-places-to-visit-in-indonesia/map-with-articles.png "=400x400")
+![Map with curated articles](curating-a-map-for-places-to-visit-in-indonesia/map-with-article.png "=400x400")
 
 ![Map with 360 view](curating-a-map-for-places-to-visit-in-indonesia/map-with-iframe.png "=400x400")
