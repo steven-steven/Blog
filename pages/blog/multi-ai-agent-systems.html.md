@@ -91,4 +91,8 @@ I wasn't quite satisfied seeing the execution logs in the terminal, and decided 
 
 ## Future Ideas
 
-I do believe that AI will replace tasks (not jobs). And Crew AI seems to build off a good framework to extend what LLM brings to the table. Here's to many more prompts 🍻
+Crew AI themselves has a couple of examples in [this repo](https://github.com/joaomdmoura/crewAI-examples), like a game builder, coming up with image description and copy for an instagram post (could feed this into image generation like Midjourney), create landing pages, marketing strategy, trip/activity planner, etc.
+
+If you find yourself taking hours to do something, I think it's worth writing up a crew to do it for you or help guide you through it.
+
+I do believe that AI makes great mentors and will replace tasks (not jobs). Crew AI seems to build off a good framework to extend what LLM brings to the table. Here's to many more prompts 🍻
