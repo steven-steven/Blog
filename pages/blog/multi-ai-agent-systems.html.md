@@ -1,5 +1,5 @@
 ---
-title: Multi AI Agent Systems
+title: Creating a Blog Builder with Multi AI Agent Systems
 publish_at: July 6, 2024
 layout: post
 ---
@@ -88,6 +88,24 @@ Quite disappointed though, when I learned that `SerperDevTool` was paid API.
 I wasn't quite satisfied seeing the execution logs in the terminal, and decided to spin up a Streamlit UI to go along with it. I am new to streamlit so [this tutorial](https://www.youtube.com/watch?v=vhbfs38XmKk) was quite helpful to get me started.
 
 ![Streamlit UI app](multi-ai-agent-systems/streamlit.png "=400x400")
+
+## Trying it out with my book notes
+
+If you go through this blog, you would know that I love to write summaries for books I've read, but it is time-consuming. Tldr; on my process, I would make highlights and notes as I read a book, then I'd go through those notes while writing a summary for it.
+
+Of course, there are more nuances that I don't expect the crew to capture as picking out only the important points to include in the summary is a matter of taste 🍩.
+
+With the Blog Builder I created, I can now pass in a markdown file with all my exported notes as context, and try to generate a blog with it. It worked surprisingly well! Not gonna replace me, but it's a good start to overcome the curse of the blank page, and most of the work becomes editing work 🤓.
+
+Here is the initial outline crafted by our Senior Content Strategist 🤖
+
+![Outline generated](multi-ai-agent-systems/outline_generated.png "=400x400")
+
+Here is the outline that was finalized by the Senior Blog Editor 🤖
+
+![Blog generated](multi-ai-agent-systems/blog_generated1.png "=400x400")
+
+![Blog generated 2](multi-ai-agent-systems/blog_generated2.png "=400x400")
 
 ## Future Ideas
 
