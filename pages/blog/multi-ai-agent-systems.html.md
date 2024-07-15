@@ -1,5 +1,5 @@
 ---
-title: Creating a Blog Builder with Multi AI Agent Systems
+title: Creating a Blog Builder with Multi AI Agent
 publish_at: July 6, 2024
 layout: post
 ---
@@ -97,15 +97,19 @@ Of course, there are more nuances that I don't expect the crew to capture as pic
 
 With the Blog Builder I created, I can now pass in a markdown file with all my exported notes as context, and try to generate a blog with it. It worked surprisingly well! Not gonna replace me, but it's a good start to overcome the curse of the blank page, and most of the work becomes editing work 🤓.
 
+The notes that we passed as context. It looks super raw 🥩.
+
+![The notes](multi-ai-agent-systems/notes.png "=400x400")
+
 Here is the initial outline crafted by our Senior Content Strategist 🤖
 
 ![Outline generated](multi-ai-agent-systems/outline_generated.png "=400x400")
 
 Here is the outline that was finalized by the Senior Blog Editor 🤖
 
-![Blog generated](multi-ai-agent-systems/blog_generated1.png "=400x400")
-
 ![Blog generated 2](multi-ai-agent-systems/blog_generated2.png "=400x400")
+
+![Blog generated](multi-ai-agent-systems/blog_generated1.png "=400x400")
 
 ## Future Ideas
 

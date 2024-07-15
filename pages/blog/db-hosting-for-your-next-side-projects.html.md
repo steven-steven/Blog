@@ -26,13 +26,18 @@ But if SQLite works for you, congrats! Since SQLite is in-memory, you should be 
 
 ### Hosting MySQL
 
-Now let's talk about hosting. I couldn't find a free host for MySQL but what I ended up using is [Railway](https://railway.app/) which offers a free one-time grant of $5 in credits. When you run out of credits, they have a $5/month Hobby Plan which is pretty cheap. In my case $5 credit was enough to productionalize my side-project since there was no active users yet.
+Now when it comes to hosting MySQL, I couldn't find a free host.
 
-Otherwise, AWS RDS only offers 12 months free. There's [aiven.io](https://aiven.io/docs/platform/concepts/free-plan) that offers a $300 free credit. I've also seen some mentions on running it in a Digital ocean droplet that only cost $6/month.
+I was initially with Planetscale's Hobby Tier, but migrated since after they announced March 6 that they're shutting down their free Hobby tier plan 😭. They have a concept of branching and merging similar to Github PR. A branch in this case is an isolated copy of your DB. Thought the code-like concept of merging and reverting schema changes is very cool, and it sucks that I had to migrate out of it.
 
-For me, I was on Planetscale's Hobby Tier the first time. Thought I've found "the one". They have a concept of branching and safe migrations where you can create branches (isolated copy of your DB), make your schema changes there, and when you're ready to deploy simply open a request like you'd do on a Github PR. I thought it was so cool that you can now merge and revert schema changes just like code. But a few months after I got it working on my side project...
+The next host I tried was [Railway](https://railway.app/) which offers a free one-time grant of $5 in credits. When you run out, they have a $5/month Hobby Plan. Since my side-project has no active users, I thought $5 credit was enough - until it ran out 2 months later 😔. What's the next best option?
 
-Planetscale announces March 6 that they're shutting down their free Hobby tier plan 😭
+[Digital Ocean Droplet](https://www.digitalocean.com/pricing/droplets#basic-droplets)! A VM costing $6/month is definitely worth it at that point. You can use it to power multiple side-projects. I was afraid of the intial learning curve, but honesty wasn't hard at all. Here are some good strarting points:
+
+- Setting up MySQL in Ubuntu ([ref](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-22-04))
+- Allow Remote access to Digital Ocean MySQL server ([ref](https://medium.com/ciiag/digital-ocean-allow-remote-access-to-mysql-database-18c2d6b8986))
+
+I think the limitation there is scalability. You could upgrade your droplet machine to support higher traffic and larger DB. At that point, you could even consider AWS RDS (offers 12 months free). But I think a Droplet instance is good enough for many hobby projects.
 
 ### Hosting Postgres
 
@@ -40,4 +45,4 @@ I think you'll have more luck finding free Postgres hosting services. I would re
 
 ### A bit of budgeting tip
 
-I don't think spending money on a side-project is worth it if it is still a proof-of-concept. I was building socialst.club in my free time and I insists that I wouldn't spend a dime on it (except domain name 😅) so I can keep it up even without users.
+I don't think spending money on a side-project is worth it if it is still a proof-of-concept. I was building [socialst.club](/works/social_st) in my free time and I insists that I wouldn't spend a dime on it (except domain name 😅) so I can keep it up even without users.
