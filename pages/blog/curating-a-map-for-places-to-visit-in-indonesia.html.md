@@ -12,11 +12,11 @@ In my defence, Indonesia is the world's largest archipelagic country with over 1
 
 **Guide Me Places** is a side-project I built recently. I curate places to visit, and display coordinates 📍 in an interactive map to help people like me discover and explore all corners of Indonesia. On top of that, I've curated a feed of articles and stories from fellow travelers users can browse through when they select a location in the map.
 
+**Check it out  👉 [https://guide-me-places.fly.dev/](https://guide-me-places.fly.dev/)**
+
 ![Map with curated articles](curating-a-map-for-places-to-visit-in-indonesia/map-with-article.png "=400x400")
 
 ![Map with 360 view](curating-a-map-for-places-to-visit-in-indonesia/map-with-iframe.png "=400x400")
-
-Hope you check it out!
 
 ## How it was built
 #### Leaflet
