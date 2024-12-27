@@ -15,10 +15,13 @@ class ApplicationMarkdown < MarkdownRails::Renderer::Rails
 
   def image(link, title, alt_text)
     # e.g. ![alt =100x100](url.png)
+    # e.g. ![alt](wedding0.png "=local=300x300")
+    prefix = (title =~ /=local/) ? "": "https://steven-steven.github.io/Blog/assets/images/blogAssets/"
+
     if title =~ /=(\d+)x(\d+)/
-      %(<img src="https://steven-steven.github.io/Blog/assets/images/blogAssets/#{link}" width="#{$1}" height="#{$2}" alt="#{alt_text}" style="margin: 1.5rem auto;">)
+      %(<img src="#{prefix}#{link}" width="#{$1}" height="#{$2}" alt="#{alt_text}" style="margin: 1.5rem auto;">)
     else
-      %(<img src="https://steven-steven.github.io/Blog/assets/images/blogAssets/#{link}" title="#{title}" alt="#{alt_text}" style="margin: 1.5rem auto;">)
+      %(<img src="#{prefix}#{link}" title="#{title}" alt="#{alt_text}" style="margin: 1.5rem auto;">)
     end
   end
 end
