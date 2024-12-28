@@ -59,7 +59,7 @@ A little bit further after having passed the most difficult part, we finally rea
 ![mauritius](adventures-in-mauritius/lemorne2.png "=500x500")
 ![mauritius](adventures-in-mauritius/lemorne0.png "=200x200")
 
-Unpopular opinion: I actually found the descent to be less scary. This time, I could have my back against the ground and take in the stunning views around me. I bid farewell to the mountain, feeling confident that the second time wouldn't be as daunting. Overall, the ascent took us four hours and around 2-3 hours to get back down. By the end of it, I was more than ready for well-deserved late lunch at KFC.
+Unpopular opinion: I actually found the descent to be less scary. This time, I could have my back against the ground and take in the stunning views around me. I bid farewell to the mountain, feeling confident that the second time wouldn't be as daunting. Overall, the ascent took us 1 hour 40 minutes up and 2 hours to get back down. By the end of it, I was more than ready for well-deserved late lunch at KFC.
 
 ![mauritius](adventures-in-mauritius/kfc.png "=500x500")
 
@@ -252,7 +252,7 @@ In the capital of Port Louis, a bustling neighborhood known as Chinatown awaits 
 
 During my visit, I was introduced to a variety of Chinese-Mauritian dishes, including a savory bowl of Mine Bouille (boiled noodles), Boulettes (dumplings served in various styles), Hakien (delicious deep-fried meat rolls), and Bol Renverse (upside-down bowl). Although it was my first time trying these dishes, they all felt incredibly comforting, warming my heart and making me wish I could eat them every single day. The Sino-Mauritian community makes up about 2-3% of the population, primarily consisting of the Hakka ethnicity. It was fascinating to see how many of these flavors have stuck around and evolved into distinct cultural dishes that reflect the island's diverse heritage.
 
-The majority of population are in fact of Indian descent. I savored Dhal Puri, I tried the Baguette sandwich that was so delicious it could easily kick Subway out of business! One dinner, we also experienced dining at a Indian restaurant called Sitar, where I had one of the best Indian meals I've ever tasted. Freshly made roti accompanies to a variety of curry dishes like butter chicken and the shrimp masala.
+The majority of population are in fact of Indian descent. I savored Dhal Puri, I tried the Kebab sandwich that was so delicious it could easily kick Subway out of business! One dinner, we also experienced dining at a Indian restaurant called Sitar, where I had one of the best Indian meals I've ever tasted. Freshly made roti accompanies to a variety of curry dishes like butter chicken and the shrimp masala.
 
 ![mauritius](adventures-in-mauritius/food0.png "=500x500")
 ![mauritius](adventures-in-mauritius/food3.png "=500x500")
