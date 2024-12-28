@@ -69,9 +69,8 @@ On another tangent, I finished up a 'Concurrent Data Processing for Elixir' cour
 
 - Visiting google office and old friend.
 - Visiting Shopify office in Toronto and meeting some co-worker in-person for the first time.
-- Started going on dates and I found love for the first time in my life this November ❤️. It's been a weird series of events and I'm loving every single part of it. Sad that we'll be doing LDR soon. I feel so loved right now and that feeling is absolutely amazing. We both still have lots to learn about each other and about finding balance in relationship, but she definitely was the highlight that had made this year super special.
+- Started going on dates and I found love for the first time in my life this November ❤️. It's been a weird series of events and I'm loving every single part of it. Sad that we'll be doing LDR soon. I feel so loved and that feeling is absolutely amazing. We both still have lots to learn about each other and about finding balance in relationship, but she definitely was the highlight that had made this year special.
 
-![Her](2022-rhythm/her.png "=400x400")
 ![Smoothie](2022-rhythm/smoothie.png "=400x400")
 
 **Overall**, this year has brought so much fulfillment and joy. I have found myself multiple times over, and this couldn't have been possible without support of many people around me. I hope that I had improved their life as much as they had on me. My wish for next year is to have more courage, tackle new uncertainties, and carry over all this rhythm built up over this year to create something even more amazing. At the same time, taking time to breathe and embrace any emotions with people around me.

@@ -14,10 +14,10 @@ Here are some **major highlights** ✨ of 2023:
 - 3 months Long distance relationship
 - Going to japan (Tokyo osaka kyoto)
 - Going to Singapore
-- My mom coming to canada and meeting my GF for the first time
-- Living with my GF
+- My mom coming to canada and meeting my gf for the first time
+- Living with my gf
 - Cooking a new delicious dish almost everyday
-- Another month of LDR, as my GF travels around Europe
+- Another month of LDR, as my gf travels around Europe
 - Running regularly in the summer
 - Survive layoffs
 - Read 10 books
@@ -53,7 +53,7 @@ This year, I’d spent some time keeping my expense sheets up to date, and start
 ### Not enough time
 Juggling my time for myself, my career, and my love relationship proves to be much more difficult than I imagined.
 
-I stopped climbing to save money and give back time for other things. I stopped journaling and hadn’t spend time writing as much as id like to. Despite my GF encouraging me to spend time for myself when I needed it, it takes a lot of practice and adjustments to find a right boundary.
+I stopped climbing to save money and give back time for other things. I stopped journaling and hadn’t spend time writing as much as I'd like to. Despite my gf encouraging me to spend time for myself when I needed it, it takes a lot of practice and adjustments to find a right boundary.
 
 ### Don't compromise your identity
 Perhaps I'm guilty for the lack of communication, but I find myself making small compromises (ie. movies, music, spoken language) in the relationship that didn't seem to be a big deal until I began looking back and feeling like I wasn't myself. Identity crisis! 🚨
