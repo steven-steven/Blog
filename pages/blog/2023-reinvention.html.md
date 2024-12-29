@@ -11,7 +11,7 @@ Honestly, change didn't come easy. There was moments where i felt like i needed 
 Here are some **major highlights** ✨ of 2023:
 
 - Going back home for 3 months, working with a 12h timezone difference
-- 3 months Long distance relationship
+- 3 months long distance relationship
 - Going to japan (Tokyo osaka kyoto)
 - Going to Singapore
 - My mom coming to canada and meeting my gf for the first time
@@ -35,7 +35,7 @@ Lots of wins! Excuse me as Ill take a moment to celebrate those, thank you.
 Now I will take few steps backward and talk about this year's hurdles and biggest lessons:
 
 ### Relationship. Origin and differences. Coping with uncertainties
-There was definitely tension throughout the year, from the LDR, meeting my parents, my mom and my GF struggling to communicate due to language barriers, having different religions, nationalities, cultures, hobbies, and personalities. As soon as the honeymoon phase sheds, reality jumps in and shook us to the core. The tension builds and was unexpectedly at its climax the night we watched 'The Elements' movie, a story about overcoming differences and seeing a new world appear as two completely different worlds collide. After a night of back and forth we agreed to set our differences aside and learn to work and understand each other more.
+There was definitely tension throughout the year, from the LDR, meeting my parents, my mom and my gf struggling to communicate due to language barriers, having different religions, nationalities, cultures, hobbies, and personalities. As soon as the honeymoon phase sheds, reality jumps in and shook us to the core. The tension builds and was unexpectedly at its climax the night we watched 'The Elements' movie, a story about overcoming differences and seeing a new world appear as two completely different worlds collide. After a night of back and forth we agreed to set our differences aside and learn to work and understand each other more.
 
 Agreeing on where should we live? What is it gonna look like? If starting over doesnt work, whats the backup plan? Would we have to keep making compromises?
 
