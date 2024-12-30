@@ -2,6 +2,7 @@
 title: Curating a map for places to visit in Indonesia
 publish_at: June 16, 2024
 layout: post
+tags: tech
 ---
 
 Despite being a proud Indonesian with having raised there for 17 years in the small regency called Banten in the island of Java, shamelessly I admit that I've never seen or heard a lot of places Indonesia has to offer. But it is in my bucketlist and dreamt that I would someday backpack around it.

@@ -2,6 +2,7 @@
 title: A Retrospective of my 4 months sprint at Loblaw Digital
 publish_at: December 26, 2019 01:40
 layout: post
+tags: life_update
 ---
 
 Wrapping up an awesome co-op term (4 months internship) at Loblaw Digital! :confetti_ball: This is my 5th time interning, and I couldn't be more grateful to land a position as a software developer on the API Team for online grocery (PC Express) at Loblaw Digital.

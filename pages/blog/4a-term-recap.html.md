@@ -2,6 +2,7 @@
 title: Five courses in Four months (a 4A term Recap)
 publish_at: August 15, 2020 01:40
 layout: post
+tags: tech, life_update
 ---
 
 Wow, can't believe it's 4 months after I wrote my [3B term recap](/blog/when-the-storm-ends). This term was another fast and furious ride with deadlines after deadlines. I took 5 courses (4 TE 1 CSE) after overloading one. My reason to overload is that it's free (given that I pay 20k+ for my term tuition, an extra course is like 5k value normally). Second reason is that its fully online, meaning I have a lot of time given I'm on my desk all day. Third, I was just curious but maybe the decision was a [planning fallacy](#planningfallacy) altogether.

@@ -2,6 +2,7 @@
 title: The Remote Internship
 publish_at: December 24, 2020
 layout: post
+tags: life_update
 ---
 
 ![Welcome Loots](the-remote-internship/loot.png "=400x400")

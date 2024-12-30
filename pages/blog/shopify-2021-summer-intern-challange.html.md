@@ -2,6 +2,7 @@
 title: Shopify 2021 Summer Internship Challange
 publish_at: January 6, 2021
 layout: post
+tags: tech
 ---
 
 I wanna dedicate this post on my recent side project. As the title suggests, it is primarily for a coding challenge submission as a part of Shopify's Summer 2021 Intern application. I'm shooting my shot by applying for both Front-end and Back-end positions, which has two different tasks.

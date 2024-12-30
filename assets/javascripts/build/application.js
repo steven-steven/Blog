@@ -2566,10 +2566,46 @@
     }
   };
 
+  // assets/javascripts/controllers/tag_controller.js
+  var tag_controller_default = class extends Controller {
+    static targets = ["tag", "year"];
+    connect() {
+      this.selectedTags = /* @__PURE__ */ new Set();
+      this.filterPosts();
+    }
+    toggleTag(event) {
+      const tag = event.currentTarget.dataset.tag;
+      event.currentTarget.classList.toggle("active");
+      if (this.selectedTags.has(tag)) {
+        this.selectedTags.delete(tag);
+      } else {
+        this.selectedTags.add(tag);
+      }
+      this.filterPosts();
+    }
+    filterPosts() {
+      const selected = [...this.selectedTags];
+      this.yearTargets.forEach((yearGroup) => {
+        const posts = yearGroup.querySelectorAll(".post");
+        let hasVisiblePosts = false;
+        posts.forEach((post) => {
+          const postTags = post.dataset.tags.split(",");
+          const isVisible = selected.length === 0 || selected.some((tag) => postTags.includes(tag));
+          post.style.display = isVisible ? "block" : "none";
+          if (isVisible)
+            hasVisiblePosts = true;
+        });
+        const yearHeading = yearGroup.querySelector(".year-heading");
+        yearHeading.style.display = hasVisiblePosts ? "block" : "none";
+      });
+    }
+  };
+
   // assets/javascripts/controllers/index.js
   window.Stimulus = Application.start();
   Stimulus.register("dark-toggle", dark_toggle_controller_default);
   Stimulus.register("subscription", subscription_controller_default);
+  Stimulus.register("tag", tag_controller_default);
 
   // assets/javascripts/application.js
   if (localStorage.getItem("color-theme") === "dark" || !("color-theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches) {

@@ -2,6 +2,7 @@
 title: Bookclub - This is Marketing
 publish_at: November 1, 2023
 layout: post
+tags: book_summary
 ---
 
 Reading Rich dad poor dad led me here ✌️. I don't work in marketing, but I know it helps to know the art of selling to have the impact / financial independence I wanted. So I went to pick on the catchiest book I see on my Kindle marketplace: "This is Marketing" by Seth Godin. I've heard of Seth Godin before. He's kinda famous. And don't hate me for thinking he lowkey looks like Jeff Bezos.

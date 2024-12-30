@@ -3,6 +3,7 @@ title: Updating this site
 subtitle: It's been 5 years since I created this site 🤯 where has time go?
 publish_at: April 21, 2024
 layout: post
+tags: tech
 ---
 
 It has long been in my todo list to migrate this site, soo treat this post as a housewarming party! 🥳 In the past codebase, making a post requires me to touch multiple files, npm library updates started creeping in, and 5-year old technology felt so outdated! I just thought it would make more sense (efficiency-wise, cost-wise, and fun-wise) to ditch it and spin up a new simpler home.

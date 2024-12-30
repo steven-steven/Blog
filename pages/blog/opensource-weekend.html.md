@@ -2,6 +2,7 @@
 title: Open Source Weekend
 publish_at: September 5, 2022
 layout: post
+tags: tech
 ---
 
 ![Power](opensource-weekend/meme.png "=400x400")

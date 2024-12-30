@@ -3,6 +3,7 @@ title: Creating a Blog Builder with Multi AI Agent
 subtitle: Beep! Bop! 🤖 Using CrewAI, I experimented creating a Multi-AI agent system that accepts my notes and generate a blog post.
 publish_at: July 6, 2024
 layout: post
+tags: tech
 ---
 
 👀 the project: [Crew AI Exploration](/works/crew_ai_exploration)

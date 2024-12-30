@@ -3,6 +3,7 @@ title: Introducing Social St
 subtitle: Platform to help people meet IRL and find activity companions
 publish_at: July 7, 2024
 layout: post
+tags: tech
 ---
 
 Let me introduce you to a side-project I've been heads down on my own for the past 6 months. Tbh finished the MVP 2-3 months ago but hadn't touched it since, so I thought might as well write about it now to keep the context alive.

@@ -2,6 +2,7 @@
 title: Bookclub - Menulis dan Berpikir Kreatif cara Spiritualisme Kritis
 publish_at: November 18, 2024 01:40
 layout: post
+tags: book_summary, bahasa_indonesia
 ---
 
 Sejak kecil, manusia hidup dikelilingi oleh cerita. Menurut saya, cerita merupakan saluran komunikasi yang sangat efektif untuk berbagi pengetahuan dan pengalaman, sekaligus menyampaikan pesan dengan pengaruh yang besar. Dari buku _Sapiens_ juga saya belajar bahwa manusia sudah mulai bercerita sejak revolusi kognitif pada peradaban 70.000 tahun yang lalu. Cerita memungkinkan kita untuk berimajinasi, memperdalam pemahaman terhadap dunia disekitar, dan mengembangkan struktur sosial. Secara keseluruhan, cerita sangat penting bagi keberlangsungan suatu kelompok masyarakat.

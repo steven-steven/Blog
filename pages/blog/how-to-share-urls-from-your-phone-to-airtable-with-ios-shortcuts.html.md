@@ -2,6 +2,7 @@
 title: How to share URLs from your phone to Airtable with iOS Shortcuts
 publish_at: May 27, 2024
 layout: post
+tags: tech
 ---
 
 I just discovered something cool. iOS Shortcuts ✨

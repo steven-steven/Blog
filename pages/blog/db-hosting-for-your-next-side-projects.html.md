@@ -2,6 +2,7 @@
 title: DB Hosting for your next side projects
 publish_at: May 17, 2024
 layout: post
+tags: tech
 ---
 
 While working on Rails, my DB options were:

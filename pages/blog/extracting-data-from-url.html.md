@@ -2,6 +2,7 @@
 title: Extracting data from URL
 publish_at: June 4, 2024 01:40
 layout: post
+tags: tech
 ---
 
 Imagine this.. you wish to curate websites. So the workflow goes: bookmark a site after you read them, tag it, then you have a feed of all your bookmarks filtered by tag that you can then embed in your site.

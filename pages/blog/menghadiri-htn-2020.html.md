@@ -2,6 +2,7 @@
 title: Menghadiri Hack The North 2020++
 publish_at: January 23, 2021
 layout: post
+tags: bahasa_indonesia, tech
 ---
 
 ![Dashboard home](menghadiri-htn-2020/dashboardHome.png "=400x400")

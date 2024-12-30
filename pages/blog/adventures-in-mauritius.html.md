@@ -2,6 +2,7 @@
 title: Adventures in Mauritius
 publish_at: December 24, 2024
 layout: post
+tags: travel
 ---
 
 Not all those who wander are lost. Visiting Mauritius was one of those moments where I knowingly chose to step into the unknown, allowing discoveries to unfold before me.

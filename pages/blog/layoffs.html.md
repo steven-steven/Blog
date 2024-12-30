@@ -2,6 +2,7 @@
 title: Layoffs
 publish_at: September 18, 2023
 layout: post
+tags: life_update
 ---
 
 I haven't written in a while. So much to write, so much to commit, so much postponing. Layoffs were one huge thing that happened this year (on May 4. Yes, may the 4th be with you) that I wished not to postpone writing before end of year. Rooted in the event, was common themes like lost, friendship, identity, purpose, growth, trust. All of which were too emotional and confusing to set aside.

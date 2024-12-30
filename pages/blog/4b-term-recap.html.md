@@ -2,6 +2,7 @@
 title: Closure (a 4B term Recap)
 publish_at: May 1, 2021 01:40
 layout: post
+tags: tech, life_update
 ---
 
 Like my [3B term](/blog/when-the-storm-ends) and [4A term](/blog/4a-term-recap) recap, I'm gonna do the same for my 4B term experiences - especially since it's my last term of undergrad! WAHOOO! 👨‍🎓🎊

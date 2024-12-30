@@ -2,6 +2,7 @@
 title: First time diving in Phuket 🐟
 publish_at: January 15, 2024
 layout: post
+tags: travel
 ---
 
 While in Phuket early this year, my friend and I decided to do something we've never done before - Diving 🤿! It was spontaneous as we had no events booked for that day. As we arrived first night in the busy street of Patong, we walked into a random travel agent booth to get information on scuba diving. The vendor lady took out a brochure and confidently reassured us that it was the one we're looking for. A guided beginner-friendly underwater tour, where 1 scuba diving master will be assigned to both of us. It was 2500 Thailand baht per person ($100 cad), and it includes transportation to the island and a photographer taking pictures of us under water. Not a bad deal - and tbh price wasn't much of a concern as long as I could resurface.

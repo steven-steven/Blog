@@ -2,6 +2,7 @@
 title: No Last Name
 publish_at: November 3, 2019
 layout: post
+tags: life_update
 ---
 
 Here are some FAQs about me: Is your last name Steven? Can I have your last name? How come you don't have a last name? Is your dad's last name Steven?

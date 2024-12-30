@@ -2,6 +2,7 @@
 title: Bookclub - Team of Teams
 publish_at: December 18, 2021 01:40
 layout: post
+tags: book_summary
 ---
 
 Wrapped under the story of the Afghanistan war, the book 'Team of Teams' was a writing about 2 very different approaches of teams. One that strives for efficiency, and the other that strives for adaptability. As system problems become more unpredictable, the author finds himself limited by the ineffectiveness of the efficient structure that has worked for decades.

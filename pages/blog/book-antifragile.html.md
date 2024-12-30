@@ -2,6 +2,7 @@
 title: Bookclub - Antifragile
 publish_at: January 5, 2022
 layout: post
+tags: book_summary
 ---
 
 I really love this book by Nassim Nicholas Taleb. A lengthy book full of fierce arguments, that might not be pleasant for some people. I think he just enjoys being an arrogant antagonistic asshole at times. But I can't help but enjoy his arguments and ideas so much that I bare with a lot of negatives of the book and kept on reading.

@@ -2,6 +2,7 @@
 title: Nanti Kita Cerita Tentang Hari ini
 publish_at: August 8, 2020
 layout: post
+tags: bahasa_indonesia
 ---
 
 SPOILERS: Jika sudah sampai disini saya harap anda sudah menonton film NKCTHI. Hanya saranku

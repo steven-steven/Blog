@@ -12,4 +12,7 @@
   nav > .active {
     @apply text-slate-400 dark:text-slate-600;
   }
+  .tags > .active {
+    @apply bg-violet-500 text-white
+  }
 }

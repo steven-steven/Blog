@@ -6,11 +6,19 @@ class BlogPage < Sitepress::Model
     Chronic.parse data.fetch("publish_at")
   end
 
+  def tags
+    data.fetch("tags", "").split(",").map(&:strip)
+  end
+
   def published?
     publish_at < Time.current
   end
 
   def self.published
     all.select(&:published?).sort_by(&:publish_at)
+  end
+
+  def self.all_tags
+    all.map(&:tags).flatten.uniq
   end
 end

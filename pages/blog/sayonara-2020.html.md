@@ -2,6 +2,7 @@
 title: Sayonara 2020 🎊
 publish_at: January 5, 2021
 layout: post
+tags: life_update
 ---
 
 Let's start the year with a resolution. If last year was 720p, lets aim for HD Resolution this year! A…ha..haaa..

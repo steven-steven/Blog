@@ -2,6 +2,7 @@
 title: Discovering OKR and my summary of 'Measure What Matters'
 publish_at: December 27, 2019
 layout: post
+tags: book_summary, tools
 ---
 
 Last December, I picked up a book called "Measure What Matters", by John Doerr :blue_book:. The book is centered around OKR, a goal-setting methodology used in many big companies including Google, Facebook, Amazon, and my recent company I interned at, Loblaw Digital.

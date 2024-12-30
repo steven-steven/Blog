@@ -2,6 +2,7 @@
 title: Bookclub - Permission To Feel
 publish_at: September 28, 2022 01:40
 layout: post
+tags: book_summary
 ---
 
 [Permission To Feel](https://www.marcbrackett.com/about/book-permission-to-feel/), by Marc Brackett, is a book 📖 I recently read. This post will be my notes for it.

@@ -2,6 +2,7 @@
 title: Bookclub - Thinking in Systems
 publish_at: October 24, 2021
 layout: post
+tags: book_summary
 ---
 
 When you think about it, life is full of systems. The control of your room temperature 🌡, your brain 🧠, body 🤸‍♂️, the hiring and growth of a company📈, a country🏝, government bodies 🧑‍⚖️, population 👨‍👩‍👧‍👦, forest 🌳, garbage 🗑, shipping 🚚, financials 💰, markets 🍑, pandemic 😷, or even one that I think of most days - the software I build/maintain 🧑‍💻.

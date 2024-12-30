@@ -3,6 +3,7 @@ title: When The Storm Ends (a 3B term recap)
 subtitle: Ok.. Now wot
 publish_at: April 22, 2020
 layout: post
+tags: life_update, tech
 ---
 
 Beginning of the year seems like yesterday. Looking forward to the unknown, I decided to make 3B term a humongous step outside my comfort zone. It was a shipwreck. Yet I managed to stay afloat and now it's time to ask the why. Why did I went through all that?

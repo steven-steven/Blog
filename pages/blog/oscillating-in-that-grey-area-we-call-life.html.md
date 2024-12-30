@@ -2,6 +2,7 @@
 title: Oscillating in that grey area we call life
 publish_at: September 25, 2020
 layout: post
+tags: life_update
 ---
 
 I've been craving for fried chicken for as long as I can remember. All it takes was a quick chat with a friend and a 50% discount on DoorDash to convince me on spending a $15 chicken platter from Popeyes. The first piece of chicken thigh was perfection. But by the end of the 3rd chicken I stopped feeling good and had to lie down for a few minutes before gobbling down the last few pieces and the sides. Not for pleasure, but simply to finish off what I started. I began to feel stuffed, unhealthy, regret, guilt and ashamed. How could something I so much desire, lost all its value in such a short instant? Will a mere mortal like me ever feel satisfied and content with this diversely rich and fortunate world I live in today?

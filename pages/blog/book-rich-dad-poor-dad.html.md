@@ -2,6 +2,7 @@
 title: Bookclub - Rich dad poor dad
 publish_at: October 18, 2023
 layout: post
+tags: book_summary
 ---
 
 This book, authored by Robert Kiyoshi, is a top-selling book and is likely familiar to you. He wasn't necessarily the best writer, but his story-telling style tells he was a persuasive salesman. It was simple and grabs your attention. It challenges paradigms and although I disagree with some ideas, it offers an interesting perspective to consider.

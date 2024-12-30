@@ -2,6 +2,7 @@
 title: 2024 Kaleidoscope 🖍️
 publish_at: December 28, 2024
 layout: post
+tags: life_update
 ---
 
 "Bittersweet" is a word that perfectly captures this year. Like a kaleidoscope, this year presented me with a vibrant array of colors and shapes. As we look back at it, every feeling - the joy, the discoveries, the farewells, the fear, the love, the hope, the frustration - blends together into a single complex and mysterious image. Chaotic, yet tidy, filled with both bright and dark colors. My best year and my worst, and everything in between, all at the same time.

@@ -2,6 +2,7 @@
 title: Bookclub - The End of Everything
 publish_at: February 26, 2022
 layout: post
+tags: book_summary
 ---
 
 How lucky are we? That at some point in the past, quantum fluctuation perhaps had caused variations in density/temperature that accumulate into galaxy and stars. That for the longest time ever imagined, there's a super insignificant blip in spacetime where humanity exists. That we were able to think. Knowing of our fragility, reminds me how insignificant we all are, like we are against bigger concerns than those that our civilization has placed on us, like we should live more in the moment, like we should be more unified.

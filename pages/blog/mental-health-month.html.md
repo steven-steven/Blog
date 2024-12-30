@@ -2,6 +2,7 @@
 title: Mental Health Month
 publish_at: May 26, 2020
 layout: post
+tags: life_update
 ---
 
 I learned something new recently. Other than the disturbing fact that banana 🍌 peel is edible and is a good source of vitamin, I also just learned that May is the month of mental health!

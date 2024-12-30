@@ -2,6 +2,7 @@
 title: Building a newsletter with Google Scripts and Google Sheets
 publish_at: May 7, 2024
 layout: post
+tags: tech
 ---
 
 With millions of software out there, there's not a lot of things more versatile than a Google Sheets (or spreadsheet in general). Packed with a plethora of powerful formulas, we have the whole of Google Suite offering plenty of integrations and automation on top of it, all with no code. Now, this post is for the rest of us - tech-nerds. Let's delve into how you can elevate Google Sheets even higher through custom integrations with Google Scripts.

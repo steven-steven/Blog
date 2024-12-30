@@ -2,6 +2,7 @@
 title: Creating an Invoice App with Electron and Go
 publish_at: August 26, 2020 01:40
 layout: post
+tags: tech
 ---
 
 A long long time ago (2 years ago -ish), my dad asked me if I could make an invoice app for his company because his old software was very outdated. The old legacy software was a custom-made software still currently running on a Windows XP in his office. He had even forgotten who made it for him in the first place.

@@ -2,6 +2,7 @@
 title: Ocehan - Ga Sabar Untuk Memberi
 publish_at: March 22, 2022
 layout: post
+tags: bahasa_indonesia, life_update
 ---
 
 Gw terlahir di negara yang sangat melek terhadap permasalahan sociopolitik karena emang gak ada habisnya. Sejak kecil bapak selalu memutar berita di saluran televisi yang menggambarkan Indonesia yang selalu ditimpa dengan targedi miris dan penduduknya yang kebanyakan hanya memiliki kepentingan pribadi. Sepertinya bukan salah siapa2, hanya sistem yang terlalu bergantung dan mendewakan nilai kekayaan uang.

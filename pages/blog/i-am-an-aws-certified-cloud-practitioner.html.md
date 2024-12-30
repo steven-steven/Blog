@@ -2,6 +2,7 @@
 title: I am an AWS Certified Cloud Practitioner
 publish_at: October 31, 2020
 layout: post
+tags: tech
 ---
 
 ![Download Demo](i-am-an-aws-certified-cloud-practitioner/ccp_cert.png "=400x400")

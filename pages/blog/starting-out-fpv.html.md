@@ -2,6 +2,7 @@
 title: Starting out FPV
 publish_at: November 10, 2020
 layout: post
+tags: drone
 ---
 
 ![FPV Take Off](starting-out-fpv/fpv1.gif "=400x400")

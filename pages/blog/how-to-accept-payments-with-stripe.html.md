@@ -2,6 +2,7 @@
 title: How to accept payments with Stripe
 publish_at: May 12, 2024
 layout: post
+tags: tech
 ---
 
 While reading Noah Kagan's [Million Dollar Weekend](https://www.goodreads.com/en/book/show/145624504) and Josh Kaufman's [The Personal MBA](https://www.goodreads.com/book/show/9512985-the-personal-mba), they both mention the same idea: Validate your idea by getting paid. You can call it 'shadow testing', a means of selling an offer before it actually exists.

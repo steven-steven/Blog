@@ -2,6 +2,7 @@
 title: Bookclub - Practical Object-Oriented Design
 publish_at: May 29, 2021 01:40
 layout: post
+tags: book_summary, tech
 ---
 
 [Practical Object-Oriented Design](https://www.poodr.com/), by Sandi Metz, is a book 📖 I recently read. In the book Ruby was merely just a tool to explain the concepts of designing a program in OOP. The book went through some iterative thought process of how one would approach writing 'changeable code' - one that is adaptable for future changes and reduce cost of maintainance.

@@ -2,6 +2,7 @@
 title: First Blog Post - Creating This Site
 publish_at: October 14, 2019 01:40
 layout: post
+tags: tech
 ---
 
 I've probably created too much web portfolios in my life, and I wish I could settle on a simple site that reflects who I am. But I'm a man that adapts and changes as I grow. So I'd like to rebrand my site - not as a portfolio, but as a blog. I'd like to share what matters most as a learner - reflection.

@@ -2,6 +2,7 @@
 title: Bookclub - DDIA (Designing Data Intensive Applications)
 publish_at: May 4, 2023
 layout: post
+tags: book_summary, tech
 ---
 
 It's more than a year since I first picked this book. I've let them go a few times. Man, this was a long one! But it was worth. I picked this book early 2022 because I wanted to learn about data. I've always been curious about data engineering, and challenges that come by in that space of work. I remember interviewing for Data Eng position at Shopee right after graduating undergrad, and totally blanked out terribly when asked questions like what OLAP is 🫣. This book was my redemption.

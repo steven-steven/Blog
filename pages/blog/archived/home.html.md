@@ -2,6 +2,7 @@
 title: Home
 publish_at: October 24, 2024
 layout: post
+tags: life_update
 ---
 
 Lately I found myself grappling with quarter-life crisis thing (again) and I thought I should take a step back to learn about my roots and I a bit more. In this post, I'd like to tell you a story close to me, called home. A story that traces back less than a century ago...

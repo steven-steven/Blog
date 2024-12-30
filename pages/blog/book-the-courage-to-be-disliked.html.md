@@ -2,6 +2,7 @@
 title: Bookclub - The Courage to be Disliked
 publish_at: October 14, 2024
 layout: post
+tags: book_summary
 ---
 
 "How could one live a happy life while being disliked?" was a question I asked myself when I read the the title of this book authored by Ichiro Kishimi and Fumitake Koga.

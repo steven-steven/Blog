@@ -9,3 +9,6 @@ Stimulus.register("dark-toggle", DarkToggleController)
 
 import SubscriptionController from "./subscription_controller"
 Stimulus.register("subscription", SubscriptionController)
+
+import TagController from "./tag_controller"
+Stimulus.register("tag", TagController)

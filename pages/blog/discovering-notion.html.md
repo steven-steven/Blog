@@ -2,6 +2,7 @@
 title: Discovering Notion
 publish_at: February 25, 2020 01:40
 layout: post
+tags: tools
 ---
 
 ___ Edit from Nov2020 : Now I'm just sticking to OneNote LOL. My Notion notes gets cluttered real fast especially since I'm no longer very organized. :( ___

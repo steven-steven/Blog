@@ -2,6 +2,7 @@
 title: Debug how Next.js works with redux
 publish_at: November 11, 2019 01:40
 layout: post
+tags: tech
 ---
 
 It's 4.30 a.m. My palms are sweaty, knees weak, arms are heavy. I've been on this since 12 a.m already. I'm trying to dispatch a *redux-thunk* in *getInitialProps* in Next.js but something just didn't go right.

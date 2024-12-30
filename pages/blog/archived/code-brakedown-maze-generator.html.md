@@ -2,6 +2,7 @@
 title: Code Breakdown - Maze Generator (by Mike Bostock)
 publish_at: October 20, 2019 01:40
 layout: post
+tags: tech
 ---
 
 <script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script>

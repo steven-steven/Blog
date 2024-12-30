@@ -2,6 +2,7 @@
 title: FPV Diary 1
 publish_at: May 8, 2021
 layout: post
+tags: drone
 ---
 
 I've been wanting write entry for my fpv learning progress, since I haven't really written about it since [last year](/blog/starting-out-fpv) when I just started it.

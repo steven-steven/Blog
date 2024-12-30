@@ -2,6 +2,7 @@
 title: 2022 Rhythm 🎊
 publish_at: December 31, 2022 01:40
 layout: post
+tags: life_update
 ---
 
 2022 ended fast. While 2020 was about getting lost, and 2021 was about finding direction, this year felt like it's about finding my rhythm - and it feels SO good. Being in rhythm to me is about moving forward while being in full awareness and presence. It's about not being held too much back from the past, while not looking too much forward in the future. It's about living in the now, being genuinely curious about many things, and trying to experience things at it's fullest and deepest levels. It's about participating in infinite games. About finding habits, routines, community that sticks right in my identity. Not identity as in heritage or society, but identity as in me and things I value.

@@ -3,6 +3,7 @@ title: Indexing with Spatial Search Algorithm
 subtitle: "Have you ever spent your whole afternoon searching for an eraser... I have."
 publish_at: March 12, 2020
 layout: post
+tags: tech
 ---
 
 Indexing is such a fascinating field that we all take for granted. When we lookup the nearest restaurants, the funniest cat videos, your favorite tv shows, or your idol's social media profile - we want it to be instant. Delays are unacceptable, and we shall continuously punch in billions off searches - there shall be no rest. Computers are treated inhumanely, but at the end of the day computers are computers. They have their limitation.

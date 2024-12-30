@@ -2,6 +2,7 @@
 title: Trip Down the Memory Lane
 publish_at: May 7, 2022
 layout: post
+tags: life_update
 ---
 
 I believe independence is a huge part of growing up. You move apart from family, a place you call home, in search for new opportunities and perspectives from people whose cultures are unfamiliar.

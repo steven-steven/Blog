@@ -2,6 +2,7 @@
 title: Bookclub - How to standup to a dictator
 publish_at: October 15, 2023
 layout: post
+tags: book_summary
 ---
 
 This is the story of Maria Ressa, a Nobel Peace Prize winner and courageous journalist who fought against the authoritarian government in the Philippines. She stood for freedom, facts, and her rights, offering personal lessons and a vision for the future of journalism and importance of collective action to protect truth in the face of democracy's fragility.

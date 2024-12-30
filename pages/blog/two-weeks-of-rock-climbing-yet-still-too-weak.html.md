@@ -2,6 +2,7 @@
 title: Two Weeks of Climbing, Yet Still Too Weak
 publish_at: October 27, 2019
 layout: post
+tags: climbing
 ---
 
 ![Rock Climbing Gym](two-weeks-of-rock-climbing/gym.png "=400x400")

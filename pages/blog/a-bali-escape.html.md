@@ -2,6 +2,7 @@
 title: A Bali escape
 publish_at: September 1, 2024
 layout: post
+tags: travel
 ---
 
 Enjoy these 2 part VLOG I made (with love) while at Bali last August!

@@ -2,6 +2,7 @@
 title: Kelompok Ikan Besar
 publish_at: October 30, 2020
 layout: post
+tags: bahasa_indonesia
 ---
 
 Barang kali aku merasa ada banyak tekanan dari sekitar untuk menjadi seseorang yang  terbaik dalam bidangnya. Kita memuja-muji seorang juara dan pada akhirnya kita pun membangun kebiasaan buruk untuk membanding-bandingkan diri dengan kesuksesan yang dimiliki orang lain.

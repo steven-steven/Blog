@@ -2,6 +2,7 @@
 title: Bookclub - The Well-Grounded Rubyist
 publish_at: June 25, 2021 01:40
 layout: post
+tags: book_summary, tech
 ---
 
 Took me a few months to read this, jumping on and off. Reading [POOD book](/blog/book-POOD) and working with Ruby on Rails at Shopify, sparks ✨ a deep interest in me to understand more about the Ruby language. This book by David A. Black called ['The Well-Grounded Rubyist'](https://www.manning.com/books/the-well-grounded-rubyist-third-edition?gclid=Cj0KCQjwl_SHBhCQARIsAFIFRVVTvONzrTOZXYA7iDidLZwnwKe_ZIE-6AbOmf-zhHLtdVIWEGSHhukaAvliEALw_wcB) was actually recommended by one of my colleagues at work. As a beginner picking up the language, I learned new exciting things every chapter of this book which got me going.

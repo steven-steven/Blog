@@ -2,6 +2,7 @@
 title: Last Intern
 publish_at: December 17, 2021
 layout: post
+tags: life_update
 ---
 
 Being at Shopify is by far the best thing that happened to me this year 🌠. It's a whole new environment filled with talent, empathy, trust, willingness to change, and everyone helping each other to succeed in what they do best. As a gigantic organization spanning around the world, it feels like so much is happening it's impossible to track, but at the same time there's a really strong alignment and context is everywhere (Github, documentations, podcast, townhalls, slack, discourse, data portals, Gdocs, ..) which I think is where the magic of collaboration and new ideas happen, and despite the challenges of remote work we thrive.

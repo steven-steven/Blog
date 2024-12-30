@@ -2,6 +2,7 @@
 title: 2023 Reinvention 🐣
 publish_at: December 31, 2023 01:40
 layout: post
+tags: life_update
 ---
 
 I had a post last year about my 2022 rhythm, being myself and in full awareness of the presence. 2023 felt like the opposite. It was turbulent and came with all sorts of frustrations and discomfort, but it was eventful and it helped me grow because of it. Waves of shocking discoveries came crashing to humble me as I learned to keep up and make adjustments head-on to incrementally make things better.

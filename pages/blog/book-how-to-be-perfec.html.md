@@ -3,6 +3,7 @@ title: Bookclub - How to be perfec
 subtitle: Know thyself Nothing in excess
 publish_at: August 23, 2022 01:40
 layout: post
+tags: book_summary
 ---
 
 Unless you're isolated from the world, we always find ourselves bombarded with ethical questions. What would a good person do in my situation? Why should we care? How much should we care? Why is one choice better than the other?

@@ -2,6 +2,7 @@
 title: Bookclub - The Design of Everyday Things
 publish_at: August 28, 2021
 layout: post
+tags: book_summary
 ---
 
 > "I dream the renaissance of talent... Design is an equalizing tool. All that is needed is observation, creativity, and hard work"

@@ -2,6 +2,7 @@
 title: Building Invoice App V2
 publish_at: December 30, 2020 01:40
 layout: post
+tags: tech
 ---
 
 Recently, I had a major update on [the invoice app I made 5 months ago](/blog/creating-an-invoice-app-with-electron-and-go).

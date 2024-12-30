@@ -2,6 +2,7 @@
 title: Dropping NFT
 publish_at: November 22, 2021
 layout: post
+tags: tech
 ---
 
 It was 7pm Monday in Toronto, I sat in an unfamiliar hotel room right after work. I've scheduled 8pm to grab lunch with a friend whom I haven't met in 2 years since school goes lockdown. And the next day will be my first ever visit to the office and meeting my co-workers in 3D for the first time, 6 months after joining the company. That's for another time; but point is - all was unfamiliar. I jumped onto Etherscan that evening to start the sale and push some code to enable minting from our website. And tadah! We dropped our first NFT!

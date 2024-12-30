@@ -2,6 +2,7 @@
 title: Bookclub - Million Dollar Weekend
 publish_at: July 19 2024
 layout: post
+tags: book_summary
 ---
 
 Entrepreneurship is hard 🧱. We glorify the end goal, but it is a challenging journey that often seem too elusive and daunting. Like.. how do you even start? how hard is it actually? am I ready?

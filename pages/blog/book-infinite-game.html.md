@@ -2,6 +2,7 @@
 title: Bookclub - Finite and Infinite Games
 publish_at: June 24, 2021 01:40
 layout: post
+tags: book_summary
 ---
 
 The infinite game was a concept I came across during Shopify's onboarding, which tightly relates to their vision to become a 100 year company. This triggered me to read 'Finite and Infinite Games' by James P. Carse, where this idea originates from. It wasn't an easy book to read as it continuously challenge my thoughts, it gets pretty philosophical, and personally I think there was a lack of concrete examples in some parts (which could lead to different interpretations based on reader's experiences). That being said, to me it was what made this book special, and I came out of it with an entirely new perspective of life.
