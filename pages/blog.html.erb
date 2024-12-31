@@ -9,14 +9,14 @@ primary_page:
 <section class="pt-12 md:pt-16 flex flex-col space-y-5 text-base">
   <div data-controller="tag">
 
-    <div class="tags border border-slate-600 border-dashed mb-5 px-5 pt-3">
-      <div class="font-light year-heading mb-2">Filter by Tags:</div>
+    <div class="tags border border-slate-600 border-dashed mb-5 px-5 pt-3 pb-2">
+      <div class="md:text-sm text-xs mb-3">Filter by Tags:</div>
 
       <% BlogPage.all_tags.each do |tag| %>
         <button
           data-action="click->tag#toggleTag"
           data-tag="<%= tag %>"
-          class="tag-button rounded-lg me-3 mb-3 px-2.5 py-0.5 ring-1 ring-inset md:text-sm text-xs"
+          class="tag-button rounded-lg mb-1 px-2.5 py-0.5 ring-1 ring-inset md:text-sm text-xs"
         >
           #<%= tag %>
         </button>
