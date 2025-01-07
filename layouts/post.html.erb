@@ -7,6 +7,15 @@
     <% if publish_at = date(current_page.data["publish_at"]) %>
       <p class="opacity-70"><%= publish_at.strftime("%A,  %B %d %Y") %><p>
     <% end %>
+    <% if tags = BlogPage.get(current_page).tags %>
+      <div class="md:mt-1 mt-2">
+        <% tags.each do |tag| %>
+          <span class="rounded-lg px-2.5 py-1 ring-1 ring-inset text-xs">
+            #<%= tag %>
+          </span>
+        <% end %>
+      </div>
+    <% end %>
   </header>
   <main class="prose dark:prose-invert max-w-none mt-6 text-inherit text-base md:text-lg break-words prose-code:before:hidden prose-code:after:hidden prose-code:p-1 prose-code:rounded-md prose-code:font-medium prose-code:bg-gray-300 dark:prose-code:bg-slate-700">
     <%= yield %>
