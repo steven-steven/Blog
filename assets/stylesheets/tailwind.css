@@ -1424,10 +1424,6 @@ nav > .active:is(.dark *) {
   margin-top: 1.5rem;
 }
 
-.mt-1 {
-  margin-top: 0.25rem;
-}
-
 .block {
   display: block;
 }
@@ -2010,12 +2006,12 @@ nav > .active:is(.dark *) {
     margin-left: 2.5rem;
   }
 
-  .md\:mt-20 {
-    margin-top: 5rem;
-  }
-
   .md\:mt-1 {
     margin-top: 0.25rem;
+  }
+
+  .md\:mt-20 {
+    margin-top: 5rem;
   }
 
   .md\:w-auto {
