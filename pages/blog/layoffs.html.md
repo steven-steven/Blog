@@ -10,6 +10,7 @@ I haven't written in a while. So much to write, so much to commit, so much postp
 This job was my first full-time coming out of university, and the team I've been in for the past 1.5 years has grown so much. My manager during intern days quit, 5 new developers came during the 4 months I was on break, moved to a subteam, had a new manager, etc. Then one day, they stopped working and our journey bifurcates.
 
 Some of my responses:
+
   - How should I console others?
   - There's a lot to do, but should I commit? Does my work even matter?
   - My manager, one that has made me feel most supported/heard was fired. Who should I talk to?
@@ -17,6 +18,7 @@ Some of my responses:
   - To problem solve is to act like owners. How do I own when so much is out of my control?
 
 Some of the responses from the company/people:
+
   - How do you continue on the quest after letting go of impactful people?
   - Show discontentment. The way we build world-class work is being open to calling out and telling others to step up. Love and anger shows that we care. It's indifference that's death.
   - Subtract projects/teams that don't add a lot of value. Focus on the quest, the thing we set out to do for million of merchants we serve.

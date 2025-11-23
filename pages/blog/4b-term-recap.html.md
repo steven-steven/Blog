@@ -29,6 +29,7 @@ The assignments were super hands-on and useful. But the final was brutal! (staye
 My main key takeaway from the course: **'Don't guess; measure'**.
 
 Generally some other good advices I quote from the lecture notes:
+
 - Understand the order of magnitudes that matter (know what performance is considered acceptible)
 - Plan for worst case (e.g. a user that opens too much apps)
 - Performance should be a culture (team effort rather than individuals). E.g. should be integrated in the build process (like a regression test that runs overnight), and are tracked.

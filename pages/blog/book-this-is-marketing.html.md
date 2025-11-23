@@ -56,6 +56,7 @@ Make the promise. A template:
 > My product is for people who believe in \_. I focus on people who want \_. I promise engaging to this will make you get \_.
 
 **Asserting what emotion the audience needs**. What's on their mind when they wake up? or at the end of the da? What do they talk about? We have different wants / need / pain / joy, but we share similar dreams and desires:
+
 - adventure
 - affection
 - avoiding the new

@@ -11,6 +11,7 @@ In the hype of NFTs, 4 duck friends set out to build an NFT collectible of their
 For a full overview, you could checkout [this reflection post](/blog/dropping_nft) from Nov 2021.
 
 ### More Links:
+
 - [Web3 Landing Page](https://nft-website-1a829tf3x-steveninfinity29.vercel.app/)
 - [The Etherscan Smart Contract](https://etherscan.io/address/0xc15a882ee6ab53c00af7d73d21438a5f880e0107/#code)
 - [Scripts to deploy the tokens to IPFS & the deploying the contract](https://github.com/steven-steven/nft_opensea)

@@ -56,6 +56,7 @@ There's a test to identify emotion in facial expressions (could be a nice game).
 Asking "Why?" opens the pandora box, not knowing what to expect.
 
 As a listener, an emotional scientist means learning emotions by a process of discovery and investigation. We're not just there for sympathy; but dive underneath words. Look for opportunities to ask questions like following to gently invesigate our suspicion:
+
 - "I've noticed you... What's going on?",
 - "What's happening at school that make you get these feelings?",
 - "What/who usually make you feel this way?",
@@ -92,6 +93,7 @@ As a listener, welcome every emotion - good/bad/happy/sad/success/failures. List
 
 
 Some more deep / interesting discussions:
+
 - Assault victims find it unbearable to share due to shame/guilt, fear of distrust or retaliation.
 - Teachers feel like appearing weak will risk reducing their authority
   - Classrooms aren't meant to be ruled. Expression -> relationship -> engagement. Create safe space where they can be emotionally honest.
@@ -110,6 +112,7 @@ It's not about banishing negative emotions nor tightly controlling it. You start
 Analogy: backpressuring the stream/flow of emotion
 
 We affect each other's emotions. Examples of co-regulation:
+
 - Caregiver gives physical/verbal comfort to reassure infant that its emotional distress is manageable. Without it, the infant might be at the mercy of their emotions.
 - Upbeat music promotes energy, gentle music promotes consensus and rational thought.
 - Deliver closing speech that activates not only enthusiasm but bit of anger and emergency.

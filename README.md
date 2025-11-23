@@ -22,7 +22,7 @@ $ yarn
 Then kickoff the processes with overmind.
 
 ```sh
-$ overmind start -f Procfile.dev --port 3030
+$ overmind start -f Procfile.dev --port 5001
 ```
 
 Run `bundle exec rdbg -a` in a separate terminal for debugging

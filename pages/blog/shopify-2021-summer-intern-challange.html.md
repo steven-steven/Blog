@@ -42,6 +42,7 @@ Most of my time was then spent on implementing Firebase Auth and Storage, which 
 Once I had storage working, I knew I'd need to use Firestore to maintain the image metadata. This is required since images can ideally be uploaded with the same name and that would replace the old image with the same name. So instead, I should store the image with a uniquely generated UUID, then use Firestore to keep the UUID with all metadata like the actual image name, thumbnail size, download url. To scale this further, I could also easily add more metadata like image tags or date uploaded and use them as query/search fields.
 
 All in all the logic was:
+
 - Upload each image:
     - Generate UUID -> Upload/put the image data on the Firebase Storage
     - Get extra metadata like the image download url and thumbnail size -> upload those metadata to Firestore

@@ -74,6 +74,7 @@ I've traded my Medium subscription for this, perhaps because algorithm based rec
 I want to fill myself more with these. Not necessarily subscribing to newsletters, but to leave a block of time in the day where I just dig and let myself fall into the rabbit hole.
 
 Also a couple of books that had filled my time:
+
 - Team of teams
 - Antifragile
 - When breath becomes air
@@ -93,6 +94,7 @@ Humanity has been challenged again with the Russian-Ukraine conflict. In Indones
 We're used to unclear policies, politicians not doing their job, the powerful playing behind the scenes, riots that always end up in unnecessary violence. A place where humanity is always tested. At least that's the picture you get when you are exposed to the news every day. But I do believe that for every bad news, there are countless other good news that's aren't celebrated. In the midst of complexity, emergence can be seen to occur. Amongst the crowd, there's a generation of people who cares and I'd love to stay positive in shaping the future, and be surrounded by these people.
 
 A few of hidden gems which I love following:
+
 - Emergence of many sustainable waste management start-ups (ie. Duitin)
 - Emergence of many edutech and non-profits empowering underprivileged with needed skills (ie. Markoding)
 - Gita Wirjawan's endgame series (always sparks deep conversations)
@@ -114,6 +116,7 @@ My uncle passed away weeks after CNY (partly glad that I'm home to see him for t
 Within a week after I came back to Canada, I received news that my grandfather had passed away as well from heart complications. Huff… But if it was me, I think I'd prefer that kind of sudden death rather than barely holding on to life just waiting for your time to arrive. But again, none of us really have the luxury to choose how to end a natural death. It's hard not only in bringing a person to life, but also finding a way out of it.
 
 On that same topic, I just finished reading a book during my flight called "[When breath becomes air](https://www.goodreads.com/book/show/25899336-when-breath-becomes-air?ac=1&from_search=true&qid=0ppxrZHs2C&rank=1#)". A very sad but beautifully written book by an excellent neurosurgeon, Paul Kalanithi during his last moments of life when he was diagnosed with cancer. It talks about confronting death as a physician and a patient, as well as discussions on other things:
+
 - doctor's empathy. To ease suffering rather than treating patients as a subject matter or neat medical diagrams
 - wisdom he learned from making judgement calls on what kind of life is worth living for his patients (brain fatally effects everything else)
 - his role as death's ambassador rather than making enemy of it

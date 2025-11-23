@@ -83,6 +83,7 @@ export const addInvoiceCall = (newInvoice: InvoiceRequest): AppThunk => {
 Another challenging part would then be to sync the local data to the cloud once an online connection is detected.
 
 I think there are 4 cases to take into account:
+
 - First load and is offline (I fetch initial data from local storage)
 - First load and is online (sync offline data and fetch data from the cloud)
 - Going from offline to online (sync offline data and fetch data from the cloud)

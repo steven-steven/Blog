@@ -47,6 +47,7 @@ There are also 3 flying modes (acro, angle, and horizon). The angle is the easie
 It’s like riding a bike. Knowing the theory won't help you as much as actually doing them and crashing. Then one day, the neurons in your brain just find the connections on their own. That pattern certainly occurred to me as I played the simulation for the first couple of weeks. I started out not being able to hover properly especially in the indoor maps, and had a hard time making sharp turns. Few weeks later, my fingers move on their own with minimal conscious effort. Amazing how the brain works!
 
 Once I felt comfortable enough, I went to the park to test it out. My first few flights was awful. Going from simulation I didn't really know what to expect. Some of my mistakes were:
+
 - Realizing that after you arm and your propeller joystick is all the way down, the propellers will spin, but won't fly until you actually increase its speed/throttle. So pushing the joystick down midair is like letting it go on freefall.
 - Not to fly above concrete.. Especialy when you haven't learned to properly hover.
 - Start with training your hovering and simple movements. When I started, I focus too much on wanting to move around which didn't go well at all. I found it helpful to plan my flights or to train with specific milestones in mind. (start with the small wins!)

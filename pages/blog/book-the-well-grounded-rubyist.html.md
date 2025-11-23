@@ -42,6 +42,7 @@ But when I say expressive, Ruby is insanely expressive. You can build on objects
 
 ### Future
 Things that I can explore in the future:
+
 - Ruby made it easy to use Regex since it's also an object that you send messages to. Regex is powerful, yet can be hard to maintain. I feel like a small rake script project involving regex parsing would be quite fun to explore. It can pattern match, replace captured patterns, or just play a bit more with quantifiers, anchors and lookahead assertions (constraints), modifiers..
 - Ruby (fileutils, pathname) gives a handful of File tools, like creating directories, manipulating files in the disk.. A project involving file management could be interesting.
 - Building a DSL that utililze method_missing. There was a cool code example in the book about building XML (writing ruby DSL syntax -> that can be converted into -> XML).

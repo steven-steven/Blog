@@ -60,6 +60,7 @@ Knowing *how storage engines* work helps you select & tune a storage engine to p
 **Index** is an additional metadata to search data in < O(n) time. Fast read but slow writes from overhead (⚠️ tradeoff based on your query patterns). **Secondary index** helps perform joins or a field-search (ie. find all {table} with {indexed column condition}), isn't unique. A B-tree or log structured index can be used.
 
 2 approaches of indexing / storage engines:
+
 - **Log-structured indexes**: Many db use immutable append-only data file (log). Pros: sequential write is much faster than random writes, simpler concurrency and crash recovery. A simple example is *hash indexes*: an in-memory hash map `{PK: byte_offset_in_disk}`. You could have a background job to perform 'compaction' (normalizing keys), 'merge' segmented files, store it in new segment. During that time, new write request goes to new segment, new read requests goes to old segment. Good for high write frequency, but must fit in memory (random access and growth makes hash map on disk hard) and isn't good for range queries. A better example is **SSTable (sorted string table) / LSM trees**: like hash index, but sort the segment files by key. It makes out-of-memory compaction easy with merge-sort, allow sparse index and range queries. Keeping it sorted in disk is possible (b-trees), but even easier in memory (i.e. red-black trees, avl trees). In-memory trees are called 'memtable', and you write it to disk as new SSTable segment. SSTable then gets compacted & merged on scheduled background job. Problem 1: recent writes to memtable is lost on db crash. Solution is to keep separate log on disk to append writes and can be cleared once memtable is written to disk. Problem 2: look-up on non-existent key is slow, as it looks through all segments. Solution is 'bloom filters'.
 - **Page-oriented indexes (ie. B-trees)** is more widely used. B-trees are also sorted by key, but structured as a tree of fix-size mutable pages instead of variable-sized segments. Each page has sparse keys and in-between keys is a reference to another page that defines keys within that range. Adding new key adds to the right page, or if full splits the page in 2 halves. Tree remains balanced. (fun-fact: 4-level tree of 4kb pages with branching factor of 500 = 250 TB). Problem 1: a crash in between page mutations can lead to corrupted index. Solution is a separate 'write-ahead log' (WAL) to write operation before executing them. Could also use 'copy-on-write' scheme, so it's not mutating directly. Problem 2: Tree mutations 🌳 must be protected with latches/locks for concurrent writes. Problem 3: Is hard to maintain locality of leaf pages to be positioned sequentially in disk to optimize range queries disk seeks. Unlike LSM trees which writes merged segments in one go.
 
@@ -122,6 +123,7 @@ Sync vs Async replication: On **Sync replication**, leader waits till data is pr
 Different ways to implement replication logs: (a) **Statement based replication**: forwards the instructions. But operation must be deterministic and ordered. (b) **Write Ahead Log** (WAL): the low/byte-level write logs are forwarded. But needs downtime on db upgrade. (c) **Logical Log replication**: a separate log from the storage engine log, with per-row granularity. Nodes can run different DB versions. Logical logs can be easily parsed for CDC. (d) **Trigger-based replication**: move it up to the app layer / triggers / stored procedures, to run custom code. E.g. if you want to replicate subset of data or perform conflict resolution.
 
 Replication guarantees:
+
 - **<a id="eventual-consistency">Eventual consistency</a>**: On async replication, a read-replica could be stale. But will be eventually consistent. 'eventually' (replication lag) is vague.
 - **"Reading your own writes" / "read-after-write" consistency**: guarantee you read changes you write instantly. Implementations: (1) Read modified data from the leader, (2) Client/server can track time since last update and only use follower with replication lag within 1 min. For consistency across device, you may need to route a user's devices to same replica and somehow maintain a central timestamp.
 - **"Monotonic reads"** guarantee you don't go to older replica along a read sequence. So user don't see things move back in time, like making several reads and seeing the comment appear & disappear. Implementation: restrict user to read from 1 replica.
@@ -159,11 +161,13 @@ For larger dataset / high query throughput, you want to scale across many disks 
 Goal: *Make partitioning fair* (equal data and equal query throughput). Else, it's 'skewed'. A partition with a high load is called 'hot spot'.
 
 *Ways to partition*:
+
 - By key range: like a dictionary, you directly know where to go. Depending on tne data distribution, partition boundaries would need to adapt (e.g. when A-B > T-Z). Cons: r/w access patterns can lead to hotspots, so design keys carefully.
 - By hash of key: hash_function(key) => partition. Data is uniformly random distributed, but doing range queries becomes tricky since no sorted order. Skewed workload can still exist (ie. a celebrity tweet). A technique is to split the hotspot keys into many and concat it with a random number, but this needs additional bookkeeping.
 - Hybrid approach: compound key. The first part identifies the partition and second part for sorts it.
 
 Partitioning secondary key (SK index) is more complex: 2 main approaches:
+
 - Document-based partitioning / local index: The row's SK are stored in the same partition as the PK. Writing a document updates only one partition, but expensive read since SK of all documents must be gathered from all partitions.
 - Term-based partitioning / global index: Partitions are determined by the term/SK itself, similar but independent to how PK is partitioned. Once you find the SK record, which contains array of refs to PKs, you could follow those docs across multiple partitions. Easy read, but expensive write since multiple SK indices of the document is spread across partitions (often async, which breaks read-after-write consistency).
 
@@ -209,6 +213,7 @@ On replicated db, lost-update can happen on 2 concurrent writes happening on dif
 Solution: You could use db triggers, serializable isolation, explicit locking (doesn't work for Ex2 since it checks for absence and no object to attach lock to. You could create rows to represent empty slots/resources that can be locked - approach is called 'materializing conflicts', turning phantom into lock conflict). **Phantom**: where a write changes search query of another transaction.
 
 c) **Serializable isolation**. Implementations:
+
 - Execute in serial order: **A single threaded** loop execute transactions. It's made possible with development of bigger RAM, transactions are normally short-running. Throughput is limited but avoid concurrency issues. Single-threaded usually disable multi-statement transaction since that'll kill throughput with lots of network delay; instead puts transaction code in stored procedure so everything gets executed from db. You can potentially scale throughput of single thread by using multiple cores and partition data.
 - **Two-phase locking 2PL**: Require *Shared-lock* for reads, and *Exclusive-lock* for writes. Exclusive-lock blocks everything and Shared-lock blocks exclusive lock. There's also *Predicate-locks*/*Index-range-locks* which locks group of rows matching some condition. Transactions only release all of its locks at the end, so it's possible for deadlock, in which the DB would abort one of them. Perform significantly worse than weak isolation, reduced concurrency and queuing, due to acquiring/releasing locks.
 - **Optimistic concurrency control** like *Serializable Snapshot Isolation SSI*: On top of snapshot isolation, SSI use algorithm to detect serialization conflict, and should abort in situations where transaction acts on outdated premise (someone has changed something it thought was true). A read premise is outdated if (a) the MVCC read snapshot is stale due to a write from uncommitted transaction before it. At the point of premise, uncommitted transaction was ignored because it doesn't know if they're going to write. (b) a write happens after the read: Like 2PL's locking, we could do the same but only as a trip-wire to notify that row may be outdated. Checks if it's indeed modified at the end of transaction.
@@ -346,6 +351,7 @@ A lot of *data is unbounded and arrives over time*. Stream processing is like ru
 Alternatively, You could use a DB to store incoming events and let subscribers periodically poll, but the overhead becomes large and it's better for consumer to be notified. You **could directly message** consumer from producer without an intermediary: Ex. UDP multicast is used in finance where latency is important, brokerless pub/sub like ZeroMQ, UDP is used by StatsD to collect approx metrics, HTTP/RPC is used in webhooks. In contrast you could rely on **Message brokers**: runs a server with producers and consumers connected to it. It helps to tolerate unreliable clients with data held by in-mem or on disk. Typically unbounded queueing or expects 'acks' from the client before it removes the message or redeliver.
 
 Message systems can take different approaches to publish/subscribe model:
+
 - *What happens on consumer lag?* system could drop messages, buffer, write overflows to disk, or apply backpressure like blocking producer from sending more (unix pipes/TCP).
 - *Are messages lost if node crash?* durability vs throughput/latency.
 - *Which consumers do you deliver the messages to?* ie. **load balancing** distribute processing by delivering each message to 1 consumer vs **fan-out** where each message is delivered to all consumers independently. This matters if you care about **Message ordering**: if the messages are causally dependent and you want to make sure all the messages in the queue is always performed in order, each consumer must listen to 1 queue, instead of loadbalancing a queue across the consumers.
@@ -382,6 +388,7 @@ Immutability also has limitations: (1) compaction is expensive when there's high
 ### Stream Processing In Practice
 
 Once you have the stream, you can:
+
 - create derived data and keeping it in sync
 - push the events to users in the form of push notifications or visualization
 - Processing streams! process >=1 input streams to produce >=1 output streams.
@@ -403,6 +410,7 @@ The **Complex event processing (CEP)** approach is to analyze event streams by f
 Stream operator/job is similar to unix process, map reduce jobs, and dataflow engines. The only difference is stream never ends - so sort-merge joins can't be used, and has its own strategies of fault-tolerance since you can't restart from beginning.
 
 3 types of stream joins:
+
 - **Stream-stream** (window) joins: the processor maintain state for the streams, and emit events after the join time window. E.g. to calculate Ad click-through rate, you could store 'visit' and 'click' events indexed by session ID. Then, emit *clicked* event if there are both events and *not clicked* event when there's a visit event but it expires without seeing a matching click event. The click may be delayed, out of order, or never come.
 - **Stream-table** (stream enrichment) joins: For each event, the processor remotely query DB, or if it's small, load a DB copy to be queried locally (like map-side join). That DB needs to be updated via CDC, so processor will have 2 inputs: table changelog stream + the input stream. I.e. joining user profile with a stream of user activities.
 - **Table-table** joins (materialized view maintenance): the output represents a join between 2 tables, aggregated in some way, but maintained as a continuous stream. E.g. to keep twitter's timeline cache you join 'tweets' and 'follows' table to distribute the tweets to the every follower (output is a follower with aggregation of tweets).
@@ -412,6 +420,7 @@ Stream operator/job is similar to unix process, map reduce jobs, and dataflow en
 *Slowly changing dimension (SCD)* problem: the timing of the join matters to determine order. Solution: append a unique version identifier. But this prevents log compaction since that'll remove the versions.
 
 Fault tolerance: in batch it's easy to restart due to immutable input and the output is only written once everything completes. Can't do this in streams because processing never ends. Solutions:
+
 - *Microbatching & checkpointing*: break stream into batches (in spark-streaming), or generate rolling checkpoints of state to recover when operator crashes (in Flink). But you can't discard output once it leaves the processor, so restarting causes side-effects.
 - *Atomic commit*: output and side-effect takes effect iff successful, used in more restricted non-heterogenous envs like Google Cloud Dataflow, Kafka.
 - *Idempotence*: operations you can perform many times, like setting a key or storing metadata so you don't perform the update again.
@@ -431,6 +440,7 @@ DB events aren't just async jobs: You could treat DB events as messages that act
 **Treating read as events**: read events could also be stored or streamed through a processor. Allows you to do stream joins on the DB, track causal deps (analyze user behavior) but incurs extra I/O and storage. This idea opens up possibility of **query/joining multiple partitions of data** (ie. apache storm distributed rpc feature).
 
 Subscribe vs Querying argument:
+
 - **Stream processor vs REST** in microservices: Streaming is fault tolerant and performant. You could subscribe to events and store the most recent to db locally (stream to a cache) so when it's needed no network call is needed. But it goes in one direction instead of req/res.
 - **Write path** (pre-computation stages for data to flow to derived systems - eager load) and **Read path** (flow of data when consumers ask for it - lazy load): Derived data is where write path meets read path, and defines tradeoff between write-time work vs read-time work. The role of caches shift the boundary between write/read path, determined depending on the load.
 - Idea of stream processing applies to stateful client (websockets/eventsource-api). When user lags behind it could keep up via log brokers. Why not extend the write-path all the way to users? The challenge is supportability in our libraries/protocols/db/frameworks.
@@ -442,6 +452,7 @@ Subscribe vs Querying argument:
 For write constraints *involving multi-partition* (ie. payee, payer, request_id), using transactions to couple partitions would kill throughput. Turns out you could equivalently use *stream processing to avoid atomic protocol*! Distribute the multi-partition write request to multiple streams (need this step for atomic commit to ensure all or neither commits happens) to be processed on each partition independently. On crash, it'll retry and downstream should dedup.
 
 Dealing with async: Unlike transactions, streams aren't linearizable. Consistency could mean **timeliness** (up to date state) or **integrity** correctness (no permanent corruption). *Streaming system keeps integrity with low performance but no guarantee on timeliness.* Solutions:
+
 - You can subscribe to the output stream for result.
 - **Weaker constraints**: it's often acceptable to violate constraint, write optimistically and apologize after. Eg. ask them to rebook/rename/reorder/refund. If the **cost of apology < cost of performance/availability.**
 
@@ -452,6 +463,7 @@ When zooming out, there's so much things you do with all the dataflows. (ie. cac
 Be very clear of input/output of data systems. Funnel all input through 1 system so ordering writes become easy and consistent.
 
 Developments:
+
 - As you scale, order isn't guaranteed across partitions/systems (ie. microservices deploy states independently). Causal problems often arise in subtle ways (e.g. unfriend event & message send could be causally dependent). Ordered consensus is an open research.
 - Batch & stream is beginning to blur - Spark perform stream processing on top of batch engine. Flink performs batch on top of stream engine.
 - Lambda architecture: running stream processing for quick latency, then re-running same processing w batch to perform more reliable and exact algorithms.

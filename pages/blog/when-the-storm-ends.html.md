@@ -217,6 +217,7 @@ Two weeks of vacation 🚵‍ before another another storm of school term comes 
 There's fourth year design project coming up next term, and I'm still undecided on what topic to take on. I'm taking psychology101, distributed computing, adaptive algorithms (some AI related course), robot dynamics and control, and reinforcement learning (another AI course). As you can see, I'm pretty much still testing waters of what areas I like to explore next, but I'm super 🦸‍♂️ looking forward to it.
 
 So far my activities at home have been:
+
 - Deep dive into 'Go' (the programming language). I'm LOVING IT. The language is super lightweight, there's no complex package manager, widely used, and with goroutines builtin I feel like this language has so much to offer. I'm too new to have a strong opinion, but for now I'm officially an aspiring Gopher :)
 - Learned about Docker, GraphQL, and SQLite together with Go
 - Getting in touch regularly with friends and family back home in Indonesia

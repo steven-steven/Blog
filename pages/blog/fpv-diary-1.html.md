@@ -27,6 +27,7 @@ I've been wanting write entry for my fpv learning progress, since I haven't real
 
 ## Legality
 Since I started, I've became more paranoidly concerned about drone laws in Canada. I think this isn't something one could enforce easily, but still I wish to always stay out of trouble. Some of the major ones in my case are:
+
 - away 30m from bystanders (reasonable and easy to follow)
 - below 122m (noted)
 - Need a pilot drone license to fly drones > 250 g.

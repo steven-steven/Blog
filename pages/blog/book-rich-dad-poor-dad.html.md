@@ -10,6 +10,7 @@ This book, authored by Robert Kiyoshi, is a top-selling book and is likely famil
 He told the story of 2 dads, the hard-core capitalist and the socially responsible teacher. You get different views of both, and realistically I think the poor dad was what I would've looked up to be. I hated how the system primarily rewards the former, but I acknowledge that it is often the case. Although I did enjoy this book primarily because it challenges my prior perspectives, to be more motivated to play this capitalistic game and grow financially free.
 
 Some takeaways from this book:
+
 - Thought: I do want financial freedom. Wealth to sustain myself and people I support, freedom to travel and experience, control my time. I don't want to be complacent/dependent over salaries, retirement plans, and other perks.
 - Thought: I don't think money is important, but I don't want that to be an excuse not to think and exercise my money-making/opportunity-seeking brain and produce value to the world. Don't feel neither overly attached nor avoidance of money, don't let it take over your emotions (fear/desire).
 - Thought: Don't avoid fear. Failure should excite you.
