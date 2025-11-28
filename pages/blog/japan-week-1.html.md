@@ -83,7 +83,7 @@ Just as I learned their stories, I learned mine. How we can be so similar yet so
 
 “You must be mistaken. They probably said 'Gochisoshimasta' meaning thanks for the meal. Omatasaeshimasta is a phrase used to pay respect for someone’s hard work”. Ah! Similar yet so different.
 
-![080Tokyo-group](japan-week-1/080tokyo-group.png "=400x400")
+![080Tokyo-group](japan-week-1/080Tokyo-group.png "=400x400")
 
 I rushed back to the hotel thinking I had work that night just to realize that it was thanksgiving holiday in Canada. Thankful for that, I celebrated to sleep as the nightlife carried on just outside the hotel window.
 
