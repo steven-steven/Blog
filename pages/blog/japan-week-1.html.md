@@ -29,9 +29,9 @@ The sound of wheels vibrate through the clean concrete. After a transit at Shina
 
 ---
 
-I've booked a two-month stay in a sharehouse in the city of Toda, just an hour from central Tokyo. But with timing misalignment, Kabukicho would have to accommodate me for two nights.
+I've booked a two-month stay in a sharehouse in the city of Toda, just an hour from central Tokyo. But with timing misalignment, Kabukicho would have to accommodate me for two nights. To experience a wild night on the first day of a solo trip, if anything, was not a concern for a single guy on his 20s.
 
-To experience a wild night on the first day of a solo trip, if anything, was not a concern for a single guy on his 20s. I checked in Hotel Gracery, where I'll be staying. It was a decent hotel with its iconic Godzilla-san peeking over its building. The thrill of standing in that snug hotel room, gazing down at the vibrant street below, was an exhilarating feel I haven't had in a while. Traveling.
+I checked in Hotel Gracery, where I'll be staying. It was a decent hotel with its iconic Godzilla-san peeking over its building. The thrill of standing in that snug hotel room, gazing down at the vibrant street below, was an exhilarating feel I haven't had in a while. Traveling.
 
 As an East Asian who's lived in both Southeast Asia and the West, always a minority, being surrounded by a sea of familiar faces felt strangely comforting. In a world nothing like mine, where city scapes form a chaotic urban jungle of panels left and right, I found a surprising sense of belonging.
 
@@ -165,7 +165,7 @@ Enthusiastic runners of varying ages paced around the perimeter of the palace wh
 
 I was frolicking around my new neighborhood when I saw a class of students in their uniforms walking home. There was something inherently peaceful about that scene. Was I longing for childhood and the simplicity of life in that tranquil town? I wonder what mundane conversations those kids might have at their dinner tables today. After all, today was a new experience for all of us.
 
-Back at the sharehouse, a group of international friends were cooking in the kitchen, and I seized the opportunity to get to know them. Thomas, from the UK, was here on a working holiday visa and aspired to work as a bartender. Beside him silently stood his Japanese partner, Sherry. Niel, from Italy, was a language student currently engrossed in his role as the head chef. Each person bringing their own unique story to this melting pot.
+Back at the sharehouse, a group of international friends were cooking in the kitchen, and I seized the opportunity to get to know them. Thomas, from the UK, was here on a working holiday visa and aspired to work as a bartender. Beside him silently stood his Japanese partner, Sherry. Niel, from Italy, was a language student currently engrossed in his role as the head chef for the night. Each person was bringing their own unique story to this melting pot.
 
 ![neighborhood1](japan-week-1/neighborhood1.png "=400x400")
 ![neighborhood2](japan-week-1/neighborhood2.png "=400x400")
