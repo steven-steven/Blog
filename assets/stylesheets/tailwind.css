@@ -1338,6 +1338,10 @@ nav > .active:is(.dark *) {
   position: relative;
 }
 
+.sticky {
+  position: sticky;
+}
+
 .-right-1 {
   right: -0.25rem;
 }
@@ -1488,10 +1492,6 @@ nav > .active:is(.dark *) {
   flex-shrink: 1;
 }
 
-.flex-grow {
-  flex-grow: 1;
-}
-
 .grow {
   flex-grow: 1;
 }
@@ -1520,10 +1520,6 @@ nav > .active:is(.dark *) {
 
 .items-center {
   align-items: center;
-}
-
-.justify-center {
-  justify-content: center;
 }
 
 .justify-between {

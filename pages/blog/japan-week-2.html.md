@@ -139,4 +139,31 @@ $14 chicken cutlet beef curry and raw egg for dinner at a shop in asakusa. Asaku
 
 ## Day 14
 
-Hehe
+To complete the cultural experience, I’ve decided to sign up for the burlesque show, Rokusan Angel. Don't ask where I learned it from. Let's just say the impulse stems from a deeply rooted evolutionary male instinct. Reservations are made on their website with information like the daily themes. I secured a booking for the night, as I had planned to visit Koto city for their annual Fukugawa Hachiman Festival during the day.
+
+The annual festival happened where a group of people would participate in carrying a massive 2-ton Mikoshi (portable shrine) around town, setting off 7am at the Tomioka Hachimangū Shrine and returning around 5am. Along the route, water is thrown onto the shrine and onto its carriers.
+
+I arrived in the temple at around 4pm to a busy street of vendors selling various festival food like tanghulu sweets, takoyaki, and okonomiyaki. At around four past half, police began clearing out the main street as crowds clot throughout the sides. Participants in traditional uniforms with water's kanji on their backs walked around to setup water hoses. Drums began to hum through the air as more crowds came. Humidity began to intensify as I shuffled through the crowds. I bought a drink on a nearby convenience store. Then the large shrine came into sight. A grand Mikoshi carried by hundreds of people walked by, and people began spraying them water 💦.
+
+![mikoshi](japan-week-2/mikoshi.png "=400x400")
+
+This appears similar to Thai's songkran, I thought. While those carrying the Mikoshi was mainly strong guys many people of various age trails along wearing the same white uniform. From little kids still in their parents back, to the elderly who might’ve experienced this too many times. They were all wet. Happy wet.
+
+![happywet](japan-week-2/happywet.png "=400x400")
+![crowd](japan-week-2/crowd.png "=400x400")
+
+As the sun sets, I travelled to Roppongi an hour before the show. My dinner was accompanied by the best soba experience at a store called 'Roponggi Kyouka' (二八蕎麦 六本木蕎香), where I learned that the soup served was meant to be drank with the remaining soy sauce after the end of the meal.
+
+![soba](japan-week-2/soba.png "=400x400")
+
+Before the door opened, a few of us waited outside in the dark as if anticipating for shady dealings to happen. To my surprise, there was a decent female to male distribution amongst the audience, making it better than engineering class.
+
+We headed downstairs where the stage was. Bright lights and girls wearing undergarments came into sight. A male collected the pay and guided me to the seat where I was given tickets as tokens to tip the girls later and a free welcome drink.
+
+![Show](japan-week-2/showpng "=400x400")
+
+He also surveyed where I’m from, and I answered wondering what’s it for. Later in the show, I understood. The girls paraded the stage with flags of countries and I found an Indonesian flag amongst many others. I smiled to the coincidence that it was 17th of August. Today was Indonesia’s independence day.
+
+![Independence day](japan-week-2/independence_day.png "=400x400")
+
+While we were allowed to record, some scenes were camera off and what I witnessed then would only be up in my deepest memories. I left the show with an uncontrollable smile drawn on my face. It was the best $80 I’ve ever spent, I thought then. Those teases, the fan service, the attention a man would ever get in his life. It makes one crave for more. Lust aside, the performers dance with so much joy (at least by appearance) and you'd be surprised how contageous that is. Ah, Happiness. That priceless feeling. Whatever that is, it spreads.
