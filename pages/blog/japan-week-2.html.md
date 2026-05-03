@@ -160,7 +160,7 @@ Before the door opened, a few of us waited outside in the dark as if anticipatin
 
 We headed downstairs where the stage was. Bright lights and girls wearing undergarments came into sight. A male collected the pay and guided me to the seat where I was given tickets as tokens to tip the girls later and a free welcome drink.
 
-![Show](japan-week-2/showpng "=400x400")
+![Show](japan-week-2/show.png "=400x400")
 
 He also surveyed where I’m from, and I answered wondering what’s it for. Later in the show, I understood. The girls paraded the stage with flags of countries and I found an Indonesian flag amongst many others. I smiled to the coincidence that it was 17th of August. Today was Indonesia’s independence day.
 
