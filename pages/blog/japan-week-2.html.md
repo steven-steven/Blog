@@ -7,27 +7,27 @@ tags: life_update, travel
 
 ## Day 8.
 
-It’s been a whole week in Japan and I hadn’t called home. As soon as I got off the Shimokitazawa station, I stopped by Grass Cafe by Tefu Lounge, for their wifi and to escape the heavy rain that morning. Accompanied by a basque cheese cake, a cold brew tea, and my mom on the opposite side of the call.
+It’s been a whole week in Japan and I hadn’t called home. As soon as I got off the Shimokitazawa station, I stopped by Grass Cafe by Tefu Lounge for their wifi and to escape the heavy rain that morning. Accompanied by a basque cheese cake, a cold brew tea, and my mom on the opposite side of the call.
 
 ![tefu_lounge](japan-week-2/tefu_lounge.png "=400x400")
 
-The rain subsides revealing a maze-full district of chic thrift stores. My first stop was at a vintage clothes shop called Pug. Their collection was eccentric to say the least and it took a bit of courage to walk in. A friendly sales girl spent her time to skim through the columns of clothes and picked a few clothes that might look good for me - a few designer dress shirts I’ve never dreamt of wearing. ‘Gakoi!’ She exclaimed as I walked out of the changing room. I looked at the mirror barely recognizing myself. Rushing through my head were streams of thought about how others who knew me would’ve judged me if they saw me. But at this moment, I loved what I saw and I trust my saleswomen’s eyes for clothes.
+The rain subsides revealing a maze-full district of chic thrift stores. My first stop was at a vintage clothes shop called Pug. Their collection was eccentric to say the least and it took a bit of courage to walk in. A friendly sales girl spent her time to skim through the columns of clothes and picked a few clothes that might look good on me - a few designer dress shirts I’ve never dreamt of wearing. ‘Gakoi!’ She exclaimed as I walked out of the changing room. I looked at the mirror barely recognizing myself. Rushing through my head were streams of thought about how others who knew me would’ve judged me if they saw me. But at this moment, I loved what I saw and I trust my saleswomen’s pick.
 
-While she carried the three clothes I liked back to the counter and handed a free coupon and shirt, a tall skinny guy that was 100% a model came to me and inquire of where I’m from. Looking back, I wish I’d taken a picture with him.
+She brought the three clothes I chose to the counter while handing a free coupon and bonus shirt. A fellow man working at the store inquired where I'm from. He was tall, skinny, perfectly built like a model. I struggled to choose whether to say Indonesia or Canada.
 
 ![pug](japan-week-2/pug.png "=400x400")
 
 Satisfied with my eccentric purchase, I now have appetite for a late lunch and just happened to see, along the alley, a long queue for Masu Oyaji Cafe. I joined in and stood along the line of umbrellas for nearly half an hour while I tuned in to the japanese conversation in front of me.
 
-The cozy ambiance of the curry house and the vinyl playing on the window side welcomed me as I sat in the perimeter of the kitchen bar watching the chefs prepare my meal. Besides the menu were notebooks that let customers spill anything on their minds - reviews, who they’re with, special occasions, travels, etc. i wrote mine.
+The cozy ambiance of the curry house and the vinyl playing on the window side welcomed me as I sat in the perimeter of the kitchen bar watching the chefs prepare my meal. Besides the menu were notebooks that let customers spill anything on their minds - reviews, who they’re breaking bread with, special occasions, travels, etc. I wrote mine.
 
 ![currybar](japan-week-2/currybar.png "=400x400")
 
-I continued to venture around the thrifting district with adult play money, purchasing linen shirts, baggy harajuku style pants, and cute vintage t-shirts. Shopping was never this fun. Various salesperson became my shopping buddy, and of course a language learning partner as I tried my best to fit their assumption that I looked japanese. ‘Kore wa ikura deska?’ ‘Choto ooki desne’ ‘kore wa iides, kore wa inai des’.
+I continued to venture around the thrifting district with my adult play money, purchasing linen shirts, baggy harajuku style pants, and cute vintage t-shirts. Shopping was never this fun. Various salesperson became my shopping buddy, and of course a language learning partner as I tried my best to fit their assumption that I looked japanese. ‘Kore wa ikura deska?’ ‘Choto ooki desne’ ‘kore wa iides, kore wa inai des’.
 
 ‘Nan sai des ka?’ I asked the outgoing boy who sold me harajuku pants, their own brand called MSSD. ‘Guess!’ he exclaimed.
 
-Shopping was never this fun (have I said that already?). Putting on different styles and flavours of garment transforms me as much as the I transforms the fabric. A symbiotic interaction between one’s unique self-expression of identity while letting it mold one into a new being entirely. In some ways just like any form of art, the art becomes a medium between the abstract and concrete, the material and the ideals. We shape the material world around us, and in turn, that material world shapes who we become and what we believe. We are inheritors and co-creators of culture.
+Shopping was never this fun (have I said that already?). Putting on different styles and flavours of garment transforms me as much as I transformed the fabric. A symbiotic interaction between one’s unique self-expression of identity while letting it mold one into a new being entirely. In some ways just like any forms of art, the art becomes a medium between the abstract and concrete, the material and the ideals. We shape the material world around us, and in turn, that material world shapes who we become and what we believe. We are inheritors and co-creators of culture.
 
 ![mssd](japan-week-2/mssd.png "=400x400")
 
@@ -35,11 +35,15 @@ What began as a little crowd suddenly got livelier as the dark begins to cover t
 
 A night market arose beside the square with many food vendors and small carnival-style games. I ate takoyaki and grilled corn under the cover of a scaffolding. An umbrella proved ineffective against the heavenly strong winds. When the rain died down, everyone carried on with dancing and I joined in.
 
-Being in rhythm with everyone else was an exhilarating feeling. I’m glad they still have this in 2025, when everyone else seems to be moving on their own, rushing through a rhythm that may seem too fast for anyone else to follow along. Im glad to experience this for myself. The drums of liberation that echoes through the community made me fall in love with dancing more than I’ve ever had.
+Being in rhythm with everyone else was an exhilarating feeling. I’m glad they still have this in 2025 when in my previous life, everyone else seems to be moving on their own, rushing through a rhythm that may seem too fast for anyone else to follow along. Im glad to experience this for myself. The drums of liberation that echoes through the community made me fall in love with dancing more than I’ve ever had.
 
 ![night_festival](japan-week-2/night_festival.png "=400x400")
 
-Many encores later, the dance ended at 8pm. The crowd left the square, while others remained capturing pictures and memories amongst the lantern light setup. I strolled once more around the damp streets. Amongst the intimate izakaya and music bars, stood a cozy parfait cafe/bar called Vigo. I was lucky enough to get the last table available - a high round bar table softly lit with the warm ambient lamp just for myself. It ce with a lovely menu printed on a textured paper card with water color illustrations of different parfaits. After correcting the young server that I don’t speak japanese, she tried to explain that a drink order was required. I then ordered what she recommended, Basho - a roasted tea and banana night parfait accompanied by jasmine tea. It came perfectly identical to the illustration and I was again presented with a card detailing the anatomy of the beautiful glass of parfait in front of me. A delicate curation and a true work of art in taste and presentation. Caramelized banana, roasted tea ice cream and syrup with gold leaf on top. Garnished with a elegant strand of purple flower buds called Hanaho. Amongst the many layers of ingredients I could hardly recognize were black sesame ice cream, passion fruit, chocolate crunch, and brown sugar jelly at the base. ‘Is there a right way to eat this?’ I thought as I serve myself a warm tea to complete the night.
+Many encores later, the dance ended at 8pm. The crowd left the square, while others remained capturing pictures and memories amongst the constellation of lantern lights. I strolled once more around the damp streets.
+
+Amongst the intimate izakaya and music bars, stood a cozy parfait cafe/bar called Vigo. The only open spot, a high round bar table softly lit with warm ambient lamp just for myself. It came with a lovely menu printed on a textured paper card with water color illustrations of different parfaits. After correcting the young server that I don’t speak japanese, she tried to explain that a drink order was required.
+
+The parfait came perfectly identical to the illustration and I was again presented with a card detailing the anatomy of the beautiful glass in front of me. A delicate curation of taste and presentation. Caramelized banana, roasted tea ice cream and syrup with gold leaf on top. Garnished with a elegant strand of purple flower buds called Hanaho. Amongst the many layers of ingredients were black sesame ice cream, passion fruit, chocolate crunch, and brown sugar jelly at the base. ‘Is there a right way to eat this?’ I thought as I served myself a warm jasmine tea to complete the night.
 
 ![parfait](japan-week-2/parfait.png "=400x400")
 ![parfait](japan-week-2/parfait2.png "=400x400")
@@ -72,47 +76,47 @@ I stopped by Dipper Dan, a crepe store. It was meh and taste too much like a cha
 
 Today’s stop is Harajuku. I found myself strolling on a maze full alleyway to see where it would lead me, and got in a random ramen place called Bassanova to satisfy the hunger and cool down from the heat. Its recommended Green Curry Ramen was spicy but it’s an interesting blend of thai and japanese food that sorta goes well together.
 
-The delightful dichotomy between Harajuku’s huge shopping street and alleyway stores shows two different vibes next to each both having its own charm and luxury. Indeed, they felt mostly out of my budget, but I can begin to understand the appeal to feel good with your style. Fashion is an expensive hobby.
+The delightful dichotomy between Harajuku’s huge shopping street and alleyway stores shows two different vibes next to each other, both having its own charm and luxury. Indeed, they felt mostly out of my budget, but I can begin to understand the appeal to feel good with your style. Fashion is an expensive hobby.
 
 One of the stores was the perfumery brand Kaorium which presents customers with a fun computer interaction to select a desired scent based on mood. This made me wonder how cool it would be to have scent literacy. To dive into the mysterious world of scents, one that seems largely unexplored. At the very least, by me.
 
 ![kaorium](japan-week-2/kaorium.png "=400x400")
 ![pointtwofive](japan-week-2/pointtwofive.png "=400x400")
 
-Amongst the calm alleys of clothing brands and obscure galleries, there was a wider alley named Cat St where I saw a long line for Matcha Tokyo. I followed along with an Indonesian woman in her 40s in front of me who doesn’t seem too open for conversation. The staff came out to bestow me as their last customer for the day along with a command for me to tell the next person that comes in line that their luck is out for the day. And so did a guy came in and I had to tell him the harsh reality. He decided to stay in line anyway, and few minutes later the staff came to see him off.
+Amongst the calm alleys of clothing brands and obscure galleries, there was a wider alley named Cat St. I joined a long queue for Matcha Tokyo, with an Indonesian woman in her 40s in front of me who doesn’t seem too open for conversation. The staff came out to bestow me as their last customer for the day, commanding me to tell the next person that comes in line that their luck is out for the day. And so did a guy, and I had to tell him the harsh reality. He decided to stay in line anyway, and few minutes later the staff came to see him off.
 
-It was good matcha but I kinda wished I had the latte. Earlier when I asked the girl taking orders what she meant by umami, she had a hard time describing it. But I think I tasted the umami in this one.
+It was a good matcha but I kinda wished I had the latte. Earlier when I asked the waitress what she meant by umami, she had a hard time describing it. But I think I tasted the umami in this one.
 
-As the moon rises, I walked around the lit up street of Harajuku paying visits to interesting-looking shops. I saw Palantir office and wondered what it’s like to work in tech in Japan. I looked up job listings in my train home which happened to be packed like sardines.
+As the moon rose, I walked around the lit up street of Harajuku paying visits to interesting-looking shops. I saw Palantir office and wondered what it’s like to work in tech in Japan. I looked up job listings in my train home which happened to be packed like sardines.
 
 ![popmart](japan-week-2/popmart.png "=400x400")
 
-I excused myself for a run at midnight and finished off work with a stretched at the gym as the moon falls. My soaked clothes hung on the balcony outside my room.
+As the moon falls, I excused myself at work for a run and finished off with a stretch at the gym. My soaked clothes hung on the balcony outside my room.
 
 ## Day 11
 
-When resources are limited, prioritization is essential. Same goes with my limited time in japan and in life. I figure Is should put my marathon training as top priority for now, then comes work, then comes travelling. Maintaining the first two requires a good sleep. Therefore getting sleep is north star.
+When resources are limited, prioritization is essential. Same goes with my limited time in japan and in life. I figure I should put my marathon training as top priority for now, then comes work, then comes travelling. Maintaining the first two requires a good sleep. Therefore getting sleep is north star.
 
-I woke up later today and went to nearby ikebukuro after noon. The goal was to get to a rooftop garden above the seibu department store. At least an hour going up, down and around the building to finally get to the balcony on the 9th floor. The promised food stalls were closed and it was meh overall. The weather was nice though, and I wanted to spend time sometime with the sun today, despite craving for an indoor dessert shop.
+I woke up later today and went to nearby ikebukuro after noon. The goal was to get to a rooftop garden above the Seibu department store. At least an hour going up, down and around the building to finally get to the balcony on the 9th floor. The promised food stalls were closed and it was meh overall. The weather was nice though, and I wanted to spend time sometime with the sun today, despite craving for an indoor dessert shop.
 
 As the day came dark again, I was stunned when I realized I had lost my lens cap. Conveniently there was a camera store around the corner and the owner was really nice. He helped me measure the lens, gave me a new nikon one which i liked more than the original. Just for 200Y!
 
-I brought my computer with me today, and I stopped at cafe de crie to work off my reviews and rebasing with a pasta and mint chocolate drink on my desk. I sat looking out the window, laser focused. And so is everyone else. Until I were shoo-ed at 10 and by then, the post-rush hour had cleared the transit’s usual crowd.
+I brought my computer with me today, and I stopped at Cafe de Crie to work off my code reviews and rebasing with a pasta and mint chocolate drink on my desk. I sat looking out the window, locked in. And so is everyone else. By the time I got shoo-ed at 10, the post-rush hour had cleared the transit’s usual crowd.
 
-At midnight, I run back to the route from yesterday. Along a small river and then along the bigger river until I caught the sight of a glorious water gate.
+At midnight, I run back to the dark route from yesterday. Along a small river and then along the bigger river until I caught the sight of a glorious water gate.
 
 ![water_gate](japan-week-2/water_gate.png "=400x400")
 
 
 ## Day 12
 
-Koenji was another district known for thrifting and vintage clothes shopping. I found that things were cheaper gere compared to kitazawa. Less modern and more run down, but it’s very much alive. There was a crowd but but the laid back atmosphere was apparent, and far removed from tourist crowd.
+Koenji was another district known for thrifting and shopping vintage clothes. I found that things were cheaper here compared to Kitazawa. Less modern and more run down, but very much alive. There was a crowd but but the laid back atmosphere was apparent, and far removed from tourist crowd.
 
-By the patio of a dessert shop, floresta cafe, I stared at people passing by. I opened the conversation w a western guy sitting on the table next to me. He was from France. As I spoon through the bowl of kakigori and munch on the kawaii donuts, Yanny told me about his solo trip away from his daily work in finance.
+By the patio of a dessert shop, Floresta Cafe, I stared at people passing by. I opened the conversation with a western guy sitting on the table next to me. He was from France. As I spoon through the bowl of kakigori and munch on the kawaii donuts, Yanny told me about his solo trip away from his daily work in finance.
 
 ![floresta](japan-week-2/floresta.png "=400x400")
 
-Along the street is a vintage shop called xxx.  An attractively chic exterior and a friendly cler who wouldnt stop goving me good recommendations. Unique jackets, well fitted pants. Yet it didnt quite fit my budget and I had to cut down some of those recommendations.
+Along the street is a vintage shop called ___xxx___.  An attractively chic exterior and a friendly clerk who wouldnt stop goving me good recommendations. Unique jackets, well fitted pants. Yet it didnt quite fit my budget and I had to cut down some of those recommendations.
 
 ![vintage_store](japan-week-2/vintage_store.png "=400x400")
 
